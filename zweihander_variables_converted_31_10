@@ -1,0 +1,3052 @@
+<div>
+	<h1>{{ variables.name }}</h1>
+	{% if variables.name is defined %}
+			<dt>Name</dt>
+		<dd> {{ variables.name}} </dd>
+		{% endif %}
+	{% if variables.personal_age_group is defined %}
+			<dt>personal age group</dt>
+		<dd> {{ variables.personal_age_group}} </dd>
+		{% endif %}
+	{% if variables.imageid is defined %}
+			<dt>imageid</dt>
+		<dd> {{ variables.imageid}} </dd>
+		{% endif %}
+	{% if variables.language_native is defined %}
+			<dt>language native</dt>
+		<dd> {{ variables.language_native}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_martial_melee_focus is defined %}
+			<dt>skill combat martial melee focus</dt>
+		<dd> {{ variables.skill_combat_martial_melee_focus}} </dd>
+		{% endif %}
+	{% if variables.personal_distinguishing_marks_1 is defined %}
+			<dt>personal distinguishing marks 1</dt>
+		<dd> {{ variables.personal_distinguishing_marks_1}} </dd>
+		{% endif %}
+	{% if variables.personal_place_of_birth is defined %}
+			<dt>personal place of birth</dt>
+		<dd> {{ variables.personal_place_of_birth}} </dd>
+		{% endif %}
+	{% if variables.personal_upbringing is defined %}
+			<dt>personal upbringing</dt>
+		<dd> {{ variables.personal_upbringing}} </dd>
+		{% endif %}
+	{% if variables.weapon_name_1 is defined %}
+			<dt>weapon name 1</dt>
+		<dd> {{ variables.weapon_name_1}} </dd>
+		{% endif %}
+	{% if variables.weapon_load_4 is defined %}
+			<dt>weapon load 4</dt>
+		<dd> {{ variables.weapon_load_4}} </dd>
+		{% endif %}
+	{% if variables.alignment_chaos_description is defined %}
+			<dt>alignment chaos description</dt>
+		<dd> {{ variables.alignment_chaos_description}} </dd>
+		{% endif %}
+	{% if variables.weapon_ammo_1 is defined %}
+			<dt>weapon ammo 1</dt>
+		<dd> {{ variables.weapon_ammo_1}} </dd>
+		{% endif %}
+	{% if variables.trait_name_1 is defined %}
+			<dt>trait name 1</dt>
+		<dd> {{ variables.trait_name_1}} </dd>
+		{% endif %}
+	{% if variables.trait_name_14 is defined %}
+			<dt>trait name 14</dt>
+		<dd> {{ variables.trait_name_14}} </dd>
+		{% endif %}
+	{% if variables.total_reward_points is defined %}
+			<dt>total reward points</dt>
+		<dd> {{ variables.total_reward_points}} </dd>
+		{% endif %}
+	{% if variables.initiative_base is defined %}
+			<dt>initiative base</dt>
+		<dd> {{ variables.initiative_base}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_martial_melee_10 is defined %}
+			<dt>skill combat martial melee 10</dt>
+		<dd> {{ variables.skill_combat_martial_melee_10}} </dd>
+		{% endif %}
+	{% if variables.attribute_combat_advance_1 is defined %}
+			<dt>attribute combat advance 1</dt>
+		<dd> {{ variables.attribute_combat_advance_1}} </dd>
+		{% endif %}
+	{% if variables.magic_name_1 is defined %}
+			<dt>magic name 1</dt>
+		<dd> {{ variables.magic_name_1}} </dd>
+		{% endif %}
+	{% if variables.option_toggle_magic is defined %}
+			<dt>option toggle magic</dt>
+		<dd> {{ variables.option_toggle_magic}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_1 is defined %}
+			<dt>trappings name 1</dt>
+		<dd> {{ variables.trappings_name_1}} </dd>
+		{% endif %}
+	{% if variables.magic_source_type is defined %}
+			<dt>magic source type</dt>
+		<dd> {{ variables.magic_source_type}} </dd>
+		{% endif %}
+	{% if variables.ritual_name_1 is defined %}
+			<dt>ritual name 1</dt>
+		<dd> {{ variables.ritual_name_1}} </dd>
+		{% endif %}
+	{% if variables.personal_ancestry is defined %}
+			<dt>personal" ancestry"</dt>
+		<dd> {{ variables.personal_ancestry}} </dd>
+		{% endif %}
+	{% if variables.language_1 is defined %}
+			<dt>language 1</dt>
+		<dd> {{ variables.language_1}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_martial_ranged_focus is defined %}
+			<dt>skill combat martial ranged focus</dt>
+		<dd> {{ variables.skill_combat_martial_ranged_focus}} </dd>
+		{% endif %}
+	{% if variables.personal_distinguishing_marks_2 is defined %}
+			<dt>personal distinguishing marks 2</dt>
+		<dd> {{ variables.personal_distinguishing_marks_2}} </dd>
+		{% endif %}
+	{% if variables.weapon_skill_1 is defined %}
+			<dt>weapon skill 1</dt>
+		<dd> {{ variables.weapon_skill_1}} </dd>
+		{% endif %}
+	{% if variables.weapon_handling_4 is defined %}
+			<dt>weapon handling 4</dt>
+		<dd> {{ variables.weapon_handling_4}} </dd>
+		{% endif %}
+	{% if variables.alignment_order_description is defined %}
+			<dt>alignment order description</dt>
+		<dd> {{ variables.alignment_order_description}} </dd>
+		{% endif %}
+	{% if variables.weapon_ammo_2 is defined %}
+			<dt>weapon ammo 2</dt>
+		<dd> {{ variables.weapon_ammo_2}} </dd>
+		{% endif %}
+	{% if variables.trait_description_1 is defined %}
+			<dt>trait description 1</dt>
+		<dd> {{ variables.trait_description_1}} </dd>
+		{% endif %}
+	{% if variables.trait_description_14 is defined %}
+			<dt>trait description 14</dt>
+		<dd> {{ variables.trait_description_14}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_martial_melee_20 is defined %}
+			<dt>skill combat martial melee 20</dt>
+		<dd> {{ variables.skill_combat_martial_melee_20}} </dd>
+		{% endif %}
+	{% if variables.attribute_combat_advance_2 is defined %}
+			<dt>attribute combat advance 2</dt>
+		<dd> {{ variables.attribute_combat_advance_2}} </dd>
+		{% endif %}
+	{% if variables.magic_name_2 is defined %}
+			<dt>magic name 2</dt>
+		<dd> {{ variables.magic_name_2}} </dd>
+		{% endif %}
+	{% if variables.option_toggle_rituals is defined %}
+			<dt>option toggle rituals</dt>
+		<dd> {{ variables.option_toggle_rituals}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_2 is defined %}
+			<dt>trappings name 2</dt>
+		<dd> {{ variables.trappings_name_2}} </dd>
+		{% endif %}
+	{% if variables.ritual_casting_time_1 is defined %}
+			<dt>ritual casting time 1</dt>
+		<dd> {{ variables.ritual_casting_time_1}} </dd>
+		{% endif %}
+	{% if variables.personal_sex is defined %}
+			<dt>personal sex</dt>
+		<dd> {{ variables.personal_sex}} </dd>
+		{% endif %}
+	{% if variables.language_2 is defined %}
+			<dt>language 2</dt>
+		<dd> {{ variables.language_2}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_simple_melee_focus is defined %}
+			<dt>skill combat simple melee focus</dt>
+		<dd> {{ variables.skill_combat_simple_melee_focus}} </dd>
+		{% endif %}
+	{% if variables.personal_distinguishing_marks_3 is defined %}
+			<dt>personal distinguishing marks 3</dt>
+		<dd> {{ variables.personal_distinguishing_marks_3}} </dd>
+		{% endif %}
+	{% if variables.weapon_load_2 is defined %}
+			<dt>weapon load 2</dt>
+		<dd> {{ variables.weapon_load_2}} </dd>
+		{% endif %}
+	{% if variables.weapon_ammo_3 is defined %}
+			<dt>weapon ammo 3</dt>
+		<dd> {{ variables.weapon_ammo_3}} </dd>
+		{% endif %}
+	{% if variables.trait_name_2 is defined %}
+			<dt>trait name 2</dt>
+		<dd> {{ variables.trait_name_2}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_martial_melee_30 is defined %}
+			<dt>skill combat martial melee 30</dt>
+		<dd> {{ variables.skill_combat_martial_melee_30}} </dd>
+		{% endif %}
+	{% if variables.attribute_combat_advance_3 is defined %}
+			<dt>attribute combat advance 3</dt>
+		<dd> {{ variables.attribute_combat_advance_3}} </dd>
+		{% endif %}
+	{% if variables.magic_name_3 is defined %}
+			<dt>magic name 3</dt>
+		<dd> {{ variables.magic_name_3}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_3 is defined %}
+			<dt>trappings name 3</dt>
+		<dd> {{ variables.trappings_name_3}} </dd>
+		{% endif %}
+	{% if variables.ritual_reagents_1 is defined %}
+			<dt>ritual reagents 1</dt>
+		<dd> {{ variables.ritual_reagents_1}} </dd>
+		{% endif %}
+	{% if variables.personal_height is defined %}
+			<dt>personal height</dt>
+		<dd> {{ variables.personal_height}} </dd>
+		{% endif %}
+	{% if variables.language_3 is defined %}
+			<dt>language 3</dt>
+		<dd> {{ variables.language_3}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_simple_ranged_focus is defined %}
+			<dt>skill combat simple ranged focus</dt>
+		<dd> {{ variables.skill_combat_simple_ranged_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_handling_2 is defined %}
+			<dt>weapon handling 2</dt>
+		<dd> {{ variables.weapon_handling_2}} </dd>
+		{% endif %}
+	{% if variables.weapon_ammo_4 is defined %}
+			<dt>weapon ammo 4</dt>
+		<dd> {{ variables.weapon_ammo_4}} </dd>
+		{% endif %}
+	{% if variables.trait_description_2 is defined %}
+			<dt>trait description 2</dt>
+		<dd> {{ variables.trait_description_2}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_martial_ranged_10 is defined %}
+			<dt>skill combat martial ranged 10</dt>
+		<dd> {{ variables.skill_combat_martial_ranged_10}} </dd>
+		{% endif %}
+	{% if variables.attribute_combat_advance_4 is defined %}
+			<dt>attribute combat advance 4</dt>
+		<dd> {{ variables.attribute_combat_advance_4}} </dd>
+		{% endif %}
+	{% if variables.magic_name_4 is defined %}
+			<dt>magic name 4</dt>
+		<dd> {{ variables.magic_name_4}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_4 is defined %}
+			<dt>trappings name 4</dt>
+		<dd> {{ variables.trappings_name_4}} </dd>
+		{% endif %}
+	{% if variables.ritual_conidition_1 is defined %}
+			<dt>ritual conidition 1</dt>
+		<dd> {{ variables.ritual_conidition_1}} </dd>
+		{% endif %}
+	{% if variables.personal_weight is defined %}
+			<dt>personal weight</dt>
+		<dd> {{ variables.personal_weight}} </dd>
+		{% endif %}
+	{% if variables.language_4 is defined %}
+			<dt>language 4</dt>
+		<dd> {{ variables.language_4}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_athletics_focus is defined %}
+			<dt>skill brawn athletics focus</dt>
+		<dd> {{ variables.skill_brawn_athletics_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_distance_1 is defined %}
+			<dt>weapon distance 1</dt>
+		<dd> {{ variables.weapon_distance_1}} </dd>
+		{% endif %}
+	{% if variables.weapon_load_3 is defined %}
+			<dt>weapon load 3</dt>
+		<dd> {{ variables.weapon_load_3}} </dd>
+		{% endif %}
+	{% if variables.trait_name_3 is defined %}
+			<dt>trait name 3</dt>
+		<dd> {{ variables.trait_name_3}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_martial_ranged_20 is defined %}
+			<dt>skill combat martial ranged 20</dt>
+		<dd> {{ variables.skill_combat_martial_ranged_20}} </dd>
+		{% endif %}
+	{% if variables.attribute_combat_advance_5 is defined %}
+			<dt>attribute combat advance 5</dt>
+		<dd> {{ variables.attribute_combat_advance_5}} </dd>
+		{% endif %}
+	{% if variables.magic_name_5 is defined %}
+			<dt>magic name 5</dt>
+		<dd> {{ variables.magic_name_5}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_5 is defined %}
+			<dt>trappings name 5</dt>
+		<dd> {{ variables.trappings_name_5}} </dd>
+		{% endif %}
+	{% if variables.ritual_channel_power_1 is defined %}
+			<dt>ritual channel power 1</dt>
+		<dd> {{ variables.ritual_channel_power_1}} </dd>
+		{% endif %}
+	{% if variables.personal_build_type is defined %}
+			<dt>personal build type</dt>
+		<dd> {{ variables.personal_build_type}} </dd>
+		{% endif %}
+	{% if variables.language_5 is defined %}
+			<dt>language 5</dt>
+		<dd> {{ variables.language_5}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_drive_focus is defined %}
+			<dt>skill brawn drive focus</dt>
+		<dd> {{ variables.skill_brawn_drive_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_damage_1 is defined %}
+			<dt>weapon damage 1</dt>
+		<dd> {{ variables.weapon_damage_1}} </dd>
+		{% endif %}
+	{% if variables.weapon_handling_3 is defined %}
+			<dt>weapon handling 3</dt>
+		<dd> {{ variables.weapon_handling_3}} </dd>
+		{% endif %}
+	{% if variables.trait_description_3 is defined %}
+			<dt>trait description 3</dt>
+		<dd> {{ variables.trait_description_3}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_martial_ranged_30 is defined %}
+			<dt>skill combat martial ranged 30</dt>
+		<dd> {{ variables.skill_combat_martial_ranged_30}} </dd>
+		{% endif %}
+	{% if variables.attribute_combat_advance_6 is defined %}
+			<dt>attribute combat advance 6</dt>
+		<dd> {{ variables.attribute_combat_advance_6}} </dd>
+		{% endif %}
+	{% if variables.magic_name_6 is defined %}
+			<dt>magic name 6</dt>
+		<dd> {{ variables.magic_name_6}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_6 is defined %}
+			<dt>trappings name 6</dt>
+		<dd> {{ variables.trappings_name_6}} </dd>
+		{% endif %}
+	{% if variables.ritual_difficulty_rating_1 is defined %}
+			<dt>ritual difficulty rating 1</dt>
+		<dd> {{ variables.ritual_difficulty_rating_1}} </dd>
+		{% endif %}
+	{% if variables.personal_complexion is defined %}
+			<dt>personal complexion</dt>
+		<dd> {{ variables.personal_complexion}} </dd>
+		{% endif %}
+	{% if variables.shield_name is defined %}
+			<dt>shield name</dt>
+		<dd> {{ variables.shield_name}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_intimidate_focus is defined %}
+			<dt>skill brawn intimidate focus</dt>
+		<dd> {{ variables.skill_brawn_intimidate_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_qualities_1 is defined %}
+			<dt>weapon qualities 1</dt>
+		<dd> {{ variables.weapon_qualities_1}} </dd>
+		{% endif %}
+	{% if variables.weapon_load_1 is defined %}
+			<dt>weapon load 1</dt>
+		<dd> {{ variables.weapon_load_1}} </dd>
+		{% endif %}
+	{% if variables.trait_name_4 is defined %}
+			<dt>trait name 4</dt>
+		<dd> {{ variables.trait_name_4}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_simple_melee_10 is defined %}
+			<dt>skill combat simple melee 10</dt>
+		<dd> {{ variables.skill_combat_simple_melee_10}} </dd>
+		{% endif %}
+	{% if variables.attribute_brawn_advance_1 is defined %}
+			<dt>attribute brawn advance 1</dt>
+		<dd> {{ variables.attribute_brawn_advance_1}} </dd>
+		{% endif %}
+	{% if variables.magic_name_7 is defined %}
+			<dt>magic name 7</dt>
+		<dd> {{ variables.magic_name_7}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_7 is defined %}
+			<dt>trappings name 7</dt>
+		<dd> {{ variables.trappings_name_7}} </dd>
+		{% endif %}
+	{% if variables.ritual_consequences_1 is defined %}
+			<dt>ritual consequences 1</dt>
+		<dd> {{ variables.ritual_consequences_1}} </dd>
+		{% endif %}
+	{% if variables.personal_hair_color is defined %}
+			<dt>personal hair color</dt>
+		<dd> {{ variables.personal_hair_color}} </dd>
+		{% endif %}
+	{% if variables.shield_qualities is defined %}
+			<dt>shield qualities</dt>
+		<dd> {{ variables.shield_qualities}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_toughness_focus is defined %}
+			<dt>skill brawn toughness focus</dt>
+		<dd> {{ variables.skill_brawn_toughness_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_encumbrance_1 is defined %}
+			<dt>weapon encumbrance 1</dt>
+		<dd> {{ variables.weapon_encumbrance_1}} </dd>
+		{% endif %}
+	{% if variables.weapon_handling_1 is defined %}
+			<dt>weapon handling 1</dt>
+		<dd> {{ variables.weapon_handling_1}} </dd>
+		{% endif %}
+	{% if variables.trait_description_4 is defined %}
+			<dt>trait description 4</dt>
+		<dd> {{ variables.trait_description_4}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_simple_melee_20 is defined %}
+			<dt>skill combat simple melee 20</dt>
+		<dd> {{ variables.skill_combat_simple_melee_20}} </dd>
+		{% endif %}
+	{% if variables.attribute_brawn_advance_2 is defined %}
+			<dt>attribute brawn advance 2</dt>
+		<dd> {{ variables.attribute_brawn_advance_2}} </dd>
+		{% endif %}
+	{% if variables.magic_name_8 is defined %}
+			<dt>magic name 8</dt>
+		<dd> {{ variables.magic_name_8}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_8 is defined %}
+			<dt>trappings name 8</dt>
+		<dd> {{ variables.trappings_name_8}} </dd>
+		{% endif %}
+	{% if variables.ritual_effects_1 is defined %}
+			<dt>ritual effects 1</dt>
+		<dd> {{ variables.ritual_effects_1}} </dd>
+		{% endif %}
+	{% if variables.personal_eye_color is defined %}
+			<dt>personal eye color</dt>
+		<dd> {{ variables.personal_eye_color}} </dd>
+		{% endif %}
+	{% if variables.shield_encumbrance is defined %}
+			<dt>shield encumbrance</dt>
+		<dd> {{ variables.shield_encumbrance}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_coordination_focus is defined %}
+			<dt>skill agility coordination focus</dt>
+		<dd> {{ variables.skill_agility_coordination_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_name_2 is defined %}
+			<dt>weapon name 2</dt>
+		<dd> {{ variables.weapon_name_2}} </dd>
+		{% endif %}
+	{% if variables.trait_name_5 is defined %}
+			<dt>trait name 5</dt>
+		<dd> {{ variables.trait_name_5}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_simple_melee_30 is defined %}
+			<dt>skill combat simple melee 30</dt>
+		<dd> {{ variables.skill_combat_simple_melee_30}} </dd>
+		{% endif %}
+	{% if variables.attribute_brawn_advance_3 is defined %}
+			<dt>attribute brawn advance 3</dt>
+		<dd> {{ variables.attribute_brawn_advance_3}} </dd>
+		{% endif %}
+	{% if variables.magic_name_9 is defined %}
+			<dt>magic name 9</dt>
+		<dd> {{ variables.magic_name_9}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_9 is defined %}
+			<dt>trappings name 9</dt>
+		<dd> {{ variables.trappings_name_9}} </dd>
+		{% endif %}
+	{% if variables.ritual_name_2 is defined %}
+			<dt>ritual name 2</dt>
+		<dd> {{ variables.ritual_name_2}} </dd>
+		{% endif %}
+	{% if variables.personal_distinguishing_marks is defined %}
+			<dt>personal distinguishing marks</dt>
+		<dd> {{ variables.personal_distinguishing_marks}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_pilot_focus is defined %}
+			<dt>skill agility pilot focus</dt>
+		<dd> {{ variables.skill_agility_pilot_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_skill_2 is defined %}
+			<dt>weapon skill 2</dt>
+		<dd> {{ variables.weapon_skill_2}} </dd>
+		{% endif %}
+	{% if variables.trait_description_5 is defined %}
+			<dt>trait description 5</dt>
+		<dd> {{ variables.trait_description_5}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_simple_ranged_10 is defined %}
+			<dt>skill combat simple ranged 10</dt>
+		<dd> {{ variables.skill_combat_simple_ranged_10}} </dd>
+		{% endif %}
+	{% if variables.attribute_brawn_advance_4 is defined %}
+			<dt>attribute brawn advance 4</dt>
+		<dd> {{ variables.attribute_brawn_advance_4}} </dd>
+		{% endif %}
+	{% if variables.magic_name_10 is defined %}
+			<dt>magic name 10</dt>
+		<dd> {{ variables.magic_name_10}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_10 is defined %}
+			<dt>trappings name 10</dt>
+		<dd> {{ variables.trappings_name_10}} </dd>
+		{% endif %}
+	{% if variables.ritual_casting_time_2 is defined %}
+			<dt>ritual casting time 2</dt>
+		<dd> {{ variables.ritual_casting_time_2}} </dd>
+		{% endif %}
+	{% if variables.personal_season_of_birth is defined %}
+			<dt>personal season of birth</dt>
+		<dd> {{ variables.personal_season_of_birth}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_ride_focus is defined %}
+			<dt>skill agility ride focus</dt>
+		<dd> {{ variables.skill_agility_ride_focus}} </dd>
+		{% endif %}
+	{% if variables.trait_name_6 is defined %}
+			<dt>trait name 6</dt>
+		<dd> {{ variables.trait_name_6}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_simple_ranged_20 is defined %}
+			<dt>skill combat simple ranged 20</dt>
+		<dd> {{ variables.skill_combat_simple_ranged_20}} </dd>
+		{% endif %}
+	{% if variables.attribute_brawn_advance_5 is defined %}
+			<dt>attribute brawn advance 5</dt>
+		<dd> {{ variables.attribute_brawn_advance_5}} </dd>
+		{% endif %}
+	{% if variables.magic_name_11 is defined %}
+			<dt>magic name 11</dt>
+		<dd> {{ variables.magic_name_11}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_11 is defined %}
+			<dt>trappings name 11</dt>
+		<dd> {{ variables.trappings_name_11}} </dd>
+		{% endif %}
+	{% if variables.ritual_reagents_2 is defined %}
+			<dt>ritual reagents 2</dt>
+		<dd> {{ variables.ritual_reagents_2}} </dd>
+		{% endif %}
+	{% if variables.personal_social_class is defined %}
+			<dt>personal social class</dt>
+		<dd> {{ variables.personal_social_class}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_skulduggery_focus is defined %}
+			<dt>skill agility skulduggery focus</dt>
+		<dd> {{ variables.skill_agility_skulduggery_focus}} </dd>
+		{% endif %}
+	{% if variables.trait_description_6 is defined %}
+			<dt>trait description 6</dt>
+		<dd> {{ variables.trait_description_6}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_simple_ranged_30 is defined %}
+			<dt>skill combat simple ranged 30</dt>
+		<dd> {{ variables.skill_combat_simple_ranged_30}} </dd>
+		{% endif %}
+	{% if variables.attribute_brawn_advance_6 is defined %}
+			<dt>attribute brawn advance 6</dt>
+		<dd> {{ variables.attribute_brawn_advance_6}} </dd>
+		{% endif %}
+	{% if variables.magic_name_12 is defined %}
+			<dt>magic name 12</dt>
+		<dd> {{ variables.magic_name_12}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_12 is defined %}
+			<dt>trappings name 12</dt>
+		<dd> {{ variables.trappings_name_12}} </dd>
+		{% endif %}
+	{% if variables.ritual_conidition_2 is defined %}
+			<dt>ritual conidition 2</dt>
+		<dd> {{ variables.ritual_conidition_2}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_stealth_focus is defined %}
+			<dt>skill agility stealth focus</dt>
+		<dd> {{ variables.skill_agility_stealth_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_distance_2 is defined %}
+			<dt>weapon distance 2</dt>
+		<dd> {{ variables.weapon_distance_2}} </dd>
+		{% endif %}
+	{% if variables.trait_name_7 is defined %}
+			<dt>trait name 7</dt>
+		<dd> {{ variables.trait_name_7}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_athletics_10 is defined %}
+			<dt>skill brawn athletics 10</dt>
+		<dd> {{ variables.skill_brawn_athletics_10}} </dd>
+		{% endif %}
+	{% if variables.attribute_agility_advance_1 is defined %}
+			<dt>attribute agility advance 1</dt>
+		<dd> {{ variables.attribute_agility_advance_1}} </dd>
+		{% endif %}
+	{% if variables.magic_name_13 is defined %}
+			<dt>magic name 13</dt>
+		<dd> {{ variables.magic_name_13}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_13 is defined %}
+			<dt>trappings name 13</dt>
+		<dd> {{ variables.trappings_name_13}} </dd>
+		{% endif %}
+	{% if variables.ritual_channel_power_2 is defined %}
+			<dt>ritual channel power 2</dt>
+		<dd> {{ variables.ritual_channel_power_2}} </dd>
+		{% endif %}
+	{% if variables.personal_dooming is defined %}
+			<dt>personal dooming</dt>
+		<dd> {{ variables.personal_dooming}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_awareness_focus is defined %}
+			<dt>skill perception awareness focus</dt>
+		<dd> {{ variables.skill_perception_awareness_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_damage_2 is defined %}
+			<dt>weapon damage 2</dt>
+		<dd> {{ variables.weapon_damage_2}} </dd>
+		{% endif %}
+	{% if variables.trait_description_7 is defined %}
+			<dt>trait description 7</dt>
+		<dd> {{ variables.trait_description_7}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_athletics_20 is defined %}
+			<dt>skill brawn athletics 20</dt>
+		<dd> {{ variables.skill_brawn_athletics_20}} </dd>
+		{% endif %}
+	{% if variables.attribute_agility_advance_2 is defined %}
+			<dt>attribute agility advance 2</dt>
+		<dd> {{ variables.attribute_agility_advance_2}} </dd>
+		{% endif %}
+	{% if variables.magic_name_14 is defined %}
+			<dt>magic name 14</dt>
+		<dd> {{ variables.magic_name_14}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_14 is defined %}
+			<dt>trappings name 14</dt>
+		<dd> {{ variables.trappings_name_14}} </dd>
+		{% endif %}
+	{% if variables.ritual_difficulty_rating_2 is defined %}
+			<dt>ritual difficulty rating 2</dt>
+		<dd> {{ variables.ritual_difficulty_rating_2}} </dd>
+		{% endif %}
+	{% if variables.personal_fate_points is defined %}
+			<dt>personal fate points</dt>
+		<dd> {{ variables.personal_fate_points}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_eavesdrop_focus is defined %}
+			<dt>skill perception eavesdrop focus</dt>
+		<dd> {{ variables.skill_perception_eavesdrop_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_qualities_2 is defined %}
+			<dt>weapon qualities 2</dt>
+		<dd> {{ variables.weapon_qualities_2}} </dd>
+		{% endif %}
+	{% if variables.trait_name_8 is defined %}
+			<dt>trait name 8</dt>
+		<dd> {{ variables.trait_name_8}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_athletics_30 is defined %}
+			<dt>skill brawn athletics 30</dt>
+		<dd> {{ variables.skill_brawn_athletics_30}} </dd>
+		{% endif %}
+	{% if variables.attribute_agility_advance_3 is defined %}
+			<dt>attribute agility advance 3</dt>
+		<dd> {{ variables.attribute_agility_advance_3}} </dd>
+		{% endif %}
+	{% if variables.magic_name_15 is defined %}
+			<dt>magic name 15</dt>
+		<dd> {{ variables.magic_name_15}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_15 is defined %}
+			<dt>trappings name 15</dt>
+		<dd> {{ variables.trappings_name_15}} </dd>
+		{% endif %}
+	{% if variables.ritual_consequences_2 is defined %}
+			<dt>ritual consequences 2</dt>
+		<dd> {{ variables.ritual_consequences_2}} </dd>
+		{% endif %}
+	{% if variables.personal_reputation_points is defined %}
+			<dt>personal reputation points</dt>
+		<dd> {{ variables.personal_reputation_points}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_scrutinize_focus is defined %}
+			<dt>skill perception scrutinize focus</dt>
+		<dd> {{ variables.skill_perception_scrutinize_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_encumbrance_2 is defined %}
+			<dt>weapon encumbrance 2</dt>
+		<dd> {{ variables.weapon_encumbrance_2}} </dd>
+		{% endif %}
+	{% if variables.trait_description_8 is defined %}
+			<dt>trait description 8</dt>
+		<dd> {{ variables.trait_description_8}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_drive_10 is defined %}
+			<dt>skill brawn drive 10</dt>
+		<dd> {{ variables.skill_brawn_drive_10}} </dd>
+		{% endif %}
+	{% if variables.attribute_agility_advance_4 is defined %}
+			<dt>attribute agility advance 4</dt>
+		<dd> {{ variables.attribute_agility_advance_4}} </dd>
+		{% endif %}
+	{% if variables.magic_name_16 is defined %}
+			<dt>magic name 16</dt>
+		<dd> {{ variables.magic_name_16}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_16 is defined %}
+			<dt>trappings name 16</dt>
+		<dd> {{ variables.trappings_name_16}} </dd>
+		{% endif %}
+	{% if variables.ritual_effects_2 is defined %}
+			<dt>ritual effects 2</dt>
+		<dd> {{ variables.ritual_effects_2}} </dd>
+		{% endif %}
+	{% if variables.personal_disorders_drawbacks is defined %}
+			<dt>personal disorders drawbacks</dt>
+		<dd> {{ variables.personal_disorders_drawbacks}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_survival_focus is defined %}
+			<dt>skill perception survival focus</dt>
+		<dd> {{ variables.skill_perception_survival_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_name_3 is defined %}
+			<dt>weapon name 3</dt>
+		<dd> {{ variables.weapon_name_3}} </dd>
+		{% endif %}
+	{% if variables.trait_name_9 is defined %}
+			<dt>trait name 9</dt>
+		<dd> {{ variables.trait_name_9}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_drive_20 is defined %}
+			<dt>skill brawn drive 20</dt>
+		<dd> {{ variables.skill_brawn_drive_20}} </dd>
+		{% endif %}
+	{% if variables.attribute_agility_advance_5 is defined %}
+			<dt>attribute agility advance 5</dt>
+		<dd> {{ variables.attribute_agility_advance_5}} </dd>
+		{% endif %}
+	{% if variables.magic_name_17 is defined %}
+			<dt>magic name 17</dt>
+		<dd> {{ variables.magic_name_17}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_17 is defined %}
+			<dt>trappings name 17</dt>
+		<dd> {{ variables.trappings_name_17}} </dd>
+		{% endif %}
+	{% if variables.ritual_name_3 is defined %}
+			<dt>ritual name 3</dt>
+		<dd> {{ variables.ritual_name_3}} </dd>
+		{% endif %}
+	{% if variables.personal_patron_deity is defined %}
+			<dt>personal patron deity</dt>
+		<dd> {{ variables.personal_patron_deity}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_alchemy_focus is defined %}
+			<dt>skill intelligence alchemy focus</dt>
+		<dd> {{ variables.skill_intelligence_alchemy_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_skill_3 is defined %}
+			<dt>weapon skill 3</dt>
+		<dd> {{ variables.weapon_skill_3}} </dd>
+		{% endif %}
+	{% if variables.trait_description_9 is defined %}
+			<dt>trait description 9</dt>
+		<dd> {{ variables.trait_description_9}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_drive_30 is defined %}
+			<dt>skill brawn drive 30</dt>
+		<dd> {{ variables.skill_brawn_drive_30}} </dd>
+		{% endif %}
+	{% if variables.attribute_agility_advance_6 is defined %}
+			<dt>attribute agility advance 6</dt>
+		<dd> {{ variables.attribute_agility_advance_6}} </dd>
+		{% endif %}
+	{% if variables.magic_name_18 is defined %}
+			<dt>magic name 18</dt>
+		<dd> {{ variables.magic_name_18}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_18 is defined %}
+			<dt>trappings name 18</dt>
+		<dd> {{ variables.trappings_name_18}} </dd>
+		{% endif %}
+	{% if variables.ritual_casting_time_3 is defined %}
+			<dt>ritual casting time 3</dt>
+		<dd> {{ variables.ritual_casting_time_3}} </dd>
+		{% endif %}
+	{% if variables.difficulty_rating_trivial is defined %}
+			<dt>difficulty rating trivial</dt>
+		<dd> {{ variables.difficulty_rating_trivial}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_counterfeit_focus is defined %}
+			<dt>skill intelligence counterfeit focus</dt>
+		<dd> {{ variables.skill_intelligence_counterfeit_focus}} </dd>
+		{% endif %}
+	{% if variables.trait_name_10 is defined %}
+			<dt>trait name 10</dt>
+		<dd> {{ variables.trait_name_10}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_intimidate_10 is defined %}
+			<dt>skill brawn intimidate 10</dt>
+		<dd> {{ variables.skill_brawn_intimidate_10}} </dd>
+		{% endif %}
+	{% if variables.attribute_perception_advance_1 is defined %}
+			<dt>attribute perception advance 1</dt>
+		<dd> {{ variables.attribute_perception_advance_1}} </dd>
+		{% endif %}
+	{% if variables.magic_name_19 is defined %}
+			<dt>magic name 19</dt>
+		<dd> {{ variables.magic_name_19}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_19 is defined %}
+			<dt>trappings name 19</dt>
+		<dd> {{ variables.trappings_name_19}} </dd>
+		{% endif %}
+	{% if variables.ritual_reagents_3 is defined %}
+			<dt>ritual reagents 3</dt>
+		<dd> {{ variables.ritual_reagents_3}} </dd>
+		{% endif %}
+	{% if variables.difficulty_rating_easy is defined %}
+			<dt>difficulty rating easy</dt>
+		<dd> {{ variables.difficulty_rating_easy}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_education_focus is defined %}
+			<dt>skill intelligence Education focus</dt>
+		<dd> {{ variables.skill_intelligence_education_focus}} </dd>
+		{% endif %}
+	{% if variables.trait_description_10 is defined %}
+			<dt>trait description 10</dt>
+		<dd> {{ variables.trait_description_10}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_intimidate_20 is defined %}
+			<dt>skill brawn intimidate 20</dt>
+		<dd> {{ variables.skill_brawn_intimidate_20}} </dd>
+		{% endif %}
+	{% if variables.attribute_perception_advance_2 is defined %}
+			<dt>attribute perception advance 2</dt>
+		<dd> {{ variables.attribute_perception_advance_2}} </dd>
+		{% endif %}
+	{% if variables.magic_name_20 is defined %}
+			<dt>magic name 20</dt>
+		<dd> {{ variables.magic_name_20}} </dd>
+		{% endif %}
+	{% if variables.trappings_name_20 is defined %}
+			<dt>trappings name 20</dt>
+		<dd> {{ variables.trappings_name_20}} </dd>
+		{% endif %}
+	{% if variables.ritual_conidition_3 is defined %}
+			<dt>ritual conidition 3</dt>
+		<dd> {{ variables.ritual_conidition_3}} </dd>
+		{% endif %}
+	{% if variables.difficulty_rating_routine is defined %}
+			<dt>difficulty rating routine</dt>
+		<dd> {{ variables.difficulty_rating_routine}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_folklore_focus is defined %}
+			<dt>skill intelligence folklore focus</dt>
+		<dd> {{ variables.skill_intelligence_folklore_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_distance_3 is defined %}
+			<dt>weapon distance 3</dt>
+		<dd> {{ variables.weapon_distance_3}} </dd>
+		{% endif %}
+	{% if variables.trait_name_11 is defined %}
+			<dt>trait name 11</dt>
+		<dd> {{ variables.trait_name_11}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_intimidate_30 is defined %}
+			<dt>skill brawn intimidate 30</dt>
+		<dd> {{ variables.skill_brawn_intimidate_30}} </dd>
+		{% endif %}
+	{% if variables.attribute_perception_advance_3 is defined %}
+			<dt>attribute perception advance 3</dt>
+		<dd> {{ variables.attribute_perception_advance_3}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_1 is defined %}
+			<dt>magic difficulty 1</dt>
+		<dd> {{ variables.magic_difficulty_1}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_1 is defined %}
+			<dt>trappings description 1</dt>
+		<dd> {{ variables.trappings_description_1}} </dd>
+		{% endif %}
+	{% if variables.ritual_channel_power_3 is defined %}
+			<dt>ritual channel power 3</dt>
+		<dd> {{ variables.ritual_channel_power_3}} </dd>
+		{% endif %}
+	{% if variables.difficulty_rating_standard is defined %}
+			<dt>difficulty rating standard</dt>
+		<dd> {{ variables.difficulty_rating_standard}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_gamble_focus is defined %}
+			<dt>skill intelligence gamble focus</dt>
+		<dd> {{ variables.skill_intelligence_gamble_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_damage_3 is defined %}
+			<dt>weapon damage 3</dt>
+		<dd> {{ variables.weapon_damage_3}} </dd>
+		{% endif %}
+	{% if variables.trait_description_11 is defined %}
+			<dt>trait description 11</dt>
+		<dd> {{ variables.trait_description_11}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_toughnesse_10 is defined %}
+			<dt>skill brawn toughnesse 10</dt>
+		<dd> {{ variables.skill_brawn_toughnesse_10}} </dd>
+		{% endif %}
+	{% if variables.attribute_perception_advance_4 is defined %}
+			<dt>attribute perception advance 4</dt>
+		<dd> {{ variables.attribute_perception_advance_4}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_2 is defined %}
+			<dt>magic difficulty 2</dt>
+		<dd> {{ variables.magic_difficulty_2}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_2 is defined %}
+			<dt>trappings description 2</dt>
+		<dd> {{ variables.trappings_description_2}} </dd>
+		{% endif %}
+	{% if variables.ritual_difficulty_rating_3 is defined %}
+			<dt>ritual difficulty rating 3</dt>
+		<dd> {{ variables.ritual_difficulty_rating_3}} </dd>
+		{% endif %}
+	{% if variables.difficulty_rating_challenging is defined %}
+			<dt>difficulty rating challenging</dt>
+		<dd> {{ variables.difficulty_rating_challenging}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_heal_focus is defined %}
+			<dt>skill intelligence heal focus</dt>
+		<dd> {{ variables.skill_intelligence_heal_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_qualities_3 is defined %}
+			<dt>weapon qualities 3</dt>
+		<dd> {{ variables.weapon_qualities_3}} </dd>
+		{% endif %}
+	{% if variables.trait_name_12 is defined %}
+			<dt>trait name 12</dt>
+		<dd> {{ variables.trait_name_12}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_toughness_20 is defined %}
+			<dt>skill brawn toughness 20</dt>
+		<dd> {{ variables.skill_brawn_toughness_20}} </dd>
+		{% endif %}
+	{% if variables.attribute_perception_advance_5 is defined %}
+			<dt>attribute perception advance 5</dt>
+		<dd> {{ variables.attribute_perception_advance_5}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_3 is defined %}
+			<dt>magic difficulty 3</dt>
+		<dd> {{ variables.magic_difficulty_3}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_3 is defined %}
+			<dt>trappings description 3</dt>
+		<dd> {{ variables.trappings_description_3}} </dd>
+		{% endif %}
+	{% if variables.ritual_consequences_3 is defined %}
+			<dt>ritual consequences 3</dt>
+		<dd> {{ variables.ritual_consequences_3}} </dd>
+		{% endif %}
+	{% if variables.difficulty_rating_arduous is defined %}
+			<dt>difficulty rating arduous</dt>
+		<dd> {{ variables.difficulty_rating_arduous}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_navigation_focus is defined %}
+			<dt>skill intelligence navigation focus</dt>
+		<dd> {{ variables.skill_intelligence_navigation_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_encumbrance_3 is defined %}
+			<dt>weapon encumbrance 3</dt>
+		<dd> {{ variables.weapon_encumbrance_3}} </dd>
+		{% endif %}
+	{% if variables.trait_description_12 is defined %}
+			<dt>trait description 12</dt>
+		<dd> {{ variables.trait_description_12}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_toughness_30 is defined %}
+			<dt>skill brawn toughness 30</dt>
+		<dd> {{ variables.skill_brawn_toughness_30}} </dd>
+		{% endif %}
+	{% if variables.attribute_perception_advance_6 is defined %}
+			<dt>attribute perception advance 6</dt>
+		<dd> {{ variables.attribute_perception_advance_6}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_4 is defined %}
+			<dt>magic difficulty 4</dt>
+		<dd> {{ variables.magic_difficulty_4}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_4 is defined %}
+			<dt>trappings description 4</dt>
+		<dd> {{ variables.trappings_description_4}} </dd>
+		{% endif %}
+	{% if variables.ritual_effects_3 is defined %}
+			<dt>ritual effects 3</dt>
+		<dd> {{ variables.ritual_effects_3}} </dd>
+		{% endif %}
+	{% if variables.alignment_order is defined %}
+			<dt>alignment order</dt>
+		<dd> {{ variables.alignment_order}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_warfare_focus is defined %}
+			<dt>skill intelligence warfare focus</dt>
+		<dd> {{ variables.skill_intelligence_warfare_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_name_4 is defined %}
+			<dt>weapon name 4</dt>
+		<dd> {{ variables.weapon_name_4}} </dd>
+		{% endif %}
+	{% if variables.trait_name_13 is defined %}
+			<dt>trait name 13</dt>
+		<dd> {{ variables.trait_name_13}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_coordination_10 is defined %}
+			<dt>skill agility coordination 10</dt>
+		<dd> {{ variables.skill_agility_coordination_10}} </dd>
+		{% endif %}
+	{% if variables.attribute_intelligence_advance_1 is defined %}
+			<dt>attribute intelligence advance 1</dt>
+		<dd> {{ variables.attribute_intelligence_advance_1}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_5 is defined %}
+			<dt>magic difficulty 5</dt>
+		<dd> {{ variables.magic_difficulty_5}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_5 is defined %}
+			<dt>trappings description 5</dt>
+		<dd> {{ variables.trappings_description_5}} </dd>
+		{% endif %}
+	{% if variables.ritual_name_4 is defined %}
+			<dt>ritual name 4</dt>
+		<dd> {{ variables.ritual_name_4}} </dd>
+		{% endif %}
+	{% if variables.alignment_chaos is defined %}
+			<dt>alignment chaos</dt>
+		<dd> {{ variables.alignment_chaos}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_incantation_focus is defined %}
+			<dt>skill willpower incantation focus</dt>
+		<dd> {{ variables.skill_willpower_incantation_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_skill_4 is defined %}
+			<dt>weapon skill 4</dt>
+		<dd> {{ variables.weapon_skill_4}} </dd>
+		{% endif %}
+	{% if variables.trait_description_13 is defined %}
+			<dt>trait description 13</dt>
+		<dd> {{ variables.trait_description_13}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_coordination_20 is defined %}
+			<dt>skill agility coordination 20</dt>
+		<dd> {{ variables.skill_agility_coordination_20}} </dd>
+		{% endif %}
+	{% if variables.attribute_intelligence_advance_2 is defined %}
+			<dt>attribute intelligence advance 2</dt>
+		<dd> {{ variables.attribute_intelligence_advance_2}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_6 is defined %}
+			<dt>magic difficulty 6</dt>
+		<dd> {{ variables.magic_difficulty_6}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_6 is defined %}
+			<dt>trappings description 6</dt>
+		<dd> {{ variables.trappings_description_6}} </dd>
+		{% endif %}
+	{% if variables.ritual_casting_time_4 is defined %}
+			<dt>ritual casting time 4</dt>
+		<dd> {{ variables.ritual_casting_time_4}} </dd>
+		{% endif %}
+	{% if variables.alignment_corruption is defined %}
+			<dt>alignment corruption</dt>
+		<dd> {{ variables.alignment_corruption}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_interrogation_focus is defined %}
+			<dt>skill willpower interrogation focus</dt>
+		<dd> {{ variables.skill_willpower_interrogation_focus}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_coordination_30 is defined %}
+			<dt>skill agility coordination 30</dt>
+		<dd> {{ variables.skill_agility_coordination_30}} </dd>
+		{% endif %}
+	{% if variables.attribute_intelligence_advance_3 is defined %}
+			<dt>attribute intelligence advance 3</dt>
+		<dd> {{ variables.attribute_intelligence_advance_3}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_7 is defined %}
+			<dt>magic difficulty 7</dt>
+		<dd> {{ variables.magic_difficulty_7}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_7 is defined %}
+			<dt>trappings description 7</dt>
+		<dd> {{ variables.trappings_description_7}} </dd>
+		{% endif %}
+	{% if variables.ritual_reagents_4 is defined %}
+			<dt>ritual reagents 4</dt>
+		<dd> {{ variables.ritual_reagents_4}} </dd>
+		{% endif %}
+	{% if variables.alignment_order_ranks is defined %}
+			<dt>alignment order ranks</dt>
+		<dd> {{ variables.alignment_order_ranks}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_resolve_focus is defined %}
+			<dt>skill willpower resolve focus</dt>
+		<dd> {{ variables.skill_willpower_resolve_focus}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_pilot_10 is defined %}
+			<dt>skill agility pilot 10</dt>
+		<dd> {{ variables.skill_agility_pilot_10}} </dd>
+		{% endif %}
+	{% if variables.attribute_intelligence_advance_4 is defined %}
+			<dt>attribute intelligence advance 4</dt>
+		<dd> {{ variables.attribute_intelligence_advance_4}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_8 is defined %}
+			<dt>magic difficulty 8</dt>
+		<dd> {{ variables.magic_difficulty_8}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_8 is defined %}
+			<dt>trappings description 8</dt>
+		<dd> {{ variables.trappings_description_8}} </dd>
+		{% endif %}
+	{% if variables.ritual_conidition_4 is defined %}
+			<dt>ritual conidition 4</dt>
+		<dd> {{ variables.ritual_conidition_4}} </dd>
+		{% endif %}
+	{% if variables.alignment_chaos_ranks is defined %}
+			<dt>alignment chaos ranks</dt>
+		<dd> {{ variables.alignment_chaos_ranks}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_tradecraft_focus is defined %}
+			<dt>skill willpower tradecraft focus</dt>
+		<dd> {{ variables.skill_willpower_tradecraft_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_distance_4 is defined %}
+			<dt>weapon distance 4</dt>
+		<dd> {{ variables.weapon_distance_4}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_pilot_20 is defined %}
+			<dt>skill agility pilot 20</dt>
+		<dd> {{ variables.skill_agility_pilot_20}} </dd>
+		{% endif %}
+	{% if variables.attribute_intelligence_advance_5 is defined %}
+			<dt>attribute intelligence advance 5</dt>
+		<dd> {{ variables.attribute_intelligence_advance_5}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_9 is defined %}
+			<dt>magic difficulty 9</dt>
+		<dd> {{ variables.magic_difficulty_9}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_9 is defined %}
+			<dt>trappings description 9</dt>
+		<dd> {{ variables.trappings_description_9}} </dd>
+		{% endif %}
+	{% if variables.ritual_channel_power_4 is defined %}
+			<dt>ritual channel power 4</dt>
+		<dd> {{ variables.ritual_channel_power_4}} </dd>
+		{% endif %}
+	{% if variables.alignment_permanent_chaos_ranks is defined %}
+			<dt>alignment permanent chaos ranks</dt>
+		<dd> {{ variables.alignment_permanent_chaos_ranks}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_bargain_focus is defined %}
+			<dt>skill fellowship bargain focus</dt>
+		<dd> {{ variables.skill_fellowship_bargain_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_damage_4 is defined %}
+			<dt>weapon damage 4</dt>
+		<dd> {{ variables.weapon_damage_4}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_pilot_30 is defined %}
+			<dt>skill agility pilot 30</dt>
+		<dd> {{ variables.skill_agility_pilot_30}} </dd>
+		{% endif %}
+	{% if variables.attribute_intelligence_advance_6 is defined %}
+			<dt>attribute intelligence advance 6</dt>
+		<dd> {{ variables.attribute_intelligence_advance_6}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_10 is defined %}
+			<dt>magic difficulty 10</dt>
+		<dd> {{ variables.magic_difficulty_10}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_10 is defined %}
+			<dt>trappings description 10</dt>
+		<dd> {{ variables.trappings_description_10}} </dd>
+		{% endif %}
+	{% if variables.ritual_difficulty_rating_4 is defined %}
+			<dt>ritual difficulty rating 4</dt>
+		<dd> {{ variables.ritual_difficulty_rating_4}} </dd>
+		{% endif %}
+	{% if variables.alignment_permnanent_order_ranks is defined %}
+			<dt>alignment permnanent order ranks</dt>
+		<dd> {{ variables.alignment_permnanent_order_ranks}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_charm_focus is defined %}
+			<dt>skill fellowship charm focus</dt>
+		<dd> {{ variables.skill_fellowship_charm_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_qualities_4 is defined %}
+			<dt>weapon qualities 4</dt>
+		<dd> {{ variables.weapon_qualities_4}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_ride_10 is defined %}
+			<dt>skill agility ride 10</dt>
+		<dd> {{ variables.skill_agility_ride_10}} </dd>
+		{% endif %}
+	{% if variables.attribute_willpower_advance_1 is defined %}
+			<dt>attribute willpower advance 1</dt>
+		<dd> {{ variables.attribute_willpower_advance_1}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_11 is defined %}
+			<dt>magic difficulty 11</dt>
+		<dd> {{ variables.magic_difficulty_11}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_11 is defined %}
+			<dt>trappings description 11</dt>
+		<dd> {{ variables.trappings_description_11}} </dd>
+		{% endif %}
+	{% if variables.ritual_consequences_4 is defined %}
+			<dt>ritual consequences 4</dt>
+		<dd> {{ variables.ritual_consequences_4}} </dd>
+		{% endif %}
+	{% if variables.attribute_combat is defined %}
+			<dt>attribute combat</dt>
+		<dd> {{ variables.attribute_combat}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_disguise_focus is defined %}
+			<dt>skill fellowship disguise focus</dt>
+		<dd> {{ variables.skill_fellowship_disguise_focus}} </dd>
+		{% endif %}
+	{% if variables.weapon_encumbrance_4 is defined %}
+			<dt>weapon encumbrance 4</dt>
+		<dd> {{ variables.weapon_encumbrance_4}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_ride_20 is defined %}
+			<dt>skill agility ride 20</dt>
+		<dd> {{ variables.skill_agility_ride_20}} </dd>
+		{% endif %}
+	{% if variables.attribute_willpower_advance_2 is defined %}
+			<dt>attribute willpower advance 2</dt>
+		<dd> {{ variables.attribute_willpower_advance_2}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_12 is defined %}
+			<dt>magic difficulty 12</dt>
+		<dd> {{ variables.magic_difficulty_12}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_12 is defined %}
+			<dt>trappings description 12</dt>
+		<dd> {{ variables.trappings_description_12}} </dd>
+		{% endif %}
+	{% if variables.ritual_effects_4 is defined %}
+			<dt>ritual effects 4</dt>
+		<dd> {{ variables.ritual_effects_4}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_guile_focus is defined %}
+			<dt>skill fellowship guile focus</dt>
+		<dd> {{ variables.skill_fellowship_guile_focus}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_ride_30 is defined %}
+			<dt>skill agility ride 30</dt>
+		<dd> {{ variables.skill_agility_ride_30}} </dd>
+		{% endif %}
+	{% if variables.attribute_willpower_advance_3 is defined %}
+			<dt>attribute willpower advance 3</dt>
+		<dd> {{ variables.attribute_willpower_advance_3}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_13 is defined %}
+			<dt>magic difficulty 13</dt>
+		<dd> {{ variables.magic_difficulty_13}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_13 is defined %}
+			<dt>trappings description 13</dt>
+		<dd> {{ variables.trappings_description_13}} </dd>
+		{% endif %}
+	{% if variables.ritual_name_5 is defined %}
+			<dt>ritual name 5</dt>
+		<dd> {{ variables.ritual_name_5}} </dd>
+		{% endif %}
+	{% if variables.attribute_combat_bonus_mod is defined %}
+			<dt>attribute combat bonus mod</dt>
+		<dd> {{ variables.attribute_combat_bonus_mod}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_handle_animal_focus is defined %}
+			<dt>skill fellowship handle animal focus</dt>
+		<dd> {{ variables.skill_fellowship_handle_animal_focus}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_skulduggery_10 is defined %}
+			<dt>skill agility skulduggery 10</dt>
+		<dd> {{ variables.skill_agility_skulduggery_10}} </dd>
+		{% endif %}
+	{% if variables.attribute_willpower_advance_4 is defined %}
+			<dt>attribute willpower advance 4</dt>
+		<dd> {{ variables.attribute_willpower_advance_4}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_14 is defined %}
+			<dt>magic difficulty 14</dt>
+		<dd> {{ variables.magic_difficulty_14}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_14 is defined %}
+			<dt>trappings description 14</dt>
+		<dd> {{ variables.trappings_description_14}} </dd>
+		{% endif %}
+	{% if variables.ritual_casting_time_5 is defined %}
+			<dt>ritual casting time 5</dt>
+		<dd> {{ variables.ritual_casting_time_5}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_leadership_focus is defined %}
+			<dt>skill fellowship leadership focus</dt>
+		<dd> {{ variables.skill_fellowship_leadership_focus}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_skulduggery_20 is defined %}
+			<dt>skill agility skulduggery 20</dt>
+		<dd> {{ variables.skill_agility_skulduggery_20}} </dd>
+		{% endif %}
+	{% if variables.attribute_willpower_advance_5 is defined %}
+			<dt>attribute willpower advance 5</dt>
+		<dd> {{ variables.attribute_willpower_advance_5}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_15 is defined %}
+			<dt>magic difficulty 15</dt>
+		<dd> {{ variables.magic_difficulty_15}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_15 is defined %}
+			<dt>trappings description 15</dt>
+		<dd> {{ variables.trappings_description_15}} </dd>
+		{% endif %}
+	{% if variables.ritual_reagents_5 is defined %}
+			<dt>ritual reagents 5</dt>
+		<dd> {{ variables.ritual_reagents_5}} </dd>
+		{% endif %}
+	{% if variables.attribute_brawn is defined %}
+			<dt>attribute brawn</dt>
+		<dd> {{ variables.attribute_brawn}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_rumor_focus is defined %}
+			<dt>skill fellowship rumor focus</dt>
+		<dd> {{ variables.skill_fellowship_rumor_focus}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_skulduggery_30 is defined %}
+			<dt>skill agility skulduggery 30</dt>
+		<dd> {{ variables.skill_agility_skulduggery_30}} </dd>
+		{% endif %}
+	{% if variables.attribute_willpower_advance_6 is defined %}
+			<dt>attribute willpower advance 6</dt>
+		<dd> {{ variables.attribute_willpower_advance_6}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_16 is defined %}
+			<dt>magic difficulty 16</dt>
+		<dd> {{ variables.magic_difficulty_16}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_16 is defined %}
+			<dt>trappings description 16</dt>
+		<dd> {{ variables.trappings_description_16}} </dd>
+		{% endif %}
+	{% if variables.ritual_conidition_5 is defined %}
+			<dt>ritual conidition 5</dt>
+		<dd> {{ variables.ritual_conidition_5}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_stealth_10 is defined %}
+			<dt>skill agility stealth 10</dt>
+		<dd> {{ variables.skill_agility_stealth_10}} </dd>
+		{% endif %}
+	{% if variables.attribute_fellowship_advance_1 is defined %}
+			<dt>attribute fellowship advance 1</dt>
+		<dd> {{ variables.attribute_fellowship_advance_1}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_17 is defined %}
+			<dt>magic difficulty 17</dt>
+		<dd> {{ variables.magic_difficulty_17}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_17 is defined %}
+			<dt>trappings description 17</dt>
+		<dd> {{ variables.trappings_description_17}} </dd>
+		{% endif %}
+	{% if variables.ritual_channel_power_5 is defined %}
+			<dt>ritual channel power 5</dt>
+		<dd> {{ variables.ritual_channel_power_5}} </dd>
+		{% endif %}
+	{% if variables.attribute_brawn_bonus_mod is defined %}
+			<dt>attribute brawn bonus mod</dt>
+		<dd> {{ variables.attribute_brawn_bonus_mod}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_stealth_20 is defined %}
+			<dt>skill agility stealth 20</dt>
+		<dd> {{ variables.skill_agility_stealth_20}} </dd>
+		{% endif %}
+	{% if variables.attribute_fellowship_advance_2 is defined %}
+			<dt>attribute fellowship advance 2</dt>
+		<dd> {{ variables.attribute_fellowship_advance_2}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_18 is defined %}
+			<dt>magic difficulty 18</dt>
+		<dd> {{ variables.magic_difficulty_18}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_18 is defined %}
+			<dt>trappings description 18</dt>
+		<dd> {{ variables.trappings_description_18}} </dd>
+		{% endif %}
+	{% if variables.ritual_difficulty_rating_5 is defined %}
+			<dt>ritual difficulty rating 5</dt>
+		<dd> {{ variables.ritual_difficulty_rating_5}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_stealth_30 is defined %}
+			<dt>skill agility stealth 30</dt>
+		<dd> {{ variables.skill_agility_stealth_30}} </dd>
+		{% endif %}
+	{% if variables.attribute_fellowship_advance_3 is defined %}
+			<dt>attribute fellowship advance 3</dt>
+		<dd> {{ variables.attribute_fellowship_advance_3}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_19 is defined %}
+			<dt>magic difficulty 19</dt>
+		<dd> {{ variables.magic_difficulty_19}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_19 is defined %}
+			<dt>trappings description 19</dt>
+		<dd> {{ variables.trappings_description_19}} </dd>
+		{% endif %}
+	{% if variables.ritual_consequences_5 is defined %}
+			<dt>ritual consequences 5</dt>
+		<dd> {{ variables.ritual_consequences_5}} </dd>
+		{% endif %}
+	{% if variables.attribute_agility is defined %}
+			<dt>attribute agility</dt>
+		<dd> {{ variables.attribute_agility}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_awareness_10 is defined %}
+			<dt>skill perception awareness 10</dt>
+		<dd> {{ variables.skill_perception_awareness_10}} </dd>
+		{% endif %}
+	{% if variables.attribute_fellowship_advance_4 is defined %}
+			<dt>attribute fellowship advance 4</dt>
+		<dd> {{ variables.attribute_fellowship_advance_4}} </dd>
+		{% endif %}
+	{% if variables.magic_difficulty_20 is defined %}
+			<dt>magic difficulty 20</dt>
+		<dd> {{ variables.magic_difficulty_20}} </dd>
+		{% endif %}
+	{% if variables.trappings_description_20 is defined %}
+			<dt>trappings description 20</dt>
+		<dd> {{ variables.trappings_description_20}} </dd>
+		{% endif %}
+	{% if variables.ritual_effects_5 is defined %}
+			<dt>ritual effects 5</dt>
+		<dd> {{ variables.ritual_effects_5}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_awareness_20 is defined %}
+			<dt>skill perception awareness 20</dt>
+		<dd> {{ variables.skill_perception_awareness_20}} </dd>
+		{% endif %}
+	{% if variables.attribute_fellowship_advance_5 is defined %}
+			<dt>attribute fellowship advance 5</dt>
+		<dd> {{ variables.attribute_fellowship_advance_5}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_1 is defined %}
+			<dt>magic reagent 1</dt>
+		<dd> {{ variables.magic_reagent_1}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_1 is defined %}
+			<dt>trappings encumbrance 1</dt>
+		<dd> {{ variables.trappings_encumbrance_1}} </dd>
+		{% endif %}
+	{% if variables.ritual_name_6 is defined %}
+			<dt>ritual name 6</dt>
+		<dd> {{ variables.ritual_name_6}} </dd>
+		{% endif %}
+	{% if variables.attribute_agility_bonus_mod is defined %}
+			<dt>attribute agility bonus mod</dt>
+		<dd> {{ variables.attribute_agility_bonus_mod}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_awareness_30 is defined %}
+			<dt>skill perception awareness 30</dt>
+		<dd> {{ variables.skill_perception_awareness_30}} </dd>
+		{% endif %}
+	{% if variables.attribute_fellowship_advance_6 is defined %}
+			<dt>attribute fellowship advance 6</dt>
+		<dd> {{ variables.attribute_fellowship_advance_6}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_2 is defined %}
+			<dt>magic reagent 2</dt>
+		<dd> {{ variables.magic_reagent_2}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_2 is defined %}
+			<dt>trappings encumbrance 2</dt>
+		<dd> {{ variables.trappings_encumbrance_2}} </dd>
+		{% endif %}
+	{% if variables.ritual_casting_time_6 is defined %}
+			<dt>ritual casting time 6</dt>
+		<dd> {{ variables.ritual_casting_time_6}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_eavesdrop_10 is defined %}
+			<dt>skill perception eavesdrop 10</dt>
+		<dd> {{ variables.skill_perception_eavesdrop_10}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_3 is defined %}
+			<dt>magic reagent 3</dt>
+		<dd> {{ variables.magic_reagent_3}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_3 is defined %}
+			<dt>trappings encumbrance 3</dt>
+		<dd> {{ variables.trappings_encumbrance_3}} </dd>
+		{% endif %}
+	{% if variables.ritual_reagents_6 is defined %}
+			<dt>ritual reagents 6</dt>
+		<dd> {{ variables.ritual_reagents_6}} </dd>
+		{% endif %}
+	{% if variables.attribute_perception is defined %}
+			<dt>attribute perception</dt>
+		<dd> {{ variables.attribute_perception}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_eavesdrop_20 is defined %}
+			<dt>skill perception eavesdrop 20</dt>
+		<dd> {{ variables.skill_perception_eavesdrop_20}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_4 is defined %}
+			<dt>magic reagent 4</dt>
+		<dd> {{ variables.magic_reagent_4}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_4 is defined %}
+			<dt>trappings encumbrance 4</dt>
+		<dd> {{ variables.trappings_encumbrance_4}} </dd>
+		{% endif %}
+	{% if variables.ritual_conidition_6 is defined %}
+			<dt>ritual conidition 6</dt>
+		<dd> {{ variables.ritual_conidition_6}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_eavesdrop_30 is defined %}
+			<dt>skill perception eavesdrop 30</dt>
+		<dd> {{ variables.skill_perception_eavesdrop_30}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_5 is defined %}
+			<dt>magic reagent 5</dt>
+		<dd> {{ variables.magic_reagent_5}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_5 is defined %}
+			<dt>trappings encumbrance 5</dt>
+		<dd> {{ variables.trappings_encumbrance_5}} </dd>
+		{% endif %}
+	{% if variables.ritual_channel_power_6 is defined %}
+			<dt>ritual channel power 6</dt>
+		<dd> {{ variables.ritual_channel_power_6}} </dd>
+		{% endif %}
+	{% if variables.attribute_perception_bonus_mod is defined %}
+			<dt>attribute perception bonus mod</dt>
+		<dd> {{ variables.attribute_perception_bonus_mod}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_scrutinize_10 is defined %}
+			<dt>skill perception scrutinize 10</dt>
+		<dd> {{ variables.skill_perception_scrutinize_10}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_6 is defined %}
+			<dt>magic reagent 6</dt>
+		<dd> {{ variables.magic_reagent_6}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_6 is defined %}
+			<dt>trappings encumbrance 6</dt>
+		<dd> {{ variables.trappings_encumbrance_6}} </dd>
+		{% endif %}
+	{% if variables.ritual_difficulty_rating_6 is defined %}
+			<dt>ritual difficulty rating 6</dt>
+		<dd> {{ variables.ritual_difficulty_rating_6}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_scrutinize_20 is defined %}
+			<dt>skill perception scrutinize 20</dt>
+		<dd> {{ variables.skill_perception_scrutinize_20}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_7 is defined %}
+			<dt>magic reagent 7</dt>
+		<dd> {{ variables.magic_reagent_7}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_7 is defined %}
+			<dt>trappings encumbrance 7</dt>
+		<dd> {{ variables.trappings_encumbrance_7}} </dd>
+		{% endif %}
+	{% if variables.ritual_consequences_6 is defined %}
+			<dt>ritual consequences 6</dt>
+		<dd> {{ variables.ritual_consequences_6}} </dd>
+		{% endif %}
+	{% if variables.attribute_intelligence is defined %}
+			<dt>attribute intelligence</dt>
+		<dd> {{ variables.attribute_intelligence}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_scrutinize_30 is defined %}
+			<dt>skill perception scrutinize 30</dt>
+		<dd> {{ variables.skill_perception_scrutinize_30}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_8 is defined %}
+			<dt>magic reagent 8</dt>
+		<dd> {{ variables.magic_reagent_8}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_8 is defined %}
+			<dt>trappings encumbrance 8</dt>
+		<dd> {{ variables.trappings_encumbrance_8}} </dd>
+		{% endif %}
+	{% if variables.ritual_effects_6 is defined %}
+			<dt>ritual effects 6</dt>
+		<dd> {{ variables.ritual_effects_6}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_survival_10 is defined %}
+			<dt>skill perception survival 10</dt>
+		<dd> {{ variables.skill_perception_survival_10}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_9 is defined %}
+			<dt>magic reagent 9</dt>
+		<dd> {{ variables.magic_reagent_9}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_9 is defined %}
+			<dt>trappings encumbrance 9</dt>
+		<dd> {{ variables.trappings_encumbrance_9}} </dd>
+		{% endif %}
+	{% if variables.ritual_name_7 is defined %}
+			<dt>ritual name 7</dt>
+		<dd> {{ variables.ritual_name_7}} </dd>
+		{% endif %}
+	{% if variables.attribute_intelligence_bonus_mod is defined %}
+			<dt>attribute intelligence bonus mod</dt>
+		<dd> {{ variables.attribute_intelligence_bonus_mod}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_survival_20 is defined %}
+			<dt>skill perception survival 20</dt>
+		<dd> {{ variables.skill_perception_survival_20}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_10 is defined %}
+			<dt>magic reagent 10</dt>
+		<dd> {{ variables.magic_reagent_10}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_10 is defined %}
+			<dt>trappings encumbrance 10</dt>
+		<dd> {{ variables.trappings_encumbrance_10}} </dd>
+		{% endif %}
+	{% if variables.ritual_casting_time_7 is defined %}
+			<dt>ritual casting time 7</dt>
+		<dd> {{ variables.ritual_casting_time_7}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_survival_30 is defined %}
+			<dt>skill perception survival 30</dt>
+		<dd> {{ variables.skill_perception_survival_30}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_11 is defined %}
+			<dt>magic reagent 11</dt>
+		<dd> {{ variables.magic_reagent_11}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_11 is defined %}
+			<dt>trappings encumbrance 11</dt>
+		<dd> {{ variables.trappings_encumbrance_11}} </dd>
+		{% endif %}
+	{% if variables.ritual_reagents_7 is defined %}
+			<dt>ritual reagents 7</dt>
+		<dd> {{ variables.ritual_reagents_7}} </dd>
+		{% endif %}
+	{% if variables.attribute_willpower is defined %}
+			<dt>attribute willpower</dt>
+		<dd> {{ variables.attribute_willpower}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_alchemy_10 is defined %}
+			<dt>skill intelligence alchemy 10</dt>
+		<dd> {{ variables.skill_intelligence_alchemy_10}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_12 is defined %}
+			<dt>magic reagent 12</dt>
+		<dd> {{ variables.magic_reagent_12}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_12 is defined %}
+			<dt>trappings encumbrance 12</dt>
+		<dd> {{ variables.trappings_encumbrance_12}} </dd>
+		{% endif %}
+	{% if variables.ritual_conidition_7 is defined %}
+			<dt>ritual conidition 7</dt>
+		<dd> {{ variables.ritual_conidition_7}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_alchemy_20 is defined %}
+			<dt>skill intelligence alchemy 20</dt>
+		<dd> {{ variables.skill_intelligence_alchemy_20}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_13 is defined %}
+			<dt>magic reagent 13</dt>
+		<dd> {{ variables.magic_reagent_13}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_13 is defined %}
+			<dt>trappings encumbrance 13</dt>
+		<dd> {{ variables.trappings_encumbrance_13}} </dd>
+		{% endif %}
+	{% if variables.ritual_channel_power_7 is defined %}
+			<dt>ritual channel power 7</dt>
+		<dd> {{ variables.ritual_channel_power_7}} </dd>
+		{% endif %}
+	{% if variables.attribute_willpower_bonus_mod is defined %}
+			<dt>attribute willpower bonus mod</dt>
+		<dd> {{ variables.attribute_willpower_bonus_mod}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_alchemy_30 is defined %}
+			<dt>skill intelligence alchemy 30</dt>
+		<dd> {{ variables.skill_intelligence_alchemy_30}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_14 is defined %}
+			<dt>magic reagent 14</dt>
+		<dd> {{ variables.magic_reagent_14}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_14 is defined %}
+			<dt>trappings encumbrance 14</dt>
+		<dd> {{ variables.trappings_encumbrance_14}} </dd>
+		{% endif %}
+	{% if variables.ritual_difficulty_rating_7 is defined %}
+			<dt>ritual difficulty rating 7</dt>
+		<dd> {{ variables.ritual_difficulty_rating_7}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_counterfeit_10 is defined %}
+			<dt>skill intelligence counterfeit 10</dt>
+		<dd> {{ variables.skill_intelligence_counterfeit_10}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_15 is defined %}
+			<dt>magic reagent 15</dt>
+		<dd> {{ variables.magic_reagent_15}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_15 is defined %}
+			<dt>trappings encumbrance 15</dt>
+		<dd> {{ variables.trappings_encumbrance_15}} </dd>
+		{% endif %}
+	{% if variables.ritual_consequences_7 is defined %}
+			<dt>ritual consequences 7</dt>
+		<dd> {{ variables.ritual_consequences_7}} </dd>
+		{% endif %}
+	{% if variables.attribute_fellowship is defined %}
+			<dt>attribute fellowship</dt>
+		<dd> {{ variables.attribute_fellowship}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_counterfeit_20 is defined %}
+			<dt>skill intelligence counterfeit 20</dt>
+		<dd> {{ variables.skill_intelligence_counterfeit_20}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_16 is defined %}
+			<dt>magic reagent 16</dt>
+		<dd> {{ variables.magic_reagent_16}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_16 is defined %}
+			<dt>trappings encumbrance 16</dt>
+		<dd> {{ variables.trappings_encumbrance_16}} </dd>
+		{% endif %}
+	{% if variables.ritual_effects_7 is defined %}
+			<dt>ritual effects 7</dt>
+		<dd> {{ variables.ritual_effects_7}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_counterfeit_30 is defined %}
+			<dt>skill intelligence counterfeit 30</dt>
+		<dd> {{ variables.skill_intelligence_counterfeit_30}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_17 is defined %}
+			<dt>magic reagent 17</dt>
+		<dd> {{ variables.magic_reagent_17}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_17 is defined %}
+			<dt>trappings encumbrance 17</dt>
+		<dd> {{ variables.trappings_encumbrance_17}} </dd>
+		{% endif %}
+	{% if variables.ritual_name_8 is defined %}
+			<dt>ritual name 8</dt>
+		<dd> {{ variables.ritual_name_8}} </dd>
+		{% endif %}
+	{% if variables.attribute_fellowship_bonus_mod is defined %}
+			<dt>attribute fellowship bonus mod</dt>
+		<dd> {{ variables.attribute_fellowship_bonus_mod}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_education_10 is defined %}
+			<dt>skill intelligence education 10</dt>
+		<dd> {{ variables.skill_intelligence_education_10}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_18 is defined %}
+			<dt>magic reagent 18</dt>
+		<dd> {{ variables.magic_reagent_18}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_18 is defined %}
+			<dt>trappings encumbrance 18</dt>
+		<dd> {{ variables.trappings_encumbrance_18}} </dd>
+		{% endif %}
+	{% if variables.ritual_casting_time_8 is defined %}
+			<dt>ritual casting time 8</dt>
+		<dd> {{ variables.ritual_casting_time_8}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_education_20 is defined %}
+			<dt>skill intelligence education 20</dt>
+		<dd> {{ variables.skill_intelligence_education_20}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_19 is defined %}
+			<dt>magic reagent 19</dt>
+		<dd> {{ variables.magic_reagent_19}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_19 is defined %}
+			<dt>trappings encumbrance 19</dt>
+		<dd> {{ variables.trappings_encumbrance_19}} </dd>
+		{% endif %}
+	{% if variables.ritual_reagents_8 is defined %}
+			<dt>ritual reagents 8</dt>
+		<dd> {{ variables.ritual_reagents_8}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_education_30 is defined %}
+			<dt>skill intelligence education 30</dt>
+		<dd> {{ variables.skill_intelligence_education_30}} </dd>
+		{% endif %}
+	{% if variables.magic_reagent_20 is defined %}
+			<dt>magic reagent 20</dt>
+		<dd> {{ variables.magic_reagent_20}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance_20 is defined %}
+			<dt>trappings encumbrance 20</dt>
+		<dd> {{ variables.trappings_encumbrance_20}} </dd>
+		{% endif %}
+	{% if variables.ritual_conidition_8 is defined %}
+			<dt>ritual conidition 8</dt>
+		<dd> {{ variables.ritual_conidition_8}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_folklore_10 is defined %}
+			<dt>skill intelligence folklore 10</dt>
+		<dd> {{ variables.skill_intelligence_folklore_10}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_1 is defined %}
+			<dt>magic distance 1</dt>
+		<dd> {{ variables.magic_distance_1}} </dd>
+		{% endif %}
+	{% if variables.ritual_channel_power_8 is defined %}
+			<dt>ritual channel power 8</dt>
+		<dd> {{ variables.ritual_channel_power_8}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_folklore_20 is defined %}
+			<dt>skill intelligence folklore 20</dt>
+		<dd> {{ variables.skill_intelligence_folklore_20}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_2 is defined %}
+			<dt>magic distance 2</dt>
+		<dd> {{ variables.magic_distance_2}} </dd>
+		{% endif %}
+	{% if variables.ritual_difficulty_rating_8 is defined %}
+			<dt>ritual difficulty rating 8</dt>
+		<dd> {{ variables.ritual_difficulty_rating_8}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_folklore_30 is defined %}
+			<dt>skill intelligence folklore 30</dt>
+		<dd> {{ variables.skill_intelligence_folklore_30}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_3 is defined %}
+			<dt>magic distance 3</dt>
+		<dd> {{ variables.magic_distance_3}} </dd>
+		{% endif %}
+	{% if variables.ritual_consequences_8 is defined %}
+			<dt>ritual consequences 8</dt>
+		<dd> {{ variables.ritual_consequences_8}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_gamble_10 is defined %}
+			<dt>skill intelligence gamble 10</dt>
+		<dd> {{ variables.skill_intelligence_gamble_10}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_4 is defined %}
+			<dt>magic distance 4</dt>
+		<dd> {{ variables.magic_distance_4}} </dd>
+		{% endif %}
+	{% if variables.ritual_effects_8 is defined %}
+			<dt>ritual effects 8</dt>
+		<dd> {{ variables.ritual_effects_8}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_gamble_20 is defined %}
+			<dt>skill intelligence gamble 20</dt>
+		<dd> {{ variables.skill_intelligence_gamble_20}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_5 is defined %}
+			<dt>magic distance 5</dt>
+		<dd> {{ variables.magic_distance_5}} </dd>
+		{% endif %}
+	{% if variables.ritual_name_9 is defined %}
+			<dt>ritual name 9</dt>
+		<dd> {{ variables.ritual_name_9}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_gamble_30 is defined %}
+			<dt>skill intelligence gamble 30</dt>
+		<dd> {{ variables.skill_intelligence_gamble_30}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_6 is defined %}
+			<dt>magic distance 6</dt>
+		<dd> {{ variables.magic_distance_6}} </dd>
+		{% endif %}
+	{% if variables.ritual_casting_time_9 is defined %}
+			<dt>ritual casting time 9</dt>
+		<dd> {{ variables.ritual_casting_time_9}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_heal_10 is defined %}
+			<dt>skill intelligence heal 10</dt>
+		<dd> {{ variables.skill_intelligence_heal_10}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_7 is defined %}
+			<dt>magic distance 7</dt>
+		<dd> {{ variables.magic_distance_7}} </dd>
+		{% endif %}
+	{% if variables.ritual_reagents_9 is defined %}
+			<dt>ritual reagents 9</dt>
+		<dd> {{ variables.ritual_reagents_9}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_heal_20 is defined %}
+			<dt>skill intelligence heal 20</dt>
+		<dd> {{ variables.skill_intelligence_heal_20}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_8 is defined %}
+			<dt>magic distance 8</dt>
+		<dd> {{ variables.magic_distance_8}} </dd>
+		{% endif %}
+	{% if variables.ritual_conidition_9 is defined %}
+			<dt>ritual conidition 9</dt>
+		<dd> {{ variables.ritual_conidition_9}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_heal_30 is defined %}
+			<dt>skill intelligence heal 30</dt>
+		<dd> {{ variables.skill_intelligence_heal_30}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_9 is defined %}
+			<dt>magic distance 9</dt>
+		<dd> {{ variables.magic_distance_9}} </dd>
+		{% endif %}
+	{% if variables.ritual_channel_power_9 is defined %}
+			<dt>ritual channel power 9</dt>
+		<dd> {{ variables.ritual_channel_power_9}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_navigation_10 is defined %}
+			<dt>skill intelligence navigation 10</dt>
+		<dd> {{ variables.skill_intelligence_navigation_10}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_10 is defined %}
+			<dt>magic distance 10</dt>
+		<dd> {{ variables.magic_distance_10}} </dd>
+		{% endif %}
+	{% if variables.ritual_difficulty_rating_9 is defined %}
+			<dt>ritual difficulty rating 9</dt>
+		<dd> {{ variables.ritual_difficulty_rating_9}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_navigation_20 is defined %}
+			<dt>skill intelligence navigation 20</dt>
+		<dd> {{ variables.skill_intelligence_navigation_20}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_11 is defined %}
+			<dt>magic distance 11</dt>
+		<dd> {{ variables.magic_distance_11}} </dd>
+		{% endif %}
+	{% if variables.ritual_consequences_9 is defined %}
+			<dt>ritual consequences 9</dt>
+		<dd> {{ variables.ritual_consequences_9}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_navigation_30 is defined %}
+			<dt>skill intelligence navigation 30</dt>
+		<dd> {{ variables.skill_intelligence_navigation_30}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_12 is defined %}
+			<dt>magic distance 12</dt>
+		<dd> {{ variables.magic_distance_12}} </dd>
+		{% endif %}
+	{% if variables.ritual_effects_9 is defined %}
+			<dt>ritual effects 9</dt>
+		<dd> {{ variables.ritual_effects_9}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_warfare_10 is defined %}
+			<dt>skill intelligence warfare 10</dt>
+		<dd> {{ variables.skill_intelligence_warfare_10}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_13 is defined %}
+			<dt>magic distance 13</dt>
+		<dd> {{ variables.magic_distance_13}} </dd>
+		{% endif %}
+	{% if variables.ritual_name_10 is defined %}
+			<dt>ritual name 10</dt>
+		<dd> {{ variables.ritual_name_10}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_warfare_20 is defined %}
+			<dt>skill intelligence warfare 20</dt>
+		<dd> {{ variables.skill_intelligence_warfare_20}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_14 is defined %}
+			<dt>magic distance 14</dt>
+		<dd> {{ variables.magic_distance_14}} </dd>
+		{% endif %}
+	{% if variables.ritual_casting_time_10 is defined %}
+			<dt>ritual casting time 10</dt>
+		<dd> {{ variables.ritual_casting_time_10}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_warfare_30 is defined %}
+			<dt>skill intelligence warfare 30</dt>
+		<dd> {{ variables.skill_intelligence_warfare_30}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_15 is defined %}
+			<dt>magic distance 15</dt>
+		<dd> {{ variables.magic_distance_15}} </dd>
+		{% endif %}
+	{% if variables.ritual_reagents_10 is defined %}
+			<dt>ritual reagents 10</dt>
+		<dd> {{ variables.ritual_reagents_10}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_incantation_10 is defined %}
+			<dt>skill willpower incantation 10</dt>
+		<dd> {{ variables.skill_willpower_incantation_10}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_16 is defined %}
+			<dt>magic distance 16</dt>
+		<dd> {{ variables.magic_distance_16}} </dd>
+		{% endif %}
+	{% if variables.ritual_conidition_10 is defined %}
+			<dt>ritual conidition 10</dt>
+		<dd> {{ variables.ritual_conidition_10}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_incantation_20 is defined %}
+			<dt>skill willpower incantation 20</dt>
+		<dd> {{ variables.skill_willpower_incantation_20}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_17 is defined %}
+			<dt>magic distance 17</dt>
+		<dd> {{ variables.magic_distance_17}} </dd>
+		{% endif %}
+	{% if variables.ritual_channel_power_10 is defined %}
+			<dt>ritual channel power 10</dt>
+		<dd> {{ variables.ritual_channel_power_10}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_incantation_30 is defined %}
+			<dt>skill willpower incantation 30</dt>
+		<dd> {{ variables.skill_willpower_incantation_30}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_18 is defined %}
+			<dt>magic distance 18</dt>
+		<dd> {{ variables.magic_distance_18}} </dd>
+		{% endif %}
+	{% if variables.ritual_difficulty_rating_10 is defined %}
+			<dt>ritual difficulty rating 10</dt>
+		<dd> {{ variables.ritual_difficulty_rating_10}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_interrogation_10 is defined %}
+			<dt>skill willpower interrogation 10</dt>
+		<dd> {{ variables.skill_willpower_interrogation_10}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_19 is defined %}
+			<dt>magic distance 19</dt>
+		<dd> {{ variables.magic_distance_19}} </dd>
+		{% endif %}
+	{% if variables.ritual_consequences_10 is defined %}
+			<dt>ritual consequences 10</dt>
+		<dd> {{ variables.ritual_consequences_10}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_interrogation_20 is defined %}
+			<dt>skill willpower interrogation 20</dt>
+		<dd> {{ variables.skill_willpower_interrogation_20}} </dd>
+		{% endif %}
+	{% if variables.magic_distance_20 is defined %}
+			<dt>magic distance 20</dt>
+		<dd> {{ variables.magic_distance_20}} </dd>
+		{% endif %}
+	{% if variables.ritual_effects_10 is defined %}
+			<dt>ritual effects 10</dt>
+		<dd> {{ variables.ritual_effects_10}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_interrogation_30 is defined %}
+			<dt>skill willpower interrogation 30</dt>
+		<dd> {{ variables.skill_willpower_interrogation_30}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_1 is defined %}
+			<dt>magic duration 1</dt>
+		<dd> {{ variables.magic_duration_1}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_resolve_10 is defined %}
+			<dt>skill willpower resolve 10</dt>
+		<dd> {{ variables.skill_willpower_resolve_10}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_2 is defined %}
+			<dt>magic duration 2</dt>
+		<dd> {{ variables.magic_duration_2}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_resolve_20 is defined %}
+			<dt>skill willpower resolve 20</dt>
+		<dd> {{ variables.skill_willpower_resolve_20}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_3 is defined %}
+			<dt>magic duration 3</dt>
+		<dd> {{ variables.magic_duration_3}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_resolve_30 is defined %}
+			<dt>skill willpower resolve 30</dt>
+		<dd> {{ variables.skill_willpower_resolve_30}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_4 is defined %}
+			<dt>magic duration 4</dt>
+		<dd> {{ variables.magic_duration_4}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_tradecraft_10 is defined %}
+			<dt>skill willpower tradecraft 10</dt>
+		<dd> {{ variables.skill_willpower_tradecraft_10}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_5 is defined %}
+			<dt>magic duration 5</dt>
+		<dd> {{ variables.magic_duration_5}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_tradecraft_20 is defined %}
+			<dt>skill willpower tradecraft 20</dt>
+		<dd> {{ variables.skill_willpower_tradecraft_20}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_6 is defined %}
+			<dt>magic duration 6</dt>
+		<dd> {{ variables.magic_duration_6}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_tradecraft_30 is defined %}
+			<dt>skill willpower tradecraft 30</dt>
+		<dd> {{ variables.skill_willpower_tradecraft_30}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_7 is defined %}
+			<dt>magic duration 7</dt>
+		<dd> {{ variables.magic_duration_7}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_bargain_10 is defined %}
+			<dt>skill fellowship bargain 10</dt>
+		<dd> {{ variables.skill_fellowship_bargain_10}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_8 is defined %}
+			<dt>magic duration 8</dt>
+		<dd> {{ variables.magic_duration_8}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_bargain_20 is defined %}
+			<dt>skill fellowship bargain 20</dt>
+		<dd> {{ variables.skill_fellowship_bargain_20}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_9 is defined %}
+			<dt>magic duration 9</dt>
+		<dd> {{ variables.magic_duration_9}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_bargain_30 is defined %}
+			<dt>skill fellowship bargain 30</dt>
+		<dd> {{ variables.skill_fellowship_bargain_30}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_10 is defined %}
+			<dt>magic duration 10</dt>
+		<dd> {{ variables.magic_duration_10}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_charm_10 is defined %}
+			<dt>skill fellowship charm 10</dt>
+		<dd> {{ variables.skill_fellowship_charm_10}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_11 is defined %}
+			<dt>magic duration 11</dt>
+		<dd> {{ variables.magic_duration_11}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_charm_20 is defined %}
+			<dt>skill fellowship charm 20</dt>
+		<dd> {{ variables.skill_fellowship_charm_20}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_12 is defined %}
+			<dt>magic duration 12</dt>
+		<dd> {{ variables.magic_duration_12}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_charm_30 is defined %}
+			<dt>skill fellowship charm 30</dt>
+		<dd> {{ variables.skill_fellowship_charm_30}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_13 is defined %}
+			<dt>magic duration 13</dt>
+		<dd> {{ variables.magic_duration_13}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_disguise_10 is defined %}
+			<dt>skill fellowship disguise 10</dt>
+		<dd> {{ variables.skill_fellowship_disguise_10}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_14 is defined %}
+			<dt>magic duration 14</dt>
+		<dd> {{ variables.magic_duration_14}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_disguise_20 is defined %}
+			<dt>skill fellowship disguise 20</dt>
+		<dd> {{ variables.skill_fellowship_disguise_20}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_15 is defined %}
+			<dt>magic duration 15</dt>
+		<dd> {{ variables.magic_duration_15}} </dd>
+		{% endif %}
+	{% if variables.peril_threshold_base is defined %}
+			<dt>peril threshold base</dt>
+		<dd> {{ variables.peril_threshold_base}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_disguise_30 is defined %}
+			<dt>skill fellowship disguise 30</dt>
+		<dd> {{ variables.skill_fellowship_disguise_30}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_16 is defined %}
+			<dt>magic duration 16</dt>
+		<dd> {{ variables.magic_duration_16}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_guile_10 is defined %}
+			<dt>skill fellowship guile 10</dt>
+		<dd> {{ variables.skill_fellowship_guile_10}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_17 is defined %}
+			<dt>magic duration 17</dt>
+		<dd> {{ variables.magic_duration_17}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_guile_20 is defined %}
+			<dt>skill fellowship guile 20</dt>
+		<dd> {{ variables.skill_fellowship_guile_20}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_18 is defined %}
+			<dt>magic duration 18</dt>
+		<dd> {{ variables.magic_duration_18}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_guile_30 is defined %}
+			<dt>skill fellowship guile 30</dt>
+		<dd> {{ variables.skill_fellowship_guile_30}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_19 is defined %}
+			<dt>magic duration 19</dt>
+		<dd> {{ variables.magic_duration_19}} </dd>
+		{% endif %}
+	{% if variables.peril_condition_track_unhindered is defined %}
+			<dt>peril condition track unhindered</dt>
+		<dd> {{ variables.peril_condition_track_unhindered}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_handle_animal_10 is defined %}
+			<dt>skill fellowship handle animal 10</dt>
+		<dd> {{ variables.skill_fellowship_handle_animal_10}} </dd>
+		{% endif %}
+	{% if variables.magic_duration_20 is defined %}
+			<dt>magic duration 20</dt>
+		<dd> {{ variables.magic_duration_20}} </dd>
+		{% endif %}
+	{% if variables.peril_condition_track_ignore1 is defined %}
+			<dt>peril condition track ignore_1</dt>
+		<dd> {{ variables.peril_condition_track_ignore1}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_handle_animal_20 is defined %}
+			<dt>skill fellowship handle animal 20</dt>
+		<dd> {{ variables.skill_fellowship_handle_animal_20}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_1 is defined %}
+			<dt>magic effect 1</dt>
+		<dd> {{ variables.magic_effect_1}} </dd>
+		{% endif %}
+	{% if variables.peril_condition_track_ignore_2 is defined %}
+			<dt>peril condition track ignore 2</dt>
+		<dd> {{ variables.peril_condition_track_ignore_2}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_handle_animal_30 is defined %}
+			<dt>skill fellowship handle animal 30</dt>
+		<dd> {{ variables.skill_fellowship_handle_animal_30}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_2 is defined %}
+			<dt>magic effect 2</dt>
+		<dd> {{ variables.magic_effect_2}} </dd>
+		{% endif %}
+	{% if variables.peril_condition_track_ignore_3 is defined %}
+			<dt>peril condition track ignore 3</dt>
+		<dd> {{ variables.peril_condition_track_ignore_3}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_leadership_10 is defined %}
+			<dt>skill fellowship leadership 10</dt>
+		<dd> {{ variables.skill_fellowship_leadership_10}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_3 is defined %}
+			<dt>magic effect 3</dt>
+		<dd> {{ variables.magic_effect_3}} </dd>
+		{% endif %}
+	{% if variables.peril_condition_track_incapacitated is defined %}
+			<dt>peril condition track incapacitated</dt>
+		<dd> {{ variables.peril_condition_track_incapacitated}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_leadership_20 is defined %}
+			<dt>skill fellowship leadership 20</dt>
+		<dd> {{ variables.skill_fellowship_leadership_20}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_4 is defined %}
+			<dt>magic effect 4</dt>
+		<dd> {{ variables.magic_effect_4}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_leadership_30 is defined %}
+			<dt>skill fellowship leadership 30</dt>
+		<dd> {{ variables.skill_fellowship_leadership_30}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_5 is defined %}
+			<dt>magic effect 5</dt>
+		<dd> {{ variables.magic_effect_5}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_rumor_10 is defined %}
+			<dt>skill fellowship rumor 10</dt>
+		<dd> {{ variables.skill_fellowship_rumor_10}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_6 is defined %}
+			<dt>magic effect 6</dt>
+		<dd> {{ variables.magic_effect_6}} </dd>
+		{% endif %}
+	{% if variables.encumbrance_limit is defined %}
+			<dt>encumbrance limit</dt>
+		<dd> {{ variables.encumbrance_limit}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_rumor_20 is defined %}
+			<dt>skill fellowship rumor 20</dt>
+		<dd> {{ variables.skill_fellowship_rumor_20}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_7 is defined %}
+			<dt>magic effect 7</dt>
+		<dd> {{ variables.magic_effect_7}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_rumor_30 is defined %}
+			<dt>skill fellowship rumor 30</dt>
+		<dd> {{ variables.skill_fellowship_rumor_30}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_8 is defined %}
+			<dt>magic effect 8</dt>
+		<dd> {{ variables.magic_effect_8}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_9 is defined %}
+			<dt>magic effect 9</dt>
+		<dd> {{ variables.magic_effect_9}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_10 is defined %}
+			<dt>magic effect 10</dt>
+		<dd> {{ variables.magic_effect_10}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_11 is defined %}
+			<dt>magic effect 11</dt>
+		<dd> {{ variables.magic_effect_11}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_12 is defined %}
+			<dt>magic effect 12</dt>
+		<dd> {{ variables.magic_effect_12}} </dd>
+		{% endif %}
+	{% if variables.movement_base is defined %}
+			<dt>movement base</dt>
+		<dd> {{ variables.movement_base}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_13 is defined %}
+			<dt>magic effect 13</dt>
+		<dd> {{ variables.magic_effect_13}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_14 is defined %}
+			<dt>magic effect 14</dt>
+		<dd> {{ variables.magic_effect_14}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_15 is defined %}
+			<dt>magic effect 15</dt>
+		<dd> {{ variables.magic_effect_15}} </dd>
+		{% endif %}
+	{% if variables.damage_threshold is defined %}
+			<dt>damage threshold</dt>
+		<dd> {{ variables.damage_threshold}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_16 is defined %}
+			<dt>magic effect 16</dt>
+		<dd> {{ variables.magic_effect_16}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_17 is defined %}
+			<dt>magic effect 17</dt>
+		<dd> {{ variables.magic_effect_17}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_18 is defined %}
+			<dt>magic effect 18</dt>
+		<dd> {{ variables.magic_effect_18}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_19 is defined %}
+			<dt>magic effect 19</dt>
+		<dd> {{ variables.magic_effect_19}} </dd>
+		{% endif %}
+	{% if variables.damage_condition_track_unharmed is defined %}
+			<dt>damage condition track unharmed</dt>
+		<dd> {{ variables.damage_condition_track_unharmed}} </dd>
+		{% endif %}
+	{% if variables.magic_effect_20 is defined %}
+			<dt>magic effect 20</dt>
+		<dd> {{ variables.magic_effect_20}} </dd>
+		{% endif %}
+	{% if variables.damage_condition_track_light is defined %}
+			<dt>damage condition track light</dt>
+		<dd> {{ variables.damage_condition_track_light}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_1 is defined %}
+			<dt>magic critical success 1</dt>
+		<dd> {{ variables.magic_critical_success_1}} </dd>
+		{% endif %}
+	{% if variables.damage_condition_track_moderate is defined %}
+			<dt>damage condition track moderate</dt>
+		<dd> {{ variables.damage_condition_track_moderate}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_2 is defined %}
+			<dt>magic critical success 2</dt>
+		<dd> {{ variables.magic_critical_success_2}} </dd>
+		{% endif %}
+	{% if variables.damage_condition_track_serious is defined %}
+			<dt>damage condition track serious</dt>
+		<dd> {{ variables.damage_condition_track_serious}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_3 is defined %}
+			<dt>magic critical success 3</dt>
+		<dd> {{ variables.magic_critical_success_3}} </dd>
+		{% endif %}
+	{% if variables.damage_condition_track_grievous is defined %}
+			<dt>damage condition track grievous</dt>
+		<dd> {{ variables.damage_condition_track_grievous}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_4 is defined %}
+			<dt>magic critical success 4</dt>
+		<dd> {{ variables.magic_critical_success_4}} </dd>
+		{% endif %}
+	{% if variables.damage_condition_track_slain is defined %}
+			<dt>damage condition track slain</dt>
+		<dd> {{ variables.damage_condition_track_slain}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_5 is defined %}
+			<dt>magic critical success 5</dt>
+		<dd> {{ variables.magic_critical_success_5}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_6 is defined %}
+			<dt>magic critical success 6</dt>
+		<dd> {{ variables.magic_critical_success_6}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_7 is defined %}
+			<dt>magic critical success 7</dt>
+		<dd> {{ variables.magic_critical_success_7}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_8 is defined %}
+			<dt>magic critical success 8</dt>
+		<dd> {{ variables.magic_critical_success_8}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_9 is defined %}
+			<dt>magic critical success 9</dt>
+		<dd> {{ variables.magic_critical_success_9}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_10 is defined %}
+			<dt>magic critical success 10</dt>
+		<dd> {{ variables.magic_critical_success_10}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_11 is defined %}
+			<dt>magic critical success 11</dt>
+		<dd> {{ variables.magic_critical_success_11}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_12 is defined %}
+			<dt>magic critical success 12</dt>
+		<dd> {{ variables.magic_critical_success_12}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_13 is defined %}
+			<dt>magic critical success 13</dt>
+		<dd> {{ variables.magic_critical_success_13}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_14 is defined %}
+			<dt>magic critical success 14</dt>
+		<dd> {{ variables.magic_critical_success_14}} </dd>
+		{% endif %}
+	{% if variables.armor_name is defined %}
+			<dt>armor name</dt>
+		<dd> {{ variables.armor_name}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_15 is defined %}
+			<dt>magic critical success 15</dt>
+		<dd> {{ variables.magic_critical_success_15}} </dd>
+		{% endif %}
+	{% if variables.armor_dth_mod is defined %}
+			<dt>armor dth mod</dt>
+		<dd> {{ variables.armor_dth_mod}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_16 is defined %}
+			<dt>magic critical success 16</dt>
+		<dd> {{ variables.magic_critical_success_16}} </dd>
+		{% endif %}
+	{% if variables.armor_qualities is defined %}
+			<dt>armor qualities</dt>
+		<dd> {{ variables.armor_qualities}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_17 is defined %}
+			<dt>magic critical success 17</dt>
+		<dd> {{ variables.magic_critical_success_17}} </dd>
+		{% endif %}
+	{% if variables.armor_encumbrance is defined %}
+			<dt>armor encumbrance</dt>
+		<dd> {{ variables.armor_encumbrance}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_18 is defined %}
+			<dt>magic critical success 18</dt>
+		<dd> {{ variables.magic_critical_success_18}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_19 is defined %}
+			<dt>magic critical success 19</dt>
+		<dd> {{ variables.magic_critical_success_19}} </dd>
+		{% endif %}
+	{% if variables.magic_critical_success_20 is defined %}
+			<dt>magic critical success 20</dt>
+		<dd> {{ variables.magic_critical_success_20}} </dd>
+		{% endif %}
+	{% if variables.trappings_vehicle_name is defined %}
+			<dt>trappings vehicle name</dt>
+		<dd> {{ variables.trappings_vehicle_name}} </dd>
+		{% endif %}
+	{% if variables.trappings_vehicle_description is defined %}
+			<dt>trappings vehicle description</dt>
+		<dd> {{ variables.trappings_vehicle_description}} </dd>
+		{% endif %}
+	{% if variables.trappings_vehicle_encumbrance is defined %}
+			<dt>trappings vehicle encumbrance</dt>
+		<dd> {{ variables.trappings_vehicle_encumbrance}} </dd>
+		{% endif %}
+	{% if variables.injury_name is defined %}
+			<dt>injury name</dt>
+		<dd> {{ variables.injury_name}} </dd>
+		{% endif %}
+	{% if variables.injury_description is defined %}
+			<dt>injury description</dt>
+		<dd> {{ variables.injury_description}} </dd>
+		{% endif %}
+	{% if variables.talent_name is defined %}
+			<dt>talent name</dt>
+		<dd> {{ variables.talent_name}} </dd>
+		{% endif %}
+	{% if variables.talent_description is defined %}
+			<dt>talent description</dt>
+		<dd> {{ variables.talent_description}} </dd>
+		{% endif %}
+	{% if variables.wealth_gc is defined %}
+			<dt>wealth gc</dt>
+		<dd> {{ variables.wealth_gc}} </dd>
+		{% endif %}
+	{% if variables.wealth_ss is defined %}
+			<dt>wealth ss</dt>
+		<dd> {{ variables.wealth_ss}} </dd>
+		{% endif %}
+	{% if variables.wealth_bp is defined %}
+			<dt>wealth bp</dt>
+		<dd> {{ variables.wealth_bp}} </dd>
+		{% endif %}
+	{% if variables.wealth_property is defined %}
+			<dt>wealth property</dt>
+		<dd> {{ variables.wealth_property}} </dd>
+		{% endif %}
+	{% if variables.wealth_trinkets is defined %}
+			<dt>wealth trinkets</dt>
+		<dd> {{ variables.wealth_trinkets}} </dd>
+		{% endif %}
+	{% if variables.reagent_name is defined %}
+			<dt>reagent name</dt>
+		<dd> {{ variables.reagent_name}} </dd>
+		{% endif %}
+	{% if variables.reagent_description is defined %}
+			<dt>reagent description</dt>
+		<dd> {{ variables.reagent_description}} </dd>
+		{% endif %}
+	{% if variables.daemonic_gift is defined %}
+			<dt>daemonic gift</dt>
+		<dd> {{ variables.daemonic_gift}} </dd>
+		{% endif %}
+	{% if variables.gift_description is defined %}
+			<dt>gift description</dt>
+		<dd> {{ variables.gift_description}} </dd>
+		{% endif %}
+	{% if variables.current_reward_points is defined %}
+			<dt>current reward points</dt>
+		<dd> {{ variables.current_reward_points}} </dd>
+		{% endif %}
+	{% if variables.profession_basic is defined %}
+			<dt>profession basic</dt>
+		<dd> {{ variables.profession_basic}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_1 is defined %}
+			<dt>profession basic skill rank 1</dt>
+		<dd> {{ variables.profession_basic_skill_rank_1}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_1 is defined %}
+			<dt>profession basic skill rank checkbox 1</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_2 is defined %}
+			<dt>profession basic skill rank 2</dt>
+		<dd> {{ variables.profession_basic_skill_rank_2}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_2 is defined %}
+			<dt>profession basic skill rank checkbox 2</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_3 is defined %}
+			<dt>profession basic skill rank 3</dt>
+		<dd> {{ variables.profession_basic_skill_rank_3}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_3 is defined %}
+			<dt>profession basic skill rank checkbox 3</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_4 is defined %}
+			<dt>profession basic skill rank 4</dt>
+		<dd> {{ variables.profession_basic_skill_rank_4}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_4 is defined %}
+			<dt>profession basic skill rank checkbox 4</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_4}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_5 is defined %}
+			<dt>profession basic skill rank 5</dt>
+		<dd> {{ variables.profession_basic_skill_rank_5}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_5 is defined %}
+			<dt>profession basic skill rank checkbox 5</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_5}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_6 is defined %}
+			<dt>profession basic skill rank 6</dt>
+		<dd> {{ variables.profession_basic_skill_rank_6}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_6 is defined %}
+			<dt>profession basic skill rank checkbox 6</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_6}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_7 is defined %}
+			<dt>profession basic skill rank 7</dt>
+		<dd> {{ variables.profession_basic_skill_rank_7}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_7 is defined %}
+			<dt>profession basic skill rank checkbox 7</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_7}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_8 is defined %}
+			<dt>profession basic skill rank 8</dt>
+		<dd> {{ variables.profession_basic_skill_rank_8}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_8 is defined %}
+			<dt>profession basic skill rank checkbox 8</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_8}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_9 is defined %}
+			<dt>profession basic skill rank 9</dt>
+		<dd> {{ variables.profession_basic_skill_rank_9}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_9 is defined %}
+			<dt>profession basic skill rank checkbox 9</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_9}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_10 is defined %}
+			<dt>profession basic skill rank 10</dt>
+		<dd> {{ variables.profession_basic_skill_rank_10}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_10 is defined %}
+			<dt>profession basic skill rank checkbox 10</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_10}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_trait is defined %}
+			<dt>profession basic trait</dt>
+		<dd> {{ variables.profession_basic_trait}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_trait_checkbox is defined %}
+			<dt>profession basic trait checkbox</dt>
+		<dd> {{ variables.profession_basic_trait_checkbox}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_1 is defined %}
+			<dt>profession basic bonus advance 1</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_1}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_checkbox_1 is defined %}
+			<dt>profession basic bonus advance checkbox 1</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_2 is defined %}
+			<dt>profession basic bonus advance 2</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_2}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_checkbox_2 is defined %}
+			<dt>profession basic bonus advance checkbox 2</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_3 is defined %}
+			<dt>profession basic bonus advance 3</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_3}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_checkbox_3 is defined %}
+			<dt>profession basic bonus advance checkbox 3</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_4 is defined %}
+			<dt>profession basic bonus advance 4</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_4}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_checkbox_4 is defined %}
+			<dt>profession basic bonus advance checkbox 4</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_checkbox_4}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_5 is defined %}
+			<dt>profession basic bonus advance 5</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_5}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_checkbox_5 is defined %}
+			<dt>profession basic bonus advance checkbox 5</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_checkbox_5}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance6 is defined %}
+			<dt>profession basic bonus advance_6</dt>
+		<dd> {{ variables.profession_basic_bonus_advance6}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_checkbox_6 is defined %}
+			<dt>profession basic bonus advance checkbox 6</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_checkbox_6}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_7 is defined %}
+			<dt>profession basic bonus advance 7</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_7}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_checkbox_7 is defined %}
+			<dt>profession basic bonus advance checkbox 7</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_checkbox_7}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_talent_1 is defined %}
+			<dt>profession basic talent 1</dt>
+		<dd> {{ variables.profession_basic_talent_1}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_talent_checkbox_1 is defined %}
+			<dt>profession basic talent checkbox 1</dt>
+		<dd> {{ variables.profession_basic_talent_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_talent_2 is defined %}
+			<dt>profession basic talent 2</dt>
+		<dd> {{ variables.profession_basic_talent_2}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_talent_checkbox_2 is defined %}
+			<dt>profession basic talent checkbox 2</dt>
+		<dd> {{ variables.profession_basic_talent_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.talent_advance_3 is defined %}
+			<dt>talent advance 3</dt>
+		<dd> {{ variables.talent_advance_3}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_talent_checkbox_3 is defined %}
+			<dt>profession basic talent checkbox 3</dt>
+		<dd> {{ variables.profession_basic_talent_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate is defined %}
+			<dt>profession intermediate</dt>
+		<dd> {{ variables.profession_intermediate}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_1 is defined %}
+			<dt>profession intermediate skill rank 1</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_1}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_1 is defined %}
+			<dt>profession intermediate skill rank checkbox 1</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_2 is defined %}
+			<dt>profession intermediate skill rank 2</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_2}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_2 is defined %}
+			<dt>profession intermediate skill rank checkbox 2</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_3 is defined %}
+			<dt>profession intermediate skill rank 3</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_3}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_3 is defined %}
+			<dt>profession intermediate skill rank checkbox 3</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_4 is defined %}
+			<dt>profession intermediate skill rank 4</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_4}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_4 is defined %}
+			<dt>profession intermediate skill rank checkbox 4</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_4}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_5 is defined %}
+			<dt>profession intermediate skill rank 5</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_5}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_5 is defined %}
+			<dt>profession intermediate skill rank checkbox 5</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_5}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_6 is defined %}
+			<dt>profession intermediate skill rank 6</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_6}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_6 is defined %}
+			<dt>profession intermediate skill rank checkbox 6</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_6}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_7 is defined %}
+			<dt>profession intermediate skill rank 7</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_7}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_7 is defined %}
+			<dt>profession intermediate skill rank checkbox 7</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_7}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_8 is defined %}
+			<dt>profession intermediate skill rank 8</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_8}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_8 is defined %}
+			<dt>profession intermediate skill rank checkbox 8</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_8}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_9 is defined %}
+			<dt>profession intermediate skill rank 9</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_9}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_9 is defined %}
+			<dt>profession intermediate skill rank checkbox 9</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_9}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_10 is defined %}
+			<dt>profession intermediate skill rank 10</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_10}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_10 is defined %}
+			<dt>profession intermediate skill rank checkbox 10</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_10}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_trait is defined %}
+			<dt>profession intermediate trait</dt>
+		<dd> {{ variables.profession_intermediate_trait}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_trait_checkbox is defined %}
+			<dt>profession intermediate trait checkbox</dt>
+		<dd> {{ variables.profession_intermediate_trait_checkbox}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_1 is defined %}
+			<dt>profession intermediate bonus advance 1</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_1}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_checkbox_1 is defined %}
+			<dt>profession intermediate bonus advance checkbox 1</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_2 is defined %}
+			<dt>profession intermediate bonus advance 2</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_2}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_checkbox_2 is defined %}
+			<dt>profession intermediate bonus advance checkbox 2</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_3 is defined %}
+			<dt>profession intermediate bonus advance 3</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_3}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_checkbox_3 is defined %}
+			<dt>profession intermediate bonus advance checkbox 3</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_4 is defined %}
+			<dt>profession intermediate bonus advance 4</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_4}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_checkbox_4 is defined %}
+			<dt>profession intermediate bonus advance checkbox 4</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_checkbox_4}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_5 is defined %}
+			<dt>profession intermediate bonus advance 5</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_5}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_checkbox_5 is defined %}
+			<dt>profession intermediate bonus advance checkbox 5</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_checkbox_5}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance6 is defined %}
+			<dt>profession intermediate bonus advance_6</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance6}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_checkbox_6 is defined %}
+			<dt>profession intermediate bonus advance checkbox 6</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_checkbox_6}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_7 is defined %}
+			<dt>profession intermediate bonus advance 7</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_7}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_checkbox_7 is defined %}
+			<dt>profession intermediate bonus advance checkbox 7</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_checkbox_7}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_talent_1 is defined %}
+			<dt>profession intermediate talent 1</dt>
+		<dd> {{ variables.profession_intermediate_talent_1}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_talent_checkbox_1 is defined %}
+			<dt>profession intermediate talent checkbox 1</dt>
+		<dd> {{ variables.profession_intermediate_talent_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_talent_2 is defined %}
+			<dt>profession intermediate talent 2</dt>
+		<dd> {{ variables.profession_intermediate_talent_2}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_talent_checkbox_2 is defined %}
+			<dt>profession intermediate talent checkbox 2</dt>
+		<dd> {{ variables.profession_intermediate_talent_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_talent_checkbox_3 is defined %}
+			<dt>profession intermediate talent checkbox 3</dt>
+		<dd> {{ variables.profession_intermediate_talent_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced is defined %}
+			<dt>profession advanced</dt>
+		<dd> {{ variables.profession_advanced}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_1 is defined %}
+			<dt>profession advanced skill rank 1</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_1}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_1 is defined %}
+			<dt>profession advanced skill rank checkbox 1</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_2 is defined %}
+			<dt>profession advanced skill rank 2</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_2}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_2 is defined %}
+			<dt>profession advanced skill rank checkbox 2</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_3 is defined %}
+			<dt>profession advanced skill rank 3</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_3}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_3 is defined %}
+			<dt>profession advanced skill rank checkbox 3</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_4 is defined %}
+			<dt>profession advanced skill rank 4</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_4}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_4 is defined %}
+			<dt>profession advanced skill rank checkbox 4</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_4}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_5 is defined %}
+			<dt>profession advanced skill rank 5</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_5}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_5 is defined %}
+			<dt>profession advanced skill rank checkbox 5</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_5}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_6 is defined %}
+			<dt>profession advanced skill rank 6</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_6}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_6 is defined %}
+			<dt>profession advanced skill rank checkbox 6</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_6}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_7 is defined %}
+			<dt>profession advanced skill rank 7</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_7}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_7 is defined %}
+			<dt>profession advanced skill rank checkbox 7</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_7}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_8 is defined %}
+			<dt>profession advanced skill rank 8</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_8}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_8 is defined %}
+			<dt>profession advanced skill rank checkbox 8</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_8}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_9 is defined %}
+			<dt>profession advanced skill rank 9</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_9}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_9 is defined %}
+			<dt>profession advanced skill rank checkbox 9</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_9}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_10 is defined %}
+			<dt>profession advanced skill rank 10</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_10}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_10 is defined %}
+			<dt>profession advanced skill rank checkbox 10</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_10}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_trait is defined %}
+			<dt>profession advanced trait</dt>
+		<dd> {{ variables.profession_advanced_trait}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_trait_checkbox is defined %}
+			<dt>profession advanced trait checkbox</dt>
+		<dd> {{ variables.profession_advanced_trait_checkbox}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_1 is defined %}
+			<dt>profession advanced bonus advance 1</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_1}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_checkbox_1 is defined %}
+			<dt>profession advanced bonus advance checkbox 1</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_2 is defined %}
+			<dt>profession advanced bonus advance 2</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_2}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_checkbox_2 is defined %}
+			<dt>profession advanced bonus advance checkbox 2</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_3 is defined %}
+			<dt>profession advanced bonus advance 3</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_3}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_checkbox_3 is defined %}
+			<dt>profession advanced bonus advance checkbox 3</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_4 is defined %}
+			<dt>profession advanced bonus advance 4</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_4}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_checkbox_4 is defined %}
+			<dt>profession advanced bonus advance checkbox 4</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_checkbox_4}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_5 is defined %}
+			<dt>profession advanced bonus advance 5</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_5}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_checkbox_5 is defined %}
+			<dt>profession advanced bonus advance checkbox 5</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_checkbox_5}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance6 is defined %}
+			<dt>profession advanced bonus advance_6</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance6}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_checkbox_6 is defined %}
+			<dt>profession advanced bonus advance checkbox 6</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_checkbox_6}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_7 is defined %}
+			<dt>profession advanced bonus advance 7</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_7}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_checkbox_7 is defined %}
+			<dt>profession advanced bonus advance checkbox 7</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_checkbox_7}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_talent_1 is defined %}
+			<dt>profession advanced talent 1</dt>
+		<dd> {{ variables.profession_advanced_talent_1}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_talent_checkbox_1 is defined %}
+			<dt>profession advanced talent checkbox 1</dt>
+		<dd> {{ variables.profession_advanced_talent_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_talent_2 is defined %}
+			<dt>profession advanced talent 2</dt>
+		<dd> {{ variables.profession_advanced_talent_2}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_talent_checkbox_2 is defined %}
+			<dt>profession advanced talent checkbox 2</dt>
+		<dd> {{ variables.profession_advanced_talent_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_talent_checkbox_3 is defined %}
+			<dt>profession advanced talent checkbox 3</dt>
+		<dd> {{ variables.profession_advanced_talent_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.unique_advances is defined %}
+			<dt>unique advances</dt>
+		<dd> {{ variables.unique_advances}} </dd>
+		{% endif %}
+	{% if variables.character_story is defined %}
+			<dt>character story</dt>
+		<dd> {{ variables.character_story}} </dd>
+		{% endif %}
+</div>
+							

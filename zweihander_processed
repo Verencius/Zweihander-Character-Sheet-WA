@@ -1,0 +1,1256 @@
+<div>
+	<h1>{{ variables.name }}</h1>
+	{% if variables.name is defined %}
+			<dt>Name</dt>
+		<dd> {{ variables.name}} </dd>
+		{% endif %}
+	{% if variables.personal_age_group is defined %}
+			<dt>personal age group</dt>
+		<dd> {{ variables.personal_age_group}} </dd>
+		{% endif %}
+	{% if variables.imageid is defined %}
+			<dt>imageid</dt>
+		<dd> {{ variables.imageid}} </dd>
+		{% endif %}
+	{% if variables.language_native is defined %}
+			<dt>language native</dt>
+		<dd> {{ variables.language_native}} </dd>
+		{% endif %}
+	{% if variables.personal_ancestry is defined %}
+			<dt>personal" ancestry"</dt>
+		<dd> {{ variables.personal_ancestry}} </dd>
+		{% endif %}
+	{% if variables.language_1 is defined %}
+			<dt>language 1</dt>
+		<dd> {{ variables.language_1}} </dd>
+		{% endif %}
+	{% if variables.personal_sex is defined %}
+			<dt>personal sex</dt>
+		<dd> {{ variables.personal_sex}} </dd>
+		{% endif %}
+	{% if variables.language_2 is defined %}
+			<dt>language 2</dt>
+		<dd> {{ variables.language_2}} </dd>
+		{% endif %}
+	{% if variables.personal_height is defined %}
+			<dt>personal height</dt>
+		<dd> {{ variables.personal_height}} </dd>
+		{% endif %}
+	{% if variables.language_3 is defined %}
+			<dt>language 3</dt>
+		<dd> {{ variables.language_3}} </dd>
+		{% endif %}
+	{% if variables.personal_weight is defined %}
+			<dt>personal weight</dt>
+		<dd> {{ variables.personal_weight}} </dd>
+		{% endif %}
+	{% if variables.language_4 is defined %}
+			<dt>language 4</dt>
+		<dd> {{ variables.language_4}} </dd>
+		{% endif %}
+	{% if variables.personal_build_type is defined %}
+			<dt>personal build type</dt>
+		<dd> {{ variables.personal_build_type}} </dd>
+		{% endif %}
+	{% if variables.language_5 is defined %}
+			<dt>language 5</dt>
+		<dd> {{ variables.language_5}} </dd>
+		{% endif %}
+	{% if variables.personal_complexion is defined %}
+			<dt>personal complexion</dt>
+		<dd> {{ variables.personal_complexion}} </dd>
+		{% endif %}
+	{% if variables.shield_name is defined %}
+			<dt>shield name</dt>
+		<dd> {{ variables.shield_name}} </dd>
+		{% endif %}
+	{% if variables.personal_hair_color is defined %}
+			<dt>personal hair color</dt>
+		<dd> {{ variables.personal_hair_color}} </dd>
+		{% endif %}
+	{% if variables.shield_qualities is defined %}
+			<dt>shield qualities</dt>
+		<dd> {{ variables.shield_qualities}} </dd>
+		{% endif %}
+	{% if variables.personal_eye_color is defined %}
+			<dt>personal eye color</dt>
+		<dd> {{ variables.personal_eye_color}} </dd>
+		{% endif %}
+	{% if variables.shield_encumbrance is defined %}
+			<dt>shield encumbrance</dt>
+		<dd> {{ variables.shield_encumbrance}} </dd>
+		{% endif %}
+	{% if variables.personal_distinguishing_marks is defined %}
+			<dt>personal distinguishing marks</dt>
+		<dd> {{ variables.personal_distinguishing_marks}} </dd>
+		{% endif %}
+	{% if variables.personal_season_of_birth is defined %}
+			<dt>personal season of birth</dt>
+		<dd> {{ variables.personal_season_of_birth}} </dd>
+		{% endif %}
+	{% if variables.personal_social_class is defined %}
+			<dt>personal social class</dt>
+		<dd> {{ variables.personal_social_class}} </dd>
+		{% endif %}
+	{% if variables.personal_upbrining is defined %}
+			<dt>personal upbrining</dt>
+		<dd> {{ variables.personal_upbrining}} </dd>
+		{% endif %}
+	{% if variables.personal_dooming is defined %}
+			<dt>personal dooming</dt>
+		<dd> {{ variables.personal_dooming}} </dd>
+		{% endif %}
+	{% if variables.personal_fate_points is defined %}
+			<dt>personal fate points</dt>
+		<dd> {{ variables.personal_fate_points}} </dd>
+		{% endif %}
+	{% if variables.personal_reputation_points is defined %}
+			<dt>personal reputation points</dt>
+		<dd> {{ variables.personal_reputation_points}} </dd>
+		{% endif %}
+	{% if variables.personal_disorders_drawbacks is defined %}
+			<dt>personal disorders drawbacks</dt>
+		<dd> {{ variables.personal_disorders_drawbacks}} </dd>
+		{% endif %}
+	{% if variables.personal_patron_deity is defined %}
+			<dt>personal patron deity</dt>
+		<dd> {{ variables.personal_patron_deity}} </dd>
+		{% endif %}
+	{% if variables.difficulty_rating_trivial is defined %}
+			<dt>difficulty rating trivial</dt>
+		<dd> {{ variables.difficulty_rating_trivial}} </dd>
+		{% endif %}
+	{% if variables.difficulty_rating_easy is defined %}
+			<dt>difficulty rating easy</dt>
+		<dd> {{ variables.difficulty_rating_easy}} </dd>
+		{% endif %}
+	{% if variables.difficulty_rating_routine is defined %}
+			<dt>difficulty rating routine</dt>
+		<dd> {{ variables.difficulty_rating_routine}} </dd>
+		{% endif %}
+	{% if variables.difficulty_rating_standard is defined %}
+			<dt>difficulty rating standard</dt>
+		<dd> {{ variables.difficulty_rating_standard}} </dd>
+		{% endif %}
+	{% if variables.difficulty_rating_challenging is defined %}
+			<dt>difficulty rating challenging</dt>
+		<dd> {{ variables.difficulty_rating_challenging}} </dd>
+		{% endif %}
+	{% if variables.difficulty_rating_arduous is defined %}
+			<dt>difficulty rating arduous</dt>
+		<dd> {{ variables.difficulty_rating_arduous}} </dd>
+		{% endif %}
+	{% if variables.alignment_order is defined %}
+			<dt>alignment order</dt>
+		<dd> {{ variables.alignment_order}} </dd>
+		{% endif %}
+	{% if variables.alignment_chaos is defined %}
+			<dt>alignment chaos</dt>
+		<dd> {{ variables.alignment_chaos}} </dd>
+		{% endif %}
+	{% if variables.alignment_corruption is defined %}
+			<dt>alignment corruption</dt>
+		<dd> {{ variables.alignment_corruption}} </dd>
+		{% endif %}
+	{% if variables.alignment_order_ranks is defined %}
+			<dt>alignment order ranks</dt>
+		<dd> {{ variables.alignment_order_ranks}} </dd>
+		{% endif %}
+	{% if variables.alignment_chaos_ranks is defined %}
+			<dt>alignment chaos ranks</dt>
+		<dd> {{ variables.alignment_chaos_ranks}} </dd>
+		{% endif %}
+	{% if variables.alignment_permanent_chaos_ranks is defined %}
+			<dt>alignment permanent chaos ranks</dt>
+		<dd> {{ variables.alignment_permanent_chaos_ranks}} </dd>
+		{% endif %}
+	{% if variables.alignment_permnanent_order_ranks is defined %}
+			<dt>alignment permnanent order ranks</dt>
+		<dd> {{ variables.alignment_permnanent_order_ranks}} </dd>
+		{% endif %}
+	{% if variables.attribute_combat is defined %}
+			<dt>attribute combat</dt>
+		<dd> {{ variables.attribute_combat}} </dd>
+		{% endif %}
+	{% if variables.attribute_combat_advance is defined %}
+			<dt>attribute combat advance</dt>
+		<dd> {{ variables.attribute_combat_advance}} </dd>
+		{% endif %}
+	{% if variables.attribute_combat_bonus_mod is defined %}
+			<dt>attribute combat bonus mod</dt>
+		<dd> {{ variables.attribute_combat_bonus_mod}} </dd>
+		{% endif %}
+	{% if variables.attirubte_combat_bonus_final is defined %}
+			<dt>attirubte combat bonus final</dt>
+		<dd> {{ variables.attirubte_combat_bonus_final}} </dd>
+		{% endif %}
+	{% if variables.attribute_brawn is defined %}
+			<dt>attribute brawn</dt>
+		<dd> {{ variables.attribute_brawn}} </dd>
+		{% endif %}
+	{% if variables.attribute_brawn_advance is defined %}
+			<dt>attribute brawn advance</dt>
+		<dd> {{ variables.attribute_brawn_advance}} </dd>
+		{% endif %}
+	{% if variables.attribute_brawn_bonus_mod is defined %}
+			<dt>attribute brawn bonus mod</dt>
+		<dd> {{ variables.attribute_brawn_bonus_mod}} </dd>
+		{% endif %}
+	{% if variables.attribute_brawn_bonus_final is defined %}
+			<dt>attribute brawn bonus final</dt>
+		<dd> {{ variables.attribute_brawn_bonus_final}} </dd>
+		{% endif %}
+	{% if variables.attribute_agility is defined %}
+			<dt>attribute agility</dt>
+		<dd> {{ variables.attribute_agility}} </dd>
+		{% endif %}
+	{% if variables.attribute_agility_advance is defined %}
+			<dt>attribute agility advance</dt>
+		<dd> {{ variables.attribute_agility_advance}} </dd>
+		{% endif %}
+	{% if variables.attribute_agility_bonus_mod is defined %}
+			<dt>attribute agility bonus mod</dt>
+		<dd> {{ variables.attribute_agility_bonus_mod}} </dd>
+		{% endif %}
+	{% if variables.attribute_agility_bonus_final is defined %}
+			<dt>attribute agility bonus final</dt>
+		<dd> {{ variables.attribute_agility_bonus_final}} </dd>
+		{% endif %}
+	{% if variables.attribute_perception is defined %}
+			<dt>attribute perception</dt>
+		<dd> {{ variables.attribute_perception}} </dd>
+		{% endif %}
+	{% if variables.attribute_perception_advance is defined %}
+			<dt>attribute perception advance</dt>
+		<dd> {{ variables.attribute_perception_advance}} </dd>
+		{% endif %}
+	{% if variables.attribute_perception_bonus_mod is defined %}
+			<dt>attribute perception bonus mod</dt>
+		<dd> {{ variables.attribute_perception_bonus_mod}} </dd>
+		{% endif %}
+	{% if variables.attribute_perception_bonus_final is defined %}
+			<dt>attribute perception bonus final</dt>
+		<dd> {{ variables.attribute_perception_bonus_final}} </dd>
+		{% endif %}
+	{% if variables.attribute_intelligence is defined %}
+			<dt>attribute intelligence</dt>
+		<dd> {{ variables.attribute_intelligence}} </dd>
+		{% endif %}
+	{% if variables.attribute_intelligence_advance is defined %}
+			<dt>attribute intelligence advance</dt>
+		<dd> {{ variables.attribute_intelligence_advance}} </dd>
+		{% endif %}
+	{% if variables.attribute_intelligence_bonus_mod is defined %}
+			<dt>attribute intelligence bonus mod</dt>
+		<dd> {{ variables.attribute_intelligence_bonus_mod}} </dd>
+		{% endif %}
+	{% if variables.attribute_intelligence_bonus_final is defined %}
+			<dt>attribute intelligence bonus final</dt>
+		<dd> {{ variables.attribute_intelligence_bonus_final}} </dd>
+		{% endif %}
+	{% if variables.attribute_willpower is defined %}
+			<dt>attribute willpower</dt>
+		<dd> {{ variables.attribute_willpower}} </dd>
+		{% endif %}
+	{% if variables.attribute_willpower_advance is defined %}
+			<dt>attribute willpower advance</dt>
+		<dd> {{ variables.attribute_willpower_advance}} </dd>
+		{% endif %}
+	{% if variables.attribute_willpower_bonus_mod is defined %}
+			<dt>attribute willpower bonus mod</dt>
+		<dd> {{ variables.attribute_willpower_bonus_mod}} </dd>
+		{% endif %}
+	{% if variables.attribute_willpower_bonus_final is defined %}
+			<dt>attribute willpower bonus final</dt>
+		<dd> {{ variables.attribute_willpower_bonus_final}} </dd>
+		{% endif %}
+	{% if variables.attribute_fellowship is defined %}
+			<dt>attribute fellowship</dt>
+		<dd> {{ variables.attribute_fellowship}} </dd>
+		{% endif %}
+	{% if variables.attribute_fellowship_advance is defined %}
+			<dt>attribute fellowship advance</dt>
+		<dd> {{ variables.attribute_fellowship_advance}} </dd>
+		{% endif %}
+	{% if variables.attribute_fellowship_bonus_mod is defined %}
+			<dt>attribute fellowship bonus mod</dt>
+		<dd> {{ variables.attribute_fellowship_bonus_mod}} </dd>
+		{% endif %}
+	{% if variables.attribute_fellowship_bonus_final is defined %}
+			<dt>attribute fellowship bonus final</dt>
+		<dd> {{ variables.attribute_fellowship_bonus_final}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_martial_melee is defined %}
+			<dt>skill combat martial melee</dt>
+		<dd> {{ variables.skill_combat_martial_melee}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_martial_ranged is defined %}
+			<dt>skill combat martial ranged</dt>
+		<dd> {{ variables.skill_combat_martial_ranged}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_simple_melee is defined %}
+			<dt>skill combat simple melee</dt>
+		<dd> {{ variables.skill_combat_simple_melee}} </dd>
+		{% endif %}
+	{% if variables.skill_combat_simple_ranged is defined %}
+			<dt>skill combat simple ranged</dt>
+		<dd> {{ variables.skill_combat_simple_ranged}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_athletics is defined %}
+			<dt>skill brawn athletics</dt>
+		<dd> {{ variables.skill_brawn_athletics}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_drive is defined %}
+			<dt>skill brawn drive</dt>
+		<dd> {{ variables.skill_brawn_drive}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_intimidate is defined %}
+			<dt>skill brawn intimidate</dt>
+		<dd> {{ variables.skill_brawn_intimidate}} </dd>
+		{% endif %}
+	{% if variables.skill_brawn_toughness is defined %}
+			<dt>skill brawn toughness</dt>
+		<dd> {{ variables.skill_brawn_toughness}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_coordination is defined %}
+			<dt>skill agility coordination</dt>
+		<dd> {{ variables.skill_agility_coordination}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_pilot is defined %}
+			<dt>skill agility pilot</dt>
+		<dd> {{ variables.skill_agility_pilot}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_ride is defined %}
+			<dt>skill agility ride</dt>
+		<dd> {{ variables.skill_agility_ride}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_skulduggery is defined %}
+			<dt>skill agility skulduggery</dt>
+		<dd> {{ variables.skill_agility_skulduggery}} </dd>
+		{% endif %}
+	{% if variables.skill_agility_stealth is defined %}
+			<dt>skill agility stealth</dt>
+		<dd> {{ variables.skill_agility_stealth}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_awareness is defined %}
+			<dt>skill perception awareness</dt>
+		<dd> {{ variables.skill_perception_awareness}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_eavesdrop is defined %}
+			<dt>skill perception eavesdrop</dt>
+		<dd> {{ variables.skill_perception_eavesdrop}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_scrutinize is defined %}
+			<dt>skill perception scrutinize</dt>
+		<dd> {{ variables.skill_perception_scrutinize}} </dd>
+		{% endif %}
+	{% if variables.skill_perception_survival is defined %}
+			<dt>skill perception survival</dt>
+		<dd> {{ variables.skill_perception_survival}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_alchemy is defined %}
+			<dt>skill intelligence alchemy</dt>
+		<dd> {{ variables.skill_intelligence_alchemy}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_counterfeit is defined %}
+			<dt>skill intelligence counterfeit</dt>
+		<dd> {{ variables.skill_intelligence_counterfeit}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_education is defined %}
+			<dt>skill intelligence education</dt>
+		<dd> {{ variables.skill_intelligence_education}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_folklore is defined %}
+			<dt>skill intelligence folklore</dt>
+		<dd> {{ variables.skill_intelligence_folklore}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_gamble is defined %}
+			<dt>skill intelligence gamble</dt>
+		<dd> {{ variables.skill_intelligence_gamble}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_heal is defined %}
+			<dt>skill intelligence heal</dt>
+		<dd> {{ variables.skill_intelligence_heal}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_navigation is defined %}
+			<dt>skill intelligence navigation</dt>
+		<dd> {{ variables.skill_intelligence_navigation}} </dd>
+		{% endif %}
+	{% if variables.skill_intelligence_warfare is defined %}
+			<dt>skill intelligence warfare</dt>
+		<dd> {{ variables.skill_intelligence_warfare}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_incantation is defined %}
+			<dt>skill willpower incantation</dt>
+		<dd> {{ variables.skill_willpower_incantation}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_interrogation is defined %}
+			<dt>skill willpower interrogation</dt>
+		<dd> {{ variables.skill_willpower_interrogation}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_resolve is defined %}
+			<dt>skill willpower resolve</dt>
+		<dd> {{ variables.skill_willpower_resolve}} </dd>
+		{% endif %}
+	{% if variables.skill_willpower_tradecraft is defined %}
+			<dt>skill willpower tradecraft</dt>
+		<dd> {{ variables.skill_willpower_tradecraft}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_bargain is defined %}
+			<dt>skill fellowship bargain</dt>
+		<dd> {{ variables.skill_fellowship_bargain}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_charm is defined %}
+			<dt>skill fellowship charm</dt>
+		<dd> {{ variables.skill_fellowship_charm}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_disguise is defined %}
+			<dt>skill fellowship disguise</dt>
+		<dd> {{ variables.skill_fellowship_disguise}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_guile is defined %}
+			<dt>skill fellowship guile</dt>
+		<dd> {{ variables.skill_fellowship_guile}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_handle_animal is defined %}
+			<dt>skill fellowship handle animal</dt>
+		<dd> {{ variables.skill_fellowship_handle_animal}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_leadership is defined %}
+			<dt>skill fellowship leadership</dt>
+		<dd> {{ variables.skill_fellowship_leadership}} </dd>
+		{% endif %}
+	{% if variables.skill_fellowship_rumor is defined %}
+			<dt>skill fellowship rumor</dt>
+		<dd> {{ variables.skill_fellowship_rumor}} </dd>
+		{% endif %}
+	{% if variables.peril_threshold_base is defined %}
+			<dt>peril threshold base</dt>
+		<dd> {{ variables.peril_threshold_base}} </dd>
+		{% endif %}
+	{% if variables.peril_threshold_6 is defined %}
+			<dt>peril threshold 6</dt>
+		<dd> {{ variables.peril_threshold_6}} </dd>
+		{% endif %}
+	{% if variables.peril_threshold_12 is defined %}
+			<dt>peril threshold 12</dt>
+		<dd> {{ variables.peril_threshold_12}} </dd>
+		{% endif %}
+	{% if variables.peril_threshold_18 is defined %}
+			<dt>peril threshold 18</dt>
+		<dd> {{ variables.peril_threshold_18}} </dd>
+		{% endif %}
+	{% if variables.peril_condition_track_unhindered is defined %}
+			<dt>peril condition track unhindered</dt>
+		<dd> {{ variables.peril_condition_track_unhindered}} </dd>
+		{% endif %}
+	{% if variables.peril_condition_track_ignore1 is defined %}
+			<dt>peril condition track ignore_1</dt>
+		<dd> {{ variables.peril_condition_track_ignore1}} </dd>
+		{% endif %}
+	{% if variables.peril_condition_track_ignore_2 is defined %}
+			<dt>peril condition track ignore 2</dt>
+		<dd> {{ variables.peril_condition_track_ignore_2}} </dd>
+		{% endif %}
+	{% if variables.peril_condition_track_ignore_3 is defined %}
+			<dt>peril condition track ignore 3</dt>
+		<dd> {{ variables.peril_condition_track_ignore_3}} </dd>
+		{% endif %}
+	{% if variables.peril_condition_track_incapacitated is defined %}
+			<dt>peril condition track incapacitated</dt>
+		<dd> {{ variables.peril_condition_track_incapacitated}} </dd>
+		{% endif %}
+	{% if variables.traits_name is defined %}
+			<dt>traits name</dt>
+		<dd> {{ variables.traits_name}} </dd>
+		{% endif %}
+	{% if variables.traits_description is defined %}
+			<dt>traits description</dt>
+		<dd> {{ variables.traits_description}} </dd>
+		{% endif %}
+	{% if variables.encumbrance_limit is defined %}
+			<dt>encumbrance limit</dt>
+		<dd> {{ variables.encumbrance_limit}} </dd>
+		{% endif %}
+	{% if variables.encumbrance_current is defined %}
+			<dt>encumbrance current</dt>
+		<dd> {{ variables.encumbrance_current}} </dd>
+		{% endif %}
+	{% if variables.encumbrance_overage is defined %}
+			<dt>encumbrance overage</dt>
+		<dd> {{ variables.encumbrance_overage}} </dd>
+		{% endif %}
+	{% if variables.initative_base is defined %}
+			<dt>initative base</dt>
+		<dd> {{ variables.initative_base}} </dd>
+		{% endif %}
+	{% if variables.initative_current is defined %}
+			<dt>initative current</dt>
+		<dd> {{ variables.initative_current}} </dd>
+		{% endif %}
+	{% if variables.initiative_overage is defined %}
+			<dt>initiative overage</dt>
+		<dd> {{ variables.initiative_overage}} </dd>
+		{% endif %}
+	{% if variables.movement_base is defined %}
+			<dt>movement base</dt>
+		<dd> {{ variables.movement_base}} </dd>
+		{% endif %}
+	{% if variables.movement_current is defined %}
+			<dt>movement current</dt>
+		<dd> {{ variables.movement_current}} </dd>
+		{% endif %}
+	{% if variables.movement_overage is defined %}
+			<dt>movement overage</dt>
+		<dd> {{ variables.movement_overage}} </dd>
+		{% endif %}
+	{% if variables.damage_threshold is defined %}
+			<dt>damage threshold</dt>
+		<dd> {{ variables.damage_threshold}} </dd>
+		{% endif %}
+	{% if variables.damage_threshold_6 is defined %}
+			<dt>damage threshold 6</dt>
+		<dd> {{ variables.damage_threshold_6}} </dd>
+		{% endif %}
+	{% if variables.damage_threshold_12 is defined %}
+			<dt>damage threshold 12</dt>
+		<dd> {{ variables.damage_threshold_12}} </dd>
+		{% endif %}
+	{% if variables.damage_threshold_18 is defined %}
+			<dt>damage threshold 18</dt>
+		<dd> {{ variables.damage_threshold_18}} </dd>
+		{% endif %}
+	{% if variables.damage_condition_track_unharmed is defined %}
+			<dt>damage condition track unharmed</dt>
+		<dd> {{ variables.damage_condition_track_unharmed}} </dd>
+		{% endif %}
+	{% if variables.damage_condition_track_light is defined %}
+			<dt>damage condition track light</dt>
+		<dd> {{ variables.damage_condition_track_light}} </dd>
+		{% endif %}
+	{% if variables.damage_condition_track_moderate is defined %}
+			<dt>damage condition track moderate</dt>
+		<dd> {{ variables.damage_condition_track_moderate}} </dd>
+		{% endif %}
+	{% if variables.damage_condition_track_serious is defined %}
+			<dt>damage condition track serious</dt>
+		<dd> {{ variables.damage_condition_track_serious}} </dd>
+		{% endif %}
+	{% if variables.damage_condition_track_grievous is defined %}
+			<dt>damage condition track grievous</dt>
+		<dd> {{ variables.damage_condition_track_grievous}} </dd>
+		{% endif %}
+	{% if variables.damage_condition_track_slain is defined %}
+			<dt>damage condition track slain</dt>
+		<dd> {{ variables.damage_condition_track_slain}} </dd>
+		{% endif %}
+	{% if variables.dodge_coordination is defined %}
+			<dt>dodge coordination</dt>
+		<dd> {{ variables.dodge_coordination}} </dd>
+		{% endif %}
+	{% if variables.dodge_guile is defined %}
+			<dt>dodge guile</dt>
+		<dd> {{ variables.dodge_guile}} </dd>
+		{% endif %}
+	{% if variables.dodge_drive is defined %}
+			<dt>dodge drive</dt>
+		<dd> {{ variables.dodge_drive}} </dd>
+		{% endif %}
+	{% if variables.dodge_ride is defined %}
+			<dt>dodge ride</dt>
+		<dd> {{ variables.dodge_ride}} </dd>
+		{% endif %}
+	{% if variables.parry_simple_melee is defined %}
+			<dt>parry simple melee</dt>
+		<dd> {{ variables.parry_simple_melee}} </dd>
+		{% endif %}
+	{% if variables.parry_martialmelee is defined %}
+			<dt>parry martial_melee</dt>
+		<dd> {{ variables.parry_martialmelee}} </dd>
+		{% endif %}
+	{% if variables.parry_guile is defined %}
+			<dt>parry guile</dt>
+		<dd> {{ variables.parry_guile}} </dd>
+		{% endif %}
+	{% if variables.parry_charm is defined %}
+			<dt>parry charm</dt>
+		<dd> {{ variables.parry_charm}} </dd>
+		{% endif %}
+	{% if variables.parry_incantation is defined %}
+			<dt>parry incantation</dt>
+		<dd> {{ variables.parry_incantation}} </dd>
+		{% endif %}
+	{% if variables.armor_name is defined %}
+			<dt>armor name</dt>
+		<dd> {{ variables.armor_name}} </dd>
+		{% endif %}
+	{% if variables.armor_dth_mod is defined %}
+			<dt>armor dth mod</dt>
+		<dd> {{ variables.armor_dth_mod}} </dd>
+		{% endif %}
+	{% if variables.armor_qualities is defined %}
+			<dt>armor qualities</dt>
+		<dd> {{ variables.armor_qualities}} </dd>
+		{% endif %}
+	{% if variables.armor_encumbrance is defined %}
+			<dt>armor encumbrance</dt>
+		<dd> {{ variables.armor_encumbrance}} </dd>
+		{% endif %}
+	{% if variables.weapon_name is defined %}
+			<dt>weapon name</dt>
+		<dd> {{ variables.weapon_name}} </dd>
+		{% endif %}
+	{% if variables.weapon_skill is defined %}
+			<dt>weapon skill</dt>
+		<dd> {{ variables.weapon_skill}} </dd>
+		{% endif %}
+	{% if variables.weapon_load is defined %}
+			<dt>weapon load</dt>
+		<dd> {{ variables.weapon_load}} </dd>
+		{% endif %}
+	{% if variables.weapon_handling is defined %}
+			<dt>weapon handling</dt>
+		<dd> {{ variables.weapon_handling}} </dd>
+		{% endif %}
+	{% if variables.weapon_distance is defined %}
+			<dt>weapon distance</dt>
+		<dd> {{ variables.weapon_distance}} </dd>
+		{% endif %}
+	{% if variables.weapon_damage is defined %}
+			<dt>weapon damage</dt>
+		<dd> {{ variables.weapon_damage}} </dd>
+		{% endif %}
+	{% if variables.weapon_qualities is defined %}
+			<dt>weapon qualities</dt>
+		<dd> {{ variables.weapon_qualities}} </dd>
+		{% endif %}
+	{% if variables.weapon_encumbrance is defined %}
+			<dt>weapon encumbrance</dt>
+		<dd> {{ variables.weapon_encumbrance}} </dd>
+		{% endif %}
+	{% if variables.trappings_name is defined %}
+			<dt>trappings name</dt>
+		<dd> {{ variables.trappings_name}} </dd>
+		{% endif %}
+	{% if variables.trappings_description is defined %}
+			<dt>trappings description</dt>
+		<dd> {{ variables.trappings_description}} </dd>
+		{% endif %}
+	{% if variables.trappings_encumbrance is defined %}
+			<dt>trappings encumbrance</dt>
+		<dd> {{ variables.trappings_encumbrance}} </dd>
+		{% endif %}
+	{% if variables.trappings_iconic is defined %}
+			<dt>trappings iconic</dt>
+		<dd> {{ variables.trappings_iconic}} </dd>
+		{% endif %}
+	{% if variables.trappings_iconic_encumbrance is defined %}
+			<dt>trappings iconic encumbrance</dt>
+		<dd> {{ variables.trappings_iconic_encumbrance}} </dd>
+		{% endif %}
+	{% if variables.trappings_vehicle_name is defined %}
+			<dt>trappings vehicle name</dt>
+		<dd> {{ variables.trappings_vehicle_name}} </dd>
+		{% endif %}
+	{% if variables.trappings_vehicle_description is defined %}
+			<dt>trappings vehicle description</dt>
+		<dd> {{ variables.trappings_vehicle_description}} </dd>
+		{% endif %}
+	{% if variables.trappings_vehicle_encumbrance is defined %}
+			<dt>trappings vehicle encumbrance</dt>
+		<dd> {{ variables.trappings_vehicle_encumbrance}} </dd>
+		{% endif %}
+	{% if variables.injury_name is defined %}
+			<dt>injury name</dt>
+		<dd> {{ variables.injury_name}} </dd>
+		{% endif %}
+	{% if variables.injury_description is defined %}
+			<dt>injury description</dt>
+		<dd> {{ variables.injury_description}} </dd>
+		{% endif %}
+	{% if variables.talent_name is defined %}
+			<dt>talent name</dt>
+		<dd> {{ variables.talent_name}} </dd>
+		{% endif %}
+	{% if variables.talent_description is defined %}
+			<dt>talent description</dt>
+		<dd> {{ variables.talent_description}} </dd>
+		{% endif %}
+	{% if variables.wealth_gc is defined %}
+			<dt>wealth gc</dt>
+		<dd> {{ variables.wealth_gc}} </dd>
+		{% endif %}
+	{% if variables.wealth_ss is defined %}
+			<dt>wealth ss</dt>
+		<dd> {{ variables.wealth_ss}} </dd>
+		{% endif %}
+	{% if variables.wealth_bp is defined %}
+			<dt>wealth bp</dt>
+		<dd> {{ variables.wealth_bp}} </dd>
+		{% endif %}
+	{% if variables.wealth_property is defined %}
+			<dt>wealth property</dt>
+		<dd> {{ variables.wealth_property}} </dd>
+		{% endif %}
+	{% if variables.wealth_trinkets is defined %}
+			<dt>wealth trinkets</dt>
+		<dd> {{ variables.wealth_trinkets}} </dd>
+		{% endif %}
+	{% if variables.magic_type is defined %}
+			<dt>magic type</dt>
+		<dd> {{ variables.magic_type}} </dd>
+		{% endif %}
+	{% if variables.magic_name is defined %}
+			<dt>magic name</dt>
+		<dd> {{ variables.magic_name}} </dd>
+		{% endif %}
+	{% if variables.magic_spell_or_ritual is defined %}
+			<dt>magic spell or ritual</dt>
+		<dd> {{ variables.magic_spell_or_ritual}} </dd>
+		{% endif %}
+	{% if variables.magic_description is defined %}
+			<dt>magic description</dt>
+		<dd> {{ variables.magic_description}} </dd>
+		{% endif %}
+	{% if variables.reagent_name is defined %}
+			<dt>reagent name</dt>
+		<dd> {{ variables.reagent_name}} </dd>
+		{% endif %}
+	{% if variables.reagent_description is defined %}
+			<dt>reagent description</dt>
+		<dd> {{ variables.reagent_description}} </dd>
+		{% endif %}
+	{% if variables.daemonic_gift is defined %}
+			<dt>daemonic gift</dt>
+		<dd> {{ variables.daemonic_gift}} </dd>
+		{% endif %}
+	{% if variables.gift_description is defined %}
+			<dt>gift description</dt>
+		<dd> {{ variables.gift_description}} </dd>
+		{% endif %}
+	{% if variables.current_reward_points is defined %}
+			<dt>current reward points</dt>
+		<dd> {{ variables.current_reward_points}} </dd>
+		{% endif %}
+	{% if variables.yotal_reward_points is defined %}
+			<dt>yotal reward points</dt>
+		<dd> {{ variables.yotal_reward_points}} </dd>
+		{% endif %}
+	{% if variables.profession_basic is defined %}
+			<dt>profession basic</dt>
+		<dd> {{ variables.profession_basic}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_1 is defined %}
+			<dt>profession basic skill rank 1</dt>
+		<dd> {{ variables.profession_basic_skill_rank_1}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_1 is defined %}
+			<dt>profession basic skill rank checkbox 1</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_2 is defined %}
+			<dt>profession basic skill rank 2</dt>
+		<dd> {{ variables.profession_basic_skill_rank_2}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_2 is defined %}
+			<dt>profession basic skill rank checkbox 2</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_3 is defined %}
+			<dt>profession basic skill rank 3</dt>
+		<dd> {{ variables.profession_basic_skill_rank_3}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_3 is defined %}
+			<dt>profession basic skill rank checkbox 3</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_4 is defined %}
+			<dt>profession basic skill rank 4</dt>
+		<dd> {{ variables.profession_basic_skill_rank_4}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_4 is defined %}
+			<dt>profession basic skill rank checkbox 4</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_4}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_5 is defined %}
+			<dt>profession basic skill rank 5</dt>
+		<dd> {{ variables.profession_basic_skill_rank_5}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_5 is defined %}
+			<dt>profession basic skill rank checkbox 5</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_5}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_6 is defined %}
+			<dt>profession basic skill rank 6</dt>
+		<dd> {{ variables.profession_basic_skill_rank_6}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_6 is defined %}
+			<dt>profession basic skill rank checkbox 6</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_6}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_7 is defined %}
+			<dt>profession basic skill rank 7</dt>
+		<dd> {{ variables.profession_basic_skill_rank_7}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_7 is defined %}
+			<dt>profession basic skill rank checkbox 7</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_7}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_8 is defined %}
+			<dt>profession basic skill rank 8</dt>
+		<dd> {{ variables.profession_basic_skill_rank_8}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_8 is defined %}
+			<dt>profession basic skill rank checkbox 8</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_8}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_9 is defined %}
+			<dt>profession basic skill rank 9</dt>
+		<dd> {{ variables.profession_basic_skill_rank_9}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_9 is defined %}
+			<dt>profession basic skill rank checkbox 9</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_9}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_10 is defined %}
+			<dt>profession basic skill rank 10</dt>
+		<dd> {{ variables.profession_basic_skill_rank_10}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_skill_rank_checkbox_10 is defined %}
+			<dt>profession basic skill rank checkbox 10</dt>
+		<dd> {{ variables.profession_basic_skill_rank_checkbox_10}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_trait is defined %}
+			<dt>profession basic trait</dt>
+		<dd> {{ variables.profession_basic_trait}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_trait_checkbox is defined %}
+			<dt>profession basic trait checkbox</dt>
+		<dd> {{ variables.profession_basic_trait_checkbox}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_1 is defined %}
+			<dt>profession basic bonus advance 1</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_1}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_checkbox_1 is defined %}
+			<dt>profession basic bonus advance checkbox 1</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_2 is defined %}
+			<dt>profession basic bonus advance 2</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_2}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_checkbox_2 is defined %}
+			<dt>profession basic bonus advance checkbox 2</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_3 is defined %}
+			<dt>profession basic bonus advance 3</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_3}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_checkbox_3 is defined %}
+			<dt>profession basic bonus advance checkbox 3</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_4 is defined %}
+			<dt>profession basic bonus advance 4</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_4}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_checkbox_4 is defined %}
+			<dt>profession basic bonus advance checkbox 4</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_checkbox_4}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_5 is defined %}
+			<dt>profession basic bonus advance 5</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_5}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_checkbox_5 is defined %}
+			<dt>profession basic bonus advance checkbox 5</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_checkbox_5}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance6 is defined %}
+			<dt>profession basic bonus advance_6</dt>
+		<dd> {{ variables.profession_basic_bonus_advance6}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_checkbox_6 is defined %}
+			<dt>profession basic bonus advance checkbox 6</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_checkbox_6}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_7 is defined %}
+			<dt>profession basic bonus advance 7</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_7}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_bonus_advance_checkbox_7 is defined %}
+			<dt>profession basic bonus advance checkbox 7</dt>
+		<dd> {{ variables.profession_basic_bonus_advance_checkbox_7}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_talent_1 is defined %}
+			<dt>profession basic talent 1</dt>
+		<dd> {{ variables.profession_basic_talent_1}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_talent_checkbox_1 is defined %}
+			<dt>profession basic talent checkbox 1</dt>
+		<dd> {{ variables.profession_basic_talent_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_talent_2 is defined %}
+			<dt>profession basic talent 2</dt>
+		<dd> {{ variables.profession_basic_talent_2}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_talent_checkbox_2 is defined %}
+			<dt>profession basic talent checkbox 2</dt>
+		<dd> {{ variables.profession_basic_talent_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.talent_advance_3 is defined %}
+			<dt>talent advance 3</dt>
+		<dd> {{ variables.talent_advance_3}} </dd>
+		{% endif %}
+	{% if variables.profession_basic_talent_checkbox_3 is defined %}
+			<dt>profession basic talent checkbox 3</dt>
+		<dd> {{ variables.profession_basic_talent_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate is defined %}
+			<dt>profession intermediate</dt>
+		<dd> {{ variables.profession_intermediate}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_1 is defined %}
+			<dt>profession intermediate skill rank 1</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_1}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_1 is defined %}
+			<dt>profession intermediate skill rank checkbox 1</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_2 is defined %}
+			<dt>profession intermediate skill rank 2</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_2}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_2 is defined %}
+			<dt>profession intermediate skill rank checkbox 2</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_3 is defined %}
+			<dt>profession intermediate skill rank 3</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_3}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_3 is defined %}
+			<dt>profession intermediate skill rank checkbox 3</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_4 is defined %}
+			<dt>profession intermediate skill rank 4</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_4}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_4 is defined %}
+			<dt>profession intermediate skill rank checkbox 4</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_4}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_5 is defined %}
+			<dt>profession intermediate skill rank 5</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_5}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_5 is defined %}
+			<dt>profession intermediate skill rank checkbox 5</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_5}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_6 is defined %}
+			<dt>profession intermediate skill rank 6</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_6}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_6 is defined %}
+			<dt>profession intermediate skill rank checkbox 6</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_6}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_7 is defined %}
+			<dt>profession intermediate skill rank 7</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_7}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_7 is defined %}
+			<dt>profession intermediate skill rank checkbox 7</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_7}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_8 is defined %}
+			<dt>profession intermediate skill rank 8</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_8}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_8 is defined %}
+			<dt>profession intermediate skill rank checkbox 8</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_8}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_9 is defined %}
+			<dt>profession intermediate skill rank 9</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_9}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_9 is defined %}
+			<dt>profession intermediate skill rank checkbox 9</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_9}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_10 is defined %}
+			<dt>profession intermediate skill rank 10</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_10}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_skill_rank_checkbox_10 is defined %}
+			<dt>profession intermediate skill rank checkbox 10</dt>
+		<dd> {{ variables.profession_intermediate_skill_rank_checkbox_10}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_trait is defined %}
+			<dt>profession intermediate trait</dt>
+		<dd> {{ variables.profession_intermediate_trait}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_trait_checkbox is defined %}
+			<dt>profession intermediate trait checkbox</dt>
+		<dd> {{ variables.profession_intermediate_trait_checkbox}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_1 is defined %}
+			<dt>profession intermediate bonus advance 1</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_1}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_checkbox_1 is defined %}
+			<dt>profession intermediate bonus advance checkbox 1</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_2 is defined %}
+			<dt>profession intermediate bonus advance 2</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_2}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_checkbox_2 is defined %}
+			<dt>profession intermediate bonus advance checkbox 2</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_3 is defined %}
+			<dt>profession intermediate bonus advance 3</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_3}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_checkbox_3 is defined %}
+			<dt>profession intermediate bonus advance checkbox 3</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_4 is defined %}
+			<dt>profession intermediate bonus advance 4</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_4}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_checkbox_4 is defined %}
+			<dt>profession intermediate bonus advance checkbox 4</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_checkbox_4}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_5 is defined %}
+			<dt>profession intermediate bonus advance 5</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_5}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_checkbox_5 is defined %}
+			<dt>profession intermediate bonus advance checkbox 5</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_checkbox_5}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance6 is defined %}
+			<dt>profession intermediate bonus advance_6</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance6}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_checkbox_6 is defined %}
+			<dt>profession intermediate bonus advance checkbox 6</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_checkbox_6}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_7 is defined %}
+			<dt>profession intermediate bonus advance 7</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_7}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_bonus_advance_checkbox_7 is defined %}
+			<dt>profession intermediate bonus advance checkbox 7</dt>
+		<dd> {{ variables.profession_intermediate_bonus_advance_checkbox_7}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_talent_1 is defined %}
+			<dt>profession intermediate talent 1</dt>
+		<dd> {{ variables.profession_intermediate_talent_1}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_talent_checkbox_1 is defined %}
+			<dt>profession intermediate talent checkbox 1</dt>
+		<dd> {{ variables.profession_intermediate_talent_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_talent_2 is defined %}
+			<dt>profession intermediate talent 2</dt>
+		<dd> {{ variables.profession_intermediate_talent_2}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_talent_checkbox_2 is defined %}
+			<dt>profession intermediate talent checkbox 2</dt>
+		<dd> {{ variables.profession_intermediate_talent_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_intermediate_talent_checkbox_3 is defined %}
+			<dt>profession intermediate talent checkbox 3</dt>
+		<dd> {{ variables.profession_intermediate_talent_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced is defined %}
+			<dt>profession advanced</dt>
+		<dd> {{ variables.profession_advanced}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_1 is defined %}
+			<dt>profession advanced skill rank 1</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_1}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_1 is defined %}
+			<dt>profession advanced skill rank checkbox 1</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_2 is defined %}
+			<dt>profession advanced skill rank 2</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_2}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_2 is defined %}
+			<dt>profession advanced skill rank checkbox 2</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_3 is defined %}
+			<dt>profession advanced skill rank 3</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_3}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_3 is defined %}
+			<dt>profession advanced skill rank checkbox 3</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_4 is defined %}
+			<dt>profession advanced skill rank 4</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_4}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_4 is defined %}
+			<dt>profession advanced skill rank checkbox 4</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_4}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_5 is defined %}
+			<dt>profession advanced skill rank 5</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_5}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_5 is defined %}
+			<dt>profession advanced skill rank checkbox 5</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_5}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_6 is defined %}
+			<dt>profession advanced skill rank 6</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_6}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_6 is defined %}
+			<dt>profession advanced skill rank checkbox 6</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_6}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_7 is defined %}
+			<dt>profession advanced skill rank 7</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_7}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_7 is defined %}
+			<dt>profession advanced skill rank checkbox 7</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_7}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_8 is defined %}
+			<dt>profession advanced skill rank 8</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_8}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_8 is defined %}
+			<dt>profession advanced skill rank checkbox 8</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_8}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_9 is defined %}
+			<dt>profession advanced skill rank 9</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_9}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_9 is defined %}
+			<dt>profession advanced skill rank checkbox 9</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_9}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_10 is defined %}
+			<dt>profession advanced skill rank 10</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_10}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_skill_rank_checkbox_10 is defined %}
+			<dt>profession advanced skill rank checkbox 10</dt>
+		<dd> {{ variables.profession_advanced_skill_rank_checkbox_10}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_trait is defined %}
+			<dt>profession advanced trait</dt>
+		<dd> {{ variables.profession_advanced_trait}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_trait_checkbox is defined %}
+			<dt>profession advanced trait checkbox</dt>
+		<dd> {{ variables.profession_advanced_trait_checkbox}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_1 is defined %}
+			<dt>profession advanced bonus advance 1</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_1}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_checkbox_1 is defined %}
+			<dt>profession advanced bonus advance checkbox 1</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_2 is defined %}
+			<dt>profession advanced bonus advance 2</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_2}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_checkbox_2 is defined %}
+			<dt>profession advanced bonus advance checkbox 2</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_3 is defined %}
+			<dt>profession advanced bonus advance 3</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_3}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_checkbox_3 is defined %}
+			<dt>profession advanced bonus advance checkbox 3</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_4 is defined %}
+			<dt>profession advanced bonus advance 4</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_4}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_checkbox_4 is defined %}
+			<dt>profession advanced bonus advance checkbox 4</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_checkbox_4}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_5 is defined %}
+			<dt>profession advanced bonus advance 5</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_5}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_checkbox_5 is defined %}
+			<dt>profession advanced bonus advance checkbox 5</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_checkbox_5}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance6 is defined %}
+			<dt>profession advanced bonus advance_6</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance6}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_checkbox_6 is defined %}
+			<dt>profession advanced bonus advance checkbox 6</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_checkbox_6}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_7 is defined %}
+			<dt>profession advanced bonus advance 7</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_7}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_bonus_advance_checkbox_7 is defined %}
+			<dt>profession advanced bonus advance checkbox 7</dt>
+		<dd> {{ variables.profession_advanced_bonus_advance_checkbox_7}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_talent_1 is defined %}
+			<dt>profession advanced talent 1</dt>
+		<dd> {{ variables.profession_advanced_talent_1}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_talent_checkbox_1 is defined %}
+			<dt>profession advanced talent checkbox 1</dt>
+		<dd> {{ variables.profession_advanced_talent_checkbox_1}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_talent_2 is defined %}
+			<dt>profession advanced talent 2</dt>
+		<dd> {{ variables.profession_advanced_talent_2}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_talent_checkbox_2 is defined %}
+			<dt>profession advanced talent checkbox 2</dt>
+		<dd> {{ variables.profession_advanced_talent_checkbox_2}} </dd>
+		{% endif %}
+	{% if variables.profession_advanced_talent_checkbox_3 is defined %}
+			<dt>profession advanced talent checkbox 3</dt>
+		<dd> {{ variables.profession_advanced_talent_checkbox_3}} </dd>
+		{% endif %}
+	{% if variables.unique_advances is defined %}
+			<dt>unique advances</dt>
+		<dd> {{ variables.unique_advances}} </dd>
+		{% endif %}
+	{% if variables.character_story is defined %}
+			<dt>character story</dt>
+		<dd> {{ variables.character_story}} </dd>
+		{% endif %}
+</div>
+							

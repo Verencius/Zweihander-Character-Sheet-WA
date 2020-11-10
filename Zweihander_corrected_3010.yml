@@ -1,0 +1,3043 @@
+#
+# Please read the following instructions
+# If you have any questions join us on our discord
+# https://www.worldanvil.com/discord
+# and use the channel #custom-articles-and-statblocks-help
+# 
+#   
+# IMPORTANT:
+# If you are planning to create your own form and you will not rely on automatic form generation the only thing you need 
+# for each of the fields is an entry with the label and input: string
+# example:
+# 
+# vehicle_class
+#   input: string
+#   label: "Vehicle Class"
+# 
+# 
+# Notes
+# 1. To properly name the field always use the "label" property
+# 2. Do not use a field name called "name". This is always automatically addded. 
+# 
+# Reference
+# Input types
+#   string
+#   integer
+#   select
+#   text
+#   checkbox
+#   
+# Renderers
+#  (use property "render") 
+#  image (input: integer, note: accepts ID of an image)
+#  table (input: text, note: this is a | separated CSV)
+#  random (input: text, note: this is a | separated CSV)
+#  list (input: text, note: this is a key value list ( each linke: key|value) )
+# 
+# 
+fields:
+# character image
+  imageid:
+    input: integer
+    label: "imageid"
+# character description  
+  personal_age_group:
+    input: string
+    label: "personal age group"
+    placeholder: "Young"
+  personal_ancestry:
+    input: string
+    label: "personal ancestry"
+    placeholder: "Human"
+  personal_sex:
+    input: string
+    label: "personal sex"
+  personal_height:
+    input: string
+    label: "personal height"
+  personal_weight:
+    input: string
+    label: "personal weight"
+  personal_build_type:
+    input: string
+    label: "personal build type"
+  personal_complexion:
+    input: string
+    label: "personal complexion"
+  personal_hair_color:
+    input: string
+    label: "personal hair color"
+  personal_eye_color:
+    input: string
+    label: "personal eye color"
+  personal_distinguishing_marks:
+    input: text
+    label: "personal distinguishing marks"
+  personal_distinguishing_marks_number:
+    input: integer
+    label: "personal distinguishing marks number"
+  personal_distinguishing_marks_1:
+    input: string
+    label: "personal distinguishing marks 1"
+  personal_distinguishing_marks_2:
+    input: string
+    label: "personal distinguishing marks 2"
+  personal_distinguishing_marks_3:
+    input: string
+    label: "personal distinguishing marks 3"
+  personal_season_of_birth:
+    input: string
+    label: "personal season of birth"
+  personal_social_class:
+    input: string
+    label: "personal social class"
+    placeholder: "Lowborn"
+  personal_upbringing:
+    input: string
+    label: "personal upbringing"
+  personal_dooming:
+    input: string
+    label: "personal dooming"
+  personal_pronoun:
+    input: string
+    label: "personal pronoun"
+  personal_fate_points:
+    input: integer
+    label: "personal fate points"
+  personal_reptutation_points:
+    input: integer
+    label: "personal reputation points"
+  personal_disorders_drawbacks:
+    input: text
+    label: "personal disorders drawbacks"
+  personal_patron:
+    input: string
+    label: "personal patron deity"
+  personal_place_of_birth:
+    input: string
+    label: "personal place of birth"
+
+# Difficulty table for rolls
+  difficulty_rating_trivial:
+    input: checkbox
+    label: "difficulty rating trivial"
+  difficulty_rating_easy:
+    input: checkbox
+    label: "difficulty rating easy"
+  difficulty_rating_routine:
+    input: checkbox
+    label: "difficulty rating routine"
+  difficulty_rating_standard:
+    input: checkbox
+    label: "difficulty rating standard"
+  difficulty_rating_challenging:
+    input: checkbox
+    label: "difficulty rating challenging"
+  difficulty_rating_arduous:
+    input: checkbox
+    label: "difficulty rating arduous"
+
+#Alignment
+  alignment_order:
+    input: string
+    label: "alignment order"
+#    description: "+1 Fate Point"
+  alignment_chaos:
+    input: string
+    label: "alignment chaos"
+#    description: "+1 Disorder"
+  alignment_corruption:
+    input: integer
+    label: "alignment corruption"
+  alignment_order_ranks:
+    input: integer
+    label: "alignment order ranks"
+    min: 0
+    max: 9
+    placeholder: 0
+  alignment_chaos_ranks:
+    input: integer
+    label: "alignment chaos ranks"
+    min: 0
+    max: 9
+    placeholder: 0
+  alignment_chaos_permanent_rank:
+    input: integer
+    label: "alignment permanent chaos ranks"
+    min: 0
+    max: 9
+    placeholder: 0
+  alignment_order_permanent_rank:
+    input: integer
+    label: "alignment permnanent order ranks"
+    min: 0
+    max: 9
+    placeholder: 0
+  alignment_chaos_description:
+    input: text
+    label: "alignment chaos description"
+  alignment_order_description:
+    input: text
+    label: "alignment order description"
+
+# Primary Attributes
+  attribute_combat:
+    input: integer
+    label: "attribute combat"
+    placeholder: 25
+  attribute_combat_bonus_mod:
+    input: integer
+    label: "attribute combat bonus mod"
+    placeholder: 0
+  attribute_combat_bonus_final:
+    input: integer
+    label: "attirubte combat bonus final"
+    placeholder: 0
+  attribute_brawn:
+    input: integer
+    label: "attribute brawn"
+    placeholder: 25
+  attribute_brawn_bonus_mod:
+    input: integer
+    label: "attribute brawn bonus mod"
+    placeholder: 0
+  attribute_brawn_bonus_final:
+    input: integer
+    label: "attribute brawn bonus final"
+    placeholder: 0
+  attribute_agility:
+    input: integer
+    label: "attribute agility"
+    placeholder: 25
+  attribute_agility_bonus_mod:
+    input: integer
+    label: "attribute agility bonus mod"
+    placeholder: 0
+  attribute_agility_bonus_final:
+    input: integer
+    label: "attribute agility bonus final"
+    placeholder: 0
+  attribute_perception:
+    input: integer
+    label: "attribute perception"
+    placeholder: 25
+  attribute_perception_bonus_mod:
+    input: integer
+    label: "attribute perception bonus mod"
+    placeholder: 0
+  attribute_perception_bonus_final:
+    input: integer
+    label: "attribute perception bonus final"
+    placeholder: 0
+  attribute_intelligence:
+    input: integer
+    label: "attribute intelligence"
+    placeholder: 25
+  attribute_intelligence_bonus_mod:
+    input: integer
+    label: "attribute intelligence bonus mod"
+    placeholder: 0
+  attribute_intelligence_bonus_final:
+    input: integer
+    label: "attribute intelligence bonus final"
+    placeholder: 0
+  attribute_willpower:
+    input: integer
+    label: "attribute willpower"
+    placeholder: 25
+  attribute_willpower_bonus_mod:
+    input: integer
+    label: "attribute willpower bonus mod"
+    placeholder: 0
+  attribute_willpower_bonus_final:
+    input: integer
+    label: "attribute willpower bonus final"
+    placeholder: 0
+  attribute_fellowship:
+    input: integer
+    label: "attribute fellowship"
+    placeholder: 25
+  attribute_fellowship_bonus_mod:
+    input: integer
+    label: "attribute fellowship bonus mod"
+    placeholder: 0
+  attribute_fellowship_bonus_final:
+    input: integer
+    label: "attribute fellowship bonus final"
+    placeholder: 0
+# Primary Attribute Advances
+  attribute_combat_advance_1:
+    input: checkbox
+    label: "attribute combat advance 1"
+  attribute_combat_advance_2:
+    input: checkbox
+    label: "attribute combat advance 2"
+  attribute_combat_advance_3:
+    input: checkbox
+    label: "attribute combat advance 3"
+  attribute_combat_advance_4:
+    input: checkbox
+    label: "attribute combat advance 4"
+  attribute_combat_advance_5:
+    input: checkbox
+    label: "attribute combat advance 5"
+  attribute_combat_advance_6:
+    input: checkbox
+    label: "attribute combat advance 6"
+  attribute_brawn_advance_1:
+    intput: checkbox
+    label: "attribute brawn advance 1"
+  attribute_brawn_advance_2:
+    intput: checkbox
+    label: "attribute brawn advance 2"
+  attribute_brawn_advance_3:
+    intput: checkbox
+    label: "attribute brawn advance 3"
+  attribute_brawn_advance_4:
+    intput: checkbox
+    label: "attribute brawn advance 4"
+  attribute_brawn_advance_5:
+    intput: checkbox
+    label: "attribute brawn advance 5"
+  attribute_brawn_advance_6:
+    intput: checkbox
+    label: "attribute brawn advance 6"
+  attribute_agility_advance_1:
+    input: checkbox
+    label: "attribute agility advance 1"
+  attribute_agility_advance_2:
+    input: checkbox
+    label: "attribute agility advance 2"
+  attribute_agility_advance_3:
+    input: checkbox
+    label: "attribute agility advance 3"
+  attribute_agility_advance_4:
+    input: checkbox
+    label: "attribute agility advance 4"
+  attribute_agility_advance_5:
+    input: checkbox
+    label: "attribute agility advance 5"
+  attribute_agility_advance_6:
+    input: checkbox
+    label: "attribute agility advance 6"
+  attribute_perception_advance_1:
+    input: checkbox
+    label: "attribute perception advance 1"
+  attribute_perception_advance_2:
+    input: checkbox
+    label: "attribute perception advance 2"
+  attribute_perception_advance_3:
+    input: checkbox
+    label: "attribute perception advance 3"
+  attribute_perception_advance_4:
+    input: checkbox
+    label: "attribute perception advance 4"
+  attribute_perception_advance_5:
+    input: checkbox
+    label: "attribute perception advance 5"
+  attribute_perception_advance_6:
+    input: checkbox
+    label: "attribute perception advance 6"
+  attribute_intelligence_advance_1:
+    input: checkbox
+    label: "attribute intelligence advance 1"
+  attribute_intelligence_advance_2:
+    input: checkbox
+    label: "attribute intelligence advance 2"
+  attribute_intelligence_advance_3:
+    input: checkbox
+    label: "attribute intelligence advance 3"
+  attribute_intelligence_advance_4:
+    input: checkbox
+    label: "attribute intelligence advance 4"
+  attribute_intelligence_advance_5:
+    input: checkbox
+    label: "attribute intelligence advance 5"
+  attribute_intelligence_advance_6:
+    input: checkbox
+    label: "attribute intelligence advance 6"
+  attribute_willpower_advance_1:
+    input: checkbox
+    label: "attribute willpower advance 1"
+  attribute_willpower_advance_2:
+    input: checkbox
+    label: "attribute willpower advance 2"
+  attribute_willpower_advance_3:
+    input: checkbox
+    label: "attribute willpower advance 3"
+  attribute_willpower_advance_4:
+    input: checkbox
+    label: "attribute willpower advance 4"
+  attribute_willpower_advance_5:
+    input: checkbox
+    label: "attribute willpower advance 5"
+  attribute_willpower_advance_6:
+    input: checkbox
+    label: "attribute willpower advance 6"
+  attribute_fellowship_advance_1:
+    input: checkbox
+    label: "attribute fellowship advance 1"
+  attribute_fellowship_advance_2:
+    input: checkbox
+    label: "attribute fellowship advance 2"
+  attribute_fellowship_advance_3:
+    input: checkbox
+    label: "attribute fellowship advance 3"
+  attribute_fellowship_advance_4:
+    input: checkbox
+    label: "attribute fellowship advance 4"
+  attribute_fellowship_advance_5:
+    input: checkbox
+    label: "attribute fellowship advance 5"
+  attribute_fellowship_advance_6:
+    input: checkbox
+    label: "attribute fellowship advance 6"
+
+
+# Skills
+  # Combat skills
+  skill_combat_martial_melee_10:
+    input: checkbox
+    label: "skill combat martial melee 10"
+  skill_combat_martial_melee_20:
+    input: checkbox
+    label: "skill combat martial melee 20"
+  skill_combat_martial_melee_30:
+    input: checkbox
+    label: "skill combat martial melee 30"
+  skill_combat_martial_ranged_10:
+    input: checkbox
+    label: "skill combat martial ranged 10"
+  skill_combat_martial_ranged_20:
+    input: checkbox
+    label: "skill combat martial ranged 20"
+  skill_combat_martial_ranged_30:
+    input: checkbox
+    label: "skill combat martial ranged 30"
+  skill_combat_simple_melee_10:
+    input: checkbox
+    label: "skill combat simple melee 10"
+  skill_combat_simple_melee_20:
+    input: checkbox
+    label: "skill combat simple melee 20"
+  skill_combat_simple_melee_30:
+    input: checkbox
+    label: "skill combat simple melee 30"
+  skill_combat_simple_ranged_10:
+    input: checkbox  
+    label: "skill combat simple ranged 10"
+  skill_combat_simple_ranged_20:
+    input: checkbox  
+    label: "skill combat simple ranged 20"
+  skill_combat_simple_ranged_30:
+    input: checkbox  
+    label: "skill combat simple ranged 30"
+    
+  # Brawn Skills  
+  skill_brawn_athletics_10:
+    input: checkbox
+    label: "skill brawn athletics 10"
+  skill_brawn_athletics_20:
+    input: checkbox
+    label: "skill brawn athletics 20"
+  skill_brawn_athletics_30:
+    input: checkbox
+    label: "skill brawn athletics 30"
+  skill_brawn_drive_10:
+    input: checkbox
+    label: "skill brawn drive 10"
+  skill_brawn_drive_20:
+    input: checkbox
+    label: "skill brawn drive 20"
+  skill_brawn_drive_30:
+    input: checkbox
+    label: "skill brawn drive 30"
+  skill_brawn_intimidate_10:
+    input: checkbox
+    label: "skill brawn intimidate 10"
+  skill_brawn_intimidate_20:
+    input: checkbox
+    label: "skill brawn intimidate 20"
+  skill_brawn_intimidate_30:
+    input: checkbox
+    label: "skill brawn intimidate 30"
+  skill_brawn_toughness_10:
+    input: checkbox
+    label: "skill brawn toughnesse 10"
+  skill_brawn_toughness_20:
+    input: checkbox
+    label: "skill brawn toughness 20"
+  skill_brawn_toughness_30:
+    input: checkbox
+    label: "skill brawn toughness 30"
+
+  #Agility Skills
+  skill_agility_coordination_10:
+    input: checkbox
+    label: "skill agility coordination 10"
+  skill_agility_coordination_20:
+    input: checkbox
+    label: "skill agility coordination 20"
+  skill_agility_coordination_30:
+    input: checkbox
+    label: "skill agility coordination 30"
+  skill_agility_pilot_10:
+    input: checkbox
+    label: "skill agility pilot 10"
+  skill_agility_pilot_20:
+    input: checkbox
+    label: "skill agility pilot 20"
+  skill_agility_pilot_30:
+    input: checkbox
+    label: "skill agility pilot 30"
+  skill_agility_ride_10:
+    input: checkbox
+    label: "skill agility ride 10"
+  skill_agility_ride_20:
+    input: checkbox
+    label: "skill agility ride 20"
+  skill_agility_ride_30:
+    input: checkbox
+    label: "skill agility ride 30"
+  skill_agility_skulduggery_10:
+    input: checkbox
+    label: "skill agility skulduggery 10"
+  skill_agility_skulduggery_20:
+    input: checkbox
+    label: "skill agility skulduggery 20"
+  skill_agility_skulduggery_30:
+    input: checkbox
+    label: "skill agility skulduggery 30"
+  skill_agility_stealth_10:
+    input: checkbox
+    label: "skill agility stealth 10"
+  skill_agility_stealth_20:
+    input: checkbox
+    label: "skill agility stealth 20"
+  skill_agility_stealth_30:
+    input: checkbox
+    label: "skill agility stealth 30"
+
+  # Perception Skills
+  skill_perception_awareness_10:
+    input: checkbox
+    label: "skill perception awareness 10"
+  skill_perception_awareness_20:
+    input: checkbox
+    label: "skill perception awareness 20"
+  skill_perception_awareness_30:
+    input: checkbox
+    label: "skill perception awareness 30"
+  skill_perception_eavesdrop_10:
+    input: checkbox
+    label: "skill perception eavesdrop 10"
+  skill_perception_eavesdrop_20:
+    input: checkbox
+    label: "skill perception eavesdrop 20"
+  skill_perception_eavesdrop_30:
+    input: checkbox
+    label: "skill perception eavesdrop 30"
+  skill_perception_scrutinize_10:
+    input: checkbox
+    label: "skill perception scrutinize 10"
+  skill_perception_scrutinize_20:
+    input: checkbox
+    label: "skill perception scrutinize 20"
+  skill_perception_scrutinize_30:
+    input: checkbox
+    label: "skill perception scrutinize 30"
+  skill_perception_survival_10:
+    input: checkbox
+    label: "skill perception survival 10"
+  skill_perception_survival_20:
+    input: checkbox
+    label: "skill perception survival 20"
+  skill_perception_survival_30:
+    input: checkbox
+    label: "skill perception survival 30"
+  # Intelligence skills
+  skill_intelligence_alchemy_10:
+    input: checkbox
+    label: "skill intelligence alchemy 10"
+  skill_intelligence_alchemy_20:
+    input: checkbox
+    label: "skill intelligence alchemy 20"
+  skill_intelligence_alchemy_30:
+    input: checkbox
+    label: "skill intelligence alchemy 30"
+  skill_intelligence_counterfeit_10:
+    input: checkbox
+    label: "skill intelligence counterfeit 10"
+  skill_intelligence_counterfeit_20:
+    input: checkbox
+    label: "skill intelligence counterfeit 20"
+  skill_intelligence_counterfeit_30:
+    input: checkbox
+    label: "skill intelligence counterfeit 30"
+  skill_intelligence_education_10:
+    input: checkbox
+    label: "skill intelligence education 10"
+  skill_intelligence_education_20:
+    input: checkbox
+    label: "skill intelligence education 20"
+  skill_intelligence_education_30:
+    input: checkbox
+    label: "skill intelligence education 30"
+  skill_intelligence_folklore_10:
+    input: checkbox
+    label: "skill intelligence folklore 10"
+  skill_intelligence_folklore_20:
+    input: checkbox
+    label: "skill intelligence folklore 20"
+  skill_intelligence_folklore_30:
+    input: checkbox
+    label: "skill intelligence folklore 30"
+  skill_intelligence_gamble_10:
+    input: checkbox
+    label: "skill intelligence gamble 10"
+  skill_intelligence_gamble_20:
+    input: checkbox
+    label: "skill intelligence gamble 20"
+  skill_intelligence_gamble_30:
+    input: checkbox
+    label: "skill intelligence gamble 30"
+  skill_intelligence_heal_10:
+    input: checkbox
+    label: "skill intelligence heal 10"
+  skill_intelligence_heal_20:
+    input: checkbox
+    label: "skill intelligence heal 20"
+  skill_intelligence_heal_30:
+    input: checkbox
+    label: "skill intelligence heal 30"
+  skill_intelligence_navigation_10:
+    input: checkbox
+    label: "skill intelligence navigation 10"
+  skill_intelligence_navigation_20:
+    input: checkbox
+    label: "skill intelligence navigation 20"
+  skill_intelligence_navigation_30:
+    input: checkbox
+    label: "skill intelligence navigation 30"
+  skill_intelligence_warfare_10:
+    input: checkbox
+    label: "skill intelligence warfare 10"
+  skill_intelligence_warfare_20:
+    input: checkbox
+    label: "skill intelligence warfare 20"
+  skill_intelligence_warfare_30:
+    input: checkbox
+    label: "skill intelligence warfare 30"
+  # Willpower skills
+  skill_willpower_incantation_10:
+    input: checkbox
+    label: "skill willpower incantation 10"
+  skill_willpower_incantation_20:
+    input: checkbox
+    label: "skill willpower incantation 20"
+  skill_willpower_incantation_30:
+    input: checkbox
+    label: "skill willpower incantation 30"
+  skill_willpower_interogation_10:
+    input: checkbox
+    label: "skill willpower interrogation 10"
+  skill_willpower_interogation_20:
+    input: checkbox
+    label: "skill willpower interrogation 20"
+  skill_willpower_interogation_30:
+    input: checkbox
+    label: "skill willpower interrogation 30"
+  skill_willpower_resolve_10:
+    input: checkbox
+    label: "skill willpower resolve 10"
+  skill_willpower_resolve_20:
+    input: checkbox
+    label: "skill willpower resolve 20"
+  skill_willpower_resolve_30:
+    input: checkbox
+    label: "skill willpower resolve 30"
+  skill_willpower_tradecraft_10:
+    input: checkbox
+    label: "skill willpower tradecraft 10"
+  skill_willpower_tradecraft_20:
+    input: checkbox
+    label: "skill willpower tradecraft 20"
+  skill_willpower_tradecraft_30:
+    input: checkbox
+    label: "skill willpower tradecraft 30"
+
+  # Fellowship Skills
+  skill_fellowship_bargain_10:
+    input: checkbox
+    label: "skill fellowship bargain 10"
+  skill_fellowship_bargain_20:
+    input: checkbox
+    label: "skill fellowship bargain 20"
+  skill_fellowship_bargain_30:
+    input: checkbox
+    label: "skill fellowship bargain 30"
+  skill_fellowship_charm_10:
+    input: checkbox
+    label: "skill fellowship charm 10"
+  skill_fellowship_charm_20:
+    input: checkbox
+    label: "skill fellowship charm 20"
+  skill_fellowship_charm_30:
+    input: checkbox
+    label: "skill fellowship charm 30"
+  skill_fellowship_disguise_10:
+    input: checkbox
+    label: "skill fellowship disguise 10"
+  skill_fellowship_disguise_20:
+    input: checkbox
+    label: "skill fellowship disguise 20"
+  skill_fellowship_disguise_30:
+    input: checkbox
+    label: "skill fellowship disguise 30"
+  skill_fellowship_guile_10:
+    input: checkbox
+    label: "skill fellowship guile 10"
+  skill_fellowship_guile_20:
+    input: checkbox
+    label: "skill fellowship guile 20"
+  skill_fellowship_guile_30:
+    input: checkbox
+    label: "skill fellowship guile 30"
+  skill_fellowship_handle_animal_10:
+    input: checkbox
+    label: "skill fellowship handle animal 10"
+  skill_fellowship_handle_animal_20:
+    input: checkbox
+    label: "skill fellowship handle animal 20"
+  skill_fellowship_handle_animal_30:
+    input: checkbox
+    label: "skill fellowship handle animal 30"
+  skill_fellowship_leadership_10:
+    input: checkbox
+    label: "skill fellowship leadership 10"
+  skill_fellowship_leadership_20:
+    input: checkbox
+    label: "skill fellowship leadership 20"
+  skill_fellowship_leadership_30:
+    input: checkbox
+    label: "skill fellowship leadership 30"
+  skill_fellowship_rumor_10:
+    input: checkbox
+    label: "skill fellowship rumor 10"
+  skill_fellowship_rumor_20:
+    input: checkbox
+    label: "skill fellowship rumor 20"
+  skill_fellowship_rumor_30:
+    input: checkbox
+    label: "skill fellowship rumor 30"
+
+#Skill Focuses:
+  #Combat skills
+  skill_combat_martial_melee_focus:
+    input: string
+    label: "skill combat martial melee focus"
+  skill_combat_martial_ranged_focus:
+    input: string
+    label: "skill combat martial ranged focus"
+  skill_combat_simple_melee_focus:
+    input: string
+    label: "skill combat simple melee focus"
+  skill_combat_simple_ranged_focus:
+    input: string  
+    label: "skill combat simple ranged focus"
+  # Brawn Skills
+  skill_brawn_athletics_focus:
+    input: string
+    label: "skill brawn athletics focus"
+  skill_brawn_drive_focus:
+    input: string 
+    label: "skill brawn drive focus"
+  skill_brawn_intimidate_focus:
+    input: string
+    label: "skill brawn intimidate focus"
+  skill_brawn_toughness_focus_focus:
+    input: string
+    label: "skill brawn toughness focus"
+  #Agility Skills
+  skill_agility_coordination_focus:
+    input: string
+    label: "skill agility coordination focus"
+  skill_agility_pilot_focus:
+    input: string
+    label: "skill agility pilot focus"
+  skill_agility_ride:
+    input: string
+    label: "skill agility ride focus"
+  skill_agility_skulduggery_focus:
+    input: string
+    label: "skill agility skulduggery focus"
+  skill_agility_stealth_focus:
+    input: string
+    label: "skill agility stealth focus"
+  # Perception Skills
+  skill_perception_awareness_focus:
+    input: string
+    label: "skill perception awareness focus"
+  skill_perception_eavesdrop_focus:
+    input: string
+    label: "skill perception eavesdrop focus"
+  skill_perception_scrutinize_focus:
+    input: string
+    label: "skill perception scrutinize focus"
+  skill_perception_survival_focus:
+    input: string
+    label: "skill perception survival focus"
+  # Intelligence skills
+  skill_intelligence_alchemy_focus:
+    input: string
+    label: "skill intelligence alchemy focus"
+  skill_intelligence_counterfeit_focus:
+    input: string
+    label: "skill intelligence counterfeit focus"
+  skill_intelligence_education_focus:
+    input: string
+    label: "skill intelligence Education focus"
+  skill_intelligence_folklore_focus:
+    input: string
+    label: "skill intelligence folklore focus"
+  skill_intelligence_gamble_focus:
+    input: string
+    label: "skill intelligence gamble focus"
+  skill_intelligence_heal_focus:
+    input: string
+    label: "skill intelligence heal focus"
+  skill_intelligence_navigation_focus:
+    input: string
+    label: "skill intelligence navigation focus"
+  skill_intelligence_warfare_focus:
+    input: string
+    label: "skill intelligence warfare focus"
+  # Willpower skills
+  skill_willpower_incantation_focus:
+    input: string
+    label: "skill willpower incantation focus"  
+  skill_willpower_interogation_focus:
+    input: string
+    label: "skill willpower interrogation focus"
+  skill_willpower_resolve_focus:
+    input: string
+    label: "skill willpower resolve focus"
+  skill_willpower_tradecraft_focus:
+    input: string
+    label: "skill willpower tradecraft focus"
+  # Fellowship Skills
+  skill_fellowship_bargain_focus:
+    input: string
+    label: "skill fellowship bargain focus"
+  skill_fellowship_charm_focus:
+    input: string
+    label: "skill fellowship charm focus"
+  skill_fellowship_disguise_focus:
+    input: string
+    label: "skill fellowship disguise focus"
+  skill_fellowship_guile_focus:
+    input: string
+    label: "skill fellowship guile focus"
+  skill_fellowship_handle_animal_focus:
+    input: string
+    label: "skill fellowship handle animal focus"
+  skill_fellowship_leadership_focus:
+    input: string
+    label: "skill fellowship leadership focus"
+  skill_fellowship_rumor_focus:
+    input: string
+    label: "skill fellowship rumor focus"
+
+# Peril
+  peril_threshold_base:
+    input: integer # 3 + WB
+    label: "peril threshold base"
+    #description: "3+ WB"
+  peril_threshold_6:
+    input: integer # peril_threshold + 6
+    label: "peril threshold 6"
+  peril_threshold_12:
+    input: integer # peril_threshold + 12
+    label: "peril threshold 12"
+  peril_threshold_18:
+    input: integer # peril_threshold + 18
+    label: "peril threshold 18"
+
+  peril_condition_track:
+    input: select
+    label: "peril condition track"
+    options:
+      unhindered: "UNHINDERED"
+      imperiled: "imperiled"
+      ignore1: "ignore 1 skill rank"
+      ignore2: "ignore 2 skill ranks"
+      ignore3: "ignore 3 skill ranks"
+      inacaptidated: "INCAPACITATED!"
+
+# Traits (name + description)
+  trait_name_1:
+    input: string
+    label: "trait name 1"
+  trait_description_1:
+    input: text
+    label: "trait description 1"
+  trait_name_2:
+    input: string
+    label: "trait name 2"
+  trait_description_2:
+    input: text
+    label: "trait description 2"
+  trait_name_3:
+    input: string
+    label: "trait name 3"
+  trait_description_3:
+    input: text
+    label: "trait description 3"
+  trait_name_4:
+    input: string
+    label: "trait name 4"
+  trait_description_4:
+    input: text
+    label: "trait description 4"
+  trait_name_5:
+    input: string
+    label: "trait name 5"
+  trait_description_5:
+    input: text
+    label: "trait description 5"
+  trait_name_6:
+    input: string
+    label: "trait name 6"
+  trait_description_6:
+    input: text
+    label: "trait description 6"
+  trait_name_7:
+    input: string
+    label: "trait name 7"
+  trait_description_7:
+    input: text
+    label: "trait description 7"
+  trait_name_8:
+    input: string
+    label: "trait name 8"
+  trait_description_8:
+    input: text
+    label: "trait description 8"
+  trait_name_9:
+    input: string
+    label: "trait name 9"
+  trait_description_9:
+    input: text
+    label: "trait description 9"
+  trait_name_10:
+    input: string
+    label: "trait name 10"
+  trait_description_10:
+    input: text
+    label: "trait description 10"
+  trait_name_11:
+    input: string
+    label: "trait name 11"
+  trait_description_11:
+    input: text
+    label: "trait description 11"
+  trait_name_12:
+    input: string
+    label: "trait name 12"
+  trait_description_12:
+    input: text
+    label: "trait description 12"
+  trait_name_13:
+    input: string
+    label: "trait name 13"
+  trait_description_13:
+    input: text
+    label: "trait description 13"
+  trait_name_14:
+    input: string
+    label: "trait name 14"
+  trait_description_14:
+    input: text
+    label: "trait description 14"
+
+
+# Second Page (Trappings)
+
+# Encumbrance Limit
+  encumbrance_limit:
+    input: integer # 3+BB
+    label: "encumbrance limit"
+
+# Initiative
+  initiative_base:
+    input: integer # 3+PB
+    label: "initiative base"
+
+# Movement
+  movement_base:
+    input: integer # 3 + AB
+    label: "movement base"
+  movement_current:
+    input: integer # movement - overage
+    label: "movement current"
+  movement_overage: #probably redundant
+    input: integer # overage
+    label: "movement overage"
+
+# Damage
+  damage_threshold_damage:
+    input: integer # BB + Dth_modifier
+    label: "damage threshold"
+    description: "BB +"
+  damage_threshold_6:
+    input: integer # damage_threshold + 6
+    label: "damage threshold 6"
+  damage_threshold_12:
+    input: integer # damage_threshold + 12
+    label: "damage threshold 12"
+  damage_threshold_18:
+    input: integer # damage_threshold + 18
+    label: "damage threshold 18"
+  
+  damage_condition_track:
+    input: select
+    label: "damage condition track"
+    options:
+        unharmed: "unharmed"
+        light: "light"
+        moderate: "moderate"
+        serious: "serious"
+        grievous: "grievous"
+        slain: "slain"     
+
+  # Dodge & Parry
+  #  dodge:
+  #    input: select
+  #   label: "Dodge"
+  #    options:
+  #      coordination: "Coordination" #default
+  #      guile: "Guile"
+  #      drive: "Drive"
+  #      ride": "Ride"
+  dodge_coordination:
+    input: integer
+    label: "dodge coordination"
+  dodge_guile:
+    input: integer
+    label: "dodge guile"
+  dodge_drive:
+    input: integer
+    label: "dodge drive"
+  dodge_ride:
+    input: integer
+    label: "dodge ride"
+
+#parry:
+  #  input: select
+  #  label: "Parry"
+  #  options:
+  #    simple_melee: "Simple Melee"
+  #    martial_melee: "Martial Melee"
+  #    guile: "Guile"
+  #    charm: "Charm"
+  #    incantation: "Incantation"
+  parry_simple_melee:
+    input: integer
+    label: "parry simple melee"
+  parry_martial_melee:
+    input: integer
+    label: "parry martial melee"
+  parry_guile:
+    input: integer
+    label: "parry guile"
+  parry_charm:
+    input: integer
+    label: "parry charm"
+  parry_incantation:
+    input: integer
+    label: "parry incantation"
+
+# Armor
+  armor_name:
+    input: string
+    label: "armor name"
+  armor_dth_mod:
+    input: integer
+    label: "armor dth mod"
+  armor_qualities:
+    input: text
+    label: "armor qualities"
+  armor_encumbrance:
+    input: integer
+    label: "armor encumbrance"
+  armor_is_ruined:
+    input: checkbox
+    label: "armor is ruined"
+  armor_is_makers_mark:
+    input: checkbox
+    label: "armor is makers mark"
+  armor_is_castle_forged:
+    input: checkbox
+    label: "armor is castle forged"
+  armor_is_natural:
+    input: checkbox
+    label: "armor is natural"
+
+
+# Weapon_1
+  weapon_name_1:
+    input: string
+    label: "weapon name 1"
+  weapon_skill_1:
+    input: select
+    label: "weapon skill 1"
+    options:
+      simple melee: "Simple Melee"
+      martial melee: "Martial Melee"
+      simple ranged: "Simple Ranged"
+      martial ranged: "Martial Ranged"
+  weapon_load_1:
+    input: integer
+    label: "weapon load 1"
+  weapon_ammo_1:
+    input: integer
+    label: "weapon ammo 1"
+  weapon_handling_1:
+    input: select
+    label: "weapon handling 1"
+    options:
+      weapon one handed: "One-handed"
+      weapon two handed: "Two-handed"
+  weapon_distance_1:
+    input: text
+    label: "weapon distance 1"
+    description: "(short / medium x2 / long x3)"
+  weapon_damage_1:
+    input: integer
+    label: "weapon damage 1"
+    # description: "Base damage"
+  weapon_qualities_1: 
+    input: text
+    label: "weapon qualities 1"
+  weapons_is_defensive_1:
+    input: checkbox
+    label: "weapons is defensive 1"
+  weapon_encumbrance_1:
+    input: integer
+    label: "weapon encumbrance 1"
+
+# Weapon_2
+  weapon_name_2:
+    input: string
+    label: "weapon name 2"
+  weapon_skill_2:
+    input: select
+    label: "weapon skill 2"
+    options:
+      simple melee: "Simple Melee"
+      martial melee: "Martial Melee"
+      simple ranged: "Simple Ranged"
+      martial ranged: "Martial Ranged"
+  weapon_load_2:
+    input: integer
+    label: "weapon load 2"
+  weapon_ammo_2:
+    input: integer
+    label: "weapon ammo 2"
+  weapon_handling_2:
+    input: select
+    label: "weapon handling 2"
+    options:
+      weapon one handed: "One-handed"
+      weapon two handed: "Two-handed"
+  weapon_distance_2:
+    input: text
+    label: "weapon distance 2"
+    description: "(short / medium x2 / long x3)"
+  weapon_damage_2:
+    input: integer
+    label: "weapon damage 2"
+    # description: "Base damage"
+  weapon_qualities_2: 
+    input: text
+    label: "weapon qualities 2"
+  weapons_is_defensive_2:
+    input: checkbox
+    label: "weapons is defensive 2"
+  weapon_encumbrance_2:
+    input: integer
+    label: "weapon encumbrance 2"
+
+# Weapon_3
+  weapon_name_3:
+    input: string
+    label: "weapon name 3"
+  weapon_skill_3:
+    input: select
+    label: "weapon skill 3"
+    options:
+      simple melee: "Simple Melee"
+      martial melee: "Martial Melee"
+      simple ranged: "Simple Ranged"
+      martial ranged: "Martial Ranged"
+  weapon_load_3:
+    input: integer
+    label: "weapon load 3"
+  weapon_ammo_3:
+    input: integer
+    label: "weapon ammo 3"
+  weapon_handling_3:
+    input: select
+    label: "weapon handling 3"
+    options:
+      weapon one handed: "One-handed"
+      weapon two handed: "Two-handed"
+  weapon_distance_3:
+    input: text
+    label: "weapon distance 3"
+    description: "(short / medium x3 / long x3)"
+  weapon_damage_3:
+    input: integer
+    label: "weapon damage 3"
+    # description: "Base damage"
+  weapon_qualities_3: 
+    input: text
+    label: "weapon qualities 3"
+  weapons_is_defensive_3:
+    input: checkbox
+    label: "weapons is defensive 3"
+  weapon_encumbrance_3:
+    input: integer
+    label: "weapon encumbrance 3"
+
+# Weapon_4
+  weapon_name_4:
+    input: string
+    label: "weapon name 4"
+  weapon_skill_4:
+    input: select
+    label: "weapon skill 4"
+    options:
+      simple melee: "Simple Melee"
+      martial melee: "Martial Melee"
+      simple ranged: "Simple Ranged"
+      martial ranged: "Martial Ranged"
+  weapon_load_4:
+    input: integer
+    label: "weapon load 4"
+  weapon_ammo_4:
+    input: integer
+    label: "weapon ammo 4"
+  weapon_handling_4:
+    input: select
+    label: "weapon handling 4"
+    options:
+      weapon one handed: "One-handed"
+      weapon two handed: "Two-handed"
+  weapon_distance_4:
+    input: text
+    label: "weapon distance 4"
+    description: "(short / medium x4 / long x3)"
+  weapon_damage_4:
+    input: integer
+    label: "weapon damage 4"
+    # description: "Base damage"
+  weapon_qualities_4: 
+    input: text
+    label: "weapon qualities 4"
+  weapons_is_defensive_4:
+    input: checkbox
+    label: "weapons is defensive 4"
+  weapon_encumbrance_4:
+    input: integer
+    label: "weapon encumbrance 4"
+
+# trappings
+# trappings_name
+  trappings_name_1:
+    input: string
+    label: "trappings name 1"
+  trappings_name_2:
+    input: string
+    label: "trappings name 2"
+  trappings_name_3:
+    input: string
+    label: "trappings name 3"
+  trappings_name_4:
+    input: string
+    label: "trappings name 4"
+  trappings_name_5:
+    input: string
+    label: "trappings name 5"
+  trappings_name_6:
+    input: string
+    label: "trappings name 6"
+  trappings_name_7:
+    input: string
+    label: "trappings name 7"
+  trappings_name_8:
+    input: string
+    label: "trappings name 8"
+  trappings_name_9:
+    input: string
+    label: "trappings name 9"
+  trappings_name_10:
+    input: string
+    label: "trappings name 10"
+  trappings_name_11:
+    input: string
+    label: "trappings name 11"
+  trappings_name_12:
+    input: string
+    label: "trappings name 12"
+  trappings_name_13:
+    input: string
+    label: "trappings name 13"
+  trappings_name_14:
+    input: string
+    label: "trappings name 14"
+  trappings_name_15:
+    input: string
+    label: "trappings name 15"
+  trappings_name_16:
+    input: string
+    label: "trappings name 16"
+  trappings_name_17:
+    input: string
+    label: "trappings name 17"
+  trappings_name_18:
+    input: string
+    label: "trappings name 18"
+  trappings_name_19:
+    input: string
+    label: "trappings name 19"
+  trappings_name_20:
+    input: string
+    label: "trappings name 20"
+  
+# trappings description
+  trappings_desc_1:
+    input: string
+    label: "trappings desc 1"
+  trappings_desc_2:
+    input: string
+    label: "trappings desc 2"
+  trappings_desc_3:
+    input: string
+    label: "trappings desc 3"
+  trappings_desc_4:
+    input: string
+    label: "trappings desc 4"
+  trappings_desc_5:
+    input: string
+    label: "trappings desc 5"
+  trappings_desc_6:
+    input: string
+    label: "trappings desc 6"
+  trappings_desc_7:
+    input: string
+    label: "trappings desc 7"
+  trappings_desc_8:
+    input: string
+    label: "trappings desc 8"
+  trappings_desc_9:
+    input: string
+    label: "trappings desc 9"
+  trappings_desc_10:
+    input: string
+    label: "trappings desc 10"
+  trappings_desc_11:
+    input: string
+    label: "trappings desc 11"
+  trappings_desc_12:
+    input: string
+    label: "trappings desc 12"
+  trappings_desc_13:
+    input: string
+    label: "trappings desc 13"
+  trappings_desc_14:
+    input: string
+    label: "trappings desc 14"
+  trappings_desc_15:
+    input: string
+    label: "trappings desc 15"
+  trappings_desc_16:
+    input: string
+    label: "trappings desc 16"
+  trappings_desc_17:
+    input: string
+    label: "trappings desc 17"
+  trappings_desc_18:
+    input: string
+    label: "trappings desc 18"
+  trappings_desc_19:
+    input: string
+    label: "trappings desc 19"
+  trappings_desc_20:
+    input: string
+    label: "trappings desc 20"
+
+# trappings encumbrance:
+  trappings_enc_1:
+    input: integer
+    label: "trappings enc 1"
+  trappings_enc_2:
+    input: integer
+    label: "trappings enc 2"
+  trappings_enc_3:
+    input: integer
+    label: "trappings enc 3"
+  trappings_enc_4:
+    input: integer
+    label: "trappings enc 4"
+  trappings_enc_5:
+    input: integer
+    label: "trappings enc 5"
+  trappings_enc_6:
+    input: integer
+    label: "trappings enc 6"
+  trappings_enc_7:
+    input: integer
+    label: "trappings enc 7"
+  trappings_enc_8:
+    input: integer
+    label: "trappings enc 8"
+  trappings_enc_9:
+    input: integer
+    label: "trappings enc 9"
+  trappings_enc_10:
+    input: integer
+    label: "trappings enc 10"
+  trappings_enc_11:
+    input: integer
+    label: "trappings enc 11"
+  trappings_enc_12:
+    input: integer
+    label: "trappings enc 12"
+  trappings_enc_13:
+    input: integer
+    label: "trappings enc 13"
+  trappings_enc_14:
+    input: integer
+    label: "trappings enc 14"
+  trappings_enc_15:
+    input: integer
+    label: "trappings enc 15"
+  trappings_enc_16:
+    input: integer
+    label: "trappings enc 16"
+  trappings_enc_17:
+    input: integer
+    label: "trappings enc 17"
+  trappings_enc_18:
+    input: integer
+    label: "trappings enc 18"
+  trappings_enc_19:
+    input: integer
+    label: "trappings enc 19"
+  trappings_enc_20:
+    input: integer
+    label: "trappings enc 20"
+
+# trappings on vehicle or steed (from Character Folio)
+  trappings_vehicle_name_1:
+    input: string
+    label: "trappings vehicle name 1"
+  trappings_vehicle_name_2:
+    input: string
+    label: "trappings vehicle name 2"
+  trappings_vehicle_name_3:
+    input: string
+    label: "trappings vehicle name 3"
+  trappings_vehicle_name_4:
+    input: string
+    label: "trappings vehicle name 4"
+  trappings_vehicle_name_5:
+    input: string
+    label: "trappings vehicle name 5"
+  trappings_vehicle_name_6:
+    input: string
+    label: "trappings vehicle name 6"
+  trappings_vehicle_name_7:
+    input: string
+    label: "trappings vehicle name 7"
+  trappings_vehicle_name_8:
+    input: string
+    label: "trappings vehicle name 8"
+  trappings_vehicle_name_9:
+    input: string
+    label: "trappings vehicle name 9"
+  trappings_vehicle_name_10:
+    input: string
+    label: "trappings vehicle name 10"
+
+
+
+# injuries
+  injuries_name_1:
+    input: string
+    label: "injury name 1"
+  injuries_description_1:
+    input: text
+    label: "injury description 1"
+  injuries_name_2:
+    input: string
+    label: "injury name 2"
+  injuries_description_2:
+    input: text
+    label: "injury description 2"
+  injuries_name_3:
+    input: string
+    label: "injury name 3"
+  injuries_description_3:
+    input: text
+    label: "injury description 3"
+  injuries_name_4:
+    input: string
+    label: "injury name 4"
+  injuries_description_4:
+    input: text
+    label: "injury description 4"
+  injuries_name_5:
+    input: string
+    label: "injury name 5"
+  injuries_description_5:
+    input: text
+    label: "injury description 5"
+
+# talents
+  talents_name_1:
+    input: string
+    label: "talent name 1"
+  talents_name_2:
+    input: string
+    label: "talent name 2"
+  talents_name_3:
+    input: string
+    label: "talent name 3"
+  talents_name_4:
+    input: string
+    label: "talent name 4"
+  talents_name_5:
+    input: string
+    label: "talent name 5"
+  talents_name_6:
+    input: string
+    label: "talent name 6"
+  talents_name_7:
+    input: string
+    label: "talent name 7"
+  talents_name_8:
+    input: string
+    label: "talent name 8"
+  talents_name_9:
+    input: string
+    label: "talent name 9"
+  talents_name_10:
+    input: string
+    label: "talent name 10"
+
+  talent_desc_1:
+    input: text
+    label: "talent desc 1"
+  talent_desc_2:
+    input: text
+    label: "talent desc 2"
+  talent_desc_3:
+    input: text
+    label: "talent desc 3"
+  talent_desc_4:
+    input: text
+    label: "talent desc 4"
+  talent_desc_5:
+    input: text
+    label: "talent desc 5"
+  talent_desc_6:
+    input: text
+    label: "talent desc 6"
+  talent_desc_7:
+    input: text
+    label: "talent desc 7"
+  talent_desc_8:
+    input: text
+    label: "talent desc 8"
+  talent_desc_9:
+    input: text
+    label: "talent desc 9"
+  talent_desc_10:
+    input: text
+    label: "talent desc 10"
+# wealth
+  wealth_gc:
+    input: integer
+    label: "wealth gc"
+  wealth_ss:
+    input: integer
+    label: "wealth ss"
+  wealth_bp:
+    input: integer
+    label: "wealth bp"
+# properties (from chatacter folio)
+  wealth_property:
+    input: text
+    label: "wealth property"
+# trinkets: (from character folio)
+  wealth_trinkets:
+    input: text
+    label: "wealth trinkets"
+
+
+# magic profile (page 3)
+  magic_source_type:
+    input: select
+    label: "magic source type"
+    options:
+      none: none
+      arcane: arcane
+      covenant: covenant
+      divine: divine
+
+# magic & rituals
+# spell name
+  magic_name_1:
+    input: string
+    label: "magic name 1"
+  magic_name_2:
+    input: string
+    label: "magic name 2"
+  magic_name_3:
+    input: string
+    label: "magic name 3"
+  magic_name_4:
+    input: string
+    label: "magic name 4"
+  magic_name_5:
+    input: string
+    label: "magic name 5"
+  magic_name_6:
+    input: string
+    label: "magic name 6"
+  magic_name_7:
+    input: string
+    label: "magic name 7"
+  magic_name_8:
+    input: string
+    label: "magic name 8"
+  magic_name_9:
+    input: string
+    label: "magic name 9"
+  magic_name_10:
+    input: string
+    label: "magic name 10"
+  magic_name_11:
+    input: string
+    label: "magic name 11"
+  magic_name_12:
+    input: string
+    label: "magic name 12"
+  magic_name_13:
+    input: string
+    label: "magic name 13"
+  magic_name_14:
+    input: string
+    label: "magic name 14"
+  magic_name_15:
+    input: string
+    label: "magic name 15"
+  magic_name_16:
+    input: string
+    label: "magic name 16"
+  magic_name_17:
+    input: string
+    label: "magic name 17"
+  magic_name_18:
+    input: string
+    label: "magic name 18"
+  magic_name_19:
+    input: string
+    label: "magic name 19"
+  magic_name_20:
+    input: string
+    label: "magic name 20"
+# description: "Petty / Lesser / Greater"
+  magic_difficulty_1:
+    input: select
+    label: "magic difficulty 1"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_2:
+    input: select
+    label: "magic difficulty 2"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_3:
+    input: select
+    label: "magic difficulty 3"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_4:
+    input: select
+    label: "magic difficulty 4"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_5:
+    input: select
+    label: "magic difficulty 5"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_6:
+    input: select
+    label: "magic difficulty 6"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_7:
+    input: select
+    label: "magic difficulty 7"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_8:
+    input: select
+    label: "magic difficulty 8"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_9:
+    input: select
+    label: "magic difficulty 9"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_10:
+    input: select
+    label: "magic difficulty 10"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_11:
+    input: select
+    label: "magic difficulty 11"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_12:
+    input: select
+    label: "magic difficulty 12"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_13:
+    input: select
+    label: "magic difficulty 13"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_14:
+    input: select
+    label: "magic difficulty 14"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_15:
+    input: select
+    label: "magic difficulty 15"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_16:
+    input: select
+    label: "magic difficulty 16"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_17:
+    input: select
+    label: "magic difficulty 17"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_18:
+    input: select
+    label: "magic difficulty 18"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_19:
+    input: select
+    label: "magic difficulty 19"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+  magic_difficulty_20:
+    input: select
+    label: "magic difficulty 20"
+    options:
+      petty: "Petty"
+      lesser: "Lesser"
+      greater: "Greater"
+
+# reagents
+  magic_reagent_1:
+    input: text
+    label: "magic reagent 1"
+  magic_reagent_2:
+    input: text
+    label: "magic reagent 2"
+  magic_reagent_3:
+    input: text
+    label: "magic reagent 3"
+  magic_reagent_4:
+    input: text
+    label: "magic reagent 4"
+  magic_reagent_5:
+    input: text
+    label: "magic reagent 5"
+  magic_reagent_6:
+    input: text
+    label: "magic reagent 6"
+  magic_reagent_7:
+    input: text
+    label: "magic reagent 7"
+  magic_reagent_8:
+    input: text
+    label: "magic reagent 8"
+  magic_reagent_9:
+    input: text
+    label: "magic reagent 9"
+  magic_reagent_10:
+    input: text
+    label: "magic reagent 10"
+  magic_reagent_11:
+    input: text
+    label: "magic reagent 11"
+  magic_reagent_12:
+    input: text
+    label: "magic reagent 12"
+  magic_reagent_13:
+    input: text
+    label: "magic reagent 13"
+  magic_reagent_14:
+    input: text
+    label: "magic reagent 14"
+  magic_reagent_15:
+    input: text
+    label: "magic reagent 15"
+  magic_reagent_16:
+    input: text
+    label: "magic reagent 16"
+  magic_reagent_17:
+    input: text
+    label: "magic reagent 17"
+  magic_reagent_18:
+    input: text
+    label: "magic reagent 18"
+  magic_reagent_19:
+    input: text
+    label: "magic reagent 19"
+  magic_reagent_20:
+    input: text
+    label: "magic reagent 20"
+
+# magic distance info
+  magic_distance_1:
+    input: text
+    label: "magic distance 1"
+  magic_distance_2:
+    input: text
+    label: "magic distance 2"
+  magic_distance_3:
+    input: text
+    label: "magic distance 3"
+  magic_distance_4:
+    input: text
+    label: "magic distance 4"
+  magic_distance_5:
+    input: text
+    label: "magic distance 5"
+  magic_distance_6:
+    input: text
+    label: "magic distance 6"
+  magic_distance_7:
+    input: text
+    label: "magic distance 7"
+  magic_distance_8:
+    input: text
+    label: "magic distance 8"
+  magic_distance_9:
+    input: text
+    label: "magic distance 9"
+  magic_distance_10:
+    input: text
+    label: "magic distance 10"
+  magic_distance_11:
+    input: text
+    label: "magic distance 11"
+  magic_distance_12:
+    input: text
+    label: "magic distance 12"
+  magic_distance_13:
+    input: text
+    label: "magic distance 13"
+  magic_distance_14:
+    input: text
+    label: "magic distance 14"
+  magic_distance_15:
+    input: text
+    label: "magic distance 15"
+  magic_distance_16:
+    input: text
+    label: "magic distance 16"
+  magic_distance_17:
+    input: text
+    label: "magic distance 17"
+  magic_distance_18:
+    input: text
+    label: "magic distance 18"
+  magic_distance_19:
+    input: text
+    label: "magic distance 19"
+  magic_distance_20:
+    input: text
+    label: "magic distance 20"
+# magic duration info
+  magic_duration_1:
+    input: text
+    label: "magic duration 1"
+  magic_duration_2:
+    input: text
+    label: "magic duration 2"
+  magic_duration_3:
+    input: text
+    label: "magic duration 3"
+  magic_duration_4:
+    input: text
+    label: "magic duration 4"
+  magic_duration_5:
+    input: text
+    label: "magic duration 5"
+  magic_duration_6:
+    input: text
+    label: "magic duration 6"
+  magic_duration_7:
+    input: text
+    label: "magic duration 7"
+  magic_duration_8:
+    input: text
+    label: "magic duration 8"
+  magic_duration_9:
+    input: text
+    label: "magic duration 9"
+  magic_duration_10:
+    input: text
+    label: "magic duration 10"
+  magic_duration_11:
+    input: text
+    label: "magic duration 11"
+  magic_duration_12:
+    input: text
+    label: "magic duration 12"
+  magic_duration_13:
+    input: text
+    label: "magic duration 13"
+  magic_duration_14:
+    input: text
+    label: "magic duration 14"
+  magic_duration_15:
+    input: text
+    label: "magic duration 15"
+  magic_duration_16:
+    input: text
+    label: "magic duration 16"
+  magic_duration_17:
+    input: text
+    label: "magic duration 17"
+  magic_duration_18:
+    input: text
+    label: "magic duration 18"
+  magic_duration_19:
+    input: text
+    label: "magic duration 19"
+  magic_duration_20:
+    input: text
+    label: "magic duration 20"
+
+# magic effect
+  magic_effect_1:
+    input: text
+    label: "magic effect 1"
+  magic_effect_2:
+    input: text
+    label: "magic effect 2"
+  magic_effect_3:
+    input: text
+    label: "magic effect 3"
+  magic_effect_4:
+    input: text
+    label: "magic effect 4"
+  magic_effect_5:
+    input: text
+    label: "magic effect 5"
+  magic_effect_6:
+    input: text
+    label: "magic effect 6"
+  magic_effect_7:
+    input: text
+    label: "magic effect 7"
+  magic_effect_8:
+    input: text
+    label: "magic effect 8"
+  magic_effect_9:
+    input: text
+    label: "magic effect 9"
+  magic_effect_10:
+    input: text
+    label: "magic effect 10"
+  magic_effect_11:
+    input: text
+    label: "magic effect 11"
+  magic_effect_12:
+    input: text
+    label: "magic effect 12"
+  magic_effect_13:
+    input: text
+    label: "magic effect 13"
+  magic_effect_14:
+    input: text
+    label: "magic effect 14"
+  magic_effect_15:
+    input: text
+    label: "magic effect 15"
+  magic_effect_16:
+    input: text
+    label: "magic effect 16"
+  magic_effect_17:
+    input: text
+    label: "magic effect 17"
+  magic_effect_18:
+    input: text
+    label: "magic effect 18"
+  magic_effect_19:
+    input: text
+    label: "magic effect 19"
+  magic_effect_20:
+    input: text
+    label: "magic effect 20"
+# magic critical success
+  magic_critical_success_1:
+    input: text
+    label: "magic critical success 1"
+  magic_critical_success_2:
+    input: text
+    label: "magic critical success 2"
+  magic_critical_success_3:
+    input: text
+    label: "magic critical success 3"
+  magic_critical_success_4:
+    input: text
+    label: "magic critical success 4"
+  magic_critical_success_5:
+    input: text
+    label: "magic critical success 5"
+  magic_critical_success_6:
+    input: text
+    label: "magic critical success 6"
+  magic_critical_success_7:
+    input: text
+    label: "magic critical success 7"
+  magic_critical_success_8:
+    input: text
+    label: "magic critical success 8"
+  magic_critical_success_9:
+    input: text
+    label: "magic critical success 9"
+  magic_critical_success_10:
+    input: text
+    label: "magic critical success 10"
+  magic_critical_success_11:
+    input: text
+    label: "magic critical success 11"
+  magic_critical_success_12:
+    input: text
+    label: "magic critical success 12"
+  magic_critical_success_13:
+    input: text
+    label: "magic critical success 13"
+  magic_critical_success_14:
+    input: text
+    label: "magic critical success 14"
+  magic_critical_success_15:
+    input: text
+    label: "magic critical success 15"
+  magic_critical_success_16:
+    input: text
+    label: "magic critical success 16"
+  magic_critical_success_17:
+    input: text
+    label: "magic critical success 17"
+  magic_critical_success_18:
+    input: text
+    label: "magic critical success 18"
+  magic_critical_success_19:
+    input: text
+    label: "magic critical success 19"
+  magic_critical_success_20:
+    input: text
+    label: "magic critical success 20"
+# magic critical failure
+  magic_critical_success_1:
+    input: text
+    label: "magic critical success 1"
+  magic_critical_success_2:
+    input: text
+    label: "magic critical success 2"
+  magic_critical_success_3:
+    input: text
+    label: "magic critical success 3"
+  magic_critical_success_4:
+    input: text
+    label: "magic critical success 4"
+  magic_critical_success_5:
+    input: text
+    label: "magic critical success 5"
+  magic_critical_success_6:
+    input: text
+    label: "magic critical success 6"
+  magic_critical_success_7:
+    input: text
+    label: "magic critical success 7"
+  magic_critical_success_8:
+    input: text
+    label: "magic critical success 8"
+  magic_critical_success_9:
+    input: text
+    label: "magic critical success 9"
+  magic_critical_success_10:
+    input: text
+    label: "magic critical success 10"
+  magic_critical_success_11:
+    input: text
+    label: "magic critical success 11"
+  magic_critical_success_12:
+    input: text
+    label: "magic critical success 12"
+  magic_critical_success_13:
+    input: text
+    label: "magic critical success 13"
+  magic_critical_success_14:
+    input: text
+    label: "magic critical success 14"
+  magic_critical_success_15:
+    input: text
+    label: "magic critical success 15"
+  magic_critical_success_16:
+    input: text
+    label: "magic critical success 16"
+  magic_critical_success_17:
+    input: text
+    label: "magic critical success 17"
+  magic_critical_success_18:
+    input: text
+    label: "magic critical success 18"
+  magic_critical_success_19:
+    input: text
+    label: "magic critical success 19"
+  magic_critical_success_20:
+    input: text
+    label: "magic critical success 20"
+
+# rituals tab
+  ritual_name_1:
+    input: text
+    label: "ritual name 1"
+  ritual_casting_time_1:
+    input: text
+    label: "ritual casting time 1"
+  ritual_reagents_1:
+    input: text
+    label: "ritual reagents 1"
+  ritual_condition_1:
+    input: text
+    label: "ritual conidition 1"
+  ritual_channel_power_1:
+    input: text
+    label: "ritual channel power 1"
+  ritual_difficulty_rating_1:
+    input: text
+    label: "ritual difficulty rating 1"
+  ritual_consequences_1:
+    input: text
+    label: "ritual consequences 1"
+  ritual_effects_1:
+    input: text
+    label: "ritual effects 1"
+  ritual_name_2:
+    input: text
+    label: "ritual name 2"
+  ritual_casting_time_2:
+    input: text
+    label: "ritual casting time 2"
+  ritual_reagents_2:
+    input: text
+    label: "ritual reagents 2"
+  ritual_condition_2:
+    input: text
+    label: "ritual conidition 2"
+  ritual_channel_power_2:
+    input: text
+    label: "ritual channel power 2"
+  ritual_difficulty_rating_2:
+    input: text
+    label: "ritual difficulty rating 2"
+  ritual_consequences_2:
+    input: text
+    label: "ritual consequences 2"
+  ritual_effects_2:
+    input: text
+    label: "ritual effects 2"
+  ritual_name_3:
+    input: text
+    label: "ritual name 3"
+  ritual_casting_time_3:
+    input: text
+    label: "ritual casting time 3"
+  ritual_reagents_3:
+    input: text
+    label: "ritual reagents 3"
+  ritual_condition_3:
+    input: text
+    label: "ritual conidition 3"
+  ritual_channel_power_3:
+    input: text
+    label: "ritual channel power 3"
+  ritual_difficulty_rating_3:
+    input: text
+    label: "ritual difficulty rating 3"
+  ritual_consequences_3:
+    input: text
+    label: "ritual consequences 3"
+  ritual_effects_3:
+    input: text
+    label: "ritual effects 3"
+  ritual_name_4:
+    input: text
+    label: "ritual name 4"
+  ritual_casting_time_4:
+    input: text
+    label: "ritual casting time 4"
+  ritual_reagents_4:
+    input: text
+    label: "ritual reagents 4"
+  ritual_condition_4:
+    input: text
+    label: "ritual conidition 4"
+  ritual_channel_power_4:
+    input: text
+    label: "ritual channel power 4"
+  ritual_difficulty_rating_4:
+    input: text
+    label: "ritual difficulty rating 4"
+  ritual_consequences_4:
+    input: text
+    label: "ritual consequences 4"
+  ritual_effects_4:
+    input: text
+    label: "ritual effects 4"
+  ritual_name_5:
+    input: text
+    label: "ritual name 5"
+  ritual_casting_time_5:
+    input: text
+    label: "ritual casting time 5"
+  ritual_reagents_5:
+    input: text
+    label: "ritual reagents 5"
+  ritual_condition_5:
+    input: text
+    label: "ritual conidition 5"
+  ritual_channel_power_5:
+    input: text
+    label: "ritual channel power 5"
+  ritual_difficulty_rating_5:
+    input: text
+    label: "ritual difficulty rating 5"
+  ritual_consequences_5:
+    input: text
+    label: "ritual consequences 5"
+  ritual_effects_5:
+    input: text
+    label: "ritual effects 5"
+  ritual_name_6:
+    input: text
+    label: "ritual name 6"
+  ritual_casting_time_6:
+    input: text
+    label: "ritual casting time 6"
+  ritual_reagents_6:
+    input: text
+    label: "ritual reagents 6"
+  ritual_condition_6:
+    input: text
+    label: "ritual conidition 6"
+  ritual_channel_power_6:
+    input: text
+    label: "ritual channel power 6"
+  ritual_difficulty_rating_6:
+    input: text
+    label: "ritual difficulty rating 6"
+  ritual_consequences_6:
+    input: text
+    label: "ritual consequences 6"
+  ritual_effects_6:
+    input: text
+    label: "ritual effects 6"
+  ritual_name_7:
+    input: text
+    label: "ritual name 7"
+  ritual_casting_time_7:
+    input: text
+    label: "ritual casting time 7"
+  ritual_reagents_7:
+    input: text
+    label: "ritual reagents 7"
+  ritual_condition_7:
+    input: text
+    label: "ritual conidition 7"
+  ritual_channel_power_7:
+    input: text
+    label: "ritual channel power 7"
+  ritual_difficulty_rating_7:
+    input: text
+    label: "ritual difficulty rating 7"
+  ritual_consequences_7:
+    input: text
+    label: "ritual consequences 7"
+  ritual_effects_7:
+    input: text
+    label: "ritual effects 7"
+  ritual_name_8:
+    input: text
+    label: "ritual name 8"
+  ritual_casting_time_8:
+    input: text
+    label: "ritual casting time 8"
+  ritual_reagents_8:
+    input: text
+    label: "ritual reagents 8"
+  ritual_condition_8:
+    input: text
+    label: "ritual conidition 8"
+  ritual_channel_power_8:
+    input: text
+    label: "ritual channel power 8"
+  ritual_difficulty_rating_8:
+    input: text
+    label: "ritual difficulty rating 8"
+  ritual_consequences_8:
+    input: text
+    label: "ritual consequences 8"
+  ritual_effects_8:
+    input: text
+    label: "ritual effects 8"
+  ritual_name_9:
+    input: text
+    label: "ritual name 9"
+  ritual_casting_time_9:
+    input: text
+    label: "ritual casting time 9"
+  ritual_reagents_9:
+    input: text
+    label: "ritual reagents 9"
+  ritual_condition_9:
+    input: text
+    label: "ritual conidition 9"
+  ritual_channel_power_9:
+    input: text
+    label: "ritual channel power 9"
+  ritual_difficulty_rating_9:
+    input: text
+    label: "ritual difficulty rating 9"
+  ritual_consequences_9:
+    input: text
+    label: "ritual consequences 9"
+  ritual_effects_9:
+    input: text
+    label: "ritual effects 9"
+  ritual_name_10:
+    input: text
+    label: "ritual name 10"
+  ritual_casting_time_10:
+    input: text
+    label: "ritual casting time 10"
+  ritual_reagents_10:
+    input: text
+    label: "ritual reagents 10"
+  ritual_condition_10:
+    input: text
+    label: "ritual conidition 10"
+  ritual_channel_power_10:
+    input: text
+    label: "ritual channel power 10"
+  ritual_difficulty_rating_10:
+    input: text
+    label: "ritual difficulty rating 10"
+  ritual_consequences_10:
+    input: text
+    label: "ritual consequences 10"
+  ritual_effects_10:
+    input: text
+    label: "ritual effects 10"
+
+
+# reagents (from character folio)
+  reagent_name_1:
+    input: string
+    label: "reagent name 1"
+  reagent_name_2:
+    input: string
+    label: "reagent name 2"
+  reagent_name_3:
+    input: string
+    label: "reagent name 3"
+  reagent_name_4:
+    input: string
+    label: "reagent name 4"
+  reagent_name_5:
+    input: string
+    label: "reagent name 5"
+  reagent_name_6:
+    input: string
+    label: "reagent name 6"
+  reagent_name_7:
+    input: string
+    label: "reagent name 7"
+  reagent_name_8:
+    input: string
+    label: "reagent name 8"
+  reagent_name_9:
+    input: string
+    label: "reagent name 9"
+  reagent_name_10:
+    input: string
+    label: "reagent name 10"
+  
+  reagent_qty_1:
+    input: integer
+    label: "reagent qty 1"
+  reagent_qty_2:
+    input: integer
+    label: "reagent qty 2"
+  reagent_qty_3:
+    input: integer
+    label: "reagent qty 3"
+  reagent_qty_4:
+    input: integer
+    label: "reagent qty 4"
+  reagent_qty_5:
+    input: integer
+    label: "reagent qty 5"
+  reagent_qty_6:
+    input: integer
+    label: "reagent qty 6"
+  reagent_qty_7:
+    input: integer
+    label: "reagent qty 7"
+  reagent_qty_8:
+    input: integer
+    label: "reagent qty 8"
+  reagent_qty_9:
+    input: integer
+    label: "reagent qty 9"
+  reagent_qty_10:
+    input: integer
+    label: "reagent qty 10"
+
+  reagent_enc_1:
+    input: integer
+    label: "reagent enc 1"
+  reagent_enc_2:
+    input: integer
+    label: "reagent enc 2"
+  reagent_enc_3:
+    input: integer
+    label: "reagent enc 3"
+  reagent_enc_4:
+    input: integer
+    label: "reagent enc 4"
+  reagent_enc_5:
+    input: integer
+    label: "reagent enc 5"
+  reagent_enc_6:
+    input: integer
+    label: "reagent enc 6"
+  reagent_enc_7:
+    input: integer
+    label: "reagent enc 7"
+  reagent_enc_8:
+    input: integer
+    label: "reagent enc 8"
+  reagent_enc_9:
+    input: integer
+    label: "reagent enc 9"
+  reagent_enc_10:
+    input: integer
+    label: "reagent enc 10"
+
+
+# Daemonic gifts (from character folio)
+  gift_name:
+    input: string
+    label: "daemonic gift"
+  gift_description:
+    input: text
+    label: "gift description"
+# Advances (page 4)
+  current_reward_points:
+    input: integer
+    label: "current reward points"
+  total_reward_points:
+    input: integer
+    label: "total reward points"
+ #Basic Profession Scheme 
+  profession_basic:
+    input: string
+    label: "profession basic"
+    #description: "Profession"
+  profession_basic_skill_rank_1:
+    input: string
+    label: "profession basic skill rank 1"
+    #description: "SR"
+  profession_basic_skill_rank_checkbox_1:
+    input: checkbox
+    label: "profession basic skill rank checkbox 1"
+  profession_basic_skill_rank_2:
+    input: string
+    label: "profession basic skill rank 2"
+    #description: "SR"
+  profession_basic_skill_rank_checkbox_2:
+    input: checkbox
+    label: "profession basic skill rank checkbox 2"
+  profession_basic_skill_rank_3:
+    input: string
+    label: "profession basic skill rank 3"
+    #description: "SR"
+  profession_basic_skill_rank_checkbox_3:
+    input: checkbox
+    label: "profession basic skill rank checkbox 3"
+  profession_basic_skill_rank_4:
+    input: string
+    label: "profession basic skill rank 4"
+    #description: "SR"
+  profession_basic_skill_rank_checkbox_4:
+    input: checkbox
+    label: "profession basic skill rank checkbox 4"
+  profession_basic_skill_rank_5:
+    input: string
+    label: "profession basic skill rank 5"
+    #description: "SR"
+  profession_basic_skill_rank_checkbox_5:
+    input: checkbox
+    label: "profession basic skill rank checkbox 5"
+  profession_basic_skill_rank_6:
+    input: string
+    label: "profession basic skill rank 6"
+    #description: "SR"
+  profession_basic_skill_rank_checkbox_6:
+    input: checkbox
+    label: "profession basic skill rank checkbox 6"
+  profession_basic_skill_rank_7:
+    input: string
+    label: "profession basic skill rank 7"
+    #description: "SR"
+  profession_basic_skill_rank_checkbox_7:
+    input: checkbox
+    label: "profession basic skill rank checkbox 7"
+  profession_basic_skill_rank_8:
+    input: string
+    label: "profession basic skill rank 8"
+    #description: "SR"
+  profession_basic_skill_rank_checkbox_8:
+    input: checkbox
+    label: "profession basic skill rank checkbox 8"
+  profession_basic_skill_rank_9:
+    input: string
+    label: "profession basic skill rank 9"
+    #description: "SR"
+  profession_basic_skill_rank_checkbox_9:
+    input: checkbox
+    label: "profession basic skill rank checkbox 9"
+  profession_basic_skill_rank_10:
+    input: string
+    label: "profession basic skill rank 10"
+    #description: "SR"
+  profession_basic_skill_rank_checkbox_10:
+    input: checkbox
+    label: "profession basic skill rank checkbox 10"
+  profession_basic_trait:
+    input: string
+    label: "profession basic trait"
+    #description: "Trait"
+  profession_basic_trait_checkbox:
+    input: checkbox
+    label: "profession basic trait checkbox"
+  profession_basic_bonus_advance_1:
+    input: string
+    label: "profession basic bonus advance 1"
+    #description: "BA"
+  profession_basic_bonus_advance_checkbox_1:
+    input: checkbox
+    label: "profession basic bonus advance checkbox 1"
+  profession_basic_bonus_advance_2:
+    input: string
+    label: "profession basic bonus advance 2"
+    #description: "BA"
+  profession_basic_bonus_advance_checkbox_2:
+    input: checkbox
+    label: "profession basic bonus advance checkbox 2"  
+  profession_basic_bonus_advance_3:
+    input: string
+    label: "profession basic bonus advance 3"
+    #description: "BA"
+  profession_basic_bonus_advance_checkbox_3:
+    input: checkbox
+    label: "profession basic bonus advance checkbox 3"
+  profession_basic_bonus_advance_4:
+    input: string
+    label: "profession basic bonus advance 4"
+    #description: "BA"
+  profession_basic_bonus_advance_checkbox_4:
+    input: checkbox
+    label: "profession basic bonus advance checkbox 4"  
+  profession_basic_bonus_advance_5:
+    input: string
+    label: "profession basic bonus advance 5"
+    #description: "BA"
+  profession_basic_bonus_advance_checkbox_5:
+    input: checkbox
+    label: "profession basic bonus advance checkbox 5"  
+  profession_basic_bonus_advance_6:
+    input: string
+    label: "profession basic bonus advance_6"
+    #description: "BA"
+  profession_basic_bonus_advance_checkbox_6:
+    input: checkbox
+    label: "profession basic bonus advance checkbox 6"
+  profession_basic_bonus_advance_7:
+    input: string
+    label: "profession basic bonus advance 7"
+    #description: "BA"
+  profession_basic_bonus_advance_checkbox_7:
+    input: checkbox
+    label: "profession basic bonus advance checkbox 7"  
+  profession_basic_talent_1:
+    input: string
+    label: "profession basic talent 1"
+    #description: "TA"
+  profession_basic_talent_checkbox_1:
+    input: checkbox
+    label: "profession basic talent checkbox 1"
+  profession_basic_talent_2:
+    input: string
+    label: "profession basic talent 2"
+    #description: "TA"
+  profession_basic_talent_checkbox_2:
+    input: checkbox
+    label: "profession basic talent checkbox 2"
+  profession_basic_talent_3:
+    input: string
+    label: "talent advance 3"
+    #escription: "TA"
+  profession_basic_talent_checkbox_3:
+    input: checkbox
+    label: "profession basic talent checkbox 3"
+
+#Intermediate Profession Scheme 
+  profession_intermediate:
+    input: string
+    label: "profession intermediate"
+    #description: "Profession"
+  profession_intermediate_skill_rank_1:
+    input: string
+    label: "profession intermediate skill rank 1"
+    #description: "SR"
+  profession_intermediate_skill_rank_checkbox_1:
+    input: checkbox
+    label: "profession intermediate skill rank checkbox 1"
+  profession_intermediate_skill_rank_2:
+    input: string
+    label: "profession intermediate skill rank 2"
+    #description: "SR"
+  profession_intermediate_skill_rank_checkbox_2:
+    input: checkbox
+    label: "profession intermediate skill rank checkbox 2"
+  profession_intermediate_skill_rank_3:
+    input: string
+    label: "profession intermediate skill rank 3"
+    #description: "SR"
+  profession_intermediate_skill_rank_checkbox_3:
+    input: checkbox
+    label: "profession intermediate skill rank checkbox 3"
+  profession_intermediate_skill_rank_4:
+    input: string
+    label: "profession intermediate skill rank 4"
+    #description: "SR"
+  profession_intermediate_skill_rank_checkbox_4:
+    input: checkbox
+    label: "profession intermediate skill rank checkbox 4"
+  profession_intermediate_skill_rank_5:
+    input: string
+    label: "profession intermediate skill rank 5"
+    #description: "SR"
+  profession_intermediate_skill_rank_checkbox_5:
+    input: checkbox
+    label: "profession intermediate skill rank checkbox 5"
+  profession_intermediate_skill_rank_6:
+    input: string
+    label: "profession intermediate skill rank 6"
+    #description: "SR"
+  profession_intermediate_skill_rank_checkbox_6:
+    input: checkbox
+    label: "profession intermediate skill rank checkbox 6"
+  profession_intermediate_skill_rank_7:
+    input: string
+    label: "profession intermediate skill rank 7"
+    #description: "SR"
+  profession_intermediate_skill_rank_checkbox_7:
+    input: checkbox
+    label: "profession intermediate skill rank checkbox 7"
+  profession_intermediate_skill_rank_8:
+    input: string
+    label: "profession intermediate skill rank 8"
+    #description: "SR"
+  profession_intermediate_skill_rank_checkbox_8:
+    input: checkbox
+    label: "profession intermediate skill rank checkbox 8"
+  profession_intermediate_skill_rank_9:
+    input: string
+    label: "profession intermediate skill rank 9"
+    #description: "SR"
+  profession_intermediate_skill_rank_checkbox_9:
+    input: checkbox
+    label: "profession intermediate skill rank checkbox 9"
+  profession_intermediate_skill_rank_10:
+    input: string
+    label: "profession intermediate skill rank 10"
+    #description: "SR"
+  profession_intermediate_skill_rank_checkbox_10:
+    input: checkbox
+    label: "profession intermediate skill rank checkbox 10"
+  profession_intermediate_trait:
+    input: string
+    label: "profession intermediate trait"
+    #description: "Trait"
+  profession_intermediate_trait_checkbox:
+    input: checkbox
+    label: "profession intermediate trait checkbox"
+  profession_intermediate_bonus_advance_1:
+    input: string
+    label: "profession intermediate bonus advance 1"
+    #description: "BA"
+  profession_intermediate_bonus_advance_checkbox_1:
+    input: checkbox
+    label: "profession intermediate bonus advance checkbox 1"
+  profession_intermediate_bonus_advance_2:
+    input: string
+    label: "profession intermediate bonus advance 2"
+    #description: "BA"
+  profession_intermediate_bonus_advance_checkbox_2:
+    input: checkbox
+    label: "profession intermediate bonus advance checkbox 2"  
+  profession_intermediate_bonus_advance_3:
+    input: string
+    label: "profession intermediate bonus advance 3"
+    #description: "BA"
+  profession_intermediate_bonus_advance_checkbox_3:
+    input: checkbox
+    label: "profession intermediate bonus advance checkbox 3"
+  profession_intermediate_bonus_advance_4:
+    input: string
+    label: "profession intermediate bonus advance 4"
+    #description: "BA"
+  profession_intermediate_bonus_advance_checkbox_4:
+    input: checkbox
+    label: "profession intermediate bonus advance checkbox 4"  
+  profession_intermediate_bonus_advance_5:
+    input: string
+    label: "profession intermediate bonus advance 5"
+    #description: "BA"
+  profession_intermediate_bonus_advance_checkbox_5:
+    input: checkbox
+    label: "profession intermediate bonus advance checkbox 5"  
+  profession_intermediate_bonus_advance_6:
+    input: string
+    label: "profession intermediate bonus advance_6"
+    #description: "BA"
+  profession_intermediate_bonus_advance_checkbox_6:
+    input: checkbox
+    label: "profession intermediate bonus advance checkbox 6"
+  profession_intermediate_bonus_advance_7:
+    input: string
+    label: "profession intermediate bonus advance 7"
+    #description: "BA"
+  profession_intermediate_bonus_advance_checkbox_7:
+    input: checkbox
+    label: "profession intermediate bonus advance checkbox 7"  
+  profession_intermediate_talent_1:
+    input: string
+    label: "profession intermediate talent 1"
+    #description: "TA"
+  profession_intermediate_talent_checkbox_1:
+    input: checkbox
+    label: "profession intermediate talent checkbox 1"
+  profession_intermediate_talent_2:
+    input: string
+    label: "profession intermediate talent 2"
+    #description: "TA"
+  profession_intermediate_talent_checkbox_2:
+    input: checkbox
+    label: "profession intermediate talent checkbox 2"
+  profession_intermediate_talent_3:
+    input: string
+    label: "talent advance 3"
+    #description: "TA"
+  profession_intermediate_talent_checkbox_3:
+    input: checkbox
+    label: "profession intermediate talent checkbox 3"
+
+#Advanced Profession Scheme 
+  profession_advanced:
+    input: string
+    label: "profession advanced"
+  profession_advanced_skill_rank_1:
+    input: string
+    label: "profession advanced skill rank 1"
+    #description: "SR"
+  profession_advanced_skill_rank_checkbox_1:
+    input: checkbox
+    label: "profession advanced skill rank checkbox 1"
+  profession_advanced_skill_rank_2:
+    input: string
+    label: "profession advanced skill rank 2"
+    #description: "SR"
+  profession_advanced_skill_rank_checkbox_2:
+    input: checkbox
+    label: "profession advanced skill rank checkbox 2"
+  profession_advanced_skill_rank_3:
+    input: string
+    label: "profession advanced skill rank 3"
+    #description: "SR"
+  profession_advanced_skill_rank_checkbox_3:
+    input: checkbox
+    label: "profession advanced skill rank checkbox 3"
+  profession_advanced_skill_rank_4:
+    input: string
+    label: "profession advanced skill rank 4"
+    #description: "SR"
+  profession_advanced_skill_rank_checkbox_4:
+    input: checkbox
+    label: "profession advanced skill rank checkbox 4"
+  profession_advanced_skill_rank_5:
+    input: string
+    label: "profession advanced skill rank 5"
+    #description: "SR"
+  profession_advanced_skill_rank_checkbox_5:
+    input: checkbox
+    label: "profession advanced skill rank checkbox 5"
+  profession_advanced_skill_rank_6:
+    input: string
+    label: "profession advanced skill rank 6"
+    #description: "SR"
+  profession_advanced_skill_rank_checkbox_6:
+    input: checkbox
+    label: "profession advanced skill rank checkbox 6"
+  profession_advanced_skill_rank_7:
+    input: string
+    label: "profession advanced skill rank 7"
+    #description: "SR"
+  profession_advanced_skill_rank_checkbox_7:
+    input: checkbox
+    label: "profession advanced skill rank checkbox 7"
+  profession_advanced_skill_rank_8:
+    input: string
+    label: "profession advanced skill rank 8"
+    #description: "SR"
+  profession_advanced_skill_rank_checkbox_8:
+    input: checkbox
+    label: "profession advanced skill rank checkbox 8"
+  profession_advanced_skill_rank_9:
+    input: string
+    label: "profession advanced skill rank 9"
+    #description: "SR"
+  profession_advanced_skill_rank_checkbox_9:
+    input: checkbox
+    label: "profession advanced skill rank checkbox 9"
+  profession_advanced_skill_rank_10:
+    input: string
+    label: "profession advanced skill rank 10"
+    #description: "SR"
+  profession_advanced_skill_rank_checkbox_10:
+    input: checkbox
+    label: "profession advanced skill rank checkbox 10"
+  profession_advanced_trait:
+    input: string
+    label: "profession advanced trait"
+    description: "Trait"
+  profession_advanced_trait_checkbox:
+    input: checkbox
+    label: "profession advanced trait checkbox"
+  profession_advanced_bonus_advance_1:
+    input: string
+    label: "profession advanced bonus advance 1"
+    #description: "BA"
+  profession_advanced_bonus_advance_checkbox_1:
+    input: checkbox
+    label: "profession advanced bonus advance checkbox 1"
+  profession_advanced_bonus_advance_2:
+    input: string
+    label: "profession advanced bonus advance 2"
+    #description: "BA"
+  profession_advanced_bonus_advance_checkbox_2:
+    input: checkbox
+    label: "profession advanced bonus advance checkbox 2"  
+  profession_advanced_bonus_advance_3:
+    input: string
+    label: "profession advanced bonus advance 3"
+    #description: "BA"
+  profession_advanced_bonus_advance_checkbox_3:
+    input: checkbox
+    label: "profession advanced bonus advance checkbox 3"
+  profession_advanced_bonus_advance_4:
+    input: string
+    label: "profession advanced bonus advance 4"
+    #description: "BA"
+  profession_advanced_bonus_advance_checkbox_4:
+    input: checkbox
+    label: "profession advanced bonus advance checkbox 4"  
+  profession_advanced_bonus_advance_5:
+    input: string
+    label: "profession advanced bonus advance 5"
+    #description: "BA"
+  profession_advanced_bonus_advance_checkbox_5:
+    input: checkbox
+    label: "profession advanced bonus advance checkbox 5"  
+  profession_advanced_bonus_advance_6:
+    input: string
+    label: "profession advanced bonus advance_6"
+    #description: "BA"
+  profession_advanced_bonus_advance_checkbox_6:
+    input: checkbox
+    label: "profession advanced bonus advance checkbox 6"
+  profession_advanced_bonus_advance_7:
+    input: string
+    label: "profession advanced bonus advance 7"
+    #description: "BA"
+  profession_advanced_bonus_advance_checkbox_7:
+    input: checkbox
+    label: "profession advanced bonus advance checkbox 7"  
+  profession_advanced_talent_1:
+    input: string
+    label: "profession advanced talent 1"
+    #description: "TA"
+  profession_advanced_talent_checkbox_1:
+    input: checkbox
+    label: "profession advanced talent checkbox 1"
+  profession_advanced_talent_2:
+    input: string
+    label: "profession advanced talent 2"
+    #description: "TA"
+  profession_advanced_talent_checkbox_2:
+    input: checkbox
+    label: "profession advanced talent checkbox 2"
+  profession_advanced_talent_3:
+    input: string
+    label: "talent advance 3"
+    #description: "TA"
+  profession_advanced_talent_checkbox_3:
+    input: checkbox
+    label: "profession advanced talent checkbox 3"
+#Unique Advances
+  unique_advances:
+    input: text
+    label: "unique advances"
+#Character Story (from Character Folio)
+  character_story:
+    input: text
+    label: "character story"
+#Languages (usually written as unique advances)
+  language_native:
+    input: string
+    label: "language native"
+  language_1:
+    input: string
+    label: "language 1"
+  language_2:
+    input: string
+    label: "language 2"
+  language_3:
+    input: string
+    label: "language 3"
+  language_4:
+    input: string
+    label: "language 4"
+  language_5:
+    input: string
+    label: "language 5"
+#shield
+  shield_name:
+    input: string
+    label: "shield name"
+  shield_qualities:
+    input: string
+    label: "shield_qualities"
+  shield_encumbrance:
+    input: integer
+    label: "shield_encumbrance"
+  shield_is_defensive:
+    input: checkbox
+    label: "shield is defensive"
+  shield_is_ruined:
+    input: checkbox
+    label: "shield is ruined"
+  shield_is_makers_mark:
+    input: checkbox
+    label: "shield is makers mark"
+  shield_is_castle_forged:
+    input: checkbox
+    label: "shield is castle forged"
+
+# options and selectors:
+  option_toggle_magic:
+    input: checkbox
+    label: "option toggle magic"
+  option_toggle_rituals:
+    input: checkbox
+    label: "option toggle rituals"
+
+#personal goals
+  personal_goals:
+    input: text
+    label: "personal goals"
