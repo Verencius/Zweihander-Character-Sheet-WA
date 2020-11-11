@@ -27,31 +27,40 @@ h2 {
     margin-left: 10px;
     margin-bottom: 20px;
 }
-.karta-tab {
+.card {
     border: 1px solid #27241f;
     background-color: #fefefe;
     margin: 4px;
 }
-.karta-title {
+.card.row {
+    flex-direction: row;
+}
+.card-title {
     text-transform: uppercase;
     font-weight: bold;
     color: #f9f9f9;
     background-color: #27241f;
+    margin-bottom: 0;
 }
-.karta-content {
-    padding: 8px 10px;
-}
-.karta-content .border {
+.card .border {
     padding: 4px;
 }
-.karta-content .border-strong {
+.card .border-strong {
     border: 1px solid #716c64;
     text-align: center;
     background-color: #ebe6dd;
     border-radius: 15px;
     margin: 1px;
 }
-.karta-info-label {
+.card .border-strong.btext {
+    display: inline-block;
+    min-width: 38px;
+    padding: 0 2px;
+}
+.card-content {
+    padding: 8px 10px;
+}
+.card-info-label {
     text-transform: uppercase;
     border-top: 1px solid #858585;
     color: #858585;
@@ -67,16 +76,9 @@ h2 {
 }
 .table tr {
     background-color: #fefefe !important;
+    border-bottom: 1px solid #eae5dc;
 }
-.table tr:nth-of-type(1n) {
-    background-color: #dce0e6 !important;
-}
-.table tr:nth-of-type(2n) {
-    background-color: #fefefe !important;
-}
-
-.corruption {
-    padding:4px 0;
-    display: inline-block;
-    width: 38px;
+.table td.circle {    
+    width: 60px;
+    text-align: right;
 }
