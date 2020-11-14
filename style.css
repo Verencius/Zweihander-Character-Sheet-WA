@@ -1,11 +1,17 @@
+{ 
+    padding:none!important; 
+
+},
+
 #karta {
-    padding: 10px;
+    padding: 0px;
     border: 1px black solid;
     background: #ebe6dd;
     color: #27241f;
 }
 h5, h4 {
     margin-top: 8px;
+    color: white;
 }
 h3 {
     margin-top: 10px;
@@ -15,10 +21,12 @@ h2 {
 }
 .header h1 {
     margin-bottom: 0;
+    color: black;
 }
 .header h2 {
     margin-top: 0;
     font-size: 1.6em;
+    color: white;
 }
 .header h3 {    
     font-size: 1.2em;
@@ -26,6 +34,7 @@ h2 {
     font-weight: normal;
     margin-left: 10px;
     margin-bottom: 20px;
+    color: black;
 }
 .card {
     border: 1px solid #27241f;
@@ -81,4 +90,14 @@ h2 {
 .table td.circle {    
     width: 60px;
     text-align: right;
+}
+
+.col-xs-equal,
+.col-sm-equal,
+.col-md-equal,
+.col-lg-equal {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
 }

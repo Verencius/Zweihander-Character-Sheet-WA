@@ -247,7 +247,7 @@
         </div>
         <div class="col col-sm-3">
             <div class="">
-                {% if variables.imageid is defined and variables.imageid > 0 %}[img:{{variables.imageid}}]{% endif %} 
+                {% if variables.imageid is defined and variables.imageid > 0 %}[img:{{variables.imageid}}|nolink]{% endif %} 
             </div>
         </div>
     </div>
@@ -290,19 +290,30 @@
             <div class="row card">
                 <div class="col-sm-12">
                     <div class="row">
-                        <div class="col-sm-7">Fate Points:</div>
-                        <div class="col-sm-5">{{ variables.personal_fate_points}}</div>
+                        <div class="col-sm-12 card-title"><h5>Fate, Reputation and Chaos</h5></div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-7">Reputation Points:</div>
-                        <div class="col-sm-5">{{ variables.personal_reputation_points}}</div>
+                        <div class="col-sm-8"><strong>Fate Points:</strong></div>
+                        <div class="col-sm-4"><div class="col-sm-4 border-strong btext">{{ variables.personal_fate_points}}</div></div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-7">Permanent Chaos Ranks:</div>
-                        <div class="col-sm-5">{{ variables.alignment_permanent_chaos_ranks}}</div>
+                        <div class="col-sm-8"><strong>Reputation Points:</strong></div>
+                        <div class="col-sm-4"><div class="col-sm-4 border-strong btext">{{ variables.personal_reputation_points}}</div></div>
                     </div>
-                    <div>
-                        <span><h4>Sheet Options</h4></span>
+                    <div class="row">
+                        <div class="col-sm-8"><strong>Permanent Chaos Ranks:</strong></div>
+                        <div class="col-sm-4"><div class="col-sm-4 border-strong btext">{{ variables.alignment_permanent_chaos_ranks}}</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-12 card-title"><h5>Sheet Options</h5></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
                         <div><span class="circle">{% if variables.option_toggle_magic == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</span> <span>Magic Toggle</span></div>
                         <div><span class="circle">{% if variables.option_toggle_rituals == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</span> <span>Rituals Toggle</span></div>
                     </div>
@@ -314,7 +325,7 @@
     <div class="row card">
         <div class="col-sm-12">
             <div class="row">
-                <div class="col-sm-12 card-title"><h4>Order and Chaos</h4></div>
+                <div class="col-sm-12 card-title"><h5>Order and Chaos</h5></div>
             </div>
             <div class="row card-content">
                 <div class="col-sm-12">
@@ -327,7 +338,7 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td><h5>Gain Fate Point</h5></td>
+                            <td><strong>Gain Fate Point</strong></td>
                             {% for i in 9..1 %}
                                 <td class="text-center">{% if current_order_ranks >= i %} <i class="fas fa-circle"></i> {% else %} <i class="far fa-circle"></i>{% endif %}</td>
                             {% endfor %}
@@ -335,7 +346,7 @@
                             {% for i in 1..9 %}
                                 <td class="text-center">{% if current_chaos_ranks >= i %} <i class="fas fa-circle"></i> {% else %} <i class="far fa-circle"></i>{% endif %}</td>
                             {% endfor %}
-                            <td><h5>Gain Disorder</h5></td>
+                            <td><strong>Gain Disorder</strong></td>
                         </tr>
                     </table>
                 </div>
@@ -886,31 +897,31 @@
                 <div class="col-sm-12 card-title"><h5>Difficulty Rating</h5></div>
             </div>
             <div class="row">
-                <div class="col text-center">Trivial</div>
-                <div class="col text-center">Easy</div>
-                <div class="col text-center">Routine</div>
-                <div class="col text-center">Standard</div>
-                <div class="col text-center">Challenging</div>
-                <div class="col text-center">Hard</div>
-                <div class="col text-center">Arduous</div>
+                <div class="col-12 col-md-4 col-lg-2 text-center">Trivial</div>
+                <div class="col-12 col-md-4 col-lg-1 text-center">Easy</div>
+                <div class="col-12 col-md-4 col-lg-2 text-center">Routine</div>
+                <div class="col-12 col-md-4 col-lg-2 text-center">Standard</div>
+                <div class="col-12 col-md-4 col-lg-2 text-center">Challenging</div>
+                <div class="col-12 col-md-4 col-lg-1 text-center">Hard</div>
+                <div class="col-12 col-md-4 col-lg-2 text-center">Arduous</div>
             </div>
             <div class="row">
-                <div class="col text-center"><input type="radio" name="diffrat"></div>
-                <div class="col text-center"><input type="radio" name="diffrat"></div>
-                <div class="col text-center"><input type="radio" name="diffrat"></div>
-                <div class="col text-center"><input type="radio" name="diffrat"></div>
-                <div class="col text-center"><input type="radio" name="diffrat"></div>
-                <div class="col text-center"><input type="radio" name="diffrat"></div>
-                <div class="col text-center"><input type="radio" name="diffrat"></div>
+                <div class="col-12 col-md-4 col-lg-2 text-center"><input type="radio" name="diffrat"></div>
+                <div class="col-12 col-md-4 col-lg-1 text-center"><input type="radio" name="diffrat"></div>
+                <div class="col-12 col-md-4 col-lg-2 text-center"><input type="radio" name="diffrat"></div>
+                <div class="col-12 col-md-4 col-lg-2 text-center"><input type="radio" name="diffrat"></div>
+                <div class="col-12 col-md-4 col-lg-2 text-center"><input type="radio" name="diffrat"></div>
+                <div class="col-12 col-md-4 col-lg-1 text-center"><input type="radio" name="diffrat"></div>
+                <div class="col-12 col-md-4 col-lg-2 text-center"><input type="radio" name="diffrat"></div>
             </div>
             <div class="row">
-                <div class="col text-center">+30%</div>
-                <div class="col text-center">+20%</div>
-                <div class="col text-center">+10%</div>
-                <div class="col text-center">+/-0%</div>
-                <div class="col text-center">+10%</div>
-                <div class="col text-center">+20%</div>
-                <div class="col text-center">+30%</div>
+                <div class="col-12 col-md-4 col-lg-2 text-center">+30%</div>
+                <div class="col-12 col-md-4 col-lg-1 text-center">+20%</div>
+                <div class="col-12 col-md-4 col-lg-2 text-center">+10%</div>
+                <div class="col-12 col-md-4 col-lg-2 text-center">+/-0%</div>
+                <div class="col-12 col-md-4 col-lg-2 text-center">-10%</div>
+                <div class="col-12 col-md-4 col-lg-1 text-center">-20%</div>
+                <div class="col-12 col-md-4 col-lg-2 text-center">-30%</div>
             </div>
         </div>
     </div>
