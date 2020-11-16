@@ -1,14 +1,16 @@
 { 
     padding:none!important; 
-
-},
+}
 
 #karta {
-    padding: 0px;
     border: 1px black solid;
     background: #ebe6dd;
     color: #27241f;
+    font-size: 1em;
 }
+h1,h2,h3,h4,h5 {
+}
+
 h5, h4 {
     margin-top: 8px;
     color: white;
@@ -26,7 +28,9 @@ h2 {
 .header h2 {
     margin-top: 0;
     font-size: 1.6em;
+    margin-left: 2px;
     color: white;
+    
 }
 .header h3 {    
     font-size: 1.2em;
@@ -40,6 +44,7 @@ h2 {
     border: 1px solid #27241f;
     background-color: #fefefe;
     margin: 4px;
+    font-size: 13px;
 }
 .card.row {
     flex-direction: row;
