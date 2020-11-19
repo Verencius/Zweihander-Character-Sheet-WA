@@ -1,5 +1,5 @@
 { 
-    padding:none!important; 
+    padding:none !important; 
 }
 
 #karta {
@@ -8,18 +8,21 @@
     color: #27241f;
     font-size: 1em;
 }
-h1,h2,h3,h4,h5 {
+h1, h2, h3, h4, h5, h6 {
+    margin: .5rem 0;
+    line-height: 1.2;
 }
-
-h5, h4 {
-    margin-top: 8px;
+.card h3, .card h4, .card h5 {
     color: white;
 }
-h3 {
-    margin-top: 10px;
+h5 {
+    font-size: .85em;
 }
-h2 { 
-    color: #27241f !important;
+h4 {
+    font-size: 1.05em;
+}
+h3 {
+    font-size: 1.17em;
 }
 .header h1 {
     margin-bottom: 0;
@@ -29,16 +32,13 @@ h2 {
     margin-top: 0;
     font-size: 1.6em;
     margin-left: 2px;
-    color: white;
-    
+    color: #27241f;
 }
 .header h3 {    
-    font-size: 1.2em;
+    font-size: 16px;
     font-style: italic;
     font-weight: normal;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    color: black;
+    margin: 10px 10px 20px;
 }
 .card {
     border: 1px solid #27241f;
@@ -58,6 +58,7 @@ h2 {
 }
 .card .border {
     padding: 4px;
+    border: 1px solid #e6e6df!important;
 }
 .card .border-strong {
     border: 1px solid #716c64;
@@ -80,6 +81,10 @@ h2 {
     color: #858585;
     font-size: 0.8em;
     padding-bottom: 6px;
+}
+.card .square {
+    padding: 0 3px;
+    display: inline-block;
 }
 .table th {
     background-color: #fefefe;
