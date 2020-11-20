@@ -1,7 +1,6 @@
 { 
-    padding:none !important; 
+    padding:0 !important; 
 }
-
 #karta {
     border: 1px black solid;
     background: #ebe6dd;
@@ -11,9 +10,6 @@
 h1, h2, h3, h4, h5, h6 {
     margin: .5rem 0;
     line-height: 1.2;
-}
-.card h3, .card h4, .card h5 {
-    color: white;
 }
 h5 {
     font-size: .85em;
@@ -40,6 +36,15 @@ h3 {
     font-weight: normal;
     margin: 10px 10px 20px;
 }
+.border {
+    border: 1px solid #e6e6df!important;
+}
+.border-right {
+    border-right: 1px solid #e6e6df!important;
+}
+.border-left {
+    border-left: 1px solid #e6e6df!important;
+}
 .card {
     border: 1px solid #27241f;
     background-color: #fefefe;
@@ -56,9 +61,11 @@ h3 {
     background-color: #27241f;
     margin-bottom: 0;
 }
+.card-title h3, .card-title h4, .card-title h5 {
+    color: white;
+}
 .card .border {
     padding: 4px;
-    border: 1px solid #e6e6df!important;
 }
 .card .border-strong {
     border: 1px solid #716c64;
@@ -82,13 +89,13 @@ h3 {
     font-size: 0.8em;
     padding-bottom: 6px;
 }
-.card .square {
-    padding: 0 3px;
-    display: inline-block;
+.card i.fa-square-full {
+    margin: 0 2px;
 }
 .table th {
     background-color: #fefefe;
     color: #27241f;
+    text-align: left;
 }
 .table td {
     color: #27241f;

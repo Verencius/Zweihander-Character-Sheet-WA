@@ -314,8 +314,8 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <div><span class="circle">{% if variables.option_toggle_magic == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</span> <span>Magic Toggle</span></div>
-                        <div><span class="circle">{% if variables.option_toggle_rituals == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</span> <span>Rituals Toggle</span></div>
+                        <div><span>{% if variables.option_toggle_magic == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</span> <span>Magic Toggle</span></div>
+                        <div><span>{% if variables.option_toggle_rituals == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</span> <span>Rituals Toggle</span></div>
                     </div>
                 </div>
             </div>
@@ -375,11 +375,11 @@
                             {% endif %}
                             <div class="row">
                                 <div class="col-sm-8">Bonus Advance</div>
-                                <div class="col-sm-4"><div class="square">{% if attribute_combat_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_combat_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_combat_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
+                                <div class="col-sm-4">{% if attribute_combat_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_combat_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_combat_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"></div>
-                                <div class="col-sm-4"><div class="square">{% if attribute_combat_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_combat_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_combat_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div></div>
+                                <div class="col-sm-4">{% if attribute_combat_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_combat_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_combat_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus modifier</div>
@@ -393,28 +393,28 @@
                         <div class="col-sm-8 border">
                             <div class="row border-bottom">
                                 <div class="col-sm-3">Skills</div>
-                                <div class="col-sm-2">Skill Ranks +10</div>
-                                <div class="col-sm-7">Focuses</div>
+                                <div class="col-sm-3">Skill Ranks +10</div>
+                                <div class="col-sm-6">Focuses</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Martial Melee*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_combat_martial_melee_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_combat_martial_melee_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_combat_martial_melee_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_combat_martial_melee_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_combat_martial_melee_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_martial_melee_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_martial_melee_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_combat_martial_melee_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Martial Ranged*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_combat_martial_ranged_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_combat_martial_ranged_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_combat_martial_ranged_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_combat_martial_ranged_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_combat_martial_ranged_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_martial_ranged_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_martial_ranged_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_combat_martial_ranged_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Simple Melee</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_combat_simple_melee_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_combat_simple_melee_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_combat_simple_melee_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_combat_simple_melee_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_combat_simple_melee_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_simple_melee_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_simple_melee_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_combat_simple_melee_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Simple Ranged</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_combat_simple_ranged_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_combat_simple_ranged_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_combat_simple_ranged_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_combat_simple_ranged_focus}}{{ variables.skill_combat_simple_ranged_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_combat_simple_ranged_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_simple_ranged_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_simple_ranged_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_combat_simple_ranged_focus}}{{ variables.skill_combat_simple_ranged_focus}}</div>
                             </div>
                         </div>
                     </div>
@@ -428,11 +428,11 @@
                             {% endif %}
                             <div class="row">
                                 <div class="col-sm-8">Bonus Advance</div>
-                                <div class="col-sm-4"><div class="square">{% if attribute_brawn_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_brawn_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_brawn_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
+                                <div class="col-sm-4">{% if attribute_brawn_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_brawn_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_brawn_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"></div>
-                                <div class="col-sm-4"><div class="square">{% if attribute_brawn_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_brawn_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_brawn_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div></div>
+                                <div class="col-sm-4">{% if attribute_brawn_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_brawn_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_brawn_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus modifier</div>
@@ -446,23 +446,23 @@
                         <div class="col-sm-8 border">
                             <div class="row">
                                 <div class="col-sm-3">Athletics</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_brawn_athletics_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_brawn_athletics_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_brawn_athletics_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_brawn_athletics_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_brawn_athletics_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_athletics_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_athletics_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_brawn_athletics_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Drive*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_brawn_drive_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_brawn_drive_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_brawn_drive_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_brawn_drive_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_brawn_drive_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_drive_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_drive_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_brawn_drive_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Intimidate</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_brawn_intimidate_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_brawn_intimidate_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_brawn_intimidate_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_brawn_intimidate_focus}} </div>
+                                <div class="col-sm-3">{% if variables.skill_brawn_intimidate_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_intimidate_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_intimidate_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_brawn_intimidate_focus}} </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Toughness</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_brawn_toughness_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_brawn_toughness_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_brawn_toughness_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_brawn_toughness_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_brawn_toughness_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_toughness_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_toughness_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_brawn_toughness_focus}}</div>
                             </div>
                         </div>
                     </div>
@@ -476,11 +476,11 @@
                             {% endif %}
                             <div class="row">
                                 <div class="col-sm-8">Bonus Advance</div>
-                                <div class="col-sm-4"><div class="square">{% if attribute_agility_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_agility_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_agility_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
+                                <div class="col-sm-4">{% if attribute_agility_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_agility_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_agility_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"></div>
-                                <div class="col-sm-4"><div class="square">{% if attribute_agility_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_agility_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_agility_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div></div>
+                                <div class="col-sm-4">{% if attribute_agility_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_agility_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_agility_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus modifier</div>
@@ -494,28 +494,28 @@
                         <div class="col-sm-8 border">
                             <div class="row">
                                 <div class="col-sm-3">Coordination</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_agility_coordination_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_agility_coordination_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_agility_coordination_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_agility_coordination_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_agility_coordination_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_coordination_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_coordination_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_agility_coordination_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Pilot*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_agility_pilot_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_agility_pilot_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_agility_pilot_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_agility_pilot_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_agility_pilot_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_pilot_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_pilot_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_agility_pilot_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Ride*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_agility_ride_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_agility_ride_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_agility_ride_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_agility_ride_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_agility_ride_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_ride_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_ride_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_agility_ride_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Skulduggery</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_agility_skullduggery_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_agility_skullduggery_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_agility_skullduggery_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_agility_skullduggery_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_agility_skullduggery_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_skullduggery_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_skullduggery_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_agility_skullduggery_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Stealth</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_agility_stealth_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_agility_stealth_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if vvariables.skill_agility_stealth_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_agility_stealth_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_agility_stealth_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_stealth_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if vvariables.skill_agility_stealth_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_agility_stealth_focus}}</div>
                             </div>
                         </div>
                     </div>
@@ -527,11 +527,11 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus Advance</div>
-                                <div class="col-sm-4"><div class="square">{% if attribute_perception_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_perception_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_perception_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
+                                <div class="col-sm-4">{% if attribute_perception_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_perception_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_perception_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"></div>
-                                <div class="col-sm-4"><div class="square">{% if attribute_perception_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_perception_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_perception_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div></div>
+                                <div class="col-sm-4">{% if attribute_perception_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_perception_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_perception_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus modifier</div>
@@ -545,23 +545,23 @@
                         <div class="col-sm-8 border">
                             <div class="row">
                                 <div class="col-sm-3">Awareness</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_perception_awareness_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_perception_awareness_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_perception_awareness_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_perception_awareness_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_perception_awareness_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_awareness_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_awareness_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_perception_awareness_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Eavesdrop</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_perception_eavesdrop_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_perception_eavesdrop_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_perception_eavesdrop_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_perception_eavesdrop_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_perception_eavesdrop_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_eavesdrop_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_eavesdrop_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_perception_eavesdrop_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Scrutinize</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_perception_scrutinize_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_perception_scrutinize_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_perception_scrutinize_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_perception_scrutinize_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_perception_scrutinize_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_scrutinize_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_scrutinize_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_perception_scrutinize_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Survival</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_perception_survival_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_perception_survival_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_perception_survival_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_perception_survival_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_perception_survival_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_survival_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_survival_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_perception_survival_focus}}</div>
                             </div>
                         </div>
                     </div>
@@ -575,11 +575,11 @@
                             {% endif %}
                             <div class="row">
                                 <div class="col-sm-8">Bonus Advance</div>
-                                <div class="col-sm-4"><div class="square">{% if attribute_intelligence_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_intelligence_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_intelligence_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
+                                <div class="col-sm-4">{% if attribute_intelligence_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_intelligence_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_intelligence_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"></div>
-                                <div class="col-sm-4"><div class="square">{% if attribute_intelligence_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_intelligence_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_intelligence_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div></div>
+                                <div class="col-sm-4">{% if attribute_intelligence_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_intelligence_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_intelligence_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus modifier</div>
@@ -593,43 +593,43 @@
                         <div class="col-sm-8 border">
                             <div class="row">
                                 <div class="col-sm-3">Alchemy*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_intelligence_alchemy_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_alchemy_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_alchemy_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_intelligence_alchemy_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_intelligence_alchemy_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_alchemy_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_alchemy_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_intelligence_alchemy_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Counterfeit*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_intelligence_counterfeit_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_counterfeit_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_counterfeit_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_intelligence_counterfeit_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_intelligence_counterfeit_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_counterfeit_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_counterfeit_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_intelligence_counterfeit_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Education*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_intelligence_education_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_education_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_education_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_intelligence_education_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_intelligence_education_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_education_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_education_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_intelligence_education_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Folklore</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_intelligence_folklore_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_folklore_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_folklore_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_intelligence_folklore_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_intelligence_folklore_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_folklore_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_folklore_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_intelligence_folklore_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Gamble</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_intelligence_gamble_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_gamble_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_gamble_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_intelligence_gamble_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_intelligence_gamble_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_gamble_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_gamble_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_intelligence_gamble_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Heal*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_intelligence_heal_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_heal_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_heal_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_intelligence_heal_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_intelligence_heal_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_heal_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_heal_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_intelligence_heal_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Navigation*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_intelligence_navigation_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_navigation_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_navigation_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_intelligence_navigation_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_intelligence_navigation_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_navigation_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_navigation_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_intelligence_navigation_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Warfare*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_intelligence_warfare_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_warfare_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_intelligence_warfare_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_intelligence_warfare_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_intelligence_warfare_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_warfare_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_warfare_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_intelligence_warfare_focus}}</div>
                             </div>
                         </div>
                     </div>
@@ -643,11 +643,11 @@
                             {% endif %}
                             <div class="row">
                                 <div class="col-sm-8">Bonus Advance</div>
-                                <div class="col-sm-4"><div class="square">{% if attribute_willpower_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_willpower_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_willpower_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
+                                <div class="col-sm-4">{% if attribute_willpower_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_willpower_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_willpower_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"></div>
-                                <div class="col-sm-4"><div class="square">{% if attribute_willpower_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_willpower_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_willpower_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div></div>
+                                <div class="col-sm-4">{% if attribute_willpower_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_willpower_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_willpower_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus modifier</div>
@@ -661,23 +661,23 @@
                         <div class="col-sm-8 border">
                             <div class="row">
                                 <div class="col-sm-3">Incantation*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_willpower_incantation_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_willpower_incantation_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_willpower_incantation_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_willpower_incantation_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_willpower_incantation_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_incantation_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_incantation_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_willpower_incantation_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Interrogation*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_willpower_interrogation_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_willpower_interrogation_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_willpower_interrogation_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_willpower_interrogation_focus}} </div>
+                                <div class="col-sm-3">{% if variables.skill_willpower_interrogation_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_interrogation_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_interrogation_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_willpower_interrogation_focus}} </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Resolve</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_willpower_resolve_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_willpower_resolve_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_willpower_resolve_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_willpower_resolve_focus}} </div>
+                                <div class="col-sm-3">{% if variables.skill_willpower_resolve_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_resolve_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_resolve_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_willpower_resolve_focus}} </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Tradecraft*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_willpower_tradecraft_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_willpower_tradecraft_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_willpower_tradecraft_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_willpower_tradecraft_focus}} </div>
+                                <div class="col-sm-3">{% if variables.skill_willpower_tradecraft_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_tradecraft_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_tradecraft_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_willpower_tradecraft_focus}} </div>
                             </div>
                         </div>
                     </div>
@@ -691,11 +691,11 @@
                             {% endif %}
                             <div class="row">
                                 <div class="col-sm-8">Bonus Advance</div>
-                                <div class="col-sm-4"><div class="square">{% if attribute_fellowship_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_fellowship_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_fellowship_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
+                                <div class="col-sm-4">{% if attribute_fellowship_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_fellowship_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_fellowship_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"></div>
-                                <div class="col-sm-4"><div class="square">{% if attribute_fellowship_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_fellowship_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;</div><div class="square">{% if attribute_fellowship_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div></div>
+                                <div class="col-sm-4">{% if attribute_fellowship_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_fellowship_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_fellowship_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus modifier</div>
@@ -709,38 +709,38 @@
                         <div class="col-sm-8 border">
                             <div class="row">
                                 <div class="col-sm-3">Bargain</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_fellowship_bargain_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_fellowship_bargain_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_fellowship_bargain_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_fellowship_bargain_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_fellowship_bargain_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_bargain_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_bargain_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_fellowship_bargain_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Charm</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_fellowship_charm_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_fellowship_charm_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_fellowship_charm_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_fellowship_charm_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_fellowship_charm_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_charm_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_charm_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_fellowship_charm_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Disguise*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_fellowship_disguise_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_fellowship_disguise_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_fellowship_disguise_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_fellowship_disguise_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_fellowship_disguise_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_disguise_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_disguise_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_fellowship_disguise_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Guile</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_fellowship_guile_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_fellowship_guile_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_fellowship_guile_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_fellowship_guile_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_fellowship_guile_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_guile_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_guile_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_fellowship_guile_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Handle Animal*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_fellowship_handle_animal_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_fellowship_handle_animal_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_fellowship_handle_animal_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_fellowship_handle_animal_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_fellowship_handle_animal_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_handle_animal_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_handle_animal_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_fellowship_handle_animal_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Leadership*</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_fellowship_leadership_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_fellowship_leadership_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_fellowship_leadership_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_fellowship_leadership_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_fellowship_leadership_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_leadership_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_leadership_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_fellowship_leadership_focus}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Rumor</div>
-                                <div class="col-sm-2"><div class="square">{% if variables.skill_fellowship_rumor_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_fellowship_rumor_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div><div class="square">{% if variables.skill_fellowship_rumor_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div></div>
-                                <div class="col-sm-7">{{ variables.skill_fellowship_rumor_focus}}</div>
+                                <div class="col-sm-3">{% if variables.skill_fellowship_rumor_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_rumor_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_rumor_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-6">{{ variables.skill_fellowship_rumor_focus}}</div>
                             </div>
                         </div>
                     </div>
@@ -988,7 +988,7 @@
     </div>
     <!-- TAB #5: Armour and Shield -->
     <div class="row card mt-2">
-        <div class="col-6 card-content border-right">
+        <div class="col-sm-6 card-content border-right">
             <div class="row">
                 <div class="col-sm-3"><h5>Armor</h5></div>
                 <div class="col-sm-2"><h5>DTh Mod.</h5></div>
@@ -1006,7 +1006,7 @@
                 <div class="col-sm-1">{% if variables.armor_is_makers_mark == true %}{% set armor_encumbrance_adjusted = variables.armor_encumbrance - 2 %}{{ armor_encumbrance_adjusted}}{% else %}{{ variables.armor_encumbrance}}{% endif %}</div>
             </div>
         </div>
-        <div class="col-6 card-content">
+        <div class="col-sm-6 card-content">
             <div class="row">
                 <div class="col-sm-4">
                     <div><h5>Shield</h5></div>
@@ -1086,31 +1086,31 @@
                                 <div class="col-sm-12"><h5>Parry <i class="fas fa-sword"></i></h5></div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-7">Simple Melee</div>
-                                <div class="col-sm-5">{{ skill_combat_simple_melee_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_combat_simple_melee_value +10}}{% endif %}</div>
+                                <div class="col-sm-6">Simple Melee</div>
+                                <div class="col-sm-6">{{ skill_combat_simple_melee_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_combat_simple_melee_value +10}}{% endif %}</div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-7">Martial Melee</div>
-                                <div class="col-sm-5">{{ skill_combat_martial_melee_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_combat_martial_melee_value +10}}{% endif %}</div>
+                                <div class="col-sm-6">Martial Melee</div>
+                                <div class="col-sm-6">{{ skill_combat_martial_melee_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_combat_martial_melee_value +10}}{% endif %}</div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-7">Guile</div>
-                                <div class="col-sm-5">{{ skill_fellowship_guile_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_fellowship_guile_value +10}}{% endif %}</div>
+                                <div class="col-sm-6">Guile</div>
+                                <div class="col-sm-6">{{ skill_fellowship_guile_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_fellowship_guile_value +10}}{% endif %}</div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-7">Charm</div>
-                                <div class="col-sm-5">{{ skill_fellowship_charm_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_fellowship_charm_value +10}}{% endif %}</div>
+                                <div class="col-sm-6">Charm</div>
+                                <div class="col-sm-6">{{ skill_fellowship_charm_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_fellowship_charm_value +10}}{% endif %}</div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-7">Incantation</div>
-                                <div class="col-sm-5">{{ skill_willpower_incantation_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_willpower_incantation_value +10}}{% endif %}</div>
+                                <div class="col-sm-6">Incantation</div>
+                                <div class="col-sm-6">{{ skill_willpower_incantation_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_willpower_incantation_value +10}}{% endif %}</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4"> 
+        <div class="col-sm-5"> 
             <div class="row">
                 <div class="col-sm-6">
                     <div class="row">
@@ -1143,32 +1143,32 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-1">{% if variables.damage_condition_track == "unharmed" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
-                        <div class="col-sm-11">UNHARMED</div>
+                        <div class="col-sm-10">UNHARMED</div>
                     </div>
                     <div class="row">
                         <div class="col-sm-1">{% if variables.damage_condition_track == "light" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
-                        <div class="col-sm-11">Lightly Wounded</div>
+                        <div class="col-sm-10">Lightly Wounded</div>
                     </div>
                     <div class="row">
                         <div class="col-sm-1">{% if variables.damage_condition_track == "moderate" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
-                        <div class="col-sm-11">Moderately Wounded</div>
+                        <div class="col-sm-10">Moderately Wounded</div>
                     </div>
                     <div class="row">
                         <div class="col-sm-1">{% if variables.damage_condition_track == "serious" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
-                        <div class="col-sm-11">Seriously Wounded</div>
+                        <div class="col-sm-10">Seriously Wounded</div>
                     </div>
                     <div class="row">
                         <div class="col-sm-1">{% if variables.damage_condition_track == "grievous" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
-                        <div class="col-sm-11">Grievously Wounded</div>
+                        <div class="col-sm-10">Grievously Wounded</div>
                     </div>
                     <div class="row">
                         <div class="col-sm-1">{% if variables.damage_condition_track == "slain" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
-                        <div class="col-sm-11">SLAIN!</div>
+                        <div class="col-sm-10">SLAIN!</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4 border-left">
+        <div class="col-sm-3 border-left">
             <div class="row">
                 <div class="col-sm-12"><h5>Injuries</h5></div>
             </div>
@@ -1411,7 +1411,7 @@
                     <strong>BP</strong>
                     <span class="border-strong btext">{% if variables.wealth_bp == 0 %}0{% else %}{{ variables.wealth_bp}}{% endif %}</span>
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-2">
                     <strong>Enc.</strong>
                     <span class="border-strong btext">{{ wealth_enc}}</span>
                 </div>
@@ -1424,9 +1424,9 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Trappings</th>
-                                <th>Qty.</th>
-                                <th>Enc.</th>
+                                <th class="col-sm-10">Trappings</th>
+                                <th class="col-sm-1">Qty.</th>
+                                <th class="col-sm-1">Enc.</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1969,15 +1969,15 @@
                         <div class="col-sm-12">Magic Type</div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-1"><span class="circle">{% if variables.magic_source_type != "arcane" %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</div>
+                        <div class="col-sm-1"><span>{% if variables.magic_source_type != "arcane" %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</div>
                         <div class="col-sm-11">Arcane</div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-1"><span class="circle">{% if variables.magic_source_type != "covenant" %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</div>
+                        <div class="col-sm-1"><span>{% if variables.magic_source_type != "covenant" %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</div>
                         <div class="col-sm-11">Covenant</div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-1"><span class="circle">{% if variables.magic_source_type != "divine" %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</div>
+                        <div class="col-sm-1"><span>{% if variables.magic_source_type != "divine" %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</div>
                         <div class="col-sm-11">Divine</div>
                     </div>
                 </div>
@@ -2174,8 +2174,7 @@
                 <thead>
                     <tr>
                         <th>Basic</th>
-                        <th></th>
-                        <th>100 RP</th>
+                        <th class="text-right" colspan="2">100 RP</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -2187,52 +2186,52 @@
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_basic_skill_rank_1}}</td>
-                        <td class="circle">{% if variables.profession_basic_skill_rank_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_skill_rank_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_basic_skill_rank_2}}</td>
-                        <td class="circle">{% if variables.profession_basic_skill_rank_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_skill_rank_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_basic_skill_rank_3}}</td>
-                        <td class="circle">{% if variables.profession_basic_skill_rank_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_skill_rank_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_basic_skill_rank_4}}</td>
-                        <td class="circle">{% if variables.profession_basic_skill_rank_checkbox_4 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_skill_rank_checkbox_4 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_basic_skill_rank_5}}</td>
-                        <td class="circle">{% if variables.profession_basic_skill_rank_checkbox_5 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_skill_rank_checkbox_5 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_basic_skill_rank_6}}</td>
-                        <td class="circle">{% if variables.profession_basic_skill_rank_checkbox_6 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_skill_rank_checkbox_6 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_basic_skill_rank_7}}</td>
-                        <td class="circle">{% if variables.profession_basic_skill_rank_checkbox_7 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_skill_rank_checkbox_7 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_basic_skill_rank_8}}</td>
-                        <td class="circle">{% if variables.profession_basic_skill_rank_checkbox_8 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_skill_rank_checkbox_8 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_basic_skill_rank_9}}</td>
-                        <td class="circle">{% if variables.profession_basic_skill_rank_checkbox_9 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_skill_rank_checkbox_9 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_basic_skill_rank_10}}</td>
-                        <td class="circle">{% if variables.profession_basic_skill_rank_checkbox_10 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_skill_rank_checkbox_10 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td></td>
@@ -2242,58 +2241,58 @@
                     <tr>
                         <td><strong>Trait</strong></td>
                         <td>{{ variables.profession_basic_trait}}</td>
-                        <td class="circle">{% if variables.profession_basic_trait_checkbox == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_trait_checkbox == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_basic_bonus_advance_1}}</td>
-                        <td class="circle">{% if variables.profession_basic_bonus_advance_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_bonus_advance_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_basic_bonus_advance_2}}</td>
-                        <td class="circle">{% if variables.profession_basic_bonus_advance_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_bonus_advance_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_basic_bonus_advance_3}}</td>
-                        <td class="circle">{% if variables.profession_basic_bonus_advance_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_bonus_advance_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_basic_bonus_advance_4}}</td>
-                        <td class="circle">{% if variables.profession_basic_bonus_advance_checkbox_4 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_bonus_advance_checkbox_4 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_basic_bonus_advance_5}}</td>
-                        <td class="circle">{% if variables.profession_basic_bonus_advance_checkbox_5 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_bonus_advance_checkbox_5 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_basic_bonus_advance_6}}</td>
-                        <td class="circle">{% if variables.profession_basic_bonus_advance_checkbox_6 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_bonus_advance_checkbox_6 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_basic_bonus_advance_7}}</td>
-                        <td class="circle">{% if variables.profession_basic_bonus_advance_checkbox_7 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_bonus_advance_checkbox_7 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>TA</td>
                         <td>{{ variables.profession_basic_talent_1}}</td>
-                        <td class="circle">{% if variables.profession_basic_talent_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_talent_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     </tr>
                     <tr>
                         <td>TA</td>
                         <td>{{ variables.profession_basic_talent_2}}</td>
-                        <td class="circle">{% if variables.profession_basic_talent_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_talent_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>TA</td>
                         <td>{{ variables.profession_basic_talent_3}}</td>
-                        <td class="circle">{% if variables.profession_basic_talent_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_basic_talent_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                 </tbody>
             </table>
@@ -2303,8 +2302,7 @@
                 <thead>
                     <tr>
                         <th>Intermediate</th>
-                        <th></th>
-                        <th>200 RP</th>
+                        <th class="text-right" colspan="2">200 RP</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -2316,52 +2314,52 @@
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_intermediate_skill_rank_1}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_skill_rank_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_skill_rank_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_intermediate_skill_rank_2}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_skill_rank_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_skill_rank_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_intermediate_skill_rank_3}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_skill_rank_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_skill_rank_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_intermediate_skill_rank_4}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_skill_rank_checkbox_4 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_skill_rank_checkbox_4 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_intermediate_skill_rank_5}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_skill_rank_checkbox_5 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_skill_rank_checkbox_5 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_intermediate_skill_rank_6}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_skill_rank_checkbox_6 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_skill_rank_checkbox_6 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_intermediate_skill_rank_7}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_skill_rank_checkbox_7 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_skill_rank_checkbox_7 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_intermediate_skill_rank_8}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_skill_rank_checkbox_8 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_skill_rank_checkbox_8 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_intermediate_skill_rank_9}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_skill_rank_checkbox_9 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_skill_rank_checkbox_9 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_intermediate_skill_rank_10}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_skill_rank_checkbox_10 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_skill_rank_checkbox_10 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td></td>
@@ -2371,57 +2369,57 @@
                     <tr>
                         <td><strong>Trait</strong></td>
                         <td>{{ variables.profession_intermediate_trait}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_trait_checkbox == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_trait_checkbox == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_intermediate_bonus_advance_1}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_bonus_advance_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_bonus_advance_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_intermediate_bonus_advance_2}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_bonus_advance_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_bonus_advance_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_intermediate_bonus_advance_3}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_bonus_advance_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_bonus_advance_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_intermediate_bonus_advance_4}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_bonus_advance_checkbox_4 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_bonus_advance_checkbox_4 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_intermediate_bonus_advance_5}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_bonus_advance_checkbox_5 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_bonus_advance_checkbox_5 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_intermediate_bonus_advance_6}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_bonus_advance_checkbox_6 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_bonus_advance_checkbox_6 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_intermediate_bonus_advance_7}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_bonus_advance_checkbox_7 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_bonus_advance_checkbox_7 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>TA</td>
                         <td>{{ variables.profession_intermediate_talent_1}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_talent_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_talent_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>TA</td>
                         <td>{{ variables.profession_intermediate_talent_2}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_talent_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_talent_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>TA</td>
                         <td>{{ variables.profession_intermediate_talent_3}}</td>
-                        <td class="circle">{% if variables.profession_intermediate_talent_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_intermediate_talent_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                 </tbody>
             </table>
@@ -2431,65 +2429,64 @@
                 <thead>
                     <tr>
                         <th>Advanced</th>
-                        <th></th>
-                        <th>300 RP</th>
+                        <th class="text-right" colspan="2">300 RP</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Profession</strong></td>
-                        <td>{{ variables.profession_advanced}}</td>
+                        <td class="w-25"><strong>Profession</strong></td>
+                        <td class="w-75">{{ variables.profession_advanced}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_advanced_skill_rank_1}}</td>
-                        <td class="circle">{% if variables.profession_advanced_skill_rank_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_skill_rank_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_advanced_skill_rank_2}}</td>
-                        <td class="circle">{% if variables.profession_advanced_skill_rank_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_skill_rank_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_advanced_skill_rank_3}}</td>
-                        <td class="circle">{% if variables.profession_advanced_skill_rank_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_skill_rank_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_advanced_skill_rank_4}}</td>
-                        <td class="circle">{% if variables.profession_advanced_skill_rank_checkbox_4 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_skill_rank_checkbox_4 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_advanced_skill_rank_5}}</td>
-                        <td class="circle">{% if variables.profession_advanced_skill_rank_checkbox_5 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_skill_rank_checkbox_5 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_advanced_skill_rank_6}}</td>
-                        <td class="circle">{% if variables.profession_advanced_skill_rank_checkbox_6 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_skill_rank_checkbox_6 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_advanced_skill_rank_7}}</td>
-                        <td class="circle">{% if variables.profession_advanced_skill_rank_checkbox_7 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_skill_rank_checkbox_7 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_advanced_skill_rank_8}}</td>
-                        <td class="circle">{% if variables.profession_advanced_skill_rank_checkbox_8 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_skill_rank_checkbox_8 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_advanced_skill_rank_9}}</td>
-                        <td class="circle">{% if variables.profession_advanced_skill_rank_checkbox_9 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_skill_rank_checkbox_9 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>SR</td>
                         <td>{{ variables.profession_advanced_skill_rank_10}}</td>
-                        <td class="circle">{% if variables.profession_advanced_skill_rank_checkbox_10 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_skill_rank_checkbox_10 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td></td>
@@ -2499,57 +2496,57 @@
                     <tr>
                         <td><strong>Trait</strong></td>
                         <td>{{ variables.profession_advanced_trait}}</td>
-                        <td class="circle">{% if variables.profession_advanced_trait_checkbox == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_trait_checkbox == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_advanced_bonus_advance_1}}</td>
-                        <td class="circle">{% if variables.profession_advanced_bonus_advance_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_bonus_advance_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_advanced_bonus_advance_2}}</td>
-                        <td class="circle">{% if variables.profession_advanced_bonus_advance_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_bonus_advance_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_advanced_bonus_advance_3}}</td>
-                        <td class="circle">{% if variables.profession_advanced_bonus_advance_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_bonus_advance_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_advanced_bonus_advance_4}}</td>
-                        <td class="circle">{% if variables.profession_advanced_bonus_advance_checkbox_4 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_bonus_advance_checkbox_4 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_advanced_bonus_advance_5}}</td>
-                        <td class="circle">{% if variables.profession_advanced_bonus_advance_checkbox_5 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_bonus_advance_checkbox_5 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_advanced_bonus_advance_6}}</td>
-                        <td class="circle">{% if variables.profession_advanced_bonus_advance_checkbox_6 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_bonus_advance_checkbox_6 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>BA</td>
                         <td>{{ variables.profession_advanced_bonus_advance_7}}</td>
-                        <td class="circle">{% if variables.profession_advanced_bonus_advance_checkbox_7 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_bonus_advance_checkbox_7 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>TA</td>
                         <td>{{ variables.profession_advanced_talent_1}}</td>
-                        <td class="circle">{% if variables.profession_advanced_talent_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_talent_checkbox_1 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>TA</td>
                         <td>{{ variables.profession_advanced_talent_2}}</td>
-                        <td class="circle">{% if variables.profession_advanced_talent_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_talent_checkbox_2 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                     <tr>
                         <td>TA</td>
                         <td>{{ variables.profession_advanced_talent_3}}</td>
-                        <td class="circle">{% if variables.profession_advanced_talent_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
+                        <td>{% if variables.profession_advanced_talent_checkbox_3 == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</td>
                     </tr>
                 </tbody>
             </table>
