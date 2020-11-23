@@ -5,11 +5,12 @@
     border: 1px black solid;
     background: #ebe6dd;
     color: #27241f;
-    font-size: 1em;
+    font-size: 13px;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: .5rem 0;
     line-height: 1.2;
+    font-family: "open sans";
 }
 h5 {
     font-size: .85em;
@@ -19,6 +20,9 @@ h4 {
 }
 h3 {
     font-size: 1.17em;
+}
+h1, h2 {    
+    font-weight: 400;
 }
 .header h1 {
     margin-bottom: 0;
@@ -117,4 +121,17 @@ h3 {
     min-height: 1px;
     padding-right: 10px;
     padding-left: 10px;
+}
+/* Bootstrap 3 fixes */
+.ml-auto {
+    margin-left: auto!important;
+}
+.mr-auto {
+    margin-right: auto!important;
+}
+.pr-0 {
+    padding-right: 0!important;
+}
+.text-right {
+    text-align: right!important;
 }

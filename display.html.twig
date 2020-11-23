@@ -1045,7 +1045,7 @@
                     </div>
                     {% if variables.armor_is_natural == true %}
                     <div class="row">
-                        <div class="col-sm-9">Coordination <i class="fas fa-running"></i></div>
+                        <div class="col-sm-9 pr-0">Coordination <i class="fas fa-running"></i></div>
                         <div class="col-sm-3">{% set agility_coordination_value_natural = skill_agility_coordination_value + 10 %}{{ agility_coordination_value_natural}}</div>
                     </div>
                     <div class="row">
@@ -1062,7 +1062,7 @@
                     </div>
                     {% else %}
                     <div class="row">
-                        <div class="col-sm-9">Coordination <i class="fal fa-running"></i></div>
+                        <div class="col-sm-9 pr-0">Coordination <i class="fal fa-running"></i></div>
                         <div class="col-sm-3">{{ skill_agility_coordination_value}}</div>
                     </div>
                     <div class="row">
@@ -1582,8 +1582,8 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Description</th>
-                                <th>Enc.</th>
+                                <th class="col-sm-11">Description</th>
+                                <th class="col-sm-1">Enc.</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1661,9 +1661,9 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Description</th>
-                        <th>Qty.</th> 
-                        <th>Enc.</th>
+                        <th class="col-sm-10">Description</th>
+                        <th class="col-sm-1">Qty.</th> 
+                        <th class="col-sm-1">Enc.</th>
                     </tr>
                 </thead>
                 <tbody>
