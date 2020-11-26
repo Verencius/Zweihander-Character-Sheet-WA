@@ -268,7 +268,7 @@
             <div class="row card">
                 <div class="col-sm-12">
                     <div class="row card-title">
-                        <div class="col-sm-12"><h5>Order Alignment - {{ variables.alignment_order}}</h5></div>
+                        <div class="col-sm-12"><h5>Order Alignment - {{ variables.alignment_order|upper}}</h5></div>
                     </div>
                     <div class="row card-content">
                         <div class="col-sm-12">{{ variables.alignment_order_description}} </div>
@@ -278,7 +278,7 @@
             <div class="row card">
                 <div class="col-sm-12">
                     <div class="row card-title">
-                        <div class="col-sm-12"><h5>Chaos Alignment - {{ variables.alignment_chaos}}</h5></div>
+                        <div class="col-sm-12"><h5>Chaos Alignment - {{ variables.alignment_chaos|upper}}</h5></div>
                     </div>
                     <div class="row card-content">
                         <div class="col-sm-12">{{ variables.alignment_chaos_description}} </div>
@@ -302,7 +302,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-8"><strong>Permanent Chaos Ranks:</strong></div>
-                        <div class="col-sm-4"><div class="col-sm-4 border-strong btext">{{ variables.alignment_permanent_chaos_ranks}}</div></div>
+                        <div class="col-sm-4"><div class="col-sm-4 border-strong btext">{% if variables.alignment_permanent_chaos_ranks is defined and variables.alignment_permanent_chaos_ranks is not empty %}{{ variables.alignment_permanent_chaos_ranks}}{% else %}0{% endif %}</div></div>
                     </div>
                 </div>
             </div>
@@ -342,7 +342,7 @@
                             {% for i in 9..1 %}
                                 <td class="text-center">{% if current_order_ranks >= i %} <i class="fas fa-circle"></i> {% else %} <i class="far fa-circle"></i>{% endif %}</td>
                             {% endfor %}
-                            <td class="text-center"><div class="border-strong btext pt-1 pb-1"><strong>{{ variables.alignment_corruption}}</strong></div></td>
+                            <td class="text-center"><div class="border-strong btext pt-1 pb-1"><strong>{%if variables.alignment_corruption is defined and variables.alignment_curruption is not null %}{{variables.alignment_corruption}}{% else %}0{% endif %}</strong></div></td>
                             {% for i in 1..9 %}
                                 <td class="text-center">{% if current_chaos_ranks >= i %} <i class="fas fa-circle"></i> {% else %} <i class="far fa-circle"></i>{% endif %}</td>
                             {% endfor %}
@@ -357,7 +357,7 @@
     <div class="row card mt-3">
         <div class="col-sm-12">
             <div class="row">
-                <div class="col-sm-12 card-title"><h3>Skills and Talents</h3></div>
+                <div class="col-sm-12 card-title"><h3>Skills and Traits</h3></div>
             </div>
             <div class="row card-content">
                 <!-- Tab #4.1: Attributes, skills -->
@@ -365,7 +365,7 @@
                     <div class="row">
                         <div class="col-sm-4 border">
                             <div class="row border-bottom">
-                                <div class="col-sm-12">Primary Attributes</div>
+                                <div class="col-sm-12"><b>Primary Attributes</b></div>
                             </div>
                             {% if variables.attribute_combat is defined %}
                             <div class="row">
@@ -392,9 +392,9 @@
                         </div>
                         <div class="col-sm-8 border">
                             <div class="row border-bottom">
-                                <div class="col-sm-3">Skills</div>
-                                <div class="col-sm-3">Skill Ranks +10</div>
-                                <div class="col-sm-6">Focuses</div>
+                                <div class="col-sm-3"><b>Skills</b></div>
+                                <div class="col-sm-3"><b>Skill Ranks +10</b></div>
+                                <div class="col-sm-6"><b>Focuses</b></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Martial Melee*</div>

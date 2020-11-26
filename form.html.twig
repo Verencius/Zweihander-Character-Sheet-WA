@@ -251,14 +251,14 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-8">
-                            <div class=""><input  value="{{ variables.personal_distinguishing_marks_2 is defined ? variables.personal_distinguishing_marks_2 }}"  class="form-control" id="personal_distinguishing_marks_1" name="personal_distinguishing_marks_1" placeholder="" type="text" />
+                            <div class=""><input  value="{{ variables.personal_distinguishing_marks_2 is defined ? variables.personal_distinguishing_marks_2 }}"  class="form-control" id="personal_distinguishing_marks_2" name="personal_distinguishing_marks_2" placeholder="" type="text" />
                             <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Distinguishing Mark #2</div>
                         </div>    
                     </div>
                     <div class="row">
                         <div class="col-sm-8">
-                            <div class=""><input  value="{{ variables.personal_distinguishing_marks_3 is defined ? variables.personal_distinguishing_marks_3 }}"  class="form-control" id="personal_distinguishing_marks_1" name="personal_distinguishing_marks_1" placeholder="" type="text" />
+                            <div class=""><input  value="{{ variables.personal_distinguishing_marks_3 is defined ? variables.personal_distinguishing_marks_3 }}"  class="form-control" id="personal_distinguishing_marks_3" name="personal_distinguishing_marks_3" placeholder="" type="text" />
                             <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Distinguishing Mark #3</div>
                         </div>
@@ -317,7 +317,7 @@
                             <p class="description form-control-description"></p>
                         </div>
                         <div class="col-sm-12">
-                            <textarea   class="form-control"  id="alignment_chaos_description" name="alignment_chaos_description" rows="2" placeholder="Chaos Alignment Description">{{ variables.alignment_chaos_description is defined ? variables.alignment_order_description }}</textarea>
+                            <textarea   class="form-control"  id="alignment_chaos_description" name="alignment_chaos_description" rows="2" placeholder="Chaos Alignment Description">{{ variables.alignment_chaos_description is defined ? variables.alignment_chaos_description }}</textarea>
                             <p class="description form-control-description"></p>
                         </div>
                     </div>
@@ -414,7 +414,7 @@
                             {% for i in 9..1 %}
                                 <td class="text-center">{% if current_order_ranks >= i %} <i class="fas fa-circle"></i> {% else %} <i class="far fa-circle"></i>{% endif %}</td>
                             {% endfor %}
-                            <td class="text-center"><div class="border-strong btext pt-1 pb-1"><strong>{{ variables.alignment_corruption}}</strong></div></td>
+                            <td class="text-center"><div class="border-strong btext pt-1 pb-1"><strong>{%if variables.alignment_corruption is defined and variables.alignment_curruption is not null %}{{variables.alignment_corruption}}{% else %}0{% endif %}</strong></div></td>
                             {% for i in 1..9 %}
                                 <td class="text-center">{% if current_chaos_ranks >= i %} <i class="fas fa-circle"></i> {% else %} <i class="far fa-circle"></i>{% endif %}</td>
                             {% endfor %}
@@ -429,7 +429,7 @@
     <div class="row card mt-3">
         <div class="col-sm-12">
             <div class="row">
-                <div class="col-sm-12 card-title"><h3>Skills and Talents</h3></div>
+                <div class="col-sm-12 card-title"><h3>Skills and Traits</h3></div>
             </div>
             <div class="row card-content">
                 <!-- Tab #4.1: Attributes, skills -->
@@ -552,15 +552,19 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus Advance</div>
-                                <div class="col-sm-4">{% if attribute_agility_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_agility_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_agility_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-4">
+                                    <input  value="1"  {% if variables.attribute_agility_advance_1 is defined and variables.attribute_agility_advance_1 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_agility_advance_1" name="attribute_agility_advance_1" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_agility_advance_2 is defined and variables.attribute_agility_advance_2 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_agility_advance_2" name="attribute_agility_advance_2" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_agility_advance_3 is defined and variables.attribute_agility_advance_3 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_agility_advance_3" name="attribute_agility_advance_3" placeholder="" type="checkbox" />
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"></div>
-                                <div class="col-sm-4">{% if attribute_agility_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_agility_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_agility_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-4">
+                                    <input  value="1"  {% if variables.attribute_agility_advance_4 is defined and variables.attribute_agility_advance_4 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_agility_advance_4" name="attribute_agility_advance_4" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_agility_advance_5 is defined and variables.attribute_agility_advance_5 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_agility_advance_5" name="attribute_agility_advance_5" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_agility_advance_6 is defined and variables.attribute_agility_advance_6 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_agility_advance_6" name="attribute_agility_advance_6" placeholder="" type="checkbox" />
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus modifier</div>
-                                <div class="col-sm-4">{{ variables.attribute_agility_bonus_mod}}</div>
+                                <div class="col-sm-4"><input  value="{{ variables.attribute_agility_bonus_mod is defined ? variables.attribute_agility_bonus_mod }}"  class="form-control"  id="attribute_agility_bonus_mod" name="attribute_agility_bonus_mod" placeholder="0" type="number"   /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Agility Bonus [AB]</div>
@@ -571,27 +575,27 @@
                             <div class="row">
                                 <div class="col-sm-3">Coordination</div>
                                 <div class="col-sm-3"><input  value="1"  {% if variables.skill_agility_coordination_10 is defined and variables.skill_agility_coordination_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_coordination_10" name="skill_agility_coordination_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_agility_coordination_20 is defined and variables.skill_agility_coordination_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_coordination_20" name="skill_agility_coordination_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_agility_coordination_30 is defined and variables.skill_agility_coordination_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_coordination_30" name="skill_agility_coordination_30" placeholder="" type="checkbox" /></div>
-                                <div class="col-sm-6">{{ variables.skill_agility_coordination_focus}}</div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_agility_coordination_focus is defined ? variables.skill_agility_coordination_focus }}"  class="form-control" id="skill_agility_coordination_focus" name="skill_agility_coordination_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Pilot*</div>
                                 <div class="col-sm-3"><input  value="1"  {% if variables.skill_agility_pilot_10 is defined and variables.skill_agility_pilot_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_pilot_10" name="skill_agility_pilot_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_agility_pilot_20 is defined and variables.skill_agility_pilot_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_pilot_20" name="skill_agility_pilot_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_agility_pilot_30 is defined and variables.skill_agility_pilot_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_pilot_30" name="skill_agility_pilot_30" placeholder="" type="checkbox" /></div>
-                                <div class="col-sm-6">{{ variables.skill_agility_pilot_focus}}</div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_agility_pilot_focus is defined ? variables.skill_agility_pilot_focus }}"  class="form-control" id="skill_agility_pilot_focus" name="skill_agility_pilot_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Ride*</div>
                                 <div class="col-sm-3"><input  value="1"  {% if variables.skill_agility_ride_10 is defined and variables.skill_agility_ride_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_ride_10" name="skill_agility_ride_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_agility_ride_20 is defined and variables.skill_agility_ride_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_ride_20" name="skill_agility_ride_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_agility_ride_30 is defined and variables.skill_agility_ride_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_ride_30" name="skill_agility_ride_30" placeholder="" type="checkbox" /></div>
-                                <div class="col-sm-6">{{ variables.skill_agility_ride_focus}}</div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_agility_ride_focus is defined ? variables.skill_agility_ride_focus }}"  class="form-control" id="skill_agility_ride_focus" name="skill_agility_ride_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Skulduggery</div>
                                 <div class="col-sm-3"><input  value="1"  {% if variables.skill_agility_skulduggery_10 is defined and variables.skill_agility_skulduggery_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_skulduggery_10" name="skill_agility_skulduggery_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_agility_skulduggery_20 is defined and variables.skill_agility_skulduggery_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_skulduggery_20" name="skill_agility_skulduggery_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_agility_skulduggery_30 is defined and variables.skill_agility_skulduggery_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_skulduggery_30" name="skill_agility_skulduggery_30" placeholder="" type="checkbox" /></div>
-                                <div class="col-sm-6">{{ variables.skill_agility_skullduggery_focus}}</div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_agility_skulduggery_focus is defined ? variables.skill_agility_skulduggery_focus }}"  class="form-control" id="skill_agility_skulduggery_focus" name="skill_agility_skulduggery_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Stealth</div>
                                 <div class="col-sm-3"><input  value="1"  {% if variables.skill_agility_stealth_10 is defined and variables.skill_agility_stealth_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_stealth_10" name="skill_agility_stealth_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_agility_stealth_20 is defined and variables.skill_agility_stealth_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_stealth_20" name="skill_agility_stealth_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_agility_stealth_30 is defined and variables.skill_agility_stealth_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_stealth_30" name="skill_agility_stealth_30" placeholder="" type="checkbox" /></div>
-                                <div class="col-sm-6">{{ variables.skill_agility_stealth_focus}}</div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_agility_stealth_focus is defined ? variables.skill_agility_stealth_focus }}"  class="form-control" id="skill_agility_stealth_focus" name="skill_agility_stealth_focus" placeholder="" type="text" /></div>
                             </div>
                         </div>
                     </div>
@@ -599,19 +603,23 @@
                         <div class="col-sm-4 border">
                             <div class="row">     
                                 <div class="col-sm-8">Perception</div>
-                                <div class="col-sm-4">{{ variables.attribute_perception}}</div>
+                                <div class="col-sm-4"><input  value="{{ variables.attribute_perception is defined ? variables.attribute_perception }}"  class="form-control"  id="attribute_perception" name="attribute_perception" placeholder="25" type="number"  min="0" max="100" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus Advance</div>
-                                <div class="col-sm-4">{% if attribute_perception_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_perception_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_perception_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-4">
+                                    <input  value="1"  {% if variables.attribute_perception_advance_1 is defined and variables.attribute_perception_advance_1 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_perception_advance_1" name="attribute_perception_advance_1" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_perception_advance_2 is defined and variables.attribute_perception_advance_2 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_perception_advance_2" name="attribute_perception_advance_2" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_perception_advance_3 is defined and variables.attribute_perception_advance_3 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_perception_advance_3" name="attribute_perception_advance_3" placeholder="" type="checkbox" />
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"></div>
-                                <div class="col-sm-4">{% if attribute_perception_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_perception_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_perception_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-4">
+                                    <input  value="1"  {% if variables.attribute_perception_advance_4 is defined and variables.attribute_perception_advance_4 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_perception_advance_4" name="attribute_perception_advance_4" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_perception_advance_5 is defined and variables.attribute_perception_advance_5 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_perception_advance_5" name="attribute_perception_advance_5" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_perception_advance_6 is defined and variables.attribute_perception_advance_6 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_perception_advance_6" name="attribute_perception_advance_6" placeholder="" type="checkbox" />
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus modifier</div>
-                                <div class="col-sm-4">{{ variables.attribute_perception_bonus_mod}}</div>
+                                <div class="col-sm-4"><input  value="{{ variables.attribute_perception_bonus_mod is defined ? variables.attribute_perception_bonus_mod }}"  class="form-control"  id="attribute_perception_bonus_mod" name="attribute_perception_bonus_mod" placeholder="0" type="number"   /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Perception Bonus [PB]</div>
@@ -621,45 +629,47 @@
                         <div class="col-sm-8 border">
                             <div class="row">
                                 <div class="col-sm-3">Awareness</div>
-                                <div class="col-sm-3">{% if variables.skill_perception_awareness_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_awareness_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_awareness_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_perception_awareness_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_perception_awareness_10 is defined and variables.skill_perception_awareness_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_awareness_10" name="skill_perception_awareness_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_perception_awareness_20 is defined and variables.skill_perception_awareness_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_awareness_20" name="skill_perception_awareness_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_perception_awareness_30 is defined and variables.skill_perception_awareness_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_awareness_30" name="skill_perception_awareness_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_perception_awareness_focus is defined ? variables.skill_perception_awareness_focus }}"  class="form-control" id="skill_perception_awareness_focus" name="skill_perception_awareness_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Eavesdrop</div>
-                                <div class="col-sm-3">{% if variables.skill_perception_eavesdrop_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_eavesdrop_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_eavesdrop_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_perception_eavesdrop_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_perception_eavesdrop_10 is defined and variables.skill_perception_eavesdrop_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_eavesdrop_10" name="skill_perception_eavesdrop_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_perception_eavesdrop_20 is defined and variables.skill_perception_eavesdrop_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_eavesdrop_20" name="skill_perception_eavesdrop_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_perception_eavesdrop_30 is defined and variables.skill_perception_eavesdrop_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_eavesdrop_30" name="skill_perception_eavesdrop_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_perception_eavesdrop_focus is defined ? variables.skill_perception_eavesdrop_focus }}"  class="form-control" id="skill_perception_eavesdrop_focus" name="skill_perception_eavesdrop_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Scrutinize</div>
-                                <div class="col-sm-3">{% if variables.skill_perception_scrutinize_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_scrutinize_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_scrutinize_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_perception_scrutinize_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_perception_scrutinize_10 is defined and variables.skill_perception_scrutinize_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_scrutinize_10" name="skill_perception_scrutinize_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_perception_scrutinize_20 is defined and variables.skill_perception_scrutinize_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_scrutinize_20" name="skill_perception_scrutinize_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_perception_scrutinize_30 is defined and variables.skill_perception_scrutinize_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_scrutinize_30" name="skill_perception_scrutinize_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_perception_scrutinize_focus is defined ? variables.skill_perception_scrutinize_focus }}"  class="form-control" id="skill_perception_scrutinize_focus" name="skill_perception_scrutinize_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Survival</div>
-                                <div class="col-sm-3">{% if variables.skill_perception_survival_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_survival_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_survival_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_perception_survival_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_perception_survival_10 is defined and variables.skill_perception_survival_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_survival_10" name="skill_perception_survival_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_perception_survival_20 is defined and variables.skill_perception_survival_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_survival_20" name="skill_perception_survival_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_perception_survival_30 is defined and variables.skill_perception_survival_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_survival_30" name="skill_perception_survival_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_perception_survival_focus is defined ? variables.skill_perception_survival_focus }}"  class="form-control" id="skill_perception_survival_focus" name="skill_perception_survival_focus" placeholder="" type="text" /></div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-4 border">
-                            {% if variables.attribute_intelligence is defined %}
                             <div class="row">     
                                 <div class="col-sm-8">Intelligence</div>
-                                <div class="col-sm-4">{{ variables.attribute_intelligence}}</div>
+                                <div class="col-sm-4"><input  value="{{ variables.attribute_intelligence is defined ? variables.attribute_intelligence }}"  class="form-control"  id="attribute_intelligence" name="attribute_intelligence" placeholder="25" type="number"  min="0" max="100" /></div>
                             </div>
-                            {% endif %}
                             <div class="row">
                                 <div class="col-sm-8">Bonus Advance</div>
-                                <div class="col-sm-4">{% if attribute_intelligence_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_intelligence_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_intelligence_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-4">
+                                    <input  value="1"  {% if variables.attribute_intelligence_advance_1 is defined and variables.attribute_intelligence_advance_1 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_intelligence_advance_1" name="attribute_intelligence_advance_1" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_intelligence_advance_2 is defined and variables.attribute_intelligence_advance_2 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_intelligence_advance_2" name="attribute_intelligence_advance_2" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_intelligence_advance_3 is defined and variables.attribute_intelligence_advance_3 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_intelligence_advance_3" name="attribute_intelligence_advance_3" placeholder="" type="checkbox" />
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"></div>
-                                <div class="col-sm-4">{% if attribute_intelligence_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_intelligence_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_intelligence_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-4">
+                                    <input  value="1"  {% if variables.attribute_intelligence_advance_4 is defined and variables.attribute_intelligence_advance_4 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_intelligence_advance_4" name="attribute_intelligence_advance_4" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_intelligence_advance_5 is defined and variables.attribute_intelligence_advance_5 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_intelligence_advance_5" name="attribute_intelligence_advance_5" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_intelligence_advance_6 is defined and variables.attribute_intelligence_advance_6 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_intelligence_advance_6" name="attribute_intelligence_advance_6" placeholder="" type="checkbox" />
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus modifier</div>
-                                <div class="col-sm-4">{{ variables.attribute_intelligence_bonus_mod}}</div>
+                                <div class="col-sm-4"><input  value="{{ variables.attribute_intelligence_bonus_mod is defined ? variables.attribute_intelligence_bonus_mod }}"  class="form-control"  id="attribute_intelligence_bonus_mod" name="attribute_intelligence_bonus_mod" placeholder="0" type="number"   /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Intelligence Bonus [IB]</div>
@@ -669,65 +679,67 @@
                         <div class="col-sm-8 border">
                             <div class="row">
                                 <div class="col-sm-3">Alchemy*</div>
-                                <div class="col-sm-3">{% if variables.skill_intelligence_alchemy_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_alchemy_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_alchemy_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_intelligence_alchemy_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_intelligence_alchemy_10 is defined and variables.skill_intelligence_alchemy_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_alchemy_10" name="skill_intelligence_alchemy_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_alchemy_20 is defined and variables.skill_intelligence_alchemy_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_alchemy_20" name="skill_intelligence_alchemy_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_alchemy_30 is defined and variables.skill_intelligence_alchemy_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_alchemy_30" name="skill_intelligence_alchemy_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_intelligence_alchemy_focus is defined ? variables.skill_intelligence_alchemy_focus }}"  class="form-control" id="skill_intelligence_alchemy_focus" name="skill_intelligence_alchemy_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Counterfeit*</div>
-                                <div class="col-sm-3">{% if variables.skill_intelligence_counterfeit_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_counterfeit_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_counterfeit_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_intelligence_counterfeit_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_intelligence_counterfeit_10 is defined and variables.skill_intelligence_counterfeit_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_counterfeit_10" name="skill_intelligence_counterfeit_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_counterfeit_20 is defined and variables.skill_intelligence_counterfeit_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_counterfeit_20" name="skill_intelligence_counterfeit_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_counterfeit_30 is defined and variables.skill_intelligence_counterfeit_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_counterfeit_30" name="skill_intelligence_counterfeit_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_intelligence_counterfeit_focus is defined ? variables.skill_intelligence_counterfeit_focus }}"  class="form-control" id="skill_intelligence_counterfeit_focus" name="skill_intelligence_counterfeit_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Education*</div>
-                                <div class="col-sm-3">{% if variables.skill_intelligence_education_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_education_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_education_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_intelligence_education_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_intelligence_education_10 is defined and variables.skill_intelligence_education_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_education_10" name="skill_intelligence_education_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_education_20 is defined and variables.skill_intelligence_education_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_education_20" name="skill_intelligence_education_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_education_30 is defined and variables.skill_intelligence_education_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_education_30" name="skill_intelligence_education_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_intelligence_education_focus is defined ? variables.skill_intelligence_education_focus }}"  class="form-control" id="skill_intelligence_education_focus" name="skill_intelligence_education_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Folklore</div>
-                                <div class="col-sm-3">{% if variables.skill_intelligence_folklore_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_folklore_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_folklore_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_intelligence_folklore_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_intelligence_folklore_10 is defined and variables.skill_intelligence_folklore_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_folklore_10" name="skill_intelligence_folklore_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_folklore_20 is defined and variables.skill_intelligence_folklore_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_folklore_20" name="skill_intelligence_folklore_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_folklore_30 is defined and variables.skill_intelligence_folklore_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_folklore_30" name="skill_intelligence_folklore_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_intelligence_folklore_focus is defined ? variables.skill_intelligence_folklore_focus }}"  class="form-control" id="skill_intelligence_folklore_focus" name="skill_intelligence_folklore_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Gamble</div>
-                                <div class="col-sm-3">{% if variables.skill_intelligence_gamble_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_gamble_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_gamble_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_intelligence_gamble_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_intelligence_gamble_10 is defined and variables.skill_intelligence_gamble_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_gamble_10" name="skill_intelligence_gamble_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_gamble_20 is defined and variables.skill_intelligence_gamble_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_gamble_20" name="skill_intelligence_gamble_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_gamble_30 is defined and variables.skill_intelligence_gamble_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_gamble_30" name="skill_intelligence_gamble_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_intelligence_gamble_focus is defined ? variables.skill_intelligence_gamble_focus }}"  class="form-control" id="skill_intelligence_gamble_focus" name="skill_intelligence_gamble_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Heal*</div>
-                                <div class="col-sm-3">{% if variables.skill_intelligence_heal_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_heal_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_heal_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_intelligence_heal_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_intelligence_heal_10 is defined and variables.skill_intelligence_heal_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_heal_10" name="skill_intelligence_heal_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_heal_20 is defined and variables.skill_intelligence_heal_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_heal_20" name="skill_intelligence_heal_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_heal_30 is defined and variables.skill_intelligence_heal_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_heal_30" name="skill_intelligence_heal_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_intelligence_heal_focus is defined ? variables.skill_intelligence_heal_focus }}"  class="form-control" id="skill_intelligence_heal_focus" name="skill_intelligence_heal_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Navigation*</div>
-                                <div class="col-sm-3">{% if variables.skill_intelligence_navigation_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_navigation_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_navigation_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_intelligence_navigation_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_intelligence_navigation_10 is defined and variables.skill_intelligence_navigation_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_navigation_10" name="skill_intelligence_navigation_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_navigation_20 is defined and variables.skill_intelligence_navigation_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_navigation_20" name="skill_intelligence_navigation_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_navigation_30 is defined and variables.skill_intelligence_navigation_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_navigation_30" name="skill_intelligence_navigation_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_intelligence_navigation_focus is defined ? variables.skill_intelligence_navigation_focus }}"  class="form-control" id="skill_intelligence_navigation_focus" name="skill_intelligence_navigation_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Warfare*</div>
-                                <div class="col-sm-3">{% if variables.skill_intelligence_warfare_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_warfare_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_warfare_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_intelligence_warfare_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_intelligence_warfare_10 is defined and variables.skill_intelligence_warfare_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_warfare_10" name="skill_intelligence_warfare_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_warfare_20 is defined and variables.skill_intelligence_warfare_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_warfare_20" name="skill_intelligence_warfare_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_warfare_30 is defined and variables.skill_intelligence_warfare_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_warfare_30" name="skill_intelligence_warfare_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_intelligence_warfare_focus is defined ? variables.skill_intelligence_warfare_focus }}"  class="form-control" id="skill_intelligence_warfare_focus" name="skill_intelligence_warfare_focus" placeholder="" type="text" /></div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-4 border">
-                            {% if variables.attribute_willpower is defined %}
                             <div class="row">     
                                 <div class="col-sm-8">Willpower</div>
-                                <div class="col-sm-4">{{ variables.attribute_willpower }} </div>
+                                <div class="col-sm-4"><input  value="{{ variables.attribute_willpower is defined ? variables.attribute_willpower }}"  class="form-control"  id="attribute_willpower" name="attribute_willpower" placeholder="25" type="number"  min="0" max="100" /></div>
                             </div>
-                            {% endif %}
                             <div class="row">
                                 <div class="col-sm-8">Bonus Advance</div>
-                                <div class="col-sm-4">{% if attribute_willpower_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_willpower_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_willpower_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-4">
+                                    <input  value="1"  {% if variables.attribute_willpower_advance_1 is defined and variables.attribute_willpower_advance_1 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_willpower_advance_1" name="attribute_willpower_advance_1" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_willpower_advance_2 is defined and variables.attribute_willpower_advance_2 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_willpower_advance_2" name="attribute_willpower_advance_2" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_willpower_advance_3 is defined and variables.attribute_willpower_advance_3 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_willpower_advance_3" name="attribute_willpower_advance_3" placeholder="" type="checkbox" />
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"></div>
-                                <div class="col-sm-4">{% if attribute_willpower_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_willpower_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_willpower_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-4">
+                                    <input  value="1"  {% if variables.attribute_willpower_advance_4 is defined and variables.attribute_willpower_advance_4 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_willpower_advance_4" name="attribute_willpower_advance_4" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_willpower_advance_5 is defined and variables.attribute_willpower_advance_5 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_willpower_advance_5" name="attribute_willpower_advance_5" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_willpower_advance_6 is defined and variables.attribute_willpower_advance_6 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_willpower_advance_6" name="attribute_willpower_advance_6" placeholder="" type="checkbox" />
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus modifier</div>
-                                <div class="col-sm-4">{{ variables.attribute_willpower_bonus_mod}}</div>
+                                <div class="col-sm-4"><input  value="{{ variables.attribute_willpower_bonus_mod is defined ? variables.attribute_willpower_bonus_mod }}"  class="form-control"  id="attribute_willpower_bonus_mod" name="attribute_willpower_bonus_mod" placeholder="0" type="number"   /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Willpower Bonus [WB]</div>
@@ -737,45 +749,47 @@
                         <div class="col-sm-8 border">
                             <div class="row">
                                 <div class="col-sm-3">Incantation*</div>
-                                <div class="col-sm-3">{% if variables.skill_willpower_incantation_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_incantation_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_incantation_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_willpower_incantation_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_willpower_incantation_10 is defined and variables.skill_willpower_incantation_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_incantation_10" name="skill_willpower_incantation_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_willpower_incantation_20 is defined and variables.skill_willpower_incantation_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_incantation_20" name="skill_willpower_incantation_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_willpower_incantation_30 is defined and variables.skill_willpower_incantation_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_incantation_30" name="skill_willpower_incantation_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_willpower_incantation_focus is defined ? variables.skill_willpower_incantation_focus }}"  class="form-control" id="skill_willpower_incantation_focus" name="skill_willpower_incantation_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Interrogation*</div>
-                                <div class="col-sm-3">{% if variables.skill_willpower_interrogation_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_interrogation_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_interrogation_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_willpower_interrogation_focus}} </div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_willpower_interrogation_10 is defined and variables.skill_willpower_interrogation_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_interrogation_10" name="skill_willpower_interrogation_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_willpower_interrogation_20 is defined and variables.skill_willpower_interrogation_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_interrogation_20" name="skill_willpower_interrogation_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_willpower_interrogation_30 is defined and variables.skill_willpower_interrogation_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_interrogation_30" name="skill_willpower_interrogation_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_willpower_interrogation_focus is defined ? variables.skill_willpower_interrogation_focus }}"  class="form-control" id="skill_willpower_interrogation_focus" name="skill_willpower_interrogation_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Resolve</div>
-                                <div class="col-sm-3">{% if variables.skill_willpower_resolve_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_resolve_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_resolve_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_willpower_resolve_focus}} </div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_willpower_resolve_10 is defined and variables.skill_willpower_resolve_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_resolve_10" name="skill_willpower_resolve_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_willpower_resolve_20 is defined and variables.skill_willpower_resolve_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_resolve_20" name="skill_willpower_resolve_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_willpower_resolve_30 is defined and variables.skill_willpower_resolve_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_resolve_30" name="skill_willpower_resolve_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_willpower_resolve_focus is defined ? variables.skill_willpower_resolve_focus }}"  class="form-control" id="skill_willpower_resolve_focus" name="skill_willpower_resolve_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Tradecraft*</div>
-                                <div class="col-sm-3">{% if variables.skill_willpower_tradecraft_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_tradecraft_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_tradecraft_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_willpower_tradecraft_focus}} </div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_willpower_tradecraft_10 is defined and variables.skill_willpower_tradecraft_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_tradecraft_10" name="skill_willpower_tradecraft_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_willpower_tradecraft_20 is defined and variables.skill_willpower_tradecraft_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_tradecraft_20" name="skill_willpower_tradecraft_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_willpower_tradecraft_30 is defined and variables.skill_willpower_tradecraft_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_tradecraft_30" name="skill_willpower_tradecraft_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_willpower_tradecraft_focus is defined ? variables.skill_willpower_tradecraft_focus }}"  class="form-control" id="skill_willpower_tradecraft_focus" name="skill_willpower_tradecraft_focus" placeholder="" type="text" /></div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-4 border">
-                            {% if variables.attribute_fellowship is defined %}
                             <div class="row">     
                                 <div class="col-sm-8">Fellowship</div>
-                                <div class="col-sm-4">{{ variables.attribute_fellowship}} </div>
+                                <div class="col-sm-4"><input  value="{{ variables.attribute_fellowship is defined ? variables.attribute_fellowship }}"  class="form-control"  id="attribute_fellowship" name="attribute_fellowship" placeholder="25" type="number"  min="0" max="100" /></div>
                             </div>
-                            {% endif %}
                             <div class="row">
                                 <div class="col-sm-8">Bonus Advance</div>
-                                <div class="col-sm-4">{% if attribute_fellowship_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_fellowship_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_fellowship_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-4">
+                                    <input  value="1"  {% if variables.attribute_fellowship_advance_1 is defined and variables.attribute_fellowship_advance_1 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_fellowship_advance_1" name="attribute_fellowship_advance_1" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_fellowship_advance_2 is defined and variables.attribute_fellowship_advance_2 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_fellowship_advance_2" name="attribute_fellowship_advance_2" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_fellowship_advance_3 is defined and variables.attribute_fellowship_advance_3 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_fellowship_advance_3" name="attribute_fellowship_advance_3" placeholder="" type="checkbox" />
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"></div>
-                                <div class="col-sm-4">{% if attribute_fellowship_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_fellowship_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_fellowship_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-4">
+                                    <input  value="1"  {% if variables.attribute_fellowship_advance_4 is defined and variables.attribute_fellowship_advance_4 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_fellowship_advance_4" name="attribute_fellowship_advance_4" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_fellowship_advance_5 is defined and variables.attribute_fellowship_advance_5 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_fellowship_advance_5" name="attribute_fellowship_advance_5" placeholder="" type="checkbox" /><input  value="1"  {% if variables.attribute_fellowship_advance_6 is defined and variables.attribute_fellowship_advance_6 == 1   %} checked="checked"{% endif %}   class="checkbox" id="attribute_fellowship_advance_6" name="attribute_fellowship_advance_6" placeholder="" type="checkbox" />
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus modifier</div>
-                                <div class="col-sm-4">{{ variables.attribute_fellowship_bonus_mod}}</div>
+                                <div class="col-sm-4"><input  value="{{ variables.attribute_fellowship_bonus_mod is defined ? variables.attribute_fellowship_bonus_mod }}"  class="form-control"  id="attribute_fellowship_bonus_mod" name="attribute_fellowship_bonus_mod" placeholder="0" type="number"   /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Fellowship Bonus [FB]</div>
@@ -785,38 +799,38 @@
                         <div class="col-sm-8 border">
                             <div class="row">
                                 <div class="col-sm-3">Bargain</div>
-                                <div class="col-sm-3">{% if variables.skill_fellowship_bargain_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_bargain_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_bargain_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_fellowship_bargain_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_fellowship_bargain_10 is defined and variables.skill_fellowship_bargain_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_bargain_10" name="skill_fellowship_bargain_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_bargain_20 is defined and variables.skill_fellowship_bargain_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_bargain_20" name="skill_fellowship_bargain_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_bargain_30 is defined and variables.skill_fellowship_bargain_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_bargain_30" name="skill_fellowship_bargain_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_fellowship_bargain_focus is defined ? variables.skill_fellowship_bargain_focus }}"  class="form-control" id="skill_fellowship_bargain_focus" name="skill_fellowship_bargain_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Charm</div>
-                                <div class="col-sm-3">{% if variables.skill_fellowship_charm_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_charm_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_charm_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_fellowship_charm_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_fellowship_charm_10 is defined and variables.skill_fellowship_charm_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_charm_10" name="skill_fellowship_charm_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_charm_20 is defined and variables.skill_fellowship_charm_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_charm_20" name="skill_fellowship_charm_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_charm_30 is defined and variables.skill_fellowship_charm_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_charm_30" name="skill_fellowship_charm_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_fellowship_charm_focus is defined ? variables.skill_fellowship_charm_focus }}"  class="form-control" id="skill_fellowship_charm_focus" name="skill_fellowship_charm_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Disguise*</div>
-                                <div class="col-sm-3">{% if variables.skill_fellowship_disguise_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_disguise_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_disguise_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_fellowship_disguise_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_fellowship_disguise_10 is defined and variables.skill_fellowship_disguise_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_disguise_10" name="skill_fellowship_disguise_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_disguise_20 is defined and variables.skill_fellowship_disguise_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_disguise_20" name="skill_fellowship_disguise_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_disguise_30 is defined and variables.skill_fellowship_disguise_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_disguise_30" name="skill_fellowship_disguise_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_fellowship_disguise_focus is defined ? variables.skill_fellowship_disguise_focus }}"  class="form-control" id="skill_fellowship_disguise_focus" name="skill_fellowship_disguise_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Guile</div>
-                                <div class="col-sm-3">{% if variables.skill_fellowship_guile_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_guile_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_guile_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_fellowship_guile_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_fellowship_guile_10 is defined and variables.skill_fellowship_guile_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_guile_10" name="skill_fellowship_guile_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_guile_20 is defined and variables.skill_fellowship_guile_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_guile_20" name="skill_fellowship_guile_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_guile_30 is defined and variables.skill_fellowship_guile_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_guile_30" name="skill_fellowship_guile_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_fellowship_guile_focus is defined ? variables.skill_fellowship_guile_focus }}"  class="form-control" id="skill_fellowship_guile_focus" name="skill_fellowship_guile_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Handle Animal*</div>
-                                <div class="col-sm-3">{% if variables.skill_fellowship_handle_animal_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_handle_animal_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_handle_animal_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_fellowship_handle_animal_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_fellowship_handle_animal_10 is defined and variables.skill_fellowship_handle_animal_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_handle_animal_10" name="skill_fellowship_handle_animal_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_handle_animal_20 is defined and variables.skill_fellowship_handle_animal_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_handle_animal_20" name="skill_fellowship_handle_animal_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_handle_animal_30 is defined and variables.skill_fellowship_handle_animal_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_handle_animal_30" name="skill_fellowship_handle_animal_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_fellowship_handle_animal_focus is defined ? variables.skill_fellowship_handle_animal_focus }}"  class="form-control" id="skill_fellowship_handle_animal_focus" name="skill_fellowship_handle_animal_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Leadership*</div>
-                                <div class="col-sm-3">{% if variables.skill_fellowship_leadership_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_leadership_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_leadership_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_fellowship_leadership_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_fellowship_leadership_10 is defined and variables.skill_fellowship_leadership_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_leadership_10" name="skill_fellowship_leadership_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_leadership_20 is defined and variables.skill_fellowship_leadership_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_leadership_20" name="skill_fellowship_leadership_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_leadership_30 is defined and variables.skill_fellowship_leadership_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_leadership_30" name="skill_fellowship_leadership_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_fellowship_leadership_focus is defined ? variables.skill_fellowship_leadership_focus }}"  class="form-control" id="skill_fellowship_leadership_focus" name="skill_fellowship_leadership_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Rumor</div>
-                                <div class="col-sm-3">{% if variables.skill_fellowship_rumor_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_rumor_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_rumor_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_fellowship_rumor_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_fellowship_rumor_10 is defined and variables.skill_fellowship_rumor_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_rumor_10" name="skill_fellowship_rumor_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_rumor_20 is defined and variables.skill_fellowship_rumor_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_rumor_20" name="skill_fellowship_rumor_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_rumor_30 is defined and variables.skill_fellowship_rumor_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_rumor_30" name="skill_fellowship_rumor_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_fellowship_rumor_focus is defined ? variables.skill_fellowship_rumor_focus }}"  class="form-control" id="skill_fellowship_rumor_focus" name="skill_fellowship_rumor_focus" placeholder="" type="text" /></div>
                             </div>
                         </div>
                     </div>
@@ -826,21 +840,11 @@
                     <div class="row">
                         <div class="col-sm-12 border">
                             <div class="row"><div class="col-sm-12"><h5>Languages</h5></div></div>
-                            {% if variables.language_1 != "" %}
-                            <div class="row"><div class="col-sm-12">{{ variables.language_1}}</div></div>
-                            {% endif %}
-                            {% if variables.language_2 != "" %}
-                            <div class="row"><div class="col-sm-12">{{ variables.language_2}}</div></div>
-                            {% endif %}
-                            {% if variables.language_3 != "" %}
-                            <div class="row"><div class="col-sm-12">{{ variables.language_3}}</div></div>
-                            {% endif %}
-                            {% if variables.language_4 != "" %}
-                            <div class="row"><div class="col-sm-12">{{ variables.language_4}}</div></div>
-                            {% endif %}
-                            {% if variables.language_5 != "" %}
-                            <div class="row"><div class="col-sm-12">{{ variables.language_5}}</div></div>
-                            {% endif %}
+                            <div class="row"><div class="col-sm-12"><input  value="{{ variables.language_1 is defined ? variables.language_1 }}"  class="form-control" id="language_1" name="language_1" placeholder="native language" type="text" /></div></div>
+                            <div class="row"><div class="col-sm-12"><input  value="{{ variables.language_2 is defined ? variables.language_2 }}"  class="form-control" id="language_2" name="language_2" placeholder="language #2" type="text" /></div></div>
+                            <div class="row"><div class="col-sm-12"><input  value="{{ variables.language_3 is defined ? variables.language_3 }}"  class="form-control" id="language_3" name="language_3" placeholder="language #3" type="text" /></div></div>
+                            <div class="row"><div class="col-sm-12"><input  value="{{ variables.language_4 is defined ? variables.language_4 }}"  class="form-control" id="language_4" name="language_4" placeholder="language #4" type="text" /></div></div>
+                            <div class="row"><div class="col-sm-12"><input  value="{{ variables.language_5 is defined ? variables.language_5 }}"  class="form-control" id="language_5" name="language_5" placeholder="language #5" type="text" /></div></div>
                         </div>
                     </div>
                     <div class="row">
@@ -848,7 +852,7 @@
                             <div class="row"><div class="col-sm-12"><h5>Peril Threshold</h5></div></div>
                             <div class="row">
                                 <div class="col-sm-5">
-                                    <div class="row"><div class="col-sm-12"><div class="border-strong"><h1>{% if variables.peril_threshold_base != "" %}{{ variables.peril_threshold_base}}{% else %}{{attribute_willpower_bonus_final + 3}}{% endif %}</h1></div></div></div>
+                                    <div class="row"><div class="col-sm-12"><div class="border-strong"><input  value="{{ variables.peril_threshold_base is defined ? variables.peril_threshold_base }}"  class="form-control"  id="peril_threshold_base" name="peril_threshold_base" placeholder="{{attribute_willpower_bonus_final + 3}}" type="number"  min="0" /></div></div></div>
                                     <div class="row"><div class="col-sm-12 text-center"><b>3 + WB</b></div></div>
                                 </div>
                                 <div class="col-sm-7">
@@ -883,11 +887,11 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{% if variables.peril_condition_track == "ignore2" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
-                                <div class="col-sm-10">Ignore 2 Skill Rank</div>
+                                <div class="col-sm-10">Ignore 2 Skill Ranks</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{% if variables.peril_condition_track == "ignore3" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
-                                <div class="col-sm-10">Ignore 3 Skill Rank</div>
+                                <div class="col-sm-10">Ignore 3 Skill Ranks</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{% if variables.peril_condition_track == "incapacitated" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
@@ -900,66 +904,46 @@
                             <div class="row">
                                 <div class="col-sm-12"><h5>Traits</h5></div>
                             </div>
-                            {% if variables.trait_name_1 != "" %}
                             <div class="row">
-                                <div class="col-sm-4"><b>{{ variables.trait_name_1}}</b></div>
-                                <div class="col-sm-8">{{ variables.trait_description_1}}</div>
+                                <div class="col-sm-4"><input value="{{ variables.trait_name_1 is defined ? variables.trait_name_1 }}"  class="form-control" id="trait_name_1" name="trait_name_1" placeholder="trait name" type="text" /></div>
+                                <div class="col-sm-8"><textarea class="form-control"  id="trait_description_1" name="trait_description_1" rows="8" placeholder="trait description">{{ variables.trait_description_1 is defined ? variables.trait_description_1 }}</textarea></div>
                             </div>
-                            {% endif %}
-                            {% if variables.trait_name_2 != "" %}
                             <div class="row">
-                                <div class="col-sm-4">{{ variables.trait_name_2}}</b></div>
-                                <div class="col-sm-8">{{ variables.trait_description_2}}</div>
+                                <div class="col-sm-4"><input value="{{ variables.trait_name_2 is defined ? variables.trait_name_2 }}"  class="form-control" id="trait_name_2" name="trait_name_2" placeholder="trait name" type="text" /></div>
+                                <div class="col-sm-8"><textarea class="form-control"  id="trait_description_2" name="trait_description_2" rows="8" placeholder="trait description">{{ variables.trait_description_2 is defined ? variables.trait_description_2 }}</textarea></div>
                             </div>
-                            {% endif %}
-                            {% if variables.trait_name_3 != "" %}
                             <div class="row">
-                                <div class="col-sm-4"><b>{{ variables.trait_name_3}}</b></div>
-                                <div class="col-sm-8">{{ variables.trait_description_3}}</div>
+                                <div class="col-sm-4"><input value="{{ variables.trait_name_3 is defined ? variables.trait_name_3 }}"  class="form-control" id="trait_name_3" name="trait_name_3" placeholder="trait name" type="text" /></div>
+                                <div class="col-sm-8"><textarea class="form-control"  id="trait_description_3" name="trait_description_3" rows="8" placeholder="trait description">{{ variables.trait_description_3 is defined ? variables.trait_description_3 }}</textarea></div>
                             </div>
-                            {% endif %}
-                            {% if variables.trait_name_4 != "" %}
                             <div class="row">
-                                <div class="col-sm-4"><b>{{ variables.trait_name_4}}</b></div>
-                                <div class="col-sm-8">{{ variables.trait_description_4}}</div>
+                                <div class="col-sm-4"><input value="{{ variables.trait_name_4 is defined ? variables.trait_name_4 }}"  class="form-control" id="trait_name_4" name="trait_name_4" placeholder="trait name" type="text" /></div>
+                                <div class="col-sm-8"><textarea class="form-control"  id="trait_description_4" name="trait_description_4" rows="8" placeholder="trait description">{{ variables.trait_description_4 is defined ? variables.trait_description_4 }}</textarea></div>
                             </div>
-                            {% endif %}
-                            {% if variables.trait_name_5 != "" %}
                             <div class="row">
-                                <div class="col-sm-4"><b>{{ variables.trait_name_5}}</b></div>
-                                <div class="col-sm-8">{{ variables.trait_description_5}}</div>
+                                <div class="col-sm-4"><input value="{{ variables.trait_name_5 is defined ? variables.trait_name_5 }}"  class="form-control" id="trait_name_5" name="trait_name_5" placeholder="trait name" type="text" /></div>
+                                <div class="col-sm-8"><textarea class="form-control"  id="trait_description_5" name="trait_description_5" rows="8" placeholder="trait description">{{ variables.trait_description_5 is defined ? variables.trait_description_5 }}</textarea></div>
                             </div>
-                            {% endif %}
-                            {% if variables.trait_name_6 != "" %}
                             <div class="row">
-                                <div class="col-sm-4"><b>{{ variables.trait_name_6}}</b></div>
-                                <div class="col-sm-8">{{ variables.trait_description_6}}</div>
+                                <div class="col-sm-4"><input value="{{ variables.trait_name_6 is defined ? variables.trait_name_6 }}"  class="form-control" id="trait_name_6" name="trait_name_6" placeholder="trait name" type="text" /></div>
+                                <div class="col-sm-8"><textarea class="form-control"  id="trait_description_6" name="trait_description_6" rows="8" placeholder="trait description">{{ variables.trait_description_6 is defined ? variables.trait_description_6 }}</textarea></div>
                             </div>
-                            {% endif %}
-                            {% if variables.trait_name_7 != "" %}
                             <div class="row">
-                                <div class="col-sm-4"><b>{{ variables.trait_name_7}}</b></div>
-                                <div class="col-sm-8">{{ variables.trait_description_7}}</div>
+                                <div class="col-sm-4"><input value="{{ variables.trait_name_7 is defined ? variables.trait_name_7 }}"  class="form-control" id="trait_name_7" name="trait_name_7" placeholder="trait name" type="text" /></div>
+                                <div class="col-sm-8"><textarea class="form-control"  id="trait_description_7" name="trait_description_7" rows="8" placeholder="trait description">{{ variables.trait_description_7 is defined ? variables.trait_description_7 }}</textarea></div>
                             </div>
-                            {% endif %}
-                            {% if variables.trait_name_8 != "" %}
                             <div class="row">
-                                <div class="col-sm-4"><b>{{ variables.trait_name_8}}</b></div>
-                                <div class="col-sm-8">{{ variables.trait_description_8}}</div>
+                                <div class="col-sm-4"><input value="{{ variables.trait_name_8 is defined ? variables.trait_name_8 }}"  class="form-control" id="trait_name_8" name="trait_name_8" placeholder="trait name" type="text" /></div>
+                                <div class="col-sm-8"><textarea class="form-control"  id="trait_description_8" name="trait_description_8" rows="8" placeholder="trait description">{{ variables.trait_description_8 is defined ? variables.trait_description_8 }}</textarea></div>
                             </div>
-                            {% endif %}
-                            {% if variables.trait_name_9 != "" %}
                             <div class="row">
-                                <div class="col-sm-4"><b>{{ variables.trait_name_9}}</b></div>
-                                <div class="col-sm-8">{{ variables.trait_description_9}}</div>
+                                <div class="col-sm-4"><input value="{{ variables.trait_name_9 is defined ? variables.trait_name_9 }}"  class="form-control" id="trait_name_9" name="trait_name_9" placeholder="trait name" type="text" /></div>
+                                <div class="col-sm-8"><textarea class="form-control"  id="trait_description_9" name="trait_description_9" rows="8" placeholder="trait description">{{ variables.trait_description_9 is defined ? variables.trait_description_9 }}</textarea></div>
                             </div>
-                            {% endif %}
-                            {% if variables.trait_name_10 != "" %}
                             <div class="row">
-                                <div class="col-sm-4"><b>{{ variables.trait_name_10}}</b></div>
-                                <div class="col-sm-8">{{ variables.trait_description_10}}</div>
+                                <div class="col-sm-4"><input value="{{ variables.trait_name_10 is defined ? variables.trait_name_10 }}"  class="form-control" id="trait_name_10" name="trait_name_10" placeholder="trait name" type="text" /></div>
+                                <div class="col-sm-8"><textarea class="form-control"  id="trait_description_10" name="trait_description_10" rows="8" placeholder="trait description">{{ variables.trait_description_10 is defined ? variables.trait_description_10 }}</textarea></div>
                             </div>
-                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -967,6 +951,7 @@
         </div>
     </div>
     <!-- difficulty scale -->
+    <!--
     <div class="row card mt-2">
         <div class="col-sm-12">
             <div class="row">
@@ -1001,6 +986,7 @@
             </div>
         </div>
     </div>
+    -->
     <!-- MEGA TAB: Armor, Weapons, Talents, Injuries -->
     <div class="row card mt-3">
         <div class="col-sm-12">
