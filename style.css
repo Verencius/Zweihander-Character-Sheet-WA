@@ -135,3 +135,6 @@ h1, h2 {
 .text-right {
     text-align: right!important;
 }
+.checkbox {
+    margin: 0 2px;
+}
