@@ -136,17 +136,13 @@
                 <div class="col-sm-12">
                     <div class="row">
                         <div class="col-sm-12">
-                            {% if variables.name is defined %}
-                            <h1>{{ variables.name}}</h1> 
-                            {% endif %}
+                            <input  value="{{ variables.name is defined ? variables.name }}" required="required" class="form-control" id="name" name="name" placeholder="Character's Name" type="text" />
                         </div>
                     </div>
                     <div class="row">
-                        <!-- this should loop through 3 different professions and select the highest defined -->
-                        <div class="col-sm-12"><h2>The {{ profession_current}}</h2></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12"><h3>"{% if variables.personal_dooming is defined and variables.personal_dooming is not empty %}{{ variables.personal_dooming}}{% else %}"This one's fate is not known yet"{% endif %}"</h3> 
+                        <div class="col-sm-12">
+                        <input  value="{{ variables.personal_dooming is defined ? variables.personal_dooming }}"  class="form-control" id="personal_dooming" name="personal_dooming" placeholder="Dooming" type="text" />
+                        <p class="description form-control-description"></p> 
                         </div>
                     </div>
                 </div>
@@ -156,90 +152,115 @@
                 <div class="col-sm-12 card-content">
                     <div class="row">
                         <div class="col-sm-4">
-                            <div class="">{{ variables.personal_ancestry}}</div>
+                            <div class="">
+                            <input  value="{{ variables.personal_ancestry is defined ? variables.personal_ancestry }}"  class="form-control" id="personal_ancestry" name="personal_ancestry" placeholder="Human" type="text" />
+                            <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Ancestry</div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="">{{ variables.personal_build_type}}</div>
+                            <div class="">
+                            <input  value="{{ variables.personal_build_type is defined ? variables.personal_build_type }}"  class="form-control" id="personal_build_type" name="personal_build_type" placeholder="" type="text" />
+                            <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Build Type</div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="">{{ variables.personal_season_of_birth}}</div>
+                            <div class="">
+                            <input  value="{{ variables.personal_season_of_birth is defined ? variables.personal_season_of_birth }}"  class="form-control" id="personal_season_of_birth" name="personal_season_of_birth" placeholder="" type="text" />
+                            <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Season of Birth</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-4">
-                            <div class="">{{ variables.personal_age_group}}</div>
+                            <div class="">
+                            <input  value="{{ variables.personal_age_group is defined ? variables.personal_age_group }}"  class="form-control" id="personal_age_group" name="personal_age_group" placeholder="Young" type="text" />
+                            <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Age group</div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="">{{ variables.personal_complexion}}</div>
+                            <div class="">
+                            <input  value="{{ variables.personal_complexion is defined ? variables.personal_complexion }}"  class="form-control" id="personal_complexion" name="personal_complexion" placeholder="" type="text" />
+                            <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Complexion</div>
                         </div>     
                         <div class="col-sm-4">
-                            <div class="">{{ variables.personal_social_class}}</div>
+                            <div class="">
+                            <input  value="{{ variables.personal_social_class is defined ? variables.personal_social_class }}"  class="form-control" id="personal_social_class" name="personal_social_class" placeholder="Lowborn" type="text" />
+                            <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Social Class</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-4">
-                            <div class="">{{ variables.personal_sex}}</div>
+                            <div class="">
+                            <input  value="{{ variables.personal_sex is defined ? variables.personal_sex }}"  class="form-control" id="personal_sex" name="personal_sex" placeholder="" type="text" />
+                            <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Sex</div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="">{{ variables.personal_eye_color}}</div>
+                            <div class="">
+                            <input  value="{{ variables.personal_eye_color is defined ? variables.personal_eye_color }}"  class="form-control" id="personal_eye_color" name="personal_eye_color" placeholder="" type="text" />
+                            <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Eye Color</div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="">{{ variables.personal_upbringing}}</div>
+                            <div class="">
+                            <input  value="{{ variables.personal_upbringing is defined ? variables.personal_upbringing }}"  class="form-control" id="personal_upbringing" name="personal_upbringing" placeholder="" type="text" />
+                            <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Upbringing</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-2">
-                            <div class="">{{ variables.personal_height}} </div>
+                            <div class="">
+                            <input  value="{{ variables.personal_height is defined ? variables.personal_height }}"  class="form-control" id="personal_height" name="personal_height" placeholder="" type="text" />
+                            <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Height</div>
                         </div>
                         <div class="col-sm-2">
-                            <div class="">{{ variables.personal_weight}}</div>
+                            <div class="">
+                            <input  value="{{ variables.personal_weight is defined ? variables.personal_weight }}"  class="form-control" id="personal_weight" name="personal_weight" placeholder="" type="text" />
+                            <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Weight</div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="">{{ variables.personal_hair_color}}</div>
+                            <div class="">
+                            <input  value="{{ variables.personal_hair_color is defined ? variables.personal_hair_color }}"  class="form-control" id="personal_hair_color" name="personal_hair_color" placeholder="" type="text" />
+                            <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Hair Color</div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="">{{ variables.personal_place_of_birth}}</div>
+                            <div class="">
+                            <input  value="{{ variables.personal_place_of_birth is defined ? variables.personal_place_of_birth }}"  class="form-control" id="personal_place_of_birth" name="personal_place_of_birth" placeholder="" type="text" />
+                            <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Place of Birth</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-8">
-                            {% if variables.personal_distinguishing_marks_1 is not empty %}
-                            <div class="">{{ variables.personal_distinguishing_marks_1}}</div>   
-                            <div class="card-info-label">Distinguishing Marks</div>
-                            {% endif %}
+                            <div class=""><input  value="{{ variables.personal_distinguishing_marks_1 is defined ? variables.personal_distinguishing_marks_1 }}"  class="form-control" id="personal_distinguishing_marks_1" name="personal_distinguishing_marks_1" placeholder="" type="text" />
+                            <p class="description form-control-description"></p></div>   
+                            <div class="card-info-label">Distinguishing Mark #1</div>
                         </div>  
                         <div class="col-sm-4">
-                            <div class="">{{ variables.personal_patron_deity}}</div>
+                            <div class="">
+                            <input  value="{{ variables.personal_patron_deity is defined ? variables.personal_patron_deity }}"  class="form-control" id="personal_patron_deity" name="personal_patron_deity" placeholder="" type="text" />
+                            <p class="description form-control-description"></p></div>
                             <div class="card-info-label">Patron Deity</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-8">
-                            {% if variables.personal_distinguishing_marks_2 is not empty %}
-                            <div class="">{{ variables.personal_distinguishing_marks_2}}</div>
-                            <div class="card-info-label">Distinguishing Marks</div>
-                            {% endif %}
+                            <div class=""><input  value="{{ variables.personal_distinguishing_marks_2 is defined ? variables.personal_distinguishing_marks_2 }}"  class="form-control" id="personal_distinguishing_marks_1" name="personal_distinguishing_marks_1" placeholder="" type="text" />
+                            <p class="description form-control-description"></p></div>
+                            <div class="card-info-label">Distinguishing Mark #2</div>
                         </div>    
                     </div>
                     <div class="row">
                         <div class="col-sm-8">
-                            {% if variables.personal_distinguishing_marks_3 is not empty %}
-                            <div class="">{{ variables.personal_distinguishing_marks_3}}</div>
-                            <div class="card-info-label">Distinguishing Marks</div>
-                            {% endif %} 
+                            <div class=""><input  value="{{ variables.personal_distinguishing_marks_3 is defined ? variables.personal_distinguishing_marks_3 }}"  class="form-control" id="personal_distinguishing_marks_1" name="personal_distinguishing_marks_1" placeholder="" type="text" />
+                            <p class="description form-control-description"></p></div>
+                            <div class="card-info-label">Distinguishing Mark #3</div>
                         </div>
                     </div>
                 </div>
@@ -247,7 +268,8 @@
         </div>
         <div class="col col-sm-3">
             <div class="">
-                {% if variables.imageid is defined and variables.imageid > 0 %}[img:{{variables.imageid}}|nolink]{% endif %} 
+                <input  value="{{ variables.imageid is defined ? variables.imageid }}"  class="form-control"  id="imageid" name="imageid" placeholder="image ID#" type="number"   />
+                <p class="description form-control-description"></p>
             </div>
         </div>
     </div>
@@ -261,27 +283,43 @@
                         <div class="col-sm-12 card-title"><h5>Drawbacks and Disorders</h5></div>
                     </div>
                     <div class="row card-content">
-                        <div class="col-sm-12">{{ variables.personal_disorders_drawbacks |nl2br}}</div>
+                        <div class="col-sm-12">
+                        <textarea   class="form-control mention"  id="personal_disorders_drawbacks" name="personal_disorders_drawbacks" rows="5" placeholder="">{{ variables.personal_disorders_drawbacks is defined ? variables.personal_disorders_drawbacks }}</textarea>
+                        <p class="description form-control-description"></p></div>
                     </div>
                 </div>
             </div>
             <div class="row card">
                 <div class="col-sm-12">
                     <div class="row card-title">
-                        <div class="col-sm-12"><h5>Order Alignment - {{ variables.alignment_order}}</h5></div>
+                        <div class="col-sm-12"><h5>Order Alignment{{ variables.alignment_order}}</h5></div>
                     </div>
                     <div class="row card-content">
-                        <div class="col-sm-12">{{ variables.alignment_order_description}} </div>
+                        <div class ="col-sm-12">     
+                            <input  value="{{ variables.alignment_order is defined ? variables.alignment_order }}"  class="form-control" id="alignment_order" name="alignment_order" placeholder="Order Alignment" type="text" />
+                            <p class="description form-control-description"></p>
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea   class="form-control"  id="alignment_order_description" name="alignment_order_description" rows="2" placeholder="Order Alignment Description">{{ variables.alignment_order_description is defined ? variables.alignment_order_description }}</textarea>
+                            <p class="description form-control-description"></p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row card">
                 <div class="col-sm-12">
                     <div class="row card-title">
-                        <div class="col-sm-12"><h5>Chaos Alignment - {{ variables.alignment_chaos}}</h5></div>
+                        <div class="col-sm-12"><h5>Chaos Alignment</h5></div>
                     </div>
                     <div class="row card-content">
-                        <div class="col-sm-12">{{ variables.alignment_chaos_description}} </div>
+                        <div class ="col-sm-12">     
+                            <input  value="{{ variables.alignment_chaos is defined ? variables.alignment_chaos }}"  class="form-control" id="alignment_chaos" name="alignment_chaos" placeholder="Chaos Alignment" type="text" />
+                            <p class="description form-control-description"></p>
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea   class="form-control"  id="alignment_chaos_description" name="alignment_chaos_description" rows="2" placeholder="Chaos Alignment Description">{{ variables.alignment_chaos_description is defined ? variables.alignment_order_description }}</textarea>
+                            <p class="description form-control-description"></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -294,15 +332,44 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-8"><strong>Fate Points:</strong></div>
-                        <div class="col-sm-4"><div class="col-sm-4 border-strong btext">{{ variables.personal_fate_points}}</div></div>
+                        <div class="col-sm-4"><div class="col-sm-12 border-strong btext">
+                            <input  value="{{ variables.personal_fate_points is defined ? variables.personal_fate_points }}"  class="form-control"  id="personal_fate_points" name="personal_fate_points" placeholder="" type="number" min="0"  />
+                            <p class="description form-control-description"></p></div></div>
                     </div>
                     <div class="row">
                         <div class="col-sm-8"><strong>Reputation Points:</strong></div>
-                        <div class="col-sm-4"><div class="col-sm-4 border-strong btext">{{ variables.personal_reputation_points}}</div></div>
+                        <div class="col-sm-4"><div class="col-sm-12 border-strong btext">
+                            <input  value="{{ variables.personal_reputation_points is defined ? variables.personal_reputation_points }}"  class="form-control"  id="personal_reputation_points" name="personal_reputation_points" placeholder="" type="number" min="0"/>
+                            <p class="description form-control-description"></p></div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-8"><strong>Permanent Chaos Ranks:</strong></div>
-                        <div class="col-sm-4"><div class="col-sm-4 border-strong btext">{{ variables.alignment_permanent_chaos_ranks}}</div></div>
+                        <div class="col-sm-4"><div class="col-sm-12 border-strong btext">
+                            <input  value="{{ variables.alignment_permanent_chaos_ranks is defined ? variables.alignment_permanent_chaos_ranks }}"  class="form-control"  id="alignment_permanent_chaos_ranks" name="alignment_permanent_chaos_ranks" placeholder="0" type="number" min="0" max="9" />
+                            <p class="description form-control-description"></p></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8"><strong>Order Ranks:</strong></div>
+                        <div class="col-sm-4"><div class="col-sm-12 border-strong btext">
+                            <input  value="{{ variables.alignment_order_ranks is defined ? variables.alignment_order_ranks }}"  class="form-control"  id="alignment_order_ranks" name="alignment_order_ranks" placeholder="0" type="number" min="0" max="9" />
+                            <p class="description form-control-description"></p></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8"><strong>Chaos Ranks:</strong></div>
+                        <div class="col-sm-4"><div class="col-sm-12 border-strong btext">
+                            <input  value="{{ variables.alignment_chaos_ranks is defined ? variables.alignment_chaos_ranks }}"  class="form-control"  id="alignment_order_ranks" name="alignment_order_ranks" placeholder="0" type="number" min="0" max="9" />
+                            <p class="description form-control-description"></p></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8"><strong>Corruption:</strong></div>
+                        <div class="col-sm-4"><div class="col-sm-12 border-strong btext">
+                            <input  value="{{ variables.alignment_corruption is defined ? variables.alignment_corruption }}"  class="form-control"  id="alignment_corruption" name="alignment_corruption" placeholder="" type="number" min="0"  />
+                            <p class="description form-control-description"></p></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -314,8 +381,13 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <div><span>{% if variables.option_toggle_magic == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</span> <span>Magic Toggle</span></div>
-                        <div><span>{% if variables.option_toggle_rituals == 0 %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</span> <span>Rituals Toggle</span></div>
+                        <div>
+                            <input  value="1"  {% if variables.option_toggle_magic is defined and variables.option_toggle_magic == 1   %} checked="checked"{% endif %}   class="" id="option_toggle_magic" name="option_toggle_magic" placeholder="" type="checkbox" /> Magic Toggle</label>
+                            <p class="description form-control-description"></p>
+                        </div>
+                        <div>
+                            <input  value="1"  {% if variables.option_toggle_rituals is defined and variables.option_toggle_rituals == 1   %} checked="checked"{% endif %}   class="" id="option_toggle_rituals" name="option_toggle_rituals" placeholder="" type="checkbox" /> Ritual Toggle</label>
+                            <p class="description form-control-description"></p></div>
                     </div>
                 </div>
             </div>
@@ -367,23 +439,27 @@
                             <div class="row border-bottom">
                                 <div class="col-sm-12">Primary Attributes</div>
                             </div>
-                            {% if variables.attribute_combat is defined %}
                             <div class="row">
                                 <div class="col-sm-8">Combat</div>
-                                <div class="col-sm-4">{{ variables.attribute_combat}}</div>
+                                <div class="col-sm-4">
+                                    <input  value="{{ variables.attribute_combat is defined ? variables.attribute_combat }}"  class="form-control"  id="attribute_combat" name="attribute_combat" placeholder="25" type="number" min="0" max="100"   />
+                                </div>
                             </div>
-                            {% endif %}
                             <div class="row">
                                 <div class="col-sm-8">Bonus Advance</div>
-                                <div class="col-sm-4">{% if attribute_combat_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_combat_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_combat_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-4">
+                                    <input  value="1"  {% if variables.attribute_combat_advance_1 is defined and variables.attribute_combat_advance_1 == 1   %} checked="checked"{% endif %}   class="" id="attribute_combat_advance_1" name="attribute_combat_advance_1" placeholder="" type="checkbox" /><label for="attribute_combat_advance_2" class="col-sm-2 control-label"><input  value="1"  {% if variables.attribute_combat_advance_2 is defined and variables.attribute_combat_advance_2 == 1   %} checked="checked"{% endif %}   class="" id="attribute_combat_advance_2" name="attribute_combat_advance_2" placeholder="" type="checkbox" /></label><label for="attribute_combat_advance_3" class="col-sm-2 control-label"><input  value="1"  {% if variables.attribute_combat_advance_3 is defined and variables.attribute_combat_advance_3 == 1   %} checked="checked"{% endif %}   class="" id="attribute_combat_advance_3" name="attribute_combat_advance_3" placeholder="" type="checkbox" /></label>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"></div>
-                                <div class="col-sm-4">{% if attribute_combat_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_combat_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_combat_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-4">
+                                    <input  value="1"  {% if variables.attribute_combat_advance_4 is defined and variables.attribute_combat_advance_4 == 1   %} checked="checked"{% endif %}   class="" id="attribute_combat_advance_4" name="attribute_combat_advance_4" placeholder="" type="checkbox" /><label for="attribute_combat_advance_5" class="col-sm-2 control-label"><input  value="1"  {% if variables.attribute_combat_advance_5 is defined and variables.attribute_combat_advance_5 == 1   %} checked="checked"{% endif %}   class="" id="attribute_combat_advance_5" name="attribute_combat_advance_5" placeholder="" type="checkbox" /></label><label for="attribute_combat_advance_6" class="col-sm-2 control-label"><input  value="1"  {% if variables.attribute_combat_advance_6 is defined and variables.attribute_combat_advance_6 == 1   %} checked="checked"{% endif %}   class="" id="attribute_combat_advance_6" name="attribute_combat_advance_6" placeholder="" type="checkbox" /></label>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus modifier</div>
-                                <div class="col-sm-4">{{ variables.attribute_combat_bonus_mod}}</div>
+                                <div class="col-sm-4"><input  value="{{ variables.attribute_combat_bonus_mod is defined ? variables.attribute_combat_bonus_mod }}"  class="form-control"  id="attribute_combat_bonus_mod" name="attribute_combat_bonus_mod" placeholder="0" type="number"   /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Combat Bonus [CB]</div>
@@ -398,45 +474,47 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Martial Melee*</div>
-                                <div class="col-sm-3">{% if variables.skill_combat_martial_melee_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_martial_melee_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_martial_melee_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_combat_martial_melee_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_combat_martial_melee_10 is defined and variables.skill_combat_martial_melee_10 == 1   %} checked="checked"{% endif %}   class="" id="skill_combat_martial_melee_10" name="skill_combat_martial_melee_10" placeholder="" type="checkbox" /><label for="skill_combat_martial_melee_20" class="col-sm-2 control-label"><input  value="1"  {% if variables.skill_combat_martial_melee_20 is defined and variables.skill_combat_martial_melee_20 == 1   %} checked="checked"{% endif %}   class="" id="skill_combat_martial_melee_20" name="skill_combat_martial_melee_20" placeholder="" type="checkbox" /></label><input  value="1"  {% if variables.skill_combat_martial_melee_30 is defined and variables.skill_combat_martial_melee_30 == 1   %} checked="checked"{% endif %}   class="" id="skill_combat_martial_melee_30" name="skill_combat_martial_melee_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_combat_martial_melee_focus is defined ? variables.skill_combat_martial_melee_focus }}"  class="form-control" id="skill_combat_martial_melee_focus" name="skill_combat_martial_melee_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Martial Ranged*</div>
-                                <div class="col-sm-3">{% if variables.skill_combat_martial_ranged_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_martial_ranged_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_martial_ranged_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_combat_martial_ranged_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_combat_martial_ranged_10 is defined and variables.skill_combat_martial_ranged_10 == 1   %} checked="checked"{% endif %}   class="" id="skill_combat_martial_ranged_10" name="skill_combat_martial_ranged_10" placeholder="" type="checkbox" /><label for="skill_combat_martial_ranged_20" class="col-sm-2 control-label"><input  value="1"  {% if variables.skill_combat_martial_ranged_20 is defined and variables.skill_combat_martial_ranged_20 == 1   %} checked="checked"{% endif %}   class="" id="skill_combat_martial_ranged_20" name="skill_combat_martial_ranged_20" placeholder="" type="checkbox" /></label><input  value="1"  {% if variables.skill_combat_martial_ranged_30 is defined and variables.skill_combat_martial_ranged_30 == 1   %} checked="checked"{% endif %}   class="" id="skill_combat_martial_ranged_30" name="skill_combat_martial_ranged_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_combat_martial_ranged_focus is defined ? variables.skill_combat_martial_ranged_focus }}"  class="form-control" id="skill_combat_martial_ranged_focus" name="skill_combat_martial_ranged_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Simple Melee</div>
-                                <div class="col-sm-3">{% if variables.skill_combat_simple_melee_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_simple_melee_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_simple_melee_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_combat_simple_melee_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_combat_simple_melee_10 is defined and variables.skill_combat_simple_melee_10 == 1   %} checked="checked"{% endif %}   class="" id="skill_combat_simple_melee_10" name="skill_combat_simple_melee_10" placeholder="" type="checkbox" /><label for="skill_combat_simple_melee_20" class="col-sm-2 control-label"><input  value="1"  {% if variables.skill_combat_simple_melee_20 is defined and variables.skill_combat_simple_melee_20 == 1   %} checked="checked"{% endif %}   class="" id="skill_combat_simple_melee_20" name="skill_combat_simple_melee_20" placeholder="" type="checkbox" /></label><input  value="1"  {% if variables.skill_combat_simple_melee_30 is defined and variables.skill_combat_simple_melee_30 == 1   %} checked="checked"{% endif %}   class="" id="skill_combat_simple_melee_30" name="skill_combat_simple_melee_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_combat_simple_melee_focus is defined ? variables.skill_combat_simple_melee_focus }}"  class="form-control" id="skill_combat_simple_melee_focus" name="skill_combat_simple_melee_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Simple Ranged</div>
-                                <div class="col-sm-3">{% if variables.skill_combat_simple_ranged_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_simple_ranged_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_simple_ranged_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_combat_simple_ranged_focus}}{{ variables.skill_combat_simple_ranged_focus}}</div>
+                                <div class="col-sm-3"><input  value="1"  {% if variables.skill_combat_simple_ranged_10 is defined and variables.skill_combat_simple_ranged_10 == 1   %} checked="checked"{% endif %}   class="" id="skill_combat_simple_ranged_10" name="skill_combat_simple_ranged_10" placeholder="" type="checkbox" /><label for="skill_combat_simple_ranged_20" class="col-sm-2 control-label"><input  value="1"  {% if variables.skill_combat_simple_ranged_20 is defined and variables.skill_combat_simple_ranged_20 == 1   %} checked="checked"{% endif %}   class="" id="skill_combat_simple_ranged_20" name="skill_combat_simple_ranged_20" placeholder="" type="checkbox" /></label><input  value="1"  {% if variables.skill_combat_simple_ranged_30 is defined and variables.skill_combat_simple_ranged_30 == 1   %} checked="checked"{% endif %}   class="" id="skill_combat_simple_ranged_30" name="skill_combat_simple_ranged_30" placeholder="" type="checkbox" /></div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_combat_simple_ranged_focus is defined ? variables.skill_combat_simple_ranged_focus }}"  class="form-control" id="skill_combat_simple_ranged_focus" name="skill_combat_simple_ranged_focus" placeholder="" type="text" /></div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-4 border">
-                            {% if variables.attribute_brawn is defined %}   
+                        <div class="col-sm-4 border"> 
                             <div class="row">     
                                 <div class="col-sm-8">Brawn</div>
-                                <div class="col-sm-4">{{ variables.attribute_brawn}}</div>
+                                <div class="col-sm-4"><input  value="{{ variables.attribute_brawn is defined ? variables.attribute_brawn }}"  class="form-control"  id="attribute_brawn" name="attribute_brawn" placeholder="25" type="number" min="0" max="100"   /></div>
                             </div>
-                            {% endif %}
                             <div class="row">
                                 <div class="col-sm-8">Bonus Advance</div>
-                                <div class="col-sm-4">{% if attribute_brawn_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_brawn_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_brawn_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-4">
+                                    <input  value="1"  {% if variables.attribute_brawn_advance_1 is defined and variables.attribute_brawn_advance_1 == 1   %} checked="checked"{% endif %}   class="" id="attribute_brawn_advance_1" name="attribute_brawn_advance_1" placeholder="" type="checkbox" /><label for="attribute_brawn_advance_2" class="col-sm-2 control-label"><input  value="1"  {% if variables.attribute_brawn_advance_2 is defined and variables.attribute_brawn_advance_2 == 1   %} checked="checked"{% endif %}   class="" id="attribute_brawn_advance_2" name="attribute_brawn_advance_2" placeholder="" type="checkbox" /></label><label for="attribute_brawn_advance_3" class="col-sm-2 control-label"><input  value="1"  {% if variables.attribute_brawn_advance_3 is defined and variables.attribute_brawn_advance_3 == 1   %} checked="checked"{% endif %}   class="" id="attribute_brawn_advance_3" name="attribute_brawn_advance_3" placeholder="" type="checkbox" /></label>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"></div>
-                                <div class="col-sm-4">{% if attribute_brawn_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_brawn_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_brawn_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                <div class="col-sm-4">
+                                    <input  value="1"  {% if variables.attribute_brawn_advance_4 is defined and variables.attribute_brawn_advance_4 == 1   %} checked="checked"{% endif %}   class="" id="attribute_brawn_advance_4" name="attribute_brawn_advance_4" placeholder="" type="checkbox" /><label for="attribute_brawn_advance_5" class="col-sm-2 control-label"><input  value="1"  {% if variables.attribute_brawn_advance_5 is defined and variables.attribute_brawn_advance_5 == 1   %} checked="checked"{% endif %}   class="" id="attribute_brawn_advance_5" name="attribute_brawn_advance_5" placeholder="" type="checkbox" /></label><label for="attribute_brawn_advance_6" class="col-sm-2 control-label"><input  value="1"  {% if variables.attribute_brawn_advance_6 is defined and variables.attribute_brawn_advance_6 == 1   %} checked="checked"{% endif %}   class="" id="attribute_brawn_advance_6" name="attribute_brawn_advance_6" placeholder="" type="checkbox" /></label>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Bonus modifier</div>
-                                <div class="col-sm-4">{{ variables.attribute_brawn_bonus_mod}}</div>
+                                <div class="col-sm-4"><input  value="{{ variables.attribute_brawn_bonus_mod is defined ? variables.attribute_brawn_bonus_mod }}"  class="form-control"  id="attribute_brawn_bonus_mod" name="attribute_brawn_bonus_mod" placeholder="0" type="number"   /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Brawn Bonus [BB]</div>
@@ -447,17 +525,17 @@
                             <div class="row">
                                 <div class="col-sm-3">Athletics</div>
                                 <div class="col-sm-3">{% if variables.skill_brawn_athletics_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_athletics_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_athletics_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_brawn_athletics_focus}}</div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_brawn_athletics_focus is defined ? variables.skill_brawn_athletics_focus }}"  class="form-control mention" id="skill_brawn_athletics_focus" name="skill_brawn_athletics_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Drive*</div>
                                 <div class="col-sm-3">{% if variables.skill_brawn_drive_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_drive_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_drive_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_brawn_drive_focus}}</div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_brawn_drive_focus is defined ? variables.skill_brawn_drive_focus }}"  class="form-control mention" id="skill_brawn_drive_focus" name="skill_brawn_drive_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Intimidate</div>
                                 <div class="col-sm-3">{% if variables.skill_brawn_intimidate_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_intimidate_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_intimidate_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                <div class="col-sm-6">{{ variables.skill_brawn_intimidate_focus}} </div>
+                                <div class="col-sm-6"><input  value="{{ variables.skill_brawn_intimidate_focus is defined ? variables.skill_brawn_intimidate_focus }}"  class="form-control mention" id="skill_brawn_intimidate_focus" name="skill_brawn_intimidate_focus" placeholder="" type="text" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Toughness</div>
