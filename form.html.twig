@@ -437,7 +437,7 @@
                     <div class="row">
                         <div class="col-sm-4 border">
                             <div class="row border-bottom">
-                                <div class="col-sm-12">Primary Attributes</div>
+                                <div class="col-sm-12"><strong>Primary Attributes</strong></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">Combat</div>
@@ -468,9 +468,9 @@
                         </div>
                         <div class="col-sm-8 border">
                             <div class="row border-bottom">
-                                <div class="col-sm-3">Skills</div>
-                                <div class="col-sm-3">Skill Ranks +10</div>
-                                <div class="col-sm-6">Focuses</div>
+                                <div class="col-sm-3"><strong>Skills</strong></div>
+                                <div class="col-sm-3"><strong>Skill Ranks +10</strong></div>
+                                <div class="col-sm-6"><strong>Focuses</strong></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">Martial Melee*</div>
@@ -852,7 +852,7 @@
                             <div class="row"><div class="col-sm-12"><h5>Peril Threshold</h5></div></div>
                             <div class="row">
                                 <div class="col-sm-5">
-                                    <div class="row"><div class="col-sm-12"><div class="border-strong"><input  value="{{ variables.peril_threshold_base is defined ? variables.peril_threshold_base }}"  class="form-control"  id="peril_threshold_base" name="peril_threshold_base" placeholder="{{attribute_willpower_bonus_final + 3}}" type="number"  min="0" /></div></div></div>
+                                    <div class="row"><div class="col-sm-12"><div class="border-strong"><input  value="{{ variables.peril_threshold_base is defined ? variables.peril_threshold_base }}"  class="form-control input-large"  id="peril_threshold_base" name="peril_threshold_base" placeholder="{{attribute_willpower_bonus_final + 3}}" type="number"  min="0" /></div></div></div>
                                     <div class="row"><div class="col-sm-12 text-center"><b>3 + WB</b></div></div>
                                 </div>
                                 <div class="col-sm-7">
@@ -998,16 +998,16 @@
                     <div class="row"><div class="col-sm-12 text-center"><h5>Encumbrance Limit</h5></div></div>
                     <div class="row">
                         <div class="col-sm-3 ml-auto">
-                            <div class="row"><div class="col-sm-12"><div class="border-strong"><h1>{{ encumbrance_limit_temp}}</h1></div></div></div>
-                            <div class="row"><div class="col-sm-12 text-center"><b>3+BB</b></div></div>
+                            <div class="row"><div class="col-sm-12"></div></div>
+                            <div class="row"><div class="col-sm-12 text-center"><b></b></div></div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="row"><div class="col-sm-12"><div class="border-strong"><h1>{{ encumbrance_total}}</h1></div></div></div>
-                            <div class="row"><div class="col-sm-12 text-center"><b>Current</b></div></div>
+                            <div class="row"><div class="col-sm-12"><div class="border-strong"><h1><input  value="{{ variables.encumbrance_limit is defined ? variables.encumbrance_limit }}"  class="form-control input-large"  id="encumbrance_limit" name="encumbrance_limit" placeholder="{{ encumbrance_limit_temp}}" type="number" min="0"   /></h1></div></div></div>
+                            <div class="row"><div class="col-sm-12 text-center"><b>3+BB</b></div></div>
                         </div>
                         <div class="col-sm-3 mr-auto">
-                            <div class="row"><div class="col-sm-12"><div class="border-strong"><h1>{{ encumbrance_overage}}</h1></div></div></div>
-                            <div class="row"><div class="col-sm-12 text-center"><b>Overage</b></div></div>
+                            <div class="row"><div class="col-sm-12"></div></div>
+                            <div class="row"><div class="col-sm-12 text-center"><b></b></div></div>
                         </div>
                     </div>
                 </div>

@@ -138,3 +138,7 @@ h1, h2 {
 .checkbox {
     margin: 0 2px;
 }
+.input-large {
+    text-align: center;
+    font-size: 42px;
+}
