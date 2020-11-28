@@ -3051,16 +3051,19 @@ fields:
     label: "shield name"
   shield_qualities:
     input: string
-    label: "shield_qualities"
+    label: "shield qualities"
   shield_encumbrance:
     input: integer
-    label: "shield_encumbrance"
+    label: "shield encumbrance"
   shield_is_defensive:
     input: checkbox
     label: "shield is defensive"
   shield_is_ruined:
     input: checkbox
     label: "shield is ruined"
+  shield_is_protective:
+    input: checkbox
+    label: "shield is protective"
   shield_is_makers_mark:
     input: checkbox
     label: "shield is makers mark"

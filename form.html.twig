@@ -1015,16 +1015,16 @@
                     <div class="row"><div class="col-sm-12 text-center"><h5>Initiative</h5></div></div>
                     <div class="row">
                         <div class="col-sm-3 ml-auto">
-                            <div class="row"><div class="col-sm-12"><div class="border-strong"><h1>{{ initiative_base_temp}}</h1></div></div></div>
-                            <div class="row"><div class="col-sm-12 text-center"><b>3+PB</b></div></div>
+                            <div class="row"><div class="col-sm-12"></div></div>
+                            <div class="row"><div class="col-sm-12 text-center"><b></b></div></div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="row"><div class="col-sm-12"><div class="border-strong"><h1>{{ initiative_current}}</h1></div></div></div>
-                            <div class="row"><div class="col-sm-12 text-center"><b>Current</b></div></div>
+                            <div class="row"><div class="col-sm-12"><div class="border-strong"><h1><input  value="{{ variables.initiative_base is defined ? variables.initiative_base }}"  class="form-control input-large"  id="initiative_base" name="initiative_base" placeholder="{{ initiative_base_temp}}" type="number" min="0"  /></h1></div></div></div>
+                            <div class="row"><div class="col-sm-12 text-center"><b>3+PB</b></div></div>
                         </div>
                         <div class="col-sm-3 mr-auto">
-                            <div class="row"><div class="col-sm-12"><div class="border-strong"><h1>{{ encumbrance_overage}}</h1></div></div></div>
-                            <div class="row"><div class="col-sm-12 text-center"><b>Overage</b></div></div>
+                            <div class="row"><div class="col-sm-12"></div></div>
+                            <div class="row"><div class="col-sm-12 text-center"><b></b></div></div>
                         </div>
                     </div>
                 </div>
@@ -1032,16 +1032,16 @@
                     <div class="row"><div class="col-sm-12 text-center"><h5>Movement</h5></div></div>
                     <div class="row">
                         <div class="col-sm-3 ml-auto">
-                            <div class="row"><div class="col-sm-12"><div class="border-strong"><h1>{{ movement_base_temp}}</h1></div></div></div>
-                            <div class="row"><div class="col-sm-12 text-center"><b>3+AB</b></div></div>
+                            <div class="row"><div class="col-sm-12"></div></div>
+                            <div class="row"><div class="col-sm-12 text-center"><b></b></div></div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="row"><div class="col-sm-12"><div class="border-strong"><h1>{{ movement_current}}</h1></div></div></div>
-                            <div class="row"><div class="col-sm-12 text-center"><b>Current</b></div></div>
+                            <div class="row"><div class="col-sm-12"><div class="border-strong"><h1><input  value="{{ variables.movement_base is defined ? variables.movement_base }}"  class="form-control"  id="movement_base" name="movement_base" placeholder="{{ movement_base_temp}}" type="number" min="0" /></h1></div></div></div>
+                            <div class="row"><div class="col-sm-12 text-center"><b>3+AB</b></div></div>
                         </div>
                         <div class="col-sm-3 mr-auto">
-                            <div class="row"><div class="col-sm-12"><div class="border-strong"><h1>{{ encumbrance_overage}}</h1></div></div></div>
-                            <div class="row"><div class="col-sm-12 text-center"><b>Overage</b></div></div>
+                            <div class="row"><div class="col-sm-12"></div></div>
+                            <div class="row"><div class="col-sm-12 text-center"><b></b></div></div>
                         </div>
                     </div>
                 </div>
@@ -1050,49 +1050,63 @@
     </div>
     <!-- TAB #5: Armour and Shield -->
     <div class="row card mt-2">
-        <div class="col-sm-6 card-content border-right">
+        <div class="col-sm-12 card-content border-right">
             <div class="row">
-                <div class="col-sm-3"><h5>Armor</h5></div>
-                <div class="col-sm-2"><h5>DTh Mod.</h5></div>
+                <div class="col-sm-2"><h5>Armor</h5></div>
+                <div class="col-sm-1"><h5>DTh Mod.</h5></div>
                 <div class="col-sm-4"><h5>Qualities</h5></div>
-                <div class="col-sm-1"><h4 class="mb-1"><i class="ra ra-gear-hammer ra-fw"></i></h4></div>
-                <div class="col-sm-1"><h4 class="mb-1"><i class="fas fa-running"></i></h4></div>                
+                <div class="col-sm-1"><h5>Natural?</h5></div>
+                <div class="col-sm-1"><h5>Ruined?</h5></div>
+                <div class="col-sm-1"><h5>Castle Forged?</h5></div>
+                <div class="col-sm-1"><h5>Makers Mark?</h5></div>
                 <div class="col-sm-1"><h5>Enc.</h5></div>                
             </div>            
             <div class="row">
-                <div class="col-sm-3">{{ variables.armor_name}}</div>
-                <div class="col-sm-2">{{ variables.armor_dth_mod}}</div>
-                <div class="col-sm-4">{{ variables.armor_qualities}}</div>
-                <div class="col-sm-1">{% if variables.armor_is_ruined == true %}<i class="ra ra-broken-shield"></i>{% elseif variables.armor_is_makers_mark == true %}<i class="ra ra-forging"></i>{% elseif variables.armor_is_castle_forged == true %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</div>
-                <div class="col-sm-1">{% if variables.armor_is_natural == true %}<i class="fas fa-running"></i>{% else %}<i class="fal fa-running"></i>{% endif %}</div>
-                <div class="col-sm-1">{% if variables.armor_is_makers_mark == true %}{% set armor_encumbrance_adjusted = variables.armor_encumbrance - 2 %}{{ armor_encumbrance_adjusted}}{% else %}{{ variables.armor_encumbrance}}{% endif %}</div>
+                <div class="col-sm-2"><input  value="{{ variables.armor_name is defined ? variables.armor_name }}"  class="form-control" id="armor_name" name="armor_name" placeholder="armor type" type="text" /></div>
+                <div class="col-sm-1"><input  value="{{ variables.armor_dth_mod is defined ? variables.armor_dth_mod }}"  class="form-control"  id="armor_dth_mod" name="armor_dth_mod" placeholder="0" type="number"   /></div>
+                <div class="col-sm-4"><input  value="{{ variables.armor_qualities is defined ? variables.armor_qualities }}"   class="form-control"  id="armor_qualities" name="armor_qualities" placeholder="qualities" type="text"></div>
+                <div class="col-sm-1"><input  value="1"  {% if variables.armor_is_natural is defined and variables.armor_is_natural == 1   %} checked="checked"{% endif %}   class="" id="armor_is_natural" name="armor_is_natural" placeholder="" type="checkbox" /></div>
+                <div class="col-sm-1"><input  value="1"  {% if variables.armor_is_ruined is defined and variables.armor_is_ruined == 1   %} checked="checked"{% endif %}   class="" id="armor_is_ruined" name="armor_is_ruined" placeholder="" type="checkbox" /></div>
+                <div class="col-sm-1"><input  value="1"  {% if variables.armor_is_castle_forged is defined and variables.armor_is_castle_forged == 1   %} checked="checked"{% endif %}   class="" id="armor_is_castle_forged" name="armor_is_castle_forged" placeholder="" type="checkbox" /></div>
+                <div class="col-sm-1"><input  value="1"  {% if variables.armor_is_makers_mark is defined and variables.armor_is_makers_mark == 1   %} checked="checked"{% endif %}   class="" id="armor_is_makers_mark" name="armor_is_makers_mark" placeholder="" type="checkbox" /></div>
+                <div class="col-sm-1"><input  value="{{ variables.armor_encumbrance is defined ? variables.armor_encumbrance }}"  class="form-control"  id="armor_encumbrance" name="armor_encumbrance" placeholder="" type="number" min="0"  /></div>
             </div>
         </div>
-        <div class="col-sm-6 card-content">
+    </div>
+    <div class="row card mt-2">
+        <div class="col-sm-12 card-content">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-2">
                     <div><h5>Shield</h5></div>
-                    <div>{{ variables.shield_name}}</div>
+                    <div><input  value="{{ variables.shield_name is defined ? variables.shield_name }}"  class="form-control" id="shield_name" name="shield_name" placeholder="shield name" type="text" /></div>
                 </div>
                 <div class="col-sm-4">
                     <div><h5>Qualities</h5></div>
-                    <div>{{ variables.shield_qualities}}</div>
+                    <div><input  value="{{ variables.shield_qualities is defined ? variables.shield_qualities }}"  class="form-control" id="shield_qualities" name="shield_qualities" placeholder="qualities" type="text" /></div>
                 </div>
                 <div class="col-sm-1">
-                    <div><h4 class="mb-1"><i class="ra ra-gear-hammer ra-fw"></i></h4></div>
-                    <div>{% if variables.shield_is_ruined == true %}<i class="ra ra-broken-shield"></i>{% elseif variables.shield_is_makers_mark == true %}<i class="ra ra-forging"></i>{% elseif variables.shield_is_castle_forged == true %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</div>
+                    <div><h5>Ruined?</h5></div>
+                    <div><input  value="1"  {% if variables.shield_is_ruined is defined and variables.shield_is_ruined == 1   %} checked="checked"{% endif %}   class="" id="shield_is_ruined" name="shield_is_ruined" placeholder="" type="checkbox" /></div>
                 </div>
                 <div class="col-sm-1">
-                    <div><h4 class="mb-1"><i class="fas fa-shield-alt"></i></h4></div>
-                    <div>{% if variables.shield_is_defensive == false %}<i class="far fa-shield"></i>{% else %}<i class="fas fa-shield"></i>{% endif %}</div>
+                    <div><h5>Castle Forged?</h5></div>
+                    <div><input  value="1"  {% if variables.shield_is_ruined is defined and variables.shield_is_ruined == 1   %} checked="checked"{% endif %}   class="" id="shield_is_ruined" name="shield_is_ruined" placeholder="" type="checkbox" /></div>
                 </div>
                 <div class="col-sm-1">
-                    <div><h4 class="mb-1"><i class="fas fa-bow-arrow"></i></h4></div>
-                    <div>{% if variables.shield_is_protective == false %}{% else %}<i class="fad fa-bow-arrow"></i>{% endif %}</div>
+                    <div><h5>Makers Mark?</h5></div>
+                    <div><input  value="1"  {% if variables.shield_is_makers_mark is defined and variables.shield_is_makers_mark == 1   %} checked="checked"{% endif %}   class="" id="shield_is_makers_mark" name="shield_is_makers_mark" placeholder="" type="checkbox" /></div>
+                </div>
+                <div class="col-sm-1">
+                    <div><h5>Defensive?</h5></div>
+                    <div><input  value="1"  {% if variables.shield_is_defensive is defined and variables.shield_is_defensive == 1   %} checked="checked"{% endif %}   class="" id="shield_is_defensive" name="shield_is_defensive" placeholder="" type="checkbox" /></div>
+                </div>
+                <div class="col-sm-1">
+                    <div><h5>Protective?</h5></div>
+                    <div><input  value="1"  {% if variables.shield_is_protective is defined and variables.shield_is_protective == 1   %} checked="checked"{% endif %}   class="" id="shield_is_protective" name="shield_is_protective" placeholder="" type="checkbox" /></div>
                 </div>
                 <div class="col-sm-1">
                     <div><h5>Enc.</h5></div>
-                    <div>{{ variables.shield_encumbrance}}</div>
+                    <div><input  value="{{ variables.shield_encumbrance is defined ? variables.shield_encumbrance }}"  class="form-control"  id="shield_encumbrance" name="shield_encumbrance" placeholder="" type="number" min="0"  /></div>
                 </div>
             </div>
         </div>
@@ -1266,11 +1280,12 @@
             {% endif %}
         </div>
     </div>
+    <!--
     <div class="row mt-2">
         <div class="col-sm-3"><strong>1 Injury: Routine (+10%) Heal Test.</strong></div>
         <div class="col-sm-3"><strong>2 Injuries: Standard (+/- 0%) Heal Test.</strong></div>
         <div class="col-sm-3"><strong>3+ Injuries: Challenging (-10%) Heal Test</strong></div>
-    </div>
+    </div>-->
     <!-- TAB: weapons #6 -->
     <div class="row card mt-2 pt-1">
         <table class="table">

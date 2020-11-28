@@ -989,7 +989,7 @@
             </div>            
             <div class="row">
                 <div class="col-sm-3">{{ variables.armor_name}}</div>
-                <div class="col-sm-2">{{ variables.armor_dth_mod}}</div>
+                <div class="col-sm-2">{% if variables.armor.dth.mod is not empty %}{{ variables.armor_dth_mod}}{% else %}0{% endif %}</div>
                 <div class="col-sm-4">{{ variables.armor_qualities}}</div>
                 <div class="col-sm-1">{% if variables.armor_is_ruined == true %}<i class="ra ra-broken-shield"></i>{% elseif variables.armor_is_makers_mark == true %}<i class="ra ra-forging"></i>{% elseif variables.armor_is_castle_forged == true %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</div>
                 <div class="col-sm-1">{% if variables.armor_is_natural == true %}<i class="fas fa-running"></i>{% else %}<i class="fal fa-running"></i>{% endif %}</div>
