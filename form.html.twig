@@ -1405,7 +1405,7 @@
     <div class="row card mt-3">
         <div class="col-sm-12 card-title"><h3>Trappings and Wealth</h3></div>
         <div class="col-sm-12 card-content">
-            <div class="row">
+            <div class="row card">
                 <div class="col-sm-2"><strong>Bag of Coins</strong></div>
                 <div class="col-sm-1">
                     <strong>GC</strong>
@@ -1419,264 +1419,174 @@
                     <strong>BP</strong>
                     <span class="border-strong btext"><input  value="{{ variables.wealth_bp is defined ? variables.wealth_bp }}"  class="form-control"  id="wealth_bp" name="wealth_bp" placeholder="0" type="number" min="0"  /></span>
                 </div>
-                <div class="col-sm-2">
-                    <strong>Enc.</strong>
-                    <span class="border-strong btext">{{ wealth_enc}}</span>
-                </div>
             </div>
         </div>
         <div class="col-sm-6 border">
-            <div class="row">
+            <div class="row card">
                 <div class="col-sm-12"><h5>Trappings on Self</h5></div>
                 <div class="col-sm-12">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th class="col-sm-10">Trappings</th>
-                                <th class="col-sm-1">Qty.</th>
-                                <th class="col-sm-1">Enc.</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% if variables.trappings_name_1 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_1}}</td>
-                                <td>{{ variables.trappings_qty_1}}</td>
-                                <td>{{ variables.trappings_enc_1}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_2 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_2}}</td>
-                                <td>{{ variables.trappings_qty_2}}</td>
-                                <td>{{ variables.trappings_enc_2}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_3 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_3}}</td>
-                                <td>{{ variables.trappings_qty_3}}</td>
-                                <td>{{ variables.trappings_enc_3}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_4 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_4}}</td>
-                                <td>{{ variables.trappings_qty_4}}</td>
-                                <td>{{ variables.trappings_enc_4}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_5 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_5}}</td>
-                                <td>{{ variables.trappings_qty_5}}</td>
-                                <td>{{ variables.trappings_enc_5}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_6 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_6}}</td>
-                                <td>{{ variables.trappings_qty_6}}</td>
-                                <td>{{ variables.trappings_enc_6}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_7 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_7}}</td>
-                                <td>{{ variables.trappings_qty_7}}</td>
-                                <td>{{ variables.trappings_enc_7}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_8 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_8}}</td>
-                                <td>{{ variables.trappings_qty_8}}</td>
-                                <td>{{ variables.trappings_enc_8}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_9 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_9}}</td>
-                                <td>{{ variables.trappings_qty_9}}</td>
-                                <td>{{ variables.trappings_enc_9}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_10 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_10}}</td>
-                                <td>{{ variables.trappings_qty_10}}</td>
-                                <td>{{ variables.trappings_enc_10}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_11 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_11}}</td>
-                                <td>{{ variables.trappings_qty_11}}</td>
-                                <td>{{ variables.trappings_enc_11}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_12 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_12}}</td>
-                                <td>{{ variables.trappings_qty_12}}</td>
-                                <td>{{ variables.trappings_enc_12}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_13 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_13}}</td>
-                                <td>{{ variables.trappings_qty_13}}</td>
-                                <td>{{ variables.trappings_enc_13}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_14 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_14}}</td>
-                                <td>{{ variables.trappings_qty_14}}</td>
-                                <td>{{ variables.trappings_enc_14}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_15 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_15}}</td>
-                                <td>{{ variables.trappings_qty_15}}</td>
-                                <td>{{ variables.trappings_enc_15}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_16 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_16}}</td>
-                                <td>{{ variables.trappings_qty_16}}</td>
-                                <td>{{ variables.trappings_enc_16}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_17 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_17}}</td>
-                                <td>{{ variables.trappings_qty_17}}</td>
-                                <td>{{ variables.trappings_enc_17}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_18 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_18}}</td>
-                                <td>{{ variables.trappings_qty_18}}</td>
-                                <td>{{ variables.trappings_enc_18}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_19 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_19}}</td>
-                                <td>{{ variables.trappings_qty_19}}</td>
-                                <td>{{ variables.trappings_enc_19}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_name_20 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_desc_20}}</td>
-                                <td>{{ variables.trappings_qty_20}}</td>
-                                <td>{{ variables.trappings_enc_20}}</td>
-                            </tr>
-                            {% endif %}
-                        </tbody>
-                    </table>
+                    <div class="row">
+                        <div class="col-sm-10">Trappings</div>
+                        <div class="col-sm-1">Qty.</div>
+                        <div class="col-sm-1">Enc.</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_1 is defined ? variables.trappings_name_1 }}"  class="form-control" id="trappings_name_1" name="trappings_name_1" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_1 is defined ? variables.trappings_qty_1 }}"  class="form-control"  id="trappings_qty_1" name="trappings_qty_1" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_1 is defined ? variables.trappings_enc_1 }}"  class="form-control"  id="trappings_enc_1" name="trappings_enc_1" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_2 is defined ? variables.trappings_name_2 }}"  class="form-control" id="trappings_name_2" name="trappings_name_2" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_2 is defined ? variables.trappings_qty_2 }}"  class="form-control"  id="trappings_qty_2" name="trappings_qty_2" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_2 is defined ? variables.trappings_enc_2 }}"  class="form-control"  id="trappings_enc_2" name="trappings_enc_2" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_3 is defined ? variables.trappings_name_3 }}"  class="form-control" id="trappings_name_3" name="trappings_name_3" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_3 is defined ? variables.trappings_qty_3 }}"  class="form-control"  id="trappings_qty_3" name="trappings_qty_3" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_3 is defined ? variables.trappings_enc_3 }}"  class="form-control"  id="trappings_enc_3" name="trappings_enc_3" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_4 is defined ? variables.trappings_name_4 }}"  class="form-control" id="trappings_name_4" name="trappings_name_4" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_4 is defined ? variables.trappings_qty_4 }}"  class="form-control"  id="trappings_qty_4" name="trappings_qty_4" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_4 is defined ? variables.trappings_enc_4 }}"  class="form-control"  id="trappings_enc_4" name="trappings_enc_4" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_5 is defined ? variables.trappings_name_5 }}"  class="form-control" id="trappings_name_5" name="trappings_name_5" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_5 is defined ? variables.trappings_qty_5 }}"  class="form-control"  id="trappings_qty_5" name="trappings_qty_5" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_5 is defined ? variables.trappings_enc_5 }}"  class="form-control"  id="trappings_enc_5" name="trappings_enc_5" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_6 is defined ? variables.trappings_name_6 }}"  class="form-control" id="trappings_name_6" name="trappings_name_6" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_6 is defined ? variables.trappings_qty_6 }}"  class="form-control"  id="trappings_qty_6" name="trappings_qty_6" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_6 is defined ? variables.trappings_enc_6 }}"  class="form-control"  id="trappings_enc_6" name="trappings_enc_6" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_7 is defined ? variables.trappings_name_7 }}"  class="form-control" id="trappings_name_7" name="trappings_name_7" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_7 is defined ? variables.trappings_qty_7 }}"  class="form-control"  id="trappings_qty_7" name="trappings_qty_7" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_7 is defined ? variables.trappings_enc_7 }}"  class="form-control"  id="trappings_enc_7" name="trappings_enc_7" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_8 is defined ? variables.trappings_name_8 }}"  class="form-control" id="trappings_name_8" name="trappings_name_8" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_8 is defined ? variables.trappings_qty_8 }}"  class="form-control"  id="trappings_qty_8" name="trappings_qty_8" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_8 is defined ? variables.trappings_enc_8 }}"  class="form-control"  id="trappings_enc_8" name="trappings_enc_8" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_9 is defined ? variables.trappings_name_9 }}"  class="form-control" id="trappings_name_9" name="trappings_name_9" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_9 is defined ? variables.trappings_qty_9 }}"  class="form-control"  id="trappings_qty_9" name="trappings_qty_9" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_9 is defined ? variables.trappings_enc_9 }}"  class="form-control"  id="trappings_enc_9" name="trappings_enc_9" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_10 is defined ? variables.trappings_name_10 }}"  class="form-control" id="trappings_name_10" name="trappings_name_10" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_10 is defined ? variables.trappings_qty_10 }}"  class="form-control"  id="trappings_qty_10" name="trappings_qty_10" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_10 is defined ? variables.trappings_enc_10 }}"  class="form-control"  id="trappings_enc_10" name="trappings_enc_10" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_11 is defined ? variables.trappings_name_11 }}"  class="form-control" id="trappings_name_11" name="trappings_name_11" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_11 is defined ? variables.trappings_qty_11 }}"  class="form-control"  id="trappings_qty_11" name="trappings_qty_11" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_11 is defined ? variables.trappings_enc_11 }}"  class="form-control"  id="trappings_enc_11" name="trappings_enc_11" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_12 is defined ? variables.trappings_name_12 }}"  class="form-control" id="trappings_name_12" name="trappings_name_12" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_12 is defined ? variables.trappings_qty_12 }}"  class="form-control"  id="trappings_qty_12" name="trappings_qty_12" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_12 is defined ? variables.trappings_enc_12 }}"  class="form-control"  id="trappings_enc_12" name="trappings_enc_12" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_13 is defined ? variables.trappings_name_13 }}"  class="form-control" id="trappings_name_13" name="trappings_name_13" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_13 is defined ? variables.trappings_qty_13 }}"  class="form-control"  id="trappings_qty_13" name="trappings_qty_13" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_13 is defined ? variables.trappings_enc_13 }}"  class="form-control"  id="trappings_enc_13" name="trappings_enc_13" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_14 is defined ? variables.trappings_name_14 }}"  class="form-control" id="trappings_name_14" name="trappings_name_14" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_14 is defined ? variables.trappings_qty_14 }}"  class="form-control"  id="trappings_qty_14" name="trappings_qty_14" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_14 is defined ? variables.trappings_enc_14 }}"  class="form-control"  id="trappings_enc_14" name="trappings_enc_14" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_15 is defined ? variables.trappings_name_15 }}"  class="form-control" id="trappings_name_15" name="trappings_name_15" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_15 is defined ? variables.trappings_qty_15 }}"  class="form-control"  id="trappings_qty_15" name="trappings_qty_15" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_15 is defined ? variables.trappings_enc_15 }}"  class="form-control"  id="trappings_enc_15" name="trappings_enc_15" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_16 is defined ? variables.trappings_name_16 }}"  class="form-control" id="trappings_name_16" name="trappings_name_16" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_16 is defined ? variables.trappings_qty_16 }}"  class="form-control"  id="trappings_qty_16" name="trappings_qty_16" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_16 is defined ? variables.trappings_enc_16 }}"  class="form-control"  id="trappings_enc_16" name="trappings_enc_16" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_17 is defined ? variables.trappings_name_17 }}"  class="form-control" id="trappings_name_17" name="trappings_name_17" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_17 is defined ? variables.trappings_qty_17 }}"  class="form-control"  id="trappings_qty_17" name="trappings_qty_17" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_17 is defined ? variables.trappings_enc_17 }}"  class="form-control"  id="trappings_enc_17" name="trappings_enc_17" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_18 is defined ? variables.trappings_name_18 }}"  class="form-control" id="trappings_name_18" name="trappings_name_18" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_18 is defined ? variables.trappings_qty_18 }}"  class="form-control"  id="trappings_qty_18" name="trappings_qty_18" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_18 is defined ? variables.trappings_enc_18 }}"  class="form-control"  id="trappings_enc_18" name="trappings_enc_18" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_19 is defined ? variables.trappings_name_19 }}"  class="form-control" id="trappings_name_19" name="trappings_name_19" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_19 is defined ? variables.trappings_qty_19 }}"  class="form-control"  id="trappings_qty_19" name="trappings_qty_19" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_19 is defined ? variables.trappings_enc_19 }}"  class="form-control"  id="trappings_enc_19" name="trappings_enc_19" placeholder="" type="number"  min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"><input  value="{{ variables.trappings_name_20 is defined ? variables.trappings_name_20 }}"  class="form-control" id="trappings_name_20" name="trappings_name_20" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_qty_20 is defined ? variables.trappings_qty_20 }}"  class="form-control"  id="trappings_qty_20" name="trappings_qty_20" placeholder="" type="number" min="0"  /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_enc_20 is defined ? variables.trappings_enc_20 }}"  class="form-control"  id="trappings_enc_20" name="trappings_enc_20" placeholder="" type="number"  min="0" /></div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 border">
-            <div class="row">
+            <div class="row card">
                 <div class="col-sm-12"><h5>Trappings on Steed or Vehicle</h5></div>
                 <div class="col-sm-12">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th class="col-sm-11">Description</th>
-                                <th class="col-sm-1">Enc.</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% if variables.trappings_vehicle_desc_1 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_vehicle_desc_1}}</td>
-                                <td>{{ variables.trappings_vehicle_enc_1}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_vehicle_desc_2 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_vehicle_desc_2}}</td>
-                                <td>{{ variables.trappings_vehicle_enc_2}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_vehicle_desc_3 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_vehicle_desc_3}}</td>
-                                <td>{{ variables.trappings_vehicle_enc_3}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_vehicle_desc_4 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_vehicle_desc_4}}</td>
-                                <td>{{ variables.trappings_vehicle_enc_4}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_vehicle_desc_5 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_vehicle_desc_5}}</td>
-                                <td>{{ variables.trappings_vehicle_enc_5}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_vehicle_desc_6 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_vehicle_desc_6}}</td>
-                                <td>{{ variables.trappings_vehicle_enc_6}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_vehicle_desc_7 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_vehicle_desc_7}}</td>
-                                <td>{{ variables.trappings_vehicle_enc_7}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_vehicle_desc_8 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_vehicle_desc_8}}</td>
-                                <td>{{ variables.trappings_vehicle_enc_8}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_vehicle_desc_9 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_vehicle_desc_9}}</td>
-                                <td>{{ variables.trappings_vehicle_enc_9}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.trappings_vehicle_desc_10 != "" %}
-                            <tr>
-                                <td>{{ variables.trappings_vehicle_desc_10}}</td>
-                                <td>{{ variables.trappings_vehicle_enc_10}}</td>
-                            </tr>
-                            {% endif %}
-                        </tbody>
-                    </table>
+                    <div class="row">
+                        <div class="col-sm-11">Description</div>
+                        <div class="col-sm-1">Enc.</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11"><input  value="{{ variables.trappings_vehicle_name_1 is defined ? variables.trappings_vehicle_name_1 }}"  class="form-control" id="trappings_vehicle_name_1" name="trappings_vehicle_name_1" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_vehicle_enc_1 is defined ? variables.trappings_vehicle_enc_1 }}"  class="form-control " id="trappings_vehicle_enc_1" name="trappings_vehicle_enc_1" placeholder="" type="number" min="0" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11"><input  value="{{ variables.trappings_vehicle_name_2 is defined ? variables.trappings_vehicle_name_2 }}"  class="form-control" id="trappings_vehicle_name_2" name="trappings_vehicle_name_2" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_vehicle_enc_2 is defined ? variables.trappings_vehicle_enc_2 }}"  class="form-control"  id="trappings_vehicle_enc_2" name="trappings_vehicle_enc_2" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11"><input  value="{{ variables.trappings_vehicle_name_3 is defined ? variables.trappings_vehicle_name_3 }}"  class="form-control" id="trappings_vehicle_name_3" name="trappings_vehicle_name_3" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_vehicle_enc_3 is defined ? variables.trappings_vehicle_enc_3 }}"  class="form-control"  id="trappings_vehicle_enc_3" name="trappings_vehicle_enc_3" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11"><input  value="{{ variables.trappings_vehicle_name_4 is defined ? variables.trappings_vehicle_name_4 }}"  class="form-control" id="trappings_vehicle_name_4" name="trappings_vehicle_name_4" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_vehicle_enc_4 is defined ? variables.trappings_vehicle_enc_4 }}"  class="form-control"  id="trappings_vehicle_enc_4" name="trappings_vehicle_enc_4" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11"><input  value="{{ variables.trappings_vehicle_name_5 is defined ? variables.trappings_vehicle_name_5 }}"  class="form-control" id="trappings_vehicle_name_5" name="trappings_vehicle_name_5" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_vehicle_enc_5 is defined ? variables.trappings_vehicle_enc_5 }}"  class="form-control"  id="trappings_vehicle_enc_5" name="trappings_vehicle_enc_5" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11"><input  value="{{ variables.trappings_vehicle_name_6 is defined ? variables.trappings_vehicle_name_6 }}"  class="form-control" id="trappings_vehicle_name_6" name="trappings_vehicle_name_6" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_vehicle_enc_6 is defined ? variables.trappings_vehicle_enc_6 }}"  class="form-control"  id="trappings_vehicle_enc_6" name="trappings_vehicle_enc_6" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11"><input  value="{{ variables.trappings_vehicle_name_7 is defined ? variables.trappings_vehicle_name_7 }}"  class="form-control" id="trappings_vehicle_name_7" name="trappings_vehicle_name_7" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_vehicle_enc_7 is defined ? variables.trappings_vehicle_enc_7 }}"  class="form-control"  id="trappings_vehicle_enc_7" name="trappings_vehicle_enc_7" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11"><input  value="{{ variables.trappings_vehicle_name_8 is defined ? variables.trappings_vehicle_name_8 }}"  class="form-control" id="trappings_vehicle_name_8" name="trappings_vehicle_name_8" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_vehicle_enc_8 is defined ? variables.trappings_vehicle_enc_8 }}"  class="form-control"  id="trappings_vehicle_enc_8" name="trappings_vehicle_enc_8" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11"><input  value="{{ variables.trappings_vehicle_name_9 is defined ? variables.trappings_vehicle_name_9 }}"  class="form-control" id="trappings_vehicle_name_9" name="trappings_vehicle_name_9" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_vehicle_enc_9 is defined ? variables.trappings_vehicle_enc_9 }}"  class="form-control"  id="trappings_vehicle_enc_9" name="trappings_vehicle_enc_9" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11"><input  value="{{ variables.trappings_vehicle_name_10 is defined ? variables.trappings_vehicle_name_10 }}"  class="form-control" id="trappings_vehicle_name_10" name="trappings_vehicle_name_10" placeholder="" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.trappings_vehicle_enc_10 is defined ? variables.trappings_vehicle_enc_10 }}"  class="form-control"  id="trappings_vehicle_enc_10" name="trappings_vehicle_enc_10" placeholder="" type="number" min="0"  /></div>
+                    </div>
                 </div>
             </div>
-            <div class="row"><div class="col-sm-12"><h5>Property</h5></div></div>
-            <div class="row"><div class="col-sm-12">{{ variables.wealth_property|nl2br}}</div></div>
-        </div>
-    </div>
-	<div class="row card">
-        <div class="col-sm-12 card-title"><h5>Reagents</h5></div>
-        <div class="col-sm-12">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class="col-sm-10">Description</th>
-                        <th class="col-sm-1">Qty.</th> 
-                        <th class="col-sm-1">Enc.</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+            <div class="row card">
+                <div class="col-sm-12"><h5>Property</h5></div>
+                <div class="col-sm-12"><textarea   class="form-control mention"  id="wealth_property" name="wealth_property" rows="3" placeholder="">{{ variables.wealth_property is defined ? variables.wealth_property }}</textarea></div>
+            </div>
         </div>
     </div>
     <!-- TAB: Spells -->
@@ -1698,31 +1608,21 @@
                     &nbsp;<span>{% if variables.magic_source_type != "divine" %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</span>
                     <span>Divine</span>
                 </div>
-            </div>
         </div>
-    </div>
-    {% endif %}
-    {% if variables.option_toggle_magic is defined and variables.option_toggle_magic == 1 %}
-    <div class="row card">
-        <div class="col-sm-12">
-            <div class="row"><div class="col-sm-12 card-title"><h5>Spells</h5></div></div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Type</th>
-                                <th>Reagents</th>
-                                <th>Distance</th>
-                                <th>Duration</th>
-                                <th>Effect</th>
-                                <th>Critical Success</th>
-                                <th>Critical Failure</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% if variables.magic_name_1 is defined and variables.magic_name_1 != "" %}
+        {% if variables.option_toggle_magic is defined and variables.option_toggle_magic == 1 %}
+        <div class="row card">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-2 card-title"><h5>Spell Name</h5></div>
+                    <div class="col-sm-2 card title"><h5>Type</h5></div>
+                    <div class="col-sm-2 card title"><h5>Reagents</h5></div>
+                    <div class="col-sm-1 card title"><h5>Distance</h5></div>
+                    <div class="col-sm-1 card title"><h5>Duration</h5></div>
+                    <div class="col-sm-1 card title"><h5>Effect</h5></div>
+                    <div class="col-sm-1 card title"><h5>Critical Success</h5></div>
+                    <div class="col-sm-1 card title"><h5>Critical Failure</h5></div>
+                </div>
+                <div class="row">
                             <tr>
                                 <td>{{ variables.magic_name_1}}</td>
                                 <td>{{ variables.magic_type_1}}</td>
@@ -1733,8 +1633,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_1}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_2 is defined and variables.magic_name_2 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_2}}</td>
                                 <td>{{ variables.magic_type_2}}</td>
@@ -1745,8 +1643,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_2}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_3 is defined and variables.magic_name_3 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_3}}</td>
                                 <td>{{ variables.magic_type_3}}</td>
@@ -1757,8 +1653,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_3}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_4 is defined and variables.magic_name_4 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_4}}</td>
                                 <td>{{ variables.magic_type_4}}</td>
@@ -1769,8 +1663,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_4}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_5 is defined and variables.magic_name_5 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_5}}</td>
                                 <td>{{ variables.magic_type_5}}</td>
@@ -1781,8 +1673,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_5}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_6 is defined and variables.magic_name_6 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_6}}</td>
                                 <td>{{ variables.magic_type_6}}</td>
@@ -1793,8 +1683,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_6}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_7 is defined and variables.magic_name_7 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_7}}</td>
                                 <td>{{ variables.magic_type_7}}</td>
@@ -1805,8 +1693,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_7}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_8 is defined and variables.magic_name_8 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_8}}</td>
                                 <td>{{ variables.magic_type_8}}</td>
@@ -1817,8 +1703,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_8}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_9 is defined and variables.magic_name_9 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_9}}</td>
                                 <td>{{ variables.magic_type_9}}</td>
@@ -1829,8 +1713,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_9}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_10 is defined and variables.magic_name_10 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_10}}</td>
                                 <td>{{ variables.magic_type_10}}</td>
@@ -1841,8 +1723,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_10}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_11 is defined and variables.magic_name_11 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_11}}</td>
                                 <td>{{ variables.magic_type_11}}</td>
@@ -1853,8 +1733,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_11}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_12 is defined and variables.magic_name_12 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_12}}</td>
                                 <td>{{ variables.magic_type_12}}</td>
@@ -1865,8 +1743,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_12}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_13 is defined and variables.magic_name_13 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_13}}</td>
                                 <td>{{ variables.magic_type_13}}</td>
@@ -1877,8 +1753,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_13}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_14 is defined and variables.magic_name_14 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_14}}</td>
                                 <td>{{ variables.magic_type_14}}</td>
@@ -1889,8 +1763,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_14}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_15 is defined and variables.magic_name_15 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_15}}</td>
                                 <td>{{ variables.magic_type_15}}</td>
@@ -1901,8 +1773,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_15}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_16 is defined and variables.magic_name_16 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_16}}</td>
                                 <td>{{ variables.magic_type_16}}</td>
@@ -1913,8 +1783,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_16}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_17 is defined and variables.magic_name_17 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_17}}</td>
                                 <td>{{ variables.magic_type_17}}</td>
@@ -1925,8 +1793,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_17}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_18 is defined and variables.magic_name_18 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_18}}</td>
                                 <td>{{ variables.magic_type_18}}</td>
@@ -1937,8 +1803,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_18}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_19 is defined and variables.magic_name_19 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_19}}</td>
                                 <td>{{ variables.magic_type_19}}</td>
@@ -1949,8 +1813,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_19}}</td>
                             </tr>
-                            {% endif %}
-                            {% if variables.magic_name_20 is defined and variables.magic_name_20 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_20}}</td>
                                 <td>{{ variables.magic_type_20}}</td>
@@ -1961,7 +1823,6 @@
                                 <td>{{ variables.magic_critical_succes}} </td>
                                 <td>{{ variables.magic_critical_failure_20}}</td>
                             </tr>
-                            {% endif %}
                         </tbody>
                     </table>        
                 </div>
@@ -2151,6 +2012,67 @@
                 </div>
             </div>
         </div>
+    {% endif %}
+	<div class="row card">
+        <div class="col-sm-12 card-title"><h5>Reagents</h5></div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-8">Description</div>
+                <div class="col-sm-2">Qty.</div> 
+                <div class="col-sm-2">Enc.</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8"><input  value="{{ variables.reagent_name_1 is defined ? variables.reagent_name_1 }}"  class="form-control" id="reagent_name_1" name="reagent_name_1" placeholder="" type="text" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_1 is defined ? variables.reagent_qty_1 }}"  class="form-control"  id="reagent_qty_1" name="reagent_qty_1" placeholder="" type="number"  min="0" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_1 is defined ? variables.reagent_enc_1 }}"  class="form-control"  id="reagent_enc_1" name="reagent_enc_1" placeholder="" type="number" min="0"  /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8"><input  value="{{ variables.reagent_name_2 is defined ? variables.reagent_name_2 }}"  class="form-control" id="reagent_name_2" name="reagent_name_2" placeholder="" type="text" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_2 is defined ? variables.reagent_qty_2 }}"  class="form-control"  id="reagent_qty_2" name="reagent_qty_2" placeholder="" type="number"  min="0" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_2 is defined ? variables.reagent_enc_2 }}"  class="form-control"  id="reagent_enc_2" name="reagent_enc_3" placeholder="" type="number" min="0"  /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8"><input  value="{{ variables.reagent_name_3 is defined ? variables.reagent_name_3 }}"  class="form-control" id="reagent_name_3" name="reagent_name_3" placeholder="" type="text" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_3 is defined ? variables.reagent_qty_3 }}"  class="form-control"  id="reagent_qty_3" name="reagent_qty_3" placeholder="" type="number"  min="0" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_3 is defined ? variables.reagent_enc_3 }}"  class="form-control"  id="reagent_enc_3" name="reagent_enc_3" placeholder="" type="number" min="0"  /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8"><input  value="{{ variables.reagent_name_4 is defined ? variables.reagent_name_4 }}"  class="form-control" id="reagent_name_4" name="reagent_name_4" placeholder="" type="text" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_4 is defined ? variables.reagent_qty_4 }}"  class="form-control"  id="reagent_qty_4" name="reagent_qty_4" placeholder="" type="number"  min="0" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_4 is defined ? variables.reagent_enc_4 }}"  class="form-control"  id="reagent_enc_4" name="reagent_enc_4" placeholder="" type="number" min="0"  /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8"><input  value="{{ variables.reagent_name_5 is defined ? variables.reagent_name_5 }}"  class="form-control" id="reagent_name_5" name="reagent_name_5" placeholder="" type="text" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_5 is defined ? variables.reagent_qty_5 }}"  class="form-control"  id="reagent_qty_5" name="reagent_qty_5" placeholder="" type="number"  min="0" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_5 is defined ? variables.reagent_enc_5 }}"  class="form-control"  id="reagent_enc_5" name="reagent_enc_5" placeholder="" type="number" min="0"  /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8"><input  value="{{ variables.reagent_name_6 is defined ? variables.reagent_name_6 }}"  class="form-control" id="reagent_name_6" name="reagent_name_6" placeholder="" type="text" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_6 is defined ? variables.reagent_qty_6 }}"  class="form-control"  id="reagent_qty_6" name="reagent_qty_6" placeholder="" type="number"  min="0" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_6 is defined ? variables.reagent_enc_6 }}"  class="form-control"  id="reagent_enc_6" name="reagent_enc_6" placeholder="" type="number" min="0"  /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8"><input  value="{{ variables.reagent_name_7 is defined ? variables.reagent_name_7 }}"  class="form-control" id="reagent_name_7" name="reagent_name_7" placeholder="" type="text" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_7 is defined ? variables.reagent_qty_7 }}"  class="form-control"  id="reagent_qty_7" name="reagent_qty_7" placeholder="" type="number"  min="0" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_7 is defined ? variables.reagent_enc_7 }}"  class="form-control"  id="reagent_enc_7" name="reagent_enc_7" placeholder="" type="number" min="0"  /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8"><input  value="{{ variables.reagent_name_8 is defined ? variables.reagent_name_8 }}"  class="form-control" id="reagent_name_8" name="reagent_name_8" placeholder="" type="text" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_8 is defined ? variables.reagent_qty_8 }}"  class="form-control"  id="reagent_qty_8" name="reagent_qty_8" placeholder="" type="number"  min="0" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_8 is defined ? variables.reagent_enc_8 }}"  class="form-control"  id="reagent_enc_8" name="reagent_enc_8" placeholder="" type="number" min="0"  /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8"><input  value="{{ variables.reagent_name_9 is defined ? variables.reagent_name_9 }}"  class="form-control" id="reagent_name_9" name="reagent_name_9" placeholder="" type="text" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_9 is defined ? variables.reagent_qty_9 }}"  class="form-control"  id="reagent_qty_9" name="reagent_qty_9" placeholder="" type="number"  min="0" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_9 is defined ? variables.reagent_enc_9 }}"  class="form-control"  id="reagent_enc_9" name="reagent_enc_9" placeholder="" type="number" min="0"  /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8"><input  value="{{ variables.reagent_name_10 is defined ? variables.reagent_name_10 }}"  class="form-control" id="reagent_name_10" name="reagent_name_10" placeholder="" type="text" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_10 is defined ? variables.reagent_qty_10 }}"  class="form-control"  id="reagent_qty_10" name="reagent_qty_10" placeholder="" type="number"  min="0" /></div>
+                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_10 is defined ? variables.reagent_enc_10 }}"  class="form-control"  id="reagent_enc_10" name="reagent_enc_10" placeholder="" type="number" min="0"  /></div>
+            </div>
+        </div>
+    </div>
     </div>
     {% endif %}
     <!-- end of rituals tab -->

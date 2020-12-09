@@ -1354,6 +1354,68 @@ fields:
     input: string
     label: "trappings name 20"
   
+# trappings name
+  trappings_name_1:
+    input: string
+    label: "trappings name 1"
+  trappings_name_2:
+    input: string
+    label: "trappings name 2"
+  trappings_name_3:
+    input: string
+    label: "trappings name 3"
+  trappings_name_4:
+    input: string
+    label: "trappings name 4"
+  trappings_name_5:
+    input: string
+    label: "trappings name 5"
+  trappings_name_6:
+    input: string
+    label: "trappings name 6"
+  trappings_name_7:
+    input: string
+    label: "trappings name 7"
+  trappings_name_8:
+    input: string
+    label: "trappings name 8"
+  trappings_name_9:
+    input: string
+    label: "trappings name 9"
+  trappings_name_10:
+    input: string
+    label: "trappings name 10"
+  trappings_name_11:
+    input: string
+    label: "trappings name 11"
+  trappings_name_12:
+    input: string
+    label: "trappings name 12"
+  trappings_name_13:
+    input: string
+    label: "trappings name 13"
+  trappings_name_14:
+    input: string
+    label: "trappings name 14"
+  trappings_name_15:
+    input: string
+    label: "trappings name 15"
+  trappings_name_16:
+    input: string
+    label: "trappings name 16"
+  trappings_name_17:
+    input: string
+    label: "trappings name 17"
+  trappings_name_18:
+    input: string
+    label: "trappings name 18"
+  trappings_name_19:
+    input: string
+    label: "trappings name 19"
+  trappings_name_20:
+    input: string
+    label: "trappings name 20"
+
 # trappings description
   trappings_desc_1:
     input: string
@@ -1478,6 +1540,69 @@ fields:
     input: integer
     label: "trappings enc 20"
 
+
+# trappings quantity:
+  trappings_qty_1:
+    input: integer
+    label: "trappings qty 1"
+  trappings_qty_2:
+    input: integer
+    label: "trappings qty 2"
+  trappings_qty_3:
+    input: integer
+    label: "trappings qty 3"
+  trappings_qty_4:
+    input: integer
+    label: "trappings qty 4"
+  trappings_qty_5:
+    input: integer
+    label: "trappings qty 5"
+  trappings_qty_6:
+    input: integer
+    label: "trappings qty 6"
+  trappings_qty_7:
+    input: integer
+    label: "trappings qty 7"
+  trappings_qty_8:
+    input: integer
+    label: "trappings qty 8"
+  trappings_qty_9:
+    input: integer
+    label: "trappings qty 9"
+  trappings_qty_10:
+    input: integer
+    label: "trappings qty 10"
+  trappings_qty_11:
+    input: integer
+    label: "trappings qty 11"
+  trappings_qty_12:
+    input: integer
+    label: "trappings qty 12"
+  trappings_qty_13:
+    input: integer
+    label: "trappings qty 13"
+  trappings_qty_14:
+    input: integer
+    label: "trappings qty 14"
+  trappings_qty_15:
+    input: integer
+    label: "trappings qty 15"
+  trappings_qty_16:
+    input: integer
+    label: "trappings qty 16"
+  trappings_qty_17:
+    input: integer
+    label: "trappings qty 17"
+  trappings_qty_18:
+    input: integer
+    label: "trappings qty 18"
+  trappings_qty_19:
+    input: integer
+    label: "trappings qty 19"
+  trappings_qty_20:
+    input: integer
+    label: "trappings qty 20"
+
 # trappings on vehicle or steed (from Character Folio)
   trappings_vehicle_name_1:
     input: string
@@ -1510,7 +1635,36 @@ fields:
     input: string
     label: "trappings vehicle name 10"
 
-
+  trappings_vehicle_enc_1:
+    input: integer
+    label: "trappings vehicle enc 1"
+  trappings_vehicle_enc_2:
+    input: integer
+    label: "trappings vehicle enc 2"
+  trappings_vehicle_enc_3:
+    input: integer
+    label: "trappings vehicle enc 3"
+  trappings_vehicle_enc_4:
+    input: integer
+    label: "trappings vehicle enc 4"
+  trappings_vehicle_enc_5:
+    input: integer
+    label: "trappings vehicle enc 5"
+  trappings_vehicle_enc_6:
+    input: integer
+    label: "trappings vehicle enc 6"
+  trappings_vehicle_enc_7:
+    input: integer
+    label: "trappings vehicle enc 7"
+  trappings_vehicle_enc_8:
+    input: integer
+    label: "trappings vehicle enc 8"
+  trappings_vehicle_enc_9:
+    input: integer
+    label: "trappings vehicle enc 9"
+  trappings_vehicle_enc_10:
+    input: integer
+    label: "trappings vehicle enc 10"
 
 # injuries
   injuries_name_1:
