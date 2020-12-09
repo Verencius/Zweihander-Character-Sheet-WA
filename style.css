@@ -142,3 +142,8 @@ h1, h2 {
     text-align: center;
     font-size: 42px !important;
 }
+.marque.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

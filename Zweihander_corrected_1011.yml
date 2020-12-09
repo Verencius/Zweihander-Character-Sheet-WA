@@ -2548,12 +2548,38 @@ fields:
 
 
 # Daemonic gifts (from character folio)
-  gift_name:
+  daemonic_gift_name_1:
     input: string
-    label: "daemonic gift"
-  gift_description:
-    input: text
-    label: "gift description"
+    label: "daemonic gift name 1"
+  daemonic_gift_desc_1:
+    input: string
+    label: "daemonic gift desc 1"
+  daemonic_gift_name_2:
+    input: string
+    label: "daemonic  gift 2"
+  daemonic_gift_desc_2:
+    input: string
+    label: "daemonic gift desc 2"
+  daemonic_gift_name_3:
+    input: string
+    label: "daemonic gift 3"
+  daemonic_gift_desc_3:
+    input: string
+    label: "daemonic gift desc 3"
+  daemonic_gift_name_4:
+    input: string
+    label: "daemonic gift 4"
+  daemonic_gift_desc_4:
+    input: string
+    label: "daemonic gift desc 4"
+  daemonic_gift_name_5:
+    input: string
+    label: "daemonic gift 5"
+  daemonic_gift_desc_5:
+    input: string
+    label: "daemonic gift desc 5"
+
+
 # Advances (page 4)
   current_reward_points:
     input: integer
