@@ -1612,223 +1612,37 @@
         {% if variables.option_toggle_magic is defined and variables.option_toggle_magic == 1 %}
         <div class="row card">
             <div class="col-sm-12">
-                <div class="row">
-                    <div class="col-sm-2 card-title"><h5>Spell Name</h5></div>
-                    <div class="col-sm-2 card title"><h5>Type</h5></div>
-                    <div class="col-sm-2 card title"><h5>Reagents</h5></div>
-                    <div class="col-sm-1 card title"><h5>Distance</h5></div>
-                    <div class="col-sm-1 card title"><h5>Duration</h5></div>
-                    <div class="col-sm-1 card title"><h5>Effect</h5></div>
-                    <div class="col-sm-1 card title"><h5>Critical Success</h5></div>
-                    <div class="col-sm-1 card title"><h5>Critical Failure</h5></div>
+                <div class="row card-title">
+                    <div class="col-sm-2"><h5>Spell Name</h5></div>
+                    <div class="col-sm-1"><h5>Type</h5></div>
+                    <div class="col-sm-2"><h5>Reagents</h5></div>
+                    <div class="col-sm-1"><h5>Distance</h5></div>
+                    <div class="col-sm-1"><h5>Duration</h5></div>
+                    <div class="col-sm-1"><h5>Effect</h5></div>
+                    <div class="col-sm-2"><h5>Critical Success</h5></div>
+                    <div class="col-sm-2"><h5>Critical Failure</h5></div>
                 </div>
                 <div class="row">
-                            <tr>
-                                <td>{{ variables.magic_name_1}}</td>
-                                <td>{{ variables.magic_type_1}}</td>
-                                <td>{{ variables.magic_reagent_1}}</td>
-                                <td>{{ variables.magic_distance_1}}</td>
-                                <td>{{ variables.magic_duration_1}}</td>
-                                <td>{{ variables.magic_effect_1}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_1}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_2}}</td>
-                                <td>{{ variables.magic_type_2}}</td>
-                                <td>{{ variables.magic_reagent_2}}</td>
-                                <td>{{ variables.magic_distance_2}}</td>
-                                <td>{{ variables.magic_duration_2}}</td>
-                                <td>{{ variables.magic_effect_2}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_2}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_3}}</td>
-                                <td>{{ variables.magic_type_3}}</td>
-                                <td>{{ variables.magic_reagent_3}}</td>
-                                <td>{{ variables.magic_distance_3}}</td>
-                                <td>{{ variables.magic_duration_3}}</td>
-                                <td>{{ variables.magic_effect_3}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_3}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_4}}</td>
-                                <td>{{ variables.magic_type_4}}</td>
-                                <td>{{ variables.magic_reagent_4}}</td>
-                                <td>{{ variables.magic_distance_4}}</td>
-                                <td>{{ variables.magic_duration_4}}</td>
-                                <td>{{ variables.magic_effect_4}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_4}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_5}}</td>
-                                <td>{{ variables.magic_type_5}}</td>
-                                <td>{{ variables.magic_reagent_5}}</td>
-                                <td>{{ variables.magic_distance_5}}</td>
-                                <td>{{ variables.magic_duration_5}}</td>
-                                <td>{{ variables.magic_effect_5}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_5}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_6}}</td>
-                                <td>{{ variables.magic_type_6}}</td>
-                                <td>{{ variables.magic_reagent_6}}</td>
-                                <td>{{ variables.magic_distance_6}}</td>
-                                <td>{{ variables.magic_duration_6}}</td>
-                                <td>{{ variables.magic_effect_6}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_6}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_7}}</td>
-                                <td>{{ variables.magic_type_7}}</td>
-                                <td>{{ variables.magic_reagent_7}}</td>
-                                <td>{{ variables.magic_distance_7}}</td>
-                                <td>{{ variables.magic_duration_7}}</td>
-                                <td>{{ variables.magic_effect_7}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_7}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_8}}</td>
-                                <td>{{ variables.magic_type_8}}</td>
-                                <td>{{ variables.magic_reagent_8}}</td>
-                                <td>{{ variables.magic_distance_8}}</td>
-                                <td>{{ variables.magic_duration_8}}</td>
-                                <td>{{ variables.magic_effect_8}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_8}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_9}}</td>
-                                <td>{{ variables.magic_type_9}}</td>
-                                <td>{{ variables.magic_reagent_9}}</td>
-                                <td>{{ variables.magic_distance_9}}</td>
-                                <td>{{ variables.magic_duration_9}}</td>
-                                <td>{{ variables.magic_effect_9}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_9}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_10}}</td>
-                                <td>{{ variables.magic_type_10}}</td>
-                                <td>{{ variables.magic_reagent_10}}</td>
-                                <td>{{ variables.magic_distance_10}}</td>
-                                <td>{{ variables.magic_duration_10}}</td>
-                                <td>{{ variables.magic_effect_10}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_10}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_11}}</td>
-                                <td>{{ variables.magic_type_11}}</td>
-                                <td>{{ variables.magic_reagent_11}}</td>
-                                <td>{{ variables.magic_distance_11}}</td>
-                                <td>{{ variables.magic_duration_11}}</td>
-                                <td>{{ variables.magic_effect_11}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_11}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_12}}</td>
-                                <td>{{ variables.magic_type_12}}</td>
-                                <td>{{ variables.magic_reagent_12}}</td>
-                                <td>{{ variables.magic_distance_12}}</td>
-                                <td>{{ variables.magic_duration_12}}</td>
-                                <td>{{ variables.magic_effect_12}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_12}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_13}}</td>
-                                <td>{{ variables.magic_type_13}}</td>
-                                <td>{{ variables.magic_reagent_13}}</td>
-                                <td>{{ variables.magic_distance_13}}</td>
-                                <td>{{ variables.magic_duration_13}}</td>
-                                <td>{{ variables.magic_effect_13}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_13}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_14}}</td>
-                                <td>{{ variables.magic_type_14}}</td>
-                                <td>{{ variables.magic_reagent_14}}</td>
-                                <td>{{ variables.magic_distance_14}}</td>
-                                <td>{{ variables.magic_duration_14}}</td>
-                                <td>{{ variables.magic_effect_14}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_14}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_15}}</td>
-                                <td>{{ variables.magic_type_15}}</td>
-                                <td>{{ variables.magic_reagent_15}}</td>
-                                <td>{{ variables.magic_distance_15}}</td>
-                                <td>{{ variables.magic_duration_15}}</td>
-                                <td>{{ variables.magic_effect_15}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_15}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_16}}</td>
-                                <td>{{ variables.magic_type_16}}</td>
-                                <td>{{ variables.magic_reagent_16}}</td>
-                                <td>{{ variables.magic_distance_16}}</td>
-                                <td>{{ variables.magic_duration_16}}</td>
-                                <td>{{ variables.magic_effect_16}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_16}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_17}}</td>
-                                <td>{{ variables.magic_type_17}}</td>
-                                <td>{{ variables.magic_reagent_17}}</td>
-                                <td>{{ variables.magic_distance_17}}</td>
-                                <td>{{ variables.magic_duration_17}}</td>
-                                <td>{{ variables.magic_effect_17}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_17}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_18}}</td>
-                                <td>{{ variables.magic_type_18}}</td>
-                                <td>{{ variables.magic_reagent_18}}</td>
-                                <td>{{ variables.magic_distance_18}}</td>
-                                <td>{{ variables.magic_duration_18}}</td>
-                                <td>{{ variables.magic_effect_18}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_18}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_19}}</td>
-                                <td>{{ variables.magic_type_19}}</td>
-                                <td>{{ variables.magic_reagent_19}}</td>
-                                <td>{{ variables.magic_distance_19}}</td>
-                                <td>{{ variables.magic_duration_19}}</td>
-                                <td>{{ variables.magic_effect_19}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_19}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ variables.magic_name_20}}</td>
-                                <td>{{ variables.magic_type_20}}</td>
-                                <td>{{ variables.magic_reagent_20}}</td>
-                                <td>{{ variables.magic_distance_20}}</td>
-                                <td>{{ variables.magic_duration_20}}</td>
-                                <td>{{ variables.magic_effect_20}}</td>
-                                <td>{{ variables.magic_critical_succes}} </td>
-                                <td>{{ variables.magic_critical_failure_20}}</td>
-                            </tr>
-                        </tbody>
-                    </table>        
                 </div>
+                <div class="row">
+                    <div class="col-sm-2"><input  value="{{ variables.magic_name_1 is defined ? variables.magic_name_1 }}"  class="form-control" id="magic_name_1" name="magic_name_1" placeholder="" type="text" /></div>
+                    <div class="col-sm-1">
+                        <select   class="form-control"  id="magic_difficulty_1" name="magic_difficulty_1">
+                            <option value="Petty" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                            <option value="Lesser" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                            <option value="Greater" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2"><input  value="{{ variables.magic_reagent_1 is defined ? variables.magic_reagent_1 }}"  class="form-control" id="magic_reagent_1" name="magic_reagent_1" placeholder="" type="text" /></div>
+                    <div class="col-sm-1"><input  value="{{ variables.magic_distance_1 is defined ? variables.magic_distance_1 }}"  class="form-control" id="magic_distance_1" name="magic_distance_1" placeholder="" type="text" /></div>
+                    <div class="col-sm-1"><input  value="{{ variables.magic_duration_1 is defined ? variables.magic_duration_1 }}"  class="form-control" id="magic_duration_1" name="magic_duration_1" placeholder="" type="text" /></div>
+                    <div class="col-sm-1"><input  value="{{ variables.magic_effect_1 is defined ? variables.magic_effect_1 }}"  class="form-control" id="magic_effect_1" name="magic_effect_1" placeholder="" type="text" /></div>
+                    <div class="col-sm-2"><input  value="{{ variables.magic_critical_success_1 is defined ? variables.magic_critical_success_1 }}"  class="form-control" id="magic_critical_success_1" name="magic_critical_success_1" placeholder="" type="text" /></div>
+                    <div class="col-sm-2"><input  value="{{ variables.magic_critical_failure_1 is defined ? variables.magic_critical_failure_1 }}"  class="form-control" id="magic_critical_failure_1" name="magic_critical_failure_1" placeholder="" type="text" /></div>
+                </div>
+                <!-- go until 20!!!! -->
             </div>
         </div>
-    </div>
     <!-- magic sidebar -->
         <!-- <div class="col-sm-9 border"></div>
         <div class="col-sm-2 border">

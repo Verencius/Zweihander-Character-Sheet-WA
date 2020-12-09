@@ -2301,67 +2301,68 @@ fields:
   magic_critical_success_20:
     input: text
     label: "magic critical success 20"
+
 # magic critical failure
-  magic_critical_success_1:
+  magic_critical_failure_1:
     input: text
-    label: "magic critical success 1"
-  magic_critical_success_2:
+    label: "magic critical failure 1"
+  magic_critical_failure_2:
     input: text
-    label: "magic critical success 2"
-  magic_critical_success_3:
+    label: "magic critical failure 2"
+  magic_critical_failure_3:
     input: text
-    label: "magic critical success 3"
-  magic_critical_success_4:
+    label: "magic critical failure 3"
+  magic_critical_failure_4:
     input: text
-    label: "magic critical success 4"
-  magic_critical_success_5:
+    label: "magic critical failure 4"
+  magic_critical_failure_5:
     input: text
-    label: "magic critical success 5"
-  magic_critical_success_6:
+    label: "magic critical failure 5"
+  magic_critical_failure_6:
     input: text
-    label: "magic critical success 6"
-  magic_critical_success_7:
+    label: "magic critical failure 6"
+  magic_critical_failure_7:
     input: text
-    label: "magic critical success 7"
-  magic_critical_success_8:
+    label: "magic critical failure 7"
+  magic_critical_failure_8:
     input: text
-    label: "magic critical success 8"
-  magic_critical_success_9:
+    label: "magic critical failure 8"
+  magic_critical_failure_9:
     input: text
-    label: "magic critical success 9"
-  magic_critical_success_10:
+    label: "magic critical failure 9"
+  magic_critical_failure_10:
     input: text
-    label: "magic critical success 10"
-  magic_critical_success_11:
+    label: "magic critical failure 10"
+  magic_critical_failure_11:
     input: text
-    label: "magic critical success 11"
-  magic_critical_success_12:
+    label: "magic critical failure 11"
+  magic_critical_failure_12:
     input: text
-    label: "magic critical success 12"
-  magic_critical_success_13:
+    label: "magic critical failure 12"
+  magic_critical_failure_13:
     input: text
-    label: "magic critical success 13"
-  magic_critical_success_14:
+    label: "magic critical failure 13"
+  magic_critical_failure_14:
     input: text
-    label: "magic critical success 14"
-  magic_critical_success_15:
+    label: "magic critical failure 14"
+  magic_critical_failure_15:
     input: text
-    label: "magic critical success 15"
-  magic_critical_success_16:
+    label: "magic critical failure 15"
+  magic_critical_failure_16:
     input: text
-    label: "magic critical success 16"
-  magic_critical_success_17:
+    label: "magic critical failure 16"
+  magic_critical_failure_17:
     input: text
-    label: "magic critical success 17"
-  magic_critical_success_18:
+    label: "magic critical failure 17"
+  magic_critical_failure_18:
     input: text
-    label: "magic critical success 18"
-  magic_critical_success_19:
+    label: "magic critical failure 18"
+  magic_critical_failure_19:
     input: text
-    label: "magic critical success 19"
-  magic_critical_success_20:
+    label: "magic critical failure 19"
+  magic_critical_failure_20:
     input: text
-    label: "magic critical success 20"
+    label: "magic critical failure 20"
 
 # rituals tab
   ritual_name_1:

@@ -449,8 +449,19 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_critical_failure_1" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 1</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_1" name="magic_critical_failure_1" rows="3" placeholder="">{{ variables.magic_critical_failure_1 is defined ? variables.magic_critical_failure_1 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_ancestry" class="col-sm-2 control-label">
-                <h4 class="header-title">personal" ancestry"</h4>
+                <h4 class="header-title">personal ancestry</h4>
             </label>
             <div class="col-sm-12">
                 <input  value="{{ variables.personal_ancestry is defined ? variables.personal_ancestry }}"  class="form-control mention" id="personal_ancestry" name="personal_ancestry" placeholder="Human" type="text" />
@@ -743,6 +754,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_critical_failure_2" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 2</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_2" name="magic_critical_failure_2" rows="3" placeholder="">{{ variables.magic_critical_failure_2 is defined ? variables.magic_critical_failure_2 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_sex" class="col-sm-2 control-label">
                 <h4 class="header-title">personal sex</h4>
             </label>
@@ -985,6 +1007,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_critical_failure_3" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 3</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_3" name="magic_critical_failure_3" rows="3" placeholder="">{{ variables.magic_critical_failure_3 is defined ? variables.magic_critical_failure_3 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_height" class="col-sm-2 control-label">
                 <h4 class="header-title">personal height</h4>
             </label>
@@ -1197,6 +1230,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_critical_failure_4" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 4</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_4" name="magic_critical_failure_4" rows="3" placeholder="">{{ variables.magic_critical_failure_4 is defined ? variables.magic_critical_failure_4 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_weight" class="col-sm-2 control-label">
                 <h4 class="header-title">personal weight</h4>
             </label>
@@ -1389,6 +1433,17 @@
             </label>
             <div class="col-sm-12">
                 <input  value="{{ variables.trappings_vehicle_enc_5 is defined ? variables.trappings_vehicle_enc_5 }}"  class="form-control"  id="trappings_vehicle_enc_5" name="trappings_vehicle_enc_5" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_critical_failure_5" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 5</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_5" name="magic_critical_failure_5" rows="3" placeholder="">{{ variables.magic_critical_failure_5 is defined ? variables.magic_critical_failure_5 }}</textarea>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -1596,6 +1651,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_critical_failure_6" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 6</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_6" name="magic_critical_failure_6" rows="3" placeholder="">{{ variables.magic_critical_failure_6 is defined ? variables.magic_critical_failure_6 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_complexion" class="col-sm-2 control-label">
                 <h4 class="header-title">personal complexion</h4>
             </label>
@@ -1777,6 +1843,17 @@
             </label>
             <div class="col-sm-12">
                 <input  value="{{ variables.trappings_vehicle_enc_7 is defined ? variables.trappings_vehicle_enc_7 }}"  class="form-control"  id="trappings_vehicle_enc_7" name="trappings_vehicle_enc_7" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_critical_failure_7" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 7</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_7" name="magic_critical_failure_7" rows="3" placeholder="">{{ variables.magic_critical_failure_7 is defined ? variables.magic_critical_failure_7 }}</textarea>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -1973,6 +2050,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_critical_failure_8" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 8</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_8" name="magic_critical_failure_8" rows="3" placeholder="">{{ variables.magic_critical_failure_8 is defined ? variables.magic_critical_failure_8 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_eye_color" class="col-sm-2 control-label">
                 <h4 class="header-title">personal eye color</h4>
             </label>
@@ -2143,6 +2231,17 @@
             </label>
             <div class="col-sm-12">
                 <input  value="{{ variables.trappings_vehicle_enc_9 is defined ? variables.trappings_vehicle_enc_9 }}"  class="form-control"  id="trappings_vehicle_enc_9" name="trappings_vehicle_enc_9" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_critical_failure_9" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 9</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_9" name="magic_critical_failure_9" rows="3" placeholder="">{{ variables.magic_critical_failure_9 is defined ? variables.magic_critical_failure_9 }}</textarea>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -2330,6 +2429,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_critical_failure_10" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 10</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_10" name="magic_critical_failure_10" rows="3" placeholder="">{{ variables.magic_critical_failure_10 is defined ? variables.magic_critical_failure_10 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_season_of_birth" class="col-sm-2 control-label">
                 <h4 class="header-title">personal season of birth</h4>
             </label>
@@ -2456,6 +2566,17 @@
             </label>
             <div class="col-sm-12">
                 <input  value="{{ variables.trappings_enc_11 is defined ? variables.trappings_enc_11 }}"  class="form-control"  id="trappings_enc_11" name="trappings_enc_11" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_critical_failure_11" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 11</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_11" name="magic_critical_failure_11" rows="3" placeholder="">{{ variables.magic_critical_failure_11 is defined ? variables.magic_critical_failure_11 }}</textarea>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -2594,6 +2715,28 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="personal_distinguishing_marks_number" class="col-sm-2 control-label">
+                <h4 class="header-title">personal distinguishing marks number</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.personal_distinguishing_marks_number is defined ? variables.personal_distinguishing_marks_number }}"  class="form-control"  id="personal_distinguishing_marks_number" name="personal_distinguishing_marks_number" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_critical_failure_12" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 12</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_12" name="magic_critical_failure_12" rows="3" placeholder="">{{ variables.magic_critical_failure_12 is defined ? variables.magic_critical_failure_12 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="skill_agility_stealth_focus" class="col-sm-2 control-label">
                 <h4 class="header-title">skill agility stealth focus</h4>
             </label>
@@ -2709,6 +2852,17 @@
             </label>
             <div class="col-sm-12">
                 <input  value="{{ variables.trappings_enc_13 is defined ? variables.trappings_enc_13 }}"  class="form-control"  id="trappings_enc_13" name="trappings_enc_13" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_critical_failure_13" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 13</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_13" name="magic_critical_failure_13" rows="3" placeholder="">{{ variables.magic_critical_failure_13 is defined ? variables.magic_critical_failure_13 }}</textarea>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -2847,6 +3001,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_critical_failure_14" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 14</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_14" name="magic_critical_failure_14" rows="3" placeholder="">{{ variables.magic_critical_failure_14 is defined ? variables.magic_critical_failure_14 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_fate_points" class="col-sm-2 control-label">
                 <h4 class="header-title">personal fate points</h4>
             </label>
@@ -2973,6 +3138,17 @@
             </label>
             <div class="col-sm-12">
                 <input  value="{{ variables.trappings_enc_15 is defined ? variables.trappings_enc_15 }}"  class="form-control"  id="trappings_enc_15" name="trappings_enc_15" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_critical_failure_15" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 15</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_15" name="magic_critical_failure_15" rows="3" placeholder="">{{ variables.magic_critical_failure_15 is defined ? variables.magic_critical_failure_15 }}</textarea>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -3111,6 +3287,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_critical_failure_16" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 16</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_16" name="magic_critical_failure_16" rows="3" placeholder="">{{ variables.magic_critical_failure_16 is defined ? variables.magic_critical_failure_16 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_disorders_drawbacks" class="col-sm-2 control-label">
                 <h4 class="header-title">personal disorders drawbacks</h4>
             </label>
@@ -3237,6 +3424,17 @@
             </label>
             <div class="col-sm-12">
                 <input  value="{{ variables.trappings_enc_17 is defined ? variables.trappings_enc_17 }}"  class="form-control"  id="trappings_enc_17" name="trappings_enc_17" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_critical_failure_17" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 17</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_17" name="magic_critical_failure_17" rows="3" placeholder="">{{ variables.magic_critical_failure_17 is defined ? variables.magic_critical_failure_17 }}</textarea>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -3380,6 +3578,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_critical_failure_18" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 18</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_18" name="magic_critical_failure_18" rows="3" placeholder="">{{ variables.magic_critical_failure_18 is defined ? variables.magic_critical_failure_18 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="difficulty_rating_trivial" class="col-sm-2 control-label">
                 <h4 class="header-title">difficulty rating trivial</h4>
             </label>
@@ -3501,6 +3710,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_critical_failure_19" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 19</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_19" name="magic_critical_failure_19" rows="3" placeholder="">{{ variables.magic_critical_failure_19 is defined ? variables.magic_critical_failure_19 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="difficulty_rating_easy" class="col-sm-2 control-label">
                 <h4 class="header-title">difficulty rating easy</h4>
             </label>
@@ -3616,6 +3836,28 @@
             </label>
             <div class="col-sm-12">
                 <input  value="{{ variables.trappings_enc_20 is defined ? variables.trappings_enc_20 }}"  class="form-control"  id="trappings_enc_20" name="trappings_enc_20" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="personal_pronoun" class="col-sm-2 control-label">
+                <h4 class="header-title">personal pronoun</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.personal_pronoun is defined ? variables.personal_pronoun }}"  class="form-control mention" id="personal_pronoun" name="personal_pronoun" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_critical_failure_20" class="col-sm-2 control-label">
+                <h4 class="header-title">magic critical failure 20</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="magic_critical_failure_20" name="magic_critical_failure_20" rows="3" placeholder="">{{ variables.magic_critical_failure_20 is defined ? variables.magic_critical_failure_20 }}</textarea>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -5349,6 +5591,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="alignment_permnanent_order_ranks" class="col-sm-2 control-label">
+                <h4 class="header-title">alignment permnanent order ranks</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.alignment_permnanent_order_ranks is defined ? variables.alignment_permnanent_order_ranks }}"  class="form-control"  id="alignment_permnanent_order_ranks" name="alignment_permnanent_order_ranks" placeholder="0" type="number"  9 />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="skill_agility_stealth_30" class="col-sm-2 control-label">
                 <h4 class="header-title">skill agility stealth 30</h4>
             </label>
@@ -5610,6 +5863,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="attirubte_combat_bonus_final" class="col-sm-2 control-label">
+                <h4 class="header-title">attirubte combat bonus final</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.attirubte_combat_bonus_final is defined ? variables.attirubte_combat_bonus_final }}"  class="form-control"  id="attirubte_combat_bonus_final" name="attirubte_combat_bonus_final" placeholder="0" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="attribute_perception" class="col-sm-2 control-label">
                 <h4 class="header-title">attribute perception</h4>
             </label>
@@ -5731,6 +5995,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="attribute_brawn_bonus_final" class="col-sm-2 control-label">
+                <h4 class="header-title">attribute brawn bonus final</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.attribute_brawn_bonus_final is defined ? variables.attribute_brawn_bonus_final }}"  class="form-control"  id="attribute_brawn_bonus_final" name="attribute_brawn_bonus_final" placeholder="0" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="skill_perception_scrutinize_20" class="col-sm-2 control-label">
                 <h4 class="header-title">skill perception scrutinize 20</h4>
             </label>
@@ -5835,6 +6110,17 @@
             </label>
             <div class="col-sm-12">
                 <textarea   class="form-control mention"  id="ritual_name_7" name="ritual_name_7" rows="3" placeholder="">{{ variables.ritual_name_7 is defined ? variables.ritual_name_7 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="attribute_agility_bonus_final" class="col-sm-2 control-label">
+                <h4 class="header-title">attribute agility bonus final</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.attribute_agility_bonus_final is defined ? variables.attribute_agility_bonus_final }}"  class="form-control"  id="attribute_agility_bonus_final" name="attribute_agility_bonus_final" placeholder="0" type="number"   />
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -5962,6 +6248,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="attribute_perception_bonus_final" class="col-sm-2 control-label">
+                <h4 class="header-title">attribute perception bonus final</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.attribute_perception_bonus_final is defined ? variables.attribute_perception_bonus_final }}"  class="form-control"  id="attribute_perception_bonus_final" name="attribute_perception_bonus_final" placeholder="0" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="skill_intelligence_alchemy_20" class="col-sm-2 control-label">
                 <h4 class="header-title">skill intelligence alchemy 20</h4>
             </label>
@@ -6066,6 +6363,17 @@
             </label>
             <div class="col-sm-12">
                 <textarea   class="form-control mention"  id="ritual_consequences_7" name="ritual_consequences_7" rows="3" placeholder="">{{ variables.ritual_consequences_7 is defined ? variables.ritual_consequences_7 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="attribute_intelligence_bonus_final" class="col-sm-2 control-label">
+                <h4 class="header-title">attribute intelligence bonus final</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.attribute_intelligence_bonus_final is defined ? variables.attribute_intelligence_bonus_final }}"  class="form-control"  id="attribute_intelligence_bonus_final" name="attribute_intelligence_bonus_final" placeholder="0" type="number"   />
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -6193,6 +6501,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="attribute_willpower_bonus_final" class="col-sm-2 control-label">
+                <h4 class="header-title">attribute willpower bonus final</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.attribute_willpower_bonus_final is defined ? variables.attribute_willpower_bonus_final }}"  class="form-control"  id="attribute_willpower_bonus_final" name="attribute_willpower_bonus_final" placeholder="0" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="skill_intelligence_education_20" class="col-sm-2 control-label">
                 <h4 class="header-title">skill intelligence education 20</h4>
             </label>
@@ -6286,6 +6605,17 @@
             </label>
             <div class="col-sm-12">
                 <textarea   class="form-control mention"  id="ritual_channel_power_8" name="ritual_channel_power_8" rows="3" placeholder="">{{ variables.ritual_channel_power_8 is defined ? variables.ritual_channel_power_8 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="attribute_fellowship_bonus_final" class="col-sm-2 control-label">
+                <h4 class="header-title">attribute fellowship bonus final</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.attribute_fellowship_bonus_final is defined ? variables.attribute_fellowship_bonus_final }}"  class="form-control"  id="attribute_fellowship_bonus_final" name="attribute_fellowship_bonus_final" placeholder="0" type="number"   />
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -8023,7 +8353,7 @@
                 <h4 class="header-title">wealth trinkets</h4>
             </label>
             <div class="col-sm-12">
-                <input  value="{{ variables.wealth_trinkets is defined ? variables.wealth_trinkets }}"  class="form-control mention" id="wealth_trinkets" name="wealth_trinkets" placeholder="" type="text" />
+                <textarea   class="form-control mention"  id="wealth_trinkets" name="wealth_trinkets" rows="3" placeholder="">{{ variables.wealth_trinkets is defined ? variables.wealth_trinkets }}</textarea>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -8899,6 +9229,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="peril_threshold_6" class="col-sm-2 control-label">
+                <h4 class="header-title">peril threshold 6</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.peril_threshold_6 is defined ? variables.peril_threshold_6 }}"  class="form-control"  id="peril_threshold_6" name="peril_threshold_6" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="profession_intermediate_bonus_advance6" class="col-sm-2 control-label">
                 <h4 class="header-title">profession intermediate bonus advance_6</h4>
             </label>
@@ -8910,11 +9251,33 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="peril_threshold_12" class="col-sm-2 control-label">
+                <h4 class="header-title">peril threshold 12</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.peril_threshold_12 is defined ? variables.peril_threshold_12 }}"  class="form-control"  id="peril_threshold_12" name="peril_threshold_12" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="profession_intermediate_bonus_advance_checkbox_6" class="col-sm-2 control-label">
                 <h4 class="header-title">profession intermediate bonus advance checkbox 6</h4>
             </label>
             <div class="col-sm-12"><label for="profession_intermediate_bonus_advance_checkbox_6" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_6 is defined and variables.profession_intermediate_bonus_advance_checkbox_6 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_6" name="profession_intermediate_bonus_advance_checkbox_6" placeholder="" type="checkbox" /> profession intermediate bonus advance checkbox 6</label>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="peril_threshold_18" class="col-sm-2 control-label">
+                <h4 class="header-title">peril threshold 18</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.peril_threshold_18 is defined ? variables.peril_threshold_18 }}"  class="form-control"  id="peril_threshold_18" name="peril_threshold_18" placeholder="" type="number"   />
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -9152,11 +9515,33 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="trait_name_11" class="col-sm-2 control-label">
+                <h4 class="header-title">trait name 11</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trait_name_11 is defined ? variables.trait_name_11 }}"  class="form-control mention" id="trait_name_11" name="trait_name_11" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="profession_advanced_skill_rank_checkbox_7" class="col-sm-2 control-label">
                 <h4 class="header-title">profession advanced skill rank checkbox 7</h4>
             </label>
             <div class="col-sm-12"><label for="profession_advanced_skill_rank_checkbox_7" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_7 is defined and variables.profession_advanced_skill_rank_checkbox_7 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_7" name="profession_advanced_skill_rank_checkbox_7" placeholder="" type="checkbox" /> profession advanced skill rank checkbox 7</label>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trait_description_11" class="col-sm-2 control-label">
+                <h4 class="header-title">trait description 11</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="trait_description_11" name="trait_description_11" rows="3" placeholder="">{{ variables.trait_description_11 is defined ? variables.trait_description_11 }}</textarea>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -9174,11 +9559,33 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="trait_name_12" class="col-sm-2 control-label">
+                <h4 class="header-title">trait name 12</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trait_name_12 is defined ? variables.trait_name_12 }}"  class="form-control mention" id="trait_name_12" name="trait_name_12" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="profession_advanced_skill_rank_checkbox_8" class="col-sm-2 control-label">
                 <h4 class="header-title">profession advanced skill rank checkbox 8</h4>
             </label>
             <div class="col-sm-12"><label for="profession_advanced_skill_rank_checkbox_8" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_8 is defined and variables.profession_advanced_skill_rank_checkbox_8 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_8" name="profession_advanced_skill_rank_checkbox_8" placeholder="" type="checkbox" /> profession advanced skill rank checkbox 8</label>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trait_description_12" class="col-sm-2 control-label">
+                <h4 class="header-title">trait description 12</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="trait_description_12" name="trait_description_12" rows="3" placeholder="">{{ variables.trait_description_12 is defined ? variables.trait_description_12 }}</textarea>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -9196,11 +9603,33 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="trait_name_13" class="col-sm-2 control-label">
+                <h4 class="header-title">trait name 13</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trait_name_13 is defined ? variables.trait_name_13 }}"  class="form-control mention" id="trait_name_13" name="trait_name_13" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="profession_advanced_skill_rank_checkbox_9" class="col-sm-2 control-label">
                 <h4 class="header-title">profession advanced skill rank checkbox 9</h4>
             </label>
             <div class="col-sm-12"><label for="profession_advanced_skill_rank_checkbox_9" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_9 is defined and variables.profession_advanced_skill_rank_checkbox_9 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_9" name="profession_advanced_skill_rank_checkbox_9" placeholder="" type="checkbox" /> profession advanced skill rank checkbox 9</label>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trait_description_13" class="col-sm-2 control-label">
+                <h4 class="header-title">trait description 13</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="trait_description_13" name="trait_description_13" rows="3" placeholder="">{{ variables.trait_description_13 is defined ? variables.trait_description_13 }}</textarea>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -9218,11 +9647,33 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="trait_name_14" class="col-sm-2 control-label">
+                <h4 class="header-title">trait name 14</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trait_name_14 is defined ? variables.trait_name_14 }}"  class="form-control mention" id="trait_name_14" name="trait_name_14" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="profession_advanced_skill_rank_checkbox_10" class="col-sm-2 control-label">
                 <h4 class="header-title">profession advanced skill rank checkbox 10</h4>
             </label>
             <div class="col-sm-12"><label for="profession_advanced_skill_rank_checkbox_10" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_10 is defined and variables.profession_advanced_skill_rank_checkbox_10 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_10" name="profession_advanced_skill_rank_checkbox_10" placeholder="" type="checkbox" /> profession advanced skill rank checkbox 10</label>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trait_description_14" class="col-sm-2 control-label">
+                <h4 class="header-title">trait description 14</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea   class="form-control mention"  id="trait_description_14" name="trait_description_14" rows="3" placeholder="">{{ variables.trait_description_14 is defined ? variables.trait_description_14 }}</textarea>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -9273,11 +9724,33 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="movement_current" class="col-sm-2 control-label">
+                <h4 class="header-title">movement current</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.movement_current is defined ? variables.movement_current }}"  class="form-control"  id="movement_current" name="movement_current" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="profession_advanced_bonus_advance_2" class="col-sm-2 control-label">
                 <h4 class="header-title">profession advanced bonus advance 2</h4>
             </label>
             <div class="col-sm-12">
                 <input  value="{{ variables.profession_advanced_bonus_advance_2 is defined ? variables.profession_advanced_bonus_advance_2 }}"  class="form-control mention" id="profession_advanced_bonus_advance_2" name="profession_advanced_bonus_advance_2" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="movement_overage" class="col-sm-2 control-label">
+                <h4 class="header-title">movement overage</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.movement_overage is defined ? variables.movement_overage }}"  class="form-control"  id="movement_overage" name="movement_overage" placeholder="" type="number"   />
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -9306,6 +9779,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="damage_threshold_6" class="col-sm-2 control-label">
+                <h4 class="header-title">damage threshold 6</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.damage_threshold_6 is defined ? variables.damage_threshold_6 }}"  class="form-control"  id="damage_threshold_6" name="damage_threshold_6" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="profession_advanced_bonus_advance_checkbox_3" class="col-sm-2 control-label">
                 <h4 class="header-title">profession advanced bonus advance checkbox 3</h4>
             </label>
@@ -9317,11 +9801,33 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="damage_threshold_12" class="col-sm-2 control-label">
+                <h4 class="header-title">damage threshold 12</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.damage_threshold_12 is defined ? variables.damage_threshold_12 }}"  class="form-control"  id="damage_threshold_12" name="damage_threshold_12" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="profession_advanced_bonus_advance_4" class="col-sm-2 control-label">
                 <h4 class="header-title">profession advanced bonus advance 4</h4>
             </label>
             <div class="col-sm-12">
                 <input  value="{{ variables.profession_advanced_bonus_advance_4 is defined ? variables.profession_advanced_bonus_advance_4 }}"  class="form-control mention" id="profession_advanced_bonus_advance_4" name="profession_advanced_bonus_advance_4" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="damage_threshold_18" class="col-sm-2 control-label">
+                <h4 class="header-title">damage threshold 18</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.damage_threshold_18 is defined ? variables.damage_threshold_18 }}"  class="form-control"  id="damage_threshold_18" name="damage_threshold_18" placeholder="" type="number"   />
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -9350,11 +9856,33 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="dodge_coordination" class="col-sm-2 control-label">
+                <h4 class="header-title">dodge coordination</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.dodge_coordination is defined ? variables.dodge_coordination }}"  class="form-control"  id="dodge_coordination" name="dodge_coordination" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="profession_advanced_bonus_advance_checkbox_5" class="col-sm-2 control-label">
                 <h4 class="header-title">profession advanced bonus advance checkbox 5</h4>
             </label>
             <div class="col-sm-12"><label for="profession_advanced_bonus_advance_checkbox_5" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_5 is defined and variables.profession_advanced_bonus_advance_checkbox_5 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_5" name="profession_advanced_bonus_advance_checkbox_5" placeholder="" type="checkbox" /> profession advanced bonus advance checkbox 5</label>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="dodge_guile" class="col-sm-2 control-label">
+                <h4 class="header-title">dodge guile</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.dodge_guile is defined ? variables.dodge_guile }}"  class="form-control"  id="dodge_guile" name="dodge_guile" placeholder="" type="number"   />
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -9372,11 +9900,33 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="dodge_drive" class="col-sm-2 control-label">
+                <h4 class="header-title">dodge drive</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.dodge_drive is defined ? variables.dodge_drive }}"  class="form-control"  id="dodge_drive" name="dodge_drive" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="profession_advanced_bonus_advance_checkbox_6" class="col-sm-2 control-label">
                 <h4 class="header-title">profession advanced bonus advance checkbox 6</h4>
             </label>
             <div class="col-sm-12"><label for="profession_advanced_bonus_advance_checkbox_6" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_6 is defined and variables.profession_advanced_bonus_advance_checkbox_6 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_6" name="profession_advanced_bonus_advance_checkbox_6" placeholder="" type="checkbox" /> profession advanced bonus advance checkbox 6</label>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="dodge_ride" class="col-sm-2 control-label">
+                <h4 class="header-title">dodge ride</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.dodge_ride is defined ? variables.dodge_ride }}"  class="form-control"  id="dodge_ride" name="dodge_ride" placeholder="" type="number"   />
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -9394,11 +9944,33 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="parry_simple_melee" class="col-sm-2 control-label">
+                <h4 class="header-title">parry simple melee</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.parry_simple_melee is defined ? variables.parry_simple_melee }}"  class="form-control"  id="parry_simple_melee" name="parry_simple_melee" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="profession_advanced_bonus_advance_checkbox_7" class="col-sm-2 control-label">
                 <h4 class="header-title">profession advanced bonus advance checkbox 7</h4>
             </label>
             <div class="col-sm-12"><label for="profession_advanced_bonus_advance_checkbox_7" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_7 is defined and variables.profession_advanced_bonus_advance_checkbox_7 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_7" name="profession_advanced_bonus_advance_checkbox_7" placeholder="" type="checkbox" /> profession advanced bonus advance checkbox 7</label>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="parry_martial_melee" class="col-sm-2 control-label">
+                <h4 class="header-title">parry martial melee</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.parry_martial_melee is defined ? variables.parry_martial_melee }}"  class="form-control"  id="parry_martial_melee" name="parry_martial_melee" placeholder="" type="number"   />
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -9416,6 +9988,17 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="parry_guile" class="col-sm-2 control-label">
+                <h4 class="header-title">parry guile</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.parry_guile is defined ? variables.parry_guile }}"  class="form-control"  id="parry_guile" name="parry_guile" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="profession_advanced_talent_checkbox_1" class="col-sm-2 control-label">
                 <h4 class="header-title">profession advanced talent checkbox 1</h4>
             </label>
@@ -9427,11 +10010,33 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="parry_charm" class="col-sm-2 control-label">
+                <h4 class="header-title">parry charm</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.parry_charm is defined ? variables.parry_charm }}"  class="form-control"  id="parry_charm" name="parry_charm" placeholder="" type="number"   />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="profession_advanced_talent_2" class="col-sm-2 control-label">
                 <h4 class="header-title">profession advanced talent 2</h4>
             </label>
             <div class="col-sm-12">
                 <input  value="{{ variables.profession_advanced_talent_2 is defined ? variables.profession_advanced_talent_2 }}"  class="form-control mention" id="profession_advanced_talent_2" name="profession_advanced_talent_2" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="parry_incantation" class="col-sm-2 control-label">
+                <h4 class="header-title">parry incantation</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.parry_incantation is defined ? variables.parry_incantation }}"  class="form-control"  id="parry_incantation" name="parry_incantation" placeholder="" type="number"   />
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -9476,6 +10081,237 @@
             </label>
             <div class="col-sm-12">
                 <textarea   class="form-control mention"  id="character_story" name="character_story" rows="3" placeholder="">{{ variables.character_story is defined ? variables.character_story }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_1" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 1</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_1 is defined ? variables.trappings_desc_1 }}"  class="form-control mention" id="trappings_desc_1" name="trappings_desc_1" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_2" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 2</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_2 is defined ? variables.trappings_desc_2 }}"  class="form-control mention" id="trappings_desc_2" name="trappings_desc_2" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_3" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 3</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_3 is defined ? variables.trappings_desc_3 }}"  class="form-control mention" id="trappings_desc_3" name="trappings_desc_3" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_4" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 4</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_4 is defined ? variables.trappings_desc_4 }}"  class="form-control mention" id="trappings_desc_4" name="trappings_desc_4" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_5" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 5</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_5 is defined ? variables.trappings_desc_5 }}"  class="form-control mention" id="trappings_desc_5" name="trappings_desc_5" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_6" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 6</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_6 is defined ? variables.trappings_desc_6 }}"  class="form-control mention" id="trappings_desc_6" name="trappings_desc_6" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_7" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 7</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_7 is defined ? variables.trappings_desc_7 }}"  class="form-control mention" id="trappings_desc_7" name="trappings_desc_7" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_8" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 8</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_8 is defined ? variables.trappings_desc_8 }}"  class="form-control mention" id="trappings_desc_8" name="trappings_desc_8" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_9" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 9</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_9 is defined ? variables.trappings_desc_9 }}"  class="form-control mention" id="trappings_desc_9" name="trappings_desc_9" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_10" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 10</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_10 is defined ? variables.trappings_desc_10 }}"  class="form-control mention" id="trappings_desc_10" name="trappings_desc_10" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_11" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 11</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_11 is defined ? variables.trappings_desc_11 }}"  class="form-control mention" id="trappings_desc_11" name="trappings_desc_11" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_12" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 12</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_12 is defined ? variables.trappings_desc_12 }}"  class="form-control mention" id="trappings_desc_12" name="trappings_desc_12" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_13" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 13</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_13 is defined ? variables.trappings_desc_13 }}"  class="form-control mention" id="trappings_desc_13" name="trappings_desc_13" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_14" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 14</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_14 is defined ? variables.trappings_desc_14 }}"  class="form-control mention" id="trappings_desc_14" name="trappings_desc_14" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_15" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 15</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_15 is defined ? variables.trappings_desc_15 }}"  class="form-control mention" id="trappings_desc_15" name="trappings_desc_15" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_16" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 16</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_16 is defined ? variables.trappings_desc_16 }}"  class="form-control mention" id="trappings_desc_16" name="trappings_desc_16" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_17" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 17</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_17 is defined ? variables.trappings_desc_17 }}"  class="form-control mention" id="trappings_desc_17" name="trappings_desc_17" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_18" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 18</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_18 is defined ? variables.trappings_desc_18 }}"  class="form-control mention" id="trappings_desc_18" name="trappings_desc_18" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_19" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 19</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_19 is defined ? variables.trappings_desc_19 }}"  class="form-control mention" id="trappings_desc_19" name="trappings_desc_19" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="trappings_desc_20" class="col-sm-2 control-label">
+                <h4 class="header-title">trappings desc 20</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.trappings_desc_20 is defined ? variables.trappings_desc_20 }}"  class="form-control mention" id="trappings_desc_20" name="trappings_desc_20" placeholder="" type="text" />
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="language_native" class="col-sm-2 control-label">
+                <h4 class="header-title">language native</h4>
+            </label>
+            <div class="col-sm-12">
+                <input  value="{{ variables.language_native is defined ? variables.language_native }}"  class="form-control mention" id="language_native" name="language_native" placeholder="" type="text" />
                 <p class="description form-control-description"></p>
             </div>
         </div>
