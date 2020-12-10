@@ -1608,296 +1608,754 @@
                     &nbsp;<span>{% if variables.magic_source_type != "divine" %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</span>
                     <span>Divine</span>
                 </div>
-        </div>
-        {% if variables.option_toggle_magic is defined and variables.option_toggle_magic == 1 %}
-        <div class="row card">
-            <div class="col-sm-12">
-                <div class="row card-title">
-                    <div class="col-sm-2"><h5>Spell Name</h5></div>
-                    <div class="col-sm-1"><h5>Type</h5></div>
-                    <div class="col-sm-2"><h5>Reagents</h5></div>
-                    <div class="col-sm-1"><h5>Distance</h5></div>
-                    <div class="col-sm-1"><h5>Duration</h5></div>
-                    <div class="col-sm-1"><h5>Effect</h5></div>
-                    <div class="col-sm-2"><h5>Critical Success</h5></div>
-                    <div class="col-sm-2"><h5>Critical Failure</h5></div>
-                </div>
-                <div class="row">
-                </div>
-                <div class="row">
-                    <div class="col-sm-2"><input  value="{{ variables.magic_name_1 is defined ? variables.magic_name_1 }}"  class="form-control" id="magic_name_1" name="magic_name_1" placeholder="" type="text" /></div>
-                    <div class="col-sm-1">
-                        <select   class="form-control"  id="magic_difficulty_1" name="magic_difficulty_1">
-                            <option value="Petty" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                            <option value="Lesser" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                            <option value="Greater" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                        </select>
-                    </div>
-                    <div class="col-sm-2"><input  value="{{ variables.magic_reagent_1 is defined ? variables.magic_reagent_1 }}"  class="form-control" id="magic_reagent_1" name="magic_reagent_1" placeholder="" type="text" /></div>
-                    <div class="col-sm-1"><input  value="{{ variables.magic_distance_1 is defined ? variables.magic_distance_1 }}"  class="form-control" id="magic_distance_1" name="magic_distance_1" placeholder="" type="text" /></div>
-                    <div class="col-sm-1"><input  value="{{ variables.magic_duration_1 is defined ? variables.magic_duration_1 }}"  class="form-control" id="magic_duration_1" name="magic_duration_1" placeholder="" type="text" /></div>
-                    <div class="col-sm-1"><input  value="{{ variables.magic_effect_1 is defined ? variables.magic_effect_1 }}"  class="form-control" id="magic_effect_1" name="magic_effect_1" placeholder="" type="text" /></div>
-                    <div class="col-sm-2"><input  value="{{ variables.magic_critical_success_1 is defined ? variables.magic_critical_success_1 }}"  class="form-control" id="magic_critical_success_1" name="magic_critical_success_1" placeholder="" type="text" /></div>
-                    <div class="col-sm-2"><input  value="{{ variables.magic_critical_failure_1 is defined ? variables.magic_critical_failure_1 }}"  class="form-control" id="magic_critical_failure_1" name="magic_critical_failure_1" placeholder="" type="text" /></div>
-                </div>
-                <!-- go until 20!!!! -->
             </div>
-        </div>
-    <!-- magic sidebar -->
-        <!-- <div class="col-sm-9 border"></div>
-        <div class="col-sm-2 border">
-            <div class="row">
+            {% if variables.option_toggle_magic is defined and variables.option_toggle_magic == 1 %}
+            <div class="row card">
+                <div class="col-sm-12 card-title"><h5>Spells</h5></div>
+            </div>
+            <div class="row card">
                 <div class="col-sm-12">
                     <div class="row">
-                        <div class="col-sm-12">Magic Type</div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_1 is defined ? variables.magic_name_1 }}"  class="form-control" id="magic_name_1" name="magic_name_1" placeholder="Spell Name #1" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_1" name="magic_difficulty_1">
+                                <option value="Generalist" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_1 is defined ? variables.magic_reagent_1 }}"  class="form-control" id="magic_reagent_1" name="magic_reagent_1" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_1 is defined ? variables.magic_distance_1 }}"  class="form-control" id="magic_distance_1" name="magic_distance_1" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_1 is defined ? variables.magic_duration_1 }}"  class="form-control" id="magic_duration_1" name="magic_duration_1" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_1 is defined ? variables.magic_effect_1 }}"  class="form-control" id="magic_effect_1" name="magic_effect_1" placeholder="Effect" type="text" /></div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-1"><span>{% if variables.magic_source_type != "arcane" %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</div>
-                        <div class="col-sm-11">Arcane</div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_1 is defined ? variables.magic_critical_success_1 }}"  class="form-control" id="magic_critical_success_1" name="magic_critical_success_1" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_1 is defined ? variables.magic_critical_failure_1 }}"  class="form-control" id="magic_critical_failure_1" name="magic_critical_failure_1" placeholder="Critical Failure" type="text" /></div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-1"><span>{% if variables.magic_source_type != "covenant" %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</div>
-                        <div class="col-sm-11">Covenant</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-1"><span>{% if variables.magic_source_type != "divine" %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</div>
-                        <div class="col-sm-11">Divine</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-11">Incantation</div>
-                    <div class="col-sm-1">{{ skill_willpower_incantation_value}}</div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-11">Intelligence Bonus [IB]</div>
-                    <div class="col-sm-1">{{ attribute_intelligence_bonus_final}}</div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-11">Willpower Bonus [WB]</div>
-                    <div class="col-sm-1">{{ attribute_willpower_bonus_final}}</div>
                 </div>
             </div>
-        </div>
-    </div> -->
-    {% endif %} 
-    <!-- end of spells tab-->
-    <!-- TAB: Rituals -->
-    {% if variables.option_toggle_rituals is defined and variables.option_toggle_rituals == 1 %} 
-    <div class="row card">
-        <div class="col-sm-12">
-            <div class="row"><div class="col-sm-12 card-title"><h5>Rituals</h5></div></div>
-            <div class="row">
+            <div class="row card">
                 <div class="col-sm-12">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Ritual Name</th>
-                                <th>Casting Time</th>
-                                <th>Reagents</th>
-                                <th>Condition</th>
-                                <th>Channel Power</th>
-                                <th>Difficulty Rating</th>
-                                <th>Consequences</th>
-                                <th>Ritual Effects</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% if variables.ritual_name_1 is defined and variables.ritual_name_1 != "" %}
-                            <tr>
-                                <td>{{ variables.ritual_name_1}}</td>
-                                <td>{{ variables.ritual_casting_time_1}}</td>
-                                <td>{{ variables.ritual_reagents_1}}</td>
-                                <td>{{ variables.ritual_conidition_1}}</td>
-                                <td>{{ variables.ritual_channel_power_1}}</td>
-                                <td>{{ variables.ritual_difficulty_rating_1}}</td>
-                                <td>{{ variables.ritual_consequences_1}}</td>
-                                <td>{{ variables.ritual_effects_1}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.ritual_name_2 is defined and variables.ritual_name_2 != "" %}
-                            <tr>
-                                <td>{{ variables.ritual_name_2}}</td>
-                                <td>{{ variables.ritual_casting_time_2}}</td>
-                                <td>{{ variables.ritual_reagents_2}}</td>
-                                <td>{{ variables.ritual_conidition_2}}</td>
-                                <td>{{ variables.ritual_channel_power_2}}</td>
-                                <td>{{ variables.ritual_difficulty_rating_2}}</td>
-                                <td>{{ variables.ritual_consequences_2}}</td>
-                                <td>{{ variables.ritual_effects_2}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.ritual_name_3 is defined and variables.ritual_name_3 != "" %}
-                            <tr>
-                                <td>{{ variables.ritual_name_3}}</td>
-                                <td>{{ variables.ritual_casting_time_3}}</td>
-                                <td>{{ variables.ritual_reagents_3}}</td>
-                                <td>{{ variables.ritual_conidition_3}}</td>
-                                <td>{{ variables.ritual_channel_power_3}}</td>
-                                <td>{{ variables.ritual_difficulty_rating_3}}</td>
-                                <td>{{ variables.ritual_consequences_3}}</td>
-                                <td>{{ variables.ritual_effects_3}}</td>
-                            {% endif %}
-                            {% if variables.ritual_name_4 is defined and variables.ritual_name_4 != "" %}
-                            </tr>
-                            <tr>
-                                <td>{{ variables.ritual_name_4}}</td>
-                                <td>{{ variables.ritual_casting_time_4}}</td>
-                                <td>{{ variables.ritual_reagents_4}}</td>
-                                <td>{{ variables.ritual_conidition_4}}</td>
-                                <td>{{ variables.ritual_channel_power_4}}</td>
-                                <td>{{ variables.ritual_difficulty_rating_4}}</td>
-                                <td>{{ variables.ritual_consequences_4}}</td>
-                                <td>{{ variables.ritual_effects_4}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.ritual_name_5 is defined and variables.ritual_name_5 != "" %}
-                            <tr>
-                                <td>{{ variables.ritual_name_5}}</td>
-                                <td>{{ variables.ritual_casting_time_5}}</td>
-                                <td>{{ variables.ritual_reagents_5}}</td>
-                                <td>{{ variables.ritual_conidition_5}}</td>
-                                <td>{{ variables.ritual_channel_power_5}}</td>
-                                <td>{{ variables.ritual_difficulty_rating_5}}</td>
-                                <td>{{ variables.ritual_consequences_5}}</td>
-                                <td>{{ variables.ritual_effects_5}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.ritual_name_6 is defined and variables.ritual_name_6 != "" %}
-                            <tr>
-                                <td>{{ variables.ritual_name_6}}</td>
-                                <td>{{ variables.ritual_casting_time_6}}</td>
-                                <td>{{ variables.ritual_reagents_6}}</td>
-                                <td>{{ variables.ritual_conidition_6}}</td>
-                                <td>{{ variables.ritual_channel_power_6}}</td>
-                                <td>{{ variables.ritual_difficulty_rating_6}}</td>
-                                <td>{{ variables.ritual_consequences_6}}</td>
-                                <td>{{ variables.ritual_effects_6}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.ritual_name_7 is defined and variables.ritual_name_7 != "" %}
-                            <tr>
-                                <td>{{ variables.ritual_name_7}}</td>
-                                <td>{{ variables.ritual_casting_time_7}}</td>}
-                                <td>{{ variables.ritual_reagents_7}}</td>
-                                <td>{{ variables.ritual_conidition_7}}</td>
-                                <td>{{ variables.ritual_channel_power_7}}</td>
-                                <td>{{ variables.ritual_difficulty_rating_7}}</td>
-                                <td>{{ variables.ritual_consequences_7}}</td>
-                                <td>{{ variables.ritual_effects_7}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.ritual_name_8 is defined and variables.ritual_name_8 != "" %}
-                            <tr>
-                                <td>{{ variables.ritual_name_8}}</td>
-                                <td>{{ variables.ritual_casting_time_8}}</td>
-                                <td>{{ variables.ritual_reagents_8}}</td>
-                                <td>{{ variables.ritual_conidition_8}}</td>
-                                <td>{{ variables.ritual_channel_power_8}}</td>
-                                <td>{{ variables.ritual_difficulty_rating_8}}</td>
-                                <td>{{ variables.ritual_consequences_8}}</td>
-                                <td>{{ variables.ritual_effects_8}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.ritual_name_9 is defined and variables.ritual_name_9 != "" %}
-                                <td>{{ variables.ritual_name_9}}</td>
-                                <td>{{ variables.ritual_casting_time_9}}</td>
-                                <td>{{ variables.ritual_reagents_9}}</td>
-                                <td>{{ variables.ritual_conidition_9}}</td>
-                                <td>{{ variables.ritual_channel_power_9}}</td>
-                                <td>{{ variables.ritual_difficulty_rating_9}}</td>
-                                <td>{{ variables.ritual_consequences_9}}</td>
-                                <td>{{ variables.ritual_effects_9}}</td>
-                            </tr>
-                            {% endif %}
-                            {% if variables.ritual_name_10 is defined and variables.ritual_name_10 != "" %}
-                            <tr>
-                                <td>{{ variables.ritual_name_10}}</td>
-                                <td>{{ variables.ritual_casting_time_10}}</td>
-                                <td>{{ variables.ritual_reagents_10}}</td>
-                                <td>{{ variables.ritual_conidition_10}}</td>
-                                <td>{{ variables.ritual_channel_power_10}}</td>
-                                <td>{{ variables.ritual_difficulty_rating_10}}</td>
-                                <td>{{ variables.ritual_consequences_10}}</td>
-                                <td>{{ variables.ritual_effects_10}}</td>
-                            </tr>
-                            {% endif %}
-                        </tbody>
-                    </table>  
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_2 is defined ? variables.magic_name_2 }}"  class="form-control" id="magic_name_2" name="magic_name_2" placeholder="Spell Name #2" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_2" name="magic_difficulty_2">
+                                <option value="Generalist" {% if variables.magic_difficulty_2 is defined and variables.magic_difficulty_2 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_2 is defined and variables.magic_difficulty_2 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_2 is defined and variables.magic_difficulty_2 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_2 is defined and variables.magic_difficulty_2 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_2 is defined ? variables.magic_reagent_2 }}"  class="form-control" id="magic_reagent_2" name="magic_reagent_2" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_2 is defined ? variables.magic_distance_2 }}"  class="form-control" id="magic_distance_2" name="magic_distance_2" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_2 is defined ? variables.magic_duration_2 }}"  class="form-control" id="magic_duration_2" name="magic_duration_2" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_2 is defined ? variables.magic_effect_2 }}"  class="form-control" id="magic_effect_2" name="magic_effect_2" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_2 is defined ? variables.magic_critical_success_2 }}"  class="form-control" id="magic_critical_success_2" name="magic_critical_success_2" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_2 is defined ? variables.magic_critical_failure_2 }}"  class="form-control" id="magic_critical_failure_2" name="magic_critical_failure_2" placeholder="Critical Failure" type="text" /></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    {% endif %}
-	<div class="row card">
-        <div class="col-sm-12 card-title"><h5>Reagents</h5></div>
-        <div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-8">Description</div>
-                <div class="col-sm-2">Qty.</div> 
-                <div class="col-sm-2">Enc.</div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_3 is defined ? variables.magic_name_3 }}"  class="form-control" id="magic_name_3" name="magic_name_3" placeholder="Spell Name #3" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_3" name="magic_difficulty_3">
+                                <option value="Generalist" {% if variables.magic_difficulty_3 is defined and variables.magic_difficulty_3 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_3 is defined and variables.magic_difficulty_3 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_3 is defined and variables.magic_difficulty_3 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_3 is defined and variables.magic_difficulty_3 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_3 is defined ? variables.magic_reagent_3 }}"  class="form-control" id="magic_reagent_3" name="magic_reagent_3" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_3 is defined ? variables.magic_distance_3 }}"  class="form-control" id="magic_distance_3" name="magic_distance_3" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_3 is defined ? variables.magic_duration_3 }}"  class="form-control" id="magic_duration_3" name="magic_duration_3" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_3 is defined ? variables.magic_effect_3 }}"  class="form-control" id="magic_effect_3" name="magic_effect_3" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_3 is defined ? variables.magic_critical_success_3 }}"  class="form-control" id="magic_critical_success_3" name="magic_critical_success_3" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_3 is defined ? variables.magic_critical_failure_3 }}"  class="form-control" id="magic_critical_failure_3" name="magic_critical_failure_3" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-sm-8"><input  value="{{ variables.reagent_name_1 is defined ? variables.reagent_name_1 }}"  class="form-control" id="reagent_name_1" name="reagent_name_1" placeholder="" type="text" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_1 is defined ? variables.reagent_qty_1 }}"  class="form-control"  id="reagent_qty_1" name="reagent_qty_1" placeholder="" type="number"  min="0" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_1 is defined ? variables.reagent_enc_1 }}"  class="form-control"  id="reagent_enc_1" name="reagent_enc_1" placeholder="" type="number" min="0"  /></div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_4 is defined ? variables.magic_name_4 }}"  class="form-control" id="magic_name_4" name="magic_name_4" placeholder="Spell Name #4" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_4" name="magic_difficulty_4">
+                                <option value="Generalist" {% if variables.magic_difficulty_4 is defined and variables.magic_difficulty_4 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_4 is defined and variables.magic_difficulty_4 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_4 is defined and variables.magic_difficulty_4 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_4 is defined and variables.magic_difficulty_4 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_4 is defined ? variables.magic_reagent_4 }}"  class="form-control" id="magic_reagent_4" name="magic_reagent_4" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_4 is defined ? variables.magic_distance_4 }}"  class="form-control" id="magic_distance_4" name="magic_distance_4" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_4 is defined ? variables.magic_duration_4 }}"  class="form-control" id="magic_duration_4" name="magic_duration_4" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_4 is defined ? variables.magic_effect_4 }}"  class="form-control" id="magic_effect_4" name="magic_effect_4" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_4 is defined ? variables.magic_critical_success_4 }}"  class="form-control" id="magic_critical_success_4" name="magic_critical_success_4" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_4 is defined ? variables.magic_critical_failure_4 }}"  class="form-control" id="magic_critical_failure_4" name="magic_critical_failure_4" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-sm-8"><input  value="{{ variables.reagent_name_2 is defined ? variables.reagent_name_2 }}"  class="form-control" id="reagent_name_2" name="reagent_name_2" placeholder="" type="text" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_2 is defined ? variables.reagent_qty_2 }}"  class="form-control"  id="reagent_qty_2" name="reagent_qty_2" placeholder="" type="number"  min="0" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_2 is defined ? variables.reagent_enc_2 }}"  class="form-control"  id="reagent_enc_2" name="reagent_enc_3" placeholder="" type="number" min="0"  /></div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_5 is defined ? variables.magic_name_5 }}"  class="form-control" id="magic_name_5" name="magic_name_5" placeholder="Spell Name #5" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_5" name="magic_difficulty_5">
+                                <option value="Generalist" {% if variables.magic_difficulty_5 is defined and variables.magic_difficulty_5 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_5 is defined and variables.magic_difficulty_5 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_5 is defined and variables.magic_difficulty_5 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_5 is defined and variables.magic_difficulty_5 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_5 is defined ? variables.magic_reagent_5 }}"  class="form-control" id="magic_reagent_5" name="magic_reagent_5" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_5 is defined ? variables.magic_distance_5 }}"  class="form-control" id="magic_distance_5" name="magic_distance_5" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_5 is defined ? variables.magic_duration_5 }}"  class="form-control" id="magic_duration_5" name="magic_duration_5" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_5 is defined ? variables.magic_effect_5 }}"  class="form-control" id="magic_effect_5" name="magic_effect_5" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_5 is defined ? variables.magic_critical_success_5 }}"  class="form-control" id="magic_critical_success_5" name="magic_critical_success_5" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_5 is defined ? variables.magic_critical_failure_5 }}"  class="form-control" id="magic_critical_failure_5" name="magic_critical_failure_5" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-sm-8"><input  value="{{ variables.reagent_name_3 is defined ? variables.reagent_name_3 }}"  class="form-control" id="reagent_name_3" name="reagent_name_3" placeholder="" type="text" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_3 is defined ? variables.reagent_qty_3 }}"  class="form-control"  id="reagent_qty_3" name="reagent_qty_3" placeholder="" type="number"  min="0" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_3 is defined ? variables.reagent_enc_3 }}"  class="form-control"  id="reagent_enc_3" name="reagent_enc_3" placeholder="" type="number" min="0"  /></div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_6 is defined ? variables.magic_name_6 }}"  class="form-control" id="magic_name_6" name="magic_name_6" placeholder="Spell Name #6" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_6" name="magic_difficulty_6">
+                                <option value="Generalist" {% if variables.magic_difficulty_6 is defined and variables.magic_difficulty_6 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_6 is defined and variables.magic_difficulty_6 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_6 is defined and variables.magic_difficulty_6 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_6 is defined and variables.magic_difficulty_6 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_6 is defined ? variables.magic_reagent_6 }}"  class="form-control" id="magic_reagent_6" name="magic_reagent_6" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_6 is defined ? variables.magic_distance_6 }}"  class="form-control" id="magic_distance_6" name="magic_distance_6" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_6 is defined ? variables.magic_duration_6 }}"  class="form-control" id="magic_duration_6" name="magic_duration_6" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_6 is defined ? variables.magic_effect_6 }}"  class="form-control" id="magic_effect_6" name="magic_effect_6" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_6 is defined ? variables.magic_critical_success_6 }}"  class="form-control" id="magic_critical_success_6" name="magic_critical_success_6" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_6 is defined ? variables.magic_critical_failure_6 }}"  class="form-control" id="magic_critical_failure_6" name="magic_critical_failure_6" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-sm-8"><input  value="{{ variables.reagent_name_4 is defined ? variables.reagent_name_4 }}"  class="form-control" id="reagent_name_4" name="reagent_name_4" placeholder="" type="text" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_4 is defined ? variables.reagent_qty_4 }}"  class="form-control"  id="reagent_qty_4" name="reagent_qty_4" placeholder="" type="number"  min="0" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_4 is defined ? variables.reagent_enc_4 }}"  class="form-control"  id="reagent_enc_4" name="reagent_enc_4" placeholder="" type="number" min="0"  /></div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_7 is defined ? variables.magic_name_7 }}"  class="form-control" id="magic_name_7" name="magic_name_7" placeholder="Spell Name #7" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_7" name="magic_difficulty_7">
+                                <option value="Generalist" {% if variables.magic_difficulty_7 is defined and variables.magic_difficulty_7 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_7 is defined and variables.magic_difficulty_7 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_7 is defined and variables.magic_difficulty_7 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_7 is defined and variables.magic_difficulty_7 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_7 is defined ? variables.magic_reagent_7 }}"  class="form-control" id="magic_reagent_7" name="magic_reagent_7" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_7 is defined ? variables.magic_distance_7 }}"  class="form-control" id="magic_distance_7" name="magic_distance_7" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_7 is defined ? variables.magic_duration_7 }}"  class="form-control" id="magic_duration_7" name="magic_duration_7" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_7 is defined ? variables.magic_effect_7 }}"  class="form-control" id="magic_effect_7" name="magic_effect_7" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_7 is defined ? variables.magic_critical_success_7 }}"  class="form-control" id="magic_critical_success_7" name="magic_critical_success_7" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_7 is defined ? variables.magic_critical_failure_7 }}"  class="form-control" id="magic_critical_failure_7" name="magic_critical_failure_7" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-sm-8"><input  value="{{ variables.reagent_name_5 is defined ? variables.reagent_name_5 }}"  class="form-control" id="reagent_name_5" name="reagent_name_5" placeholder="" type="text" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_5 is defined ? variables.reagent_qty_5 }}"  class="form-control"  id="reagent_qty_5" name="reagent_qty_5" placeholder="" type="number"  min="0" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_5 is defined ? variables.reagent_enc_5 }}"  class="form-control"  id="reagent_enc_5" name="reagent_enc_5" placeholder="" type="number" min="0"  /></div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_8 is defined ? variables.magic_name_8 }}"  class="form-control" id="magic_name_8" name="magic_name_8" placeholder="Spell Name #8" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_8" name="magic_difficulty_8">
+                                <option value="Generalist" {% if variables.magic_difficulty_8 is defined and variables.magic_difficulty_8 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_8 is defined and variables.magic_difficulty_8 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_8 is defined and variables.magic_difficulty_8 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_8 is defined and variables.magic_difficulty_8 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_8 is defined ? variables.magic_reagent_8 }}"  class="form-control" id="magic_reagent_8" name="magic_reagent_8" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_8 is defined ? variables.magic_distance_8 }}"  class="form-control" id="magic_distance_8" name="magic_distance_8" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_8 is defined ? variables.magic_duration_8 }}"  class="form-control" id="magic_duration_8" name="magic_duration_8" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_8 is defined ? variables.magic_effect_8 }}"  class="form-control" id="magic_effect_8" name="magic_effect_8" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_8 is defined ? variables.magic_critical_success_8 }}"  class="form-control" id="magic_critical_success_8" name="magic_critical_success_8" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_8 is defined ? variables.magic_critical_failure_8 }}"  class="form-control" id="magic_critical_failure_8" name="magic_critical_failure_8" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-sm-8"><input  value="{{ variables.reagent_name_6 is defined ? variables.reagent_name_6 }}"  class="form-control" id="reagent_name_6" name="reagent_name_6" placeholder="" type="text" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_6 is defined ? variables.reagent_qty_6 }}"  class="form-control"  id="reagent_qty_6" name="reagent_qty_6" placeholder="" type="number"  min="0" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_6 is defined ? variables.reagent_enc_6 }}"  class="form-control"  id="reagent_enc_6" name="reagent_enc_6" placeholder="" type="number" min="0"  /></div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_9 is defined ? variables.magic_name_9 }}"  class="form-control" id="magic_name_9" name="magic_name_9" placeholder="Spell Name #9" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_9" name="magic_difficulty_9">
+                                <option value="Generalist" {% if variables.magic_difficulty_9 is defined and variables.magic_difficulty_9 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_9 is defined and variables.magic_difficulty_9 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_9 is defined and variables.magic_difficulty_9 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_9 is defined and variables.magic_difficulty_9 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_9 is defined ? variables.magic_reagent_9 }}"  class="form-control" id="magic_reagent_9" name="magic_reagent_9" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_9 is defined ? variables.magic_distance_9 }}"  class="form-control" id="magic_distance_9" name="magic_distance_9" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_9 is defined ? variables.magic_duration_9 }}"  class="form-control" id="magic_duration_9" name="magic_duration_9" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_9 is defined ? variables.magic_effect_9 }}"  class="form-control" id="magic_effect_9" name="magic_effect_9" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_9 is defined ? variables.magic_critical_success_9 }}"  class="form-control" id="magic_critical_success_9" name="magic_critical_success_9" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_9 is defined ? variables.magic_critical_failure_9 }}"  class="form-control" id="magic_critical_failure_9" name="magic_critical_failure_9" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-sm-8"><input  value="{{ variables.reagent_name_7 is defined ? variables.reagent_name_7 }}"  class="form-control" id="reagent_name_7" name="reagent_name_7" placeholder="" type="text" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_7 is defined ? variables.reagent_qty_7 }}"  class="form-control"  id="reagent_qty_7" name="reagent_qty_7" placeholder="" type="number"  min="0" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_7 is defined ? variables.reagent_enc_7 }}"  class="form-control"  id="reagent_enc_7" name="reagent_enc_7" placeholder="" type="number" min="0"  /></div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_10 is defined ? variables.magic_name_10 }}"  class="form-control" id="magic_name_10" name="magic_name_10" placeholder="Spell Name #10" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_10" name="magic_difficulty_10">
+                                <option value="Generalist" {% if variables.magic_difficulty_10 is defined and variables.magic_difficulty_10 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_10 is defined and variables.magic_difficulty_10 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_10 is defined and variables.magic_difficulty_10 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_10 is defined and variables.magic_difficulty_10 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_10 is defined ? variables.magic_reagent_10 }}"  class="form-control" id="magic_reagent_10" name="magic_reagent_10" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_10 is defined ? variables.magic_distance_10 }}"  class="form-control" id="magic_distance_10" name="magic_distance_10" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_10 is defined ? variables.magic_duration_10 }}"  class="form-control" id="magic_duration_10" name="magic_duration_10" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_10 is defined ? variables.magic_effect_10 }}"  class="form-control" id="magic_effect_10" name="magic_effect_10" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_10 is defined ? variables.magic_critical_success_10 }}"  class="form-control" id="magic_critical_success_10" name="magic_critical_success_10" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_10 is defined ? variables.magic_critical_failure_10 }}"  class="form-control" id="magic_critical_failure_10" name="magic_critical_failure_10" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-sm-8"><input  value="{{ variables.reagent_name_8 is defined ? variables.reagent_name_8 }}"  class="form-control" id="reagent_name_8" name="reagent_name_8" placeholder="" type="text" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_8 is defined ? variables.reagent_qty_8 }}"  class="form-control"  id="reagent_qty_8" name="reagent_qty_8" placeholder="" type="number"  min="0" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_8 is defined ? variables.reagent_enc_8 }}"  class="form-control"  id="reagent_enc_8" name="reagent_enc_8" placeholder="" type="number" min="0"  /></div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_11 is defined ? variables.magic_name_11 }}"  class="form-control" id="magic_name_11" name="magic_name_11" placeholder="Spell Name #11" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_11" name="magic_difficulty_11">
+                                <option value="Generalist" {% if variables.magic_difficulty_11 is defined and variables.magic_difficulty_11 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_11 is defined and variables.magic_difficulty_11 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_11 is defined and variables.magic_difficulty_11 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_11 is defined and variables.magic_difficulty_11 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_11 is defined ? variables.magic_reagent_11 }}"  class="form-control" id="magic_reagent_11" name="magic_reagent_11" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_11 is defined ? variables.magic_distance_11 }}"  class="form-control" id="magic_distance_11" name="magic_distance_11" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_11 is defined ? variables.magic_duration_11 }}"  class="form-control" id="magic_duration_11" name="magic_duration_11" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_11 is defined ? variables.magic_effect_11 }}"  class="form-control" id="magic_effect_11" name="magic_effect_11" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_11 is defined ? variables.magic_critical_success_11 }}"  class="form-control" id="magic_critical_success_11" name="magic_critical_success_11" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_11 is defined ? variables.magic_critical_failure_11 }}"  class="form-control" id="magic_critical_failure_11" name="magic_critical_failure_11" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-sm-8"><input  value="{{ variables.reagent_name_9 is defined ? variables.reagent_name_9 }}"  class="form-control" id="reagent_name_9" name="reagent_name_9" placeholder="" type="text" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_9 is defined ? variables.reagent_qty_9 }}"  class="form-control"  id="reagent_qty_9" name="reagent_qty_9" placeholder="" type="number"  min="0" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_9 is defined ? variables.reagent_enc_9 }}"  class="form-control"  id="reagent_enc_9" name="reagent_enc_9" placeholder="" type="number" min="0"  /></div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_12 is defined ? variables.magic_name_12 }}"  class="form-control" id="magic_name_12" name="magic_name_12" placeholder="Spell Name #12" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_12" name="magic_difficulty_12">
+                                <option value="Generalist" {% if variables.magic_difficulty_12 is defined and variables.magic_difficulty_12 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_12 is defined and variables.magic_difficulty_12 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_12 is defined and variables.magic_difficulty_12 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_12 is defined and variables.magic_difficulty_12 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_12 is defined ? variables.magic_reagent_12 }}"  class="form-control" id="magic_reagent_12" name="magic_reagent_12" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_12 is defined ? variables.magic_distance_12 }}"  class="form-control" id="magic_distance_12" name="magic_distance_12" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_12 is defined ? variables.magic_duration_12 }}"  class="form-control" id="magic_duration_12" name="magic_duration_12" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_12 is defined ? variables.magic_effect_12 }}"  class="form-control" id="magic_effect_12" name="magic_effect_12" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_12 is defined ? variables.magic_critical_success_12 }}"  class="form-control" id="magic_critical_success_12" name="magic_critical_success_12" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_12 is defined ? variables.magic_critical_failure_12 }}"  class="form-control" id="magic_critical_failure_12" name="magic_critical_failure_12" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-sm-8"><input  value="{{ variables.reagent_name_10 is defined ? variables.reagent_name_10 }}"  class="form-control" id="reagent_name_10" name="reagent_name_10" placeholder="" type="text" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_qty_10 is defined ? variables.reagent_qty_10 }}"  class="form-control"  id="reagent_qty_10" name="reagent_qty_10" placeholder="" type="number"  min="0" /></div>
-                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_10 is defined ? variables.reagent_enc_10 }}"  class="form-control"  id="reagent_enc_10" name="reagent_enc_10" placeholder="" type="number" min="0"  /></div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_13 is defined ? variables.magic_name_13 }}"  class="form-control" id="magic_name_13" name="magic_name_13" placeholder="Spell Name #13" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_13" name="magic_difficulty_13">
+                                <option value="Generalist" {% if variables.magic_difficulty_13 is defined and variables.magic_difficulty_13 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_13 is defined and variables.magic_difficulty_13 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_13 is defined and variables.magic_difficulty_13 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_13 is defined and variables.magic_difficulty_13 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_13 is defined ? variables.magic_reagent_13 }}"  class="form-control" id="magic_reagent_13" name="magic_reagent_13" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_13 is defined ? variables.magic_distance_13 }}"  class="form-control" id="magic_distance_13" name="magic_distance_13" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_13 is defined ? variables.magic_duration_13 }}"  class="form-control" id="magic_duration_13" name="magic_duration_13" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_13 is defined ? variables.magic_effect_13 }}"  class="form-control" id="magic_effect_13" name="magic_effect_13" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_13 is defined ? variables.magic_critical_success_13 }}"  class="form-control" id="magic_critical_success_13" name="magic_critical_success_13" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_13 is defined ? variables.magic_critical_failure_13 }}"  class="form-control" id="magic_critical_failure_13" name="magic_critical_failure_13" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_14 is defined ? variables.magic_name_14 }}"  class="form-control" id="magic_name_14" name="magic_name_14" placeholder="Spell Name #14" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_14" name="magic_difficulty_14">
+                                <option value="Generalist" {% if variables.magic_difficulty_14 is defined and variables.magic_difficulty_14 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_14 is defined and variables.magic_difficulty_14 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_14 is defined and variables.magic_difficulty_14 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_14 is defined and variables.magic_difficulty_14 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_14 is defined ? variables.magic_reagent_14 }}"  class="form-control" id="magic_reagent_14" name="magic_reagent_14" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_14 is defined ? variables.magic_distance_14 }}"  class="form-control" id="magic_distance_14" name="magic_distance_14" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_14 is defined ? variables.magic_duration_14 }}"  class="form-control" id="magic_duration_14" name="magic_duration_14" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_14 is defined ? variables.magic_effect_14 }}"  class="form-control" id="magic_effect_14" name="magic_effect_14" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_14 is defined ? variables.magic_critical_success_14 }}"  class="form-control" id="magic_critical_success_14" name="magic_critical_success_14" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_14 is defined ? variables.magic_critical_failure_14 }}"  class="form-control" id="magic_critical_failure_14" name="magic_critical_failure_14" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_15 is defined ? variables.magic_name_15 }}"  class="form-control" id="magic_name_15" name="magic_name_15" placeholder="Spell Name #15" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_15" name="magic_difficulty_15">
+                                <option value="Generalist" {% if variables.magic_difficulty_15 is defined and variables.magic_difficulty_15 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_15 is defined and variables.magic_difficulty_15 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_15 is defined and variables.magic_difficulty_15 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_15 is defined and variables.magic_difficulty_15 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_15 is defined ? variables.magic_reagent_15 }}"  class="form-control" id="magic_reagent_15" name="magic_reagent_15" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_15 is defined ? variables.magic_distance_15 }}"  class="form-control" id="magic_distance_15" name="magic_distance_15" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_15 is defined ? variables.magic_duration_15 }}"  class="form-control" id="magic_duration_15" name="magic_duration_15" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_15 is defined ? variables.magic_effect_15 }}"  class="form-control" id="magic_effect_15" name="magic_effect_15" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_15 is defined ? variables.magic_critical_success_15 }}"  class="form-control" id="magic_critical_success_15" name="magic_critical_success_15" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_15 is defined ? variables.magic_critical_failure_15 }}"  class="form-control" id="magic_critical_failure_15" name="magic_critical_failure_15" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_16 is defined ? variables.magic_name_16 }}"  class="form-control" id="magic_name_16" name="magic_name_16" placeholder="Spell Name #16" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_16" name="magic_difficulty_16">
+                                <option value="Generalist" {% if variables.magic_difficulty_16 is defined and variables.magic_difficulty_16 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_16 is defined and variables.magic_difficulty_16 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_16 is defined and variables.magic_difficulty_16 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_16 is defined and variables.magic_difficulty_16 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_16 is defined ? variables.magic_reagent_16 }}"  class="form-control" id="magic_reagent_16" name="magic_reagent_16" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_16 is defined ? variables.magic_distance_16 }}"  class="form-control" id="magic_distance_16" name="magic_distance_16" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_16 is defined ? variables.magic_duration_16 }}"  class="form-control" id="magic_duration_16" name="magic_duration_16" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_16 is defined ? variables.magic_effect_16 }}"  class="form-control" id="magic_effect_16" name="magic_effect_16" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_16 is defined ? variables.magic_critical_success_16 }}"  class="form-control" id="magic_critical_success_16" name="magic_critical_success_16" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_16 is defined ? variables.magic_critical_failure_16 }}"  class="form-control" id="magic_critical_failure_16" name="magic_critical_failure_16" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_17 is defined ? variables.magic_name_17 }}"  class="form-control" id="magic_name_17" name="magic_name_17" placeholder="Spell Name #17" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_17" name="magic_difficulty_17">
+                                <option value="Generalist" {% if variables.magic_difficulty_17 is defined and variables.magic_difficulty_17 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_17 is defined and variables.magic_difficulty_17 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_17 is defined and variables.magic_difficulty_17 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_17 is defined and variables.magic_difficulty_17 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_17 is defined ? variables.magic_reagent_17 }}"  class="form-control" id="magic_reagent_17" name="magic_reagent_17" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_17 is defined ? variables.magic_distance_17 }}"  class="form-control" id="magic_distance_17" name="magic_distance_17" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_17 is defined ? variables.magic_duration_17 }}"  class="form-control" id="magic_duration_17" name="magic_duration_17" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_17 is defined ? variables.magic_effect_17 }}"  class="form-control" id="magic_effect_17" name="magic_effect_17" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_17 is defined ? variables.magic_critical_success_17 }}"  class="form-control" id="magic_critical_success_17" name="magic_critical_success_17" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_17 is defined ? variables.magic_critical_failure_17 }}"  class="form-control" id="magic_critical_failure_17" name="magic_critical_failure_17" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_18 is defined ? variables.magic_name_18 }}"  class="form-control" id="magic_name_18" name="magic_name_18" placeholder="Spell Name #18" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_18" name="magic_difficulty_18">
+                                <option value="Generalist" {% if variables.magic_difficulty_18 is defined and variables.magic_difficulty_18 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_18 is defined and variables.magic_difficulty_18 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_18 is defined and variables.magic_difficulty_18 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_18 is defined and variables.magic_difficulty_18 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_18 is defined ? variables.magic_reagent_18 }}"  class="form-control" id="magic_reagent_18" name="magic_reagent_18" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_18 is defined ? variables.magic_distance_18 }}"  class="form-control" id="magic_distance_18" name="magic_distance_18" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_18 is defined ? variables.magic_duration_18 }}"  class="form-control" id="magic_duration_18" name="magic_duration_18" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_18 is defined ? variables.magic_effect_18 }}"  class="form-control" id="magic_effect_18" name="magic_effect_18" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_18 is defined ? variables.magic_critical_success_18 }}"  class="form-control" id="magic_critical_success_18" name="magic_critical_success_18" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_18 is defined ? variables.magic_critical_failure_18 }}"  class="form-control" id="magic_critical_failure_18" name="magic_critical_failure_18" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_19 is defined ? variables.magic_name_19 }}"  class="form-control" id="magic_name_19" name="magic_name_19" placeholder="Spell Name #19" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_19" name="magic_difficulty_19">
+                                <option value="Generalist" {% if variables.magic_difficulty_19 is defined and variables.magic_difficulty_19 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_19 is defined and variables.magic_difficulty_19 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_19 is defined and variables.magic_difficulty_19 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_19 is defined and variables.magic_difficulty_19 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_19 is defined ? variables.magic_reagent_19 }}"  class="form-control" id="magic_reagent_19" name="magic_reagent_19" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_19 is defined ? variables.magic_distance_19 }}"  class="form-control" id="magic_distance_19" name="magic_distance_19" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_19 is defined ? variables.magic_duration_19 }}"  class="form-control" id="magic_duration_19" name="magic_duration_19" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_19 is defined ? variables.magic_effect_19 }}"  class="form-control" id="magic_effect_19" name="magic_effect_19" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_19 is defined ? variables.magic_critical_success_19 }}"  class="form-control" id="magic_critical_success_19" name="magic_critical_success_19" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_19 is defined ? variables.magic_critical_failure_19 }}"  class="form-control" id="magic_critical_failure_19" name="magic_critical_failure_19" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.magic_name_20 is defined ? variables.magic_name_20 }}"  class="form-control" id="magic_name_20" name="magic_name_20" placeholder="Spell Name #20" type="text" /></div>
+                        <div class="col-sm-1">
+                            <select   class="form-control"  id="magic_difficulty_20" name="magic_difficulty_20">
+                                <option value="Generalist" {% if variables.magic_difficulty_20 is defined and variables.magic_difficulty_20 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                                <option value="Petty" {% if variables.magic_difficulty_20 is defined and variables.magic_difficulty_20 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                                <option value="Lesser" {% if variables.magic_difficulty_20 is defined and variables.magic_difficulty_20 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                                <option value="Greater" {% if variables.magic_difficulty_20 is defined and variables.magic_difficulty_20 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_reagent_20 is defined ? variables.magic_reagent_20 }}"  class="form-control" id="magic_reagent_20" name="magic_reagent_20" placeholder="Reagent" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_distance_20 is defined ? variables.magic_distance_20 }}"  class="form-control" id="magic_distance_20" name="magic_distance_20" placeholder="Distance" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.magic_duration_20 is defined ? variables.magic_duration_20 }}"  class="form-control" id="magic_duration_20" name="magic_duration_20" placeholder="Duration" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.magic_effect_20 is defined ? variables.magic_effect_20 }}"  class="form-control" id="magic_effect_20" name="magic_effect_20" placeholder="Effect" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_success_20 is defined ? variables.magic_critical_success_20 }}"  class="form-control" id="magic_critical_success_20" name="magic_critical_success_20" placeholder="Critical Success" type="text" /></div>
+                        <div class="col-sm-6"><input  value="{{ variables.magic_critical_failure_20 is defined ? variables.magic_critical_failure_20 }}"  class="form-control" id="magic_critical_failure_20" name="magic_critical_failure_20" placeholder="Critical Failure" type="text" /></div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            <!-- end of spells tab-->
+            <!-- TAB: Rituals -->
+            {% if variables.option_toggle_rituals is defined and variables.option_toggle_rituals == 1 %}
+            <div class="row card">
+                <div class="col-sm-12 card-title"><h5>Rituals</h5></div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_name_1 is defined ? variables.ritual_name_1 }}"  class="form-control" id="ritual_name_1" name="ritual_name_1" placeholder="Ritual #1" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.ritual_casting_time_1 is defined ? variables.ritual_casting_time_1 }}"  class="form-control" id="ritual_casting_time_1" name="ritual_casting_time_1" placeholder="Casting Time" type="text" /></div>
+                        <div class="col-sm-7"><input  value="{{ variables.ritual_reagents_1 is defined ? variables.ritual_reagents_1 }}"  class="form-control" id="ritual_reagents_1" name="ritual_reagents_1" placeholder="Reagents" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9"><input  value="{{ variables.ritual_condition_1 is defined ? variables.ritual_condition_1 }}"  class="form-control" id="ritual_condition_1" name="ritual_condition_1" placeholder="Conditions" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.ritual_channel_power_1 is defined ? variables.ritual_channel_power_1 }}"  class="form-control" id="ritual_channel_power_1" name="ritual_channel_power_1" placeholder="Channel Power" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_difficulty_rating_1 is defined ? variables.ritual_difficulty_rating_1 }}"  class="form-control" id="ritual_difficulty_rating_1" name="ritual_difficulty_rating_1" placeholder="Difficulty Rating" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><input  value="{{ variables.ritual_consequences_1 is defined ? variables.ritual_consequences_1 }}"  class="form-control" id="ritual_consequences_1" name="ritual_consequences_1" placeholder="Consequences" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><textarea   class="form-control mention"  id="ritual_effects_1" name="ritual_effects_1" rows="3" placeholder="">{{ variables.ritual_effects_1 is defined ? variables.ritual_effects_1 }}</textarea></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_name_2 is defined ? variables.ritual_name_2 }}"  class="form-control" id="ritual_name_2" name="ritual_name_2" placeholder="Ritual #2" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.ritual_casting_time_2 is defined ? variables.ritual_casting_time_2 }}"  class="form-control" id="ritual_casting_time_2" name="ritual_casting_time_2" placeholder="Casting Time" type="text" /></div>
+                        <div class="col-sm-7"><input  value="{{ variables.ritual_reagents_2 is defined ? variables.ritual_reagents_2 }}"  class="form-control" id="ritual_reagents_2" name="ritual_reagents_2" placeholder="Reagents" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9"><input  value="{{ variables.ritual_condition_2 is defined ? variables.ritual_condition_2 }}"  class="form-control" id="ritual_condition_2" name="ritual_condition_2" placeholder="Conditions" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.ritual_channel_power_2 is defined ? variables.ritual_channel_power_2 }}"  class="form-control" id="ritual_channel_power_2" name="ritual_channel_power_2" placeholder="Channel Power" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_difficulty_rating_2 is defined ? variables.ritual_difficulty_rating_2 }}"  class="form-control" id="ritual_difficulty_rating_2" name="ritual_difficulty_rating_2" placeholder="Difficulty Rating" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><input  value="{{ variables.ritual_consequences_2 is defined ? variables.ritual_consequences_2 }}"  class="form-control" id="ritual_consequences_2" name="ritual_consequences_2" placeholder="Consequences" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><textarea   class="form-control mention"  id="ritual_effects_2" name="ritual_effects_2" rows="3" placeholder="">{{ variables.ritual_effects_2 is defined ? variables.ritual_effects_2 }}</textarea></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_name_3 is defined ? variables.ritual_name_3 }}"  class="form-control" id="ritual_name_3" name="ritual_name_3" placeholder="Ritual #3" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.ritual_casting_time_3 is defined ? variables.ritual_casting_time_3 }}"  class="form-control" id="ritual_casting_time_3" name="ritual_casting_time_3" placeholder="Casting Time" type="text" /></div>
+                        <div class="col-sm-7"><input  value="{{ variables.ritual_reagents_3 is defined ? variables.ritual_reagents_3 }}"  class="form-control" id="ritual_reagents_3" name="ritual_reagents_3" placeholder="Reagents" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9"><input  value="{{ variables.ritual_condition_3 is defined ? variables.ritual_condition_3 }}"  class="form-control" id="ritual_condition_3" name="ritual_condition_3" placeholder="Conditions" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.ritual_channel_power_3 is defined ? variables.ritual_channel_power_3 }}"  class="form-control" id="ritual_channel_power_3" name="ritual_channel_power_3" placeholder="Channel Power" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_difficulty_rating_3 is defined ? variables.ritual_difficulty_rating_3 }}"  class="form-control" id="ritual_difficulty_rating_3" name="ritual_difficulty_rating_3" placeholder="Difficulty Rating" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><input  value="{{ variables.ritual_consequences_3 is defined ? variables.ritual_consequences_3 }}"  class="form-control" id="ritual_consequences_3" name="ritual_consequences_3" placeholder="Consequences" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><textarea   class="form-control mention"  id="ritual_effects_3" name="ritual_effects_3" rows="3" placeholder="">{{ variables.ritual_effects_3 is defined ? variables.ritual_effects_3 }}</textarea></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_name_4 is defined ? variables.ritual_name_4 }}"  class="form-control" id="ritual_name_4" name="ritual_name_4" placeholder="Ritual #4" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.ritual_casting_time_4 is defined ? variables.ritual_casting_time_4 }}"  class="form-control" id="ritual_casting_time_4" name="ritual_casting_time_4" placeholder="Casting Time" type="text" /></div>
+                        <div class="col-sm-7"><input  value="{{ variables.ritual_reagents_4 is defined ? variables.ritual_reagents_4 }}"  class="form-control" id="ritual_reagents_4" name="ritual_reagents_4" placeholder="Reagents" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9"><input  value="{{ variables.ritual_condition_4 is defined ? variables.ritual_condition_4 }}"  class="form-control" id="ritual_condition_4" name="ritual_condition_4" placeholder="Conditions" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.ritual_channel_power_4 is defined ? variables.ritual_channel_power_4 }}"  class="form-control" id="ritual_channel_power_4" name="ritual_channel_power_4" placeholder="Channel Power" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_difficulty_rating_4 is defined ? variables.ritual_difficulty_rating_4 }}"  class="form-control" id="ritual_difficulty_rating_4" name="ritual_difficulty_rating_4" placeholder="Difficulty Rating" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><input  value="{{ variables.ritual_consequences_4 is defined ? variables.ritual_consequences_4 }}"  class="form-control" id="ritual_consequences_4" name="ritual_consequences_4" placeholder="Consequences" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><textarea   class="form-control mention"  id="ritual_effects_4" name="ritual_effects_4" rows="3" placeholder="">{{ variables.ritual_effects_4 is defined ? variables.ritual_effects_4 }}</textarea></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_name_5 is defined ? variables.ritual_name_5 }}"  class="form-control" id="ritual_name_5" name="ritual_name_5" placeholder="Ritual #5" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.ritual_casting_time_5 is defined ? variables.ritual_casting_time_5 }}"  class="form-control" id="ritual_casting_time_5" name="ritual_casting_time_5" placeholder="Casting Time" type="text" /></div>
+                        <div class="col-sm-7"><input  value="{{ variables.ritual_reagents_5 is defined ? variables.ritual_reagents_5 }}"  class="form-control" id="ritual_reagents_5" name="ritual_reagents_5" placeholder="Reagents" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9"><input  value="{{ variables.ritual_condition_5 is defined ? variables.ritual_condition_5 }}"  class="form-control" id="ritual_condition_5" name="ritual_condition_5" placeholder="Conditions" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.ritual_channel_power_5 is defined ? variables.ritual_channel_power_5 }}"  class="form-control" id="ritual_channel_power_5" name="ritual_channel_power_5" placeholder="Channel Power" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_difficulty_rating_5 is defined ? variables.ritual_difficulty_rating_5 }}"  class="form-control" id="ritual_difficulty_rating_5" name="ritual_difficulty_rating_5" placeholder="Difficulty Rating" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><input  value="{{ variables.ritual_consequences_5 is defined ? variables.ritual_consequences_5 }}"  class="form-control" id="ritual_consequences_5" name="ritual_consequences_5" placeholder="Consequences" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><textarea   class="form-control mention"  id="ritual_effects_5" name="ritual_effects_5" rows="3" placeholder="">{{ variables.ritual_effects_5 is defined ? variables.ritual_effects_5 }}</textarea></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_name_6 is defined ? variables.ritual_name_6 }}"  class="form-control" id="ritual_name_6" name="ritual_name_6" placeholder="Ritual #6" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.ritual_casting_time_6 is defined ? variables.ritual_casting_time_6 }}"  class="form-control" id="ritual_casting_time_6" name="ritual_casting_time_6" placeholder="Casting Time" type="text" /></div>
+                        <div class="col-sm-7"><input  value="{{ variables.ritual_reagents_6 is defined ? variables.ritual_reagents_6 }}"  class="form-control" id="ritual_reagents_6" name="ritual_reagents_6" placeholder="Reagents" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9"><input  value="{{ variables.ritual_condition_6 is defined ? variables.ritual_condition_6 }}"  class="form-control" id="ritual_condition_6" name="ritual_condition_6" placeholder="Conditions" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.ritual_channel_power_6 is defined ? variables.ritual_channel_power_6 }}"  class="form-control" id="ritual_channel_power_6" name="ritual_channel_power_6" placeholder="Channel Power" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_difficulty_rating_6 is defined ? variables.ritual_difficulty_rating_6 }}"  class="form-control" id="ritual_difficulty_rating_6" name="ritual_difficulty_rating_6" placeholder="Difficulty Rating" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><input  value="{{ variables.ritual_consequences_6 is defined ? variables.ritual_consequences_6 }}"  class="form-control" id="ritual_consequences_6" name="ritual_consequences_6" placeholder="Consequences" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><textarea   class="form-control mention"  id="ritual_effects_6" name="ritual_effects_6" rows="3" placeholder="">{{ variables.ritual_effects_6 is defined ? variables.ritual_effects_6 }}</textarea></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_name_7 is defined ? variables.ritual_name_7 }}"  class="form-control" id="ritual_name_7" name="ritual_name_7" placeholder="Ritual #7" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.ritual_casting_time_7 is defined ? variables.ritual_casting_time_7 }}"  class="form-control" id="ritual_casting_time_7" name="ritual_casting_time_7" placeholder="Casting Time" type="text" /></div>
+                        <div class="col-sm-7"><input  value="{{ variables.ritual_reagents_7 is defined ? variables.ritual_reagents_7 }}"  class="form-control" id="ritual_reagents_7" name="ritual_reagents_7" placeholder="Reagents" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9"><input  value="{{ variables.ritual_condition_7 is defined ? variables.ritual_condition_7 }}"  class="form-control" id="ritual_condition_7" name="ritual_condition_7" placeholder="Conditions" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.ritual_channel_power_7 is defined ? variables.ritual_channel_power_7 }}"  class="form-control" id="ritual_channel_power_7" name="ritual_channel_power_7" placeholder="Channel Power" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_difficulty_rating_7 is defined ? variables.ritual_difficulty_rating_7 }}"  class="form-control" id="ritual_difficulty_rating_7" name="ritual_difficulty_rating_7" placeholder="Difficulty Rating" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><input  value="{{ variables.ritual_consequences_7 is defined ? variables.ritual_consequences_7 }}"  class="form-control" id="ritual_consequences_7" name="ritual_consequences_7" placeholder="Consequences" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><textarea   class="form-control mention"  id="ritual_effects_7" name="ritual_effects_7" rows="3" placeholder="">{{ variables.ritual_effects_7 is defined ? variables.ritual_effects_7 }}</textarea></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_name_8 is defined ? variables.ritual_name_8 }}"  class="form-control" id="ritual_name_8" name="ritual_name_8" placeholder="Ritual #8" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.ritual_casting_time_8 is defined ? variables.ritual_casting_time_8 }}"  class="form-control" id="ritual_casting_time_8" name="ritual_casting_time_8" placeholder="Casting Time" type="text" /></div>
+                        <div class="col-sm-7"><input  value="{{ variables.ritual_reagents_8 is defined ? variables.ritual_reagents_8 }}"  class="form-control" id="ritual_reagents_8" name="ritual_reagents_8" placeholder="Reagents" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9"><input  value="{{ variables.ritual_condition_8 is defined ? variables.ritual_condition_8 }}"  class="form-control" id="ritual_condition_8" name="ritual_condition_8" placeholder="Conditions" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.ritual_channel_power_8 is defined ? variables.ritual_channel_power_8 }}"  class="form-control" id="ritual_channel_power_8" name="ritual_channel_power_8" placeholder="Channel Power" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_difficulty_rating_8 is defined ? variables.ritual_difficulty_rating_8 }}"  class="form-control" id="ritual_difficulty_rating_8" name="ritual_difficulty_rating_8" placeholder="Difficulty Rating" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><input  value="{{ variables.ritual_consequences_8 is defined ? variables.ritual_consequences_8 }}"  class="form-control" id="ritual_consequences_8" name="ritual_consequences_8" placeholder="Consequences" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><textarea   class="form-control mention"  id="ritual_effects_8" name="ritual_effects_8" rows="3" placeholder="">{{ variables.ritual_effects_8 is defined ? variables.ritual_effects_8 }}</textarea></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_name_9 is defined ? variables.ritual_name_9 }}"  class="form-control" id="ritual_name_9" name="ritual_name_9" placeholder="Ritual #9" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.ritual_casting_time_9 is defined ? variables.ritual_casting_time_9 }}"  class="form-control" id="ritual_casting_time_9" name="ritual_casting_time_9" placeholder="Casting Time" type="text" /></div>
+                        <div class="col-sm-7"><input  value="{{ variables.ritual_reagents_9 is defined ? variables.ritual_reagents_9 }}"  class="form-control" id="ritual_reagents_9" name="ritual_reagents_9" placeholder="Reagents" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9"><input  value="{{ variables.ritual_condition_9 is defined ? variables.ritual_condition_9 }}"  class="form-control" id="ritual_condition_9" name="ritual_condition_9" placeholder="Conditions" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.ritual_channel_power_9 is defined ? variables.ritual_channel_power_9 }}"  class="form-control" id="ritual_channel_power_9" name="ritual_channel_power_9" placeholder="Channel Power" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_difficulty_rating_9 is defined ? variables.ritual_difficulty_rating_9 }}"  class="form-control" id="ritual_difficulty_rating_9" name="ritual_difficulty_rating_9" placeholder="Difficulty Rating" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><input  value="{{ variables.ritual_consequences_9 is defined ? variables.ritual_consequences_9 }}"  class="form-control" id="ritual_consequences_9" name="ritual_consequences_9" placeholder="Consequences" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><textarea   class="form-control mention"  id="ritual_effects_9" name="ritual_effects_9" rows="3" placeholder="">{{ variables.ritual_effects_9 is defined ? variables.ritual_effects_9 }}</textarea></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_name_10 is defined ? variables.ritual_name_10 }}"  class="form-control" id="ritual_name_10" name="ritual_name_10" placeholder="Ritual #10" type="text" /></div>
+                        <div class="col-sm-3"><input  value="{{ variables.ritual_casting_time_10 is defined ? variables.ritual_casting_time_10 }}"  class="form-control" id="ritual_casting_time_10" name="ritual_casting_time_10" placeholder="Casting Time" type="text" /></div>
+                        <div class="col-sm-7"><input  value="{{ variables.ritual_reagents_10 is defined ? variables.ritual_reagents_10 }}"  class="form-control" id="ritual_reagents_10" name="ritual_reagents_10" placeholder="Reagents" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9"><input  value="{{ variables.ritual_condition_10 is defined ? variables.ritual_condition_10 }}"  class="form-control" id="ritual_condition_10" name="ritual_condition_10" placeholder="Conditions" type="text" /></div>
+                        <div class="col-sm-1"><input  value="{{ variables.ritual_channel_power_10 is defined ? variables.ritual_channel_power_10 }}"  class="form-control" id="ritual_channel_power_10" name="ritual_channel_power_10" placeholder="Channel Power" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.ritual_difficulty_rating_10 is defined ? variables.ritual_difficulty_rating_10 }}"  class="form-control" id="ritual_difficulty_rating_10" name="ritual_difficulty_rating_10" placeholder="Difficulty Rating" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><input  value="{{ variables.ritual_consequences_10 is defined ? variables.ritual_consequences_10 }}"  class="form-control" id="ritual_consequences_10" name="ritual_consequences_10" placeholder="Consequences" type="text" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12"><textarea   class="form-control mention"  id="ritual_effects_10" name="ritual_effects_10" rows="3" placeholder="">{{ variables.ritual_effects_10 is defined ? variables.ritual_effects_10 }}</textarea></div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            <!-- end of rituals tab -->
+	        <div class="row card">
+                <div class="col-sm-12 card-title"><h5>Reagents</h5></div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-8"><strong>Description</strong></div>
+                        <div class="col-sm-2"><strong>Qty.</strong></div> 
+                        <div class="col-sm-2"><strong>Enc.</strong></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8"><input  value="{{ variables.reagent_name_1 is defined ? variables.reagent_name_1 }}"  class="form-control" id="reagent_name_1" name="reagent_name_1" placeholder="" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_qty_1 is defined ? variables.reagent_qty_1 }}"  class="form-control"  id="reagent_qty_1" name="reagent_qty_1" placeholder="" type="number"  min="0" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_enc_1 is defined ? variables.reagent_enc_1 }}"  class="form-control"  id="reagent_enc_1" name="reagent_enc_1" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8"><input  value="{{ variables.reagent_name_2 is defined ? variables.reagent_name_2 }}"  class="form-control" id="reagent_name_2" name="reagent_name_2" placeholder="" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_qty_2 is defined ? variables.reagent_qty_2 }}"  class="form-control"  id="reagent_qty_2" name="reagent_qty_2" placeholder="" type="number"  min="0" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_enc_2 is defined ? variables.reagent_enc_2 }}"  class="form-control"  id="reagent_enc_2" name="reagent_enc_3" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8"><input  value="{{ variables.reagent_name_3 is defined ? variables.reagent_name_3 }}"  class="form-control" id="reagent_name_3" name="reagent_name_3" placeholder="" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_qty_3 is defined ? variables.reagent_qty_3 }}"  class="form-control"  id="reagent_qty_3" name="reagent_qty_3" placeholder="" type="number"  min="0" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_enc_3 is defined ? variables.reagent_enc_3 }}"  class="form-control"  id="reagent_enc_3" name="reagent_enc_3" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8"><input  value="{{ variables.reagent_name_4 is defined ? variables.reagent_name_4 }}"  class="form-control" id="reagent_name_4" name="reagent_name_4" placeholder="" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_qty_4 is defined ? variables.reagent_qty_4 }}"  class="form-control"  id="reagent_qty_4" name="reagent_qty_4" placeholder="" type="number"  min="0" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_enc_4 is defined ? variables.reagent_enc_4 }}"  class="form-control"  id="reagent_enc_4" name="reagent_enc_4" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8"><input  value="{{ variables.reagent_name_5 is defined ? variables.reagent_name_5 }}"  class="form-control" id="reagent_name_5" name="reagent_name_5" placeholder="" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_qty_5 is defined ? variables.reagent_qty_5 }}"  class="form-control"  id="reagent_qty_5" name="reagent_qty_5" placeholder="" type="number"  min="0" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_enc_5 is defined ? variables.reagent_enc_5 }}"  class="form-control"  id="reagent_enc_5" name="reagent_enc_5" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8"><input  value="{{ variables.reagent_name_6 is defined ? variables.reagent_name_6 }}"  class="form-control" id="reagent_name_6" name="reagent_name_6" placeholder="" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_qty_6 is defined ? variables.reagent_qty_6 }}"  class="form-control"  id="reagent_qty_6" name="reagent_qty_6" placeholder="" type="number"  min="0" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_enc_6 is defined ? variables.reagent_enc_6 }}"  class="form-control"  id="reagent_enc_6" name="reagent_enc_6" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8"><input  value="{{ variables.reagent_name_7 is defined ? variables.reagent_name_7 }}"  class="form-control" id="reagent_name_7" name="reagent_name_7" placeholder="" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_qty_7 is defined ? variables.reagent_qty_7 }}"  class="form-control"  id="reagent_qty_7" name="reagent_qty_7" placeholder="" type="number"  min="0" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_enc_7 is defined ? variables.reagent_enc_7 }}"  class="form-control"  id="reagent_enc_7" name="reagent_enc_7" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8"><input  value="{{ variables.reagent_name_8 is defined ? variables.reagent_name_8 }}"  class="form-control" id="reagent_name_8" name="reagent_name_8" placeholder="" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_qty_8 is defined ? variables.reagent_qty_8 }}"  class="form-control"  id="reagent_qty_8" name="reagent_qty_8" placeholder="" type="number"  min="0" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_enc_8 is defined ? variables.reagent_enc_8 }}"  class="form-control"  id="reagent_enc_8" name="reagent_enc_8" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8"><input  value="{{ variables.reagent_name_9 is defined ? variables.reagent_name_9 }}"  class="form-control" id="reagent_name_9" name="reagent_name_9" placeholder="" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_qty_9 is defined ? variables.reagent_qty_9 }}"  class="form-control"  id="reagent_qty_9" name="reagent_qty_9" placeholder="" type="number"  min="0" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_enc_9 is defined ? variables.reagent_enc_9 }}"  class="form-control"  id="reagent_enc_9" name="reagent_enc_9" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8"><input  value="{{ variables.reagent_name_10 is defined ? variables.reagent_name_10 }}"  class="form-control" id="reagent_name_10" name="reagent_name_10" placeholder="" type="text" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_qty_10 is defined ? variables.reagent_qty_10 }}"  class="form-control"  id="reagent_qty_10" name="reagent_qty_10" placeholder="" type="number"  min="0" /></div>
+                        <div class="col-sm-2"><input  value="{{ variables.reagent_enc_10 is defined ? variables.reagent_enc_10 }}"  class="form-control"  id="reagent_enc_10" name="reagent_enc_10" placeholder="" type="number" min="0"  /></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    </div>
     {% endif %}
-    <!-- end of rituals tab -->
+    <!-- end of magic tab -->
     <div class="row card mt-3">
         <div class="col-sm-12">
             <div class="row"><div class="col-sm-12 card-title"><h3>Reward Points and Professions</h3></div></div>
             <div class="row card-content">
                 <div class="col-sm-12">
-                    <div class="row"><div class="col-sm-12"><h5>Current Personal Goals</h5></div></div>
                     <div class="row">
-                        <div class="sm-12 min-vh-20"><textarea   class="form-control mention"  id="personal_goals" name="personal_goals" rows="3" placeholder="">{{ variables.personal_goals is defined ? variables.personal_goals }}</textarea></div>
+                        <div class="col-sm-12"><h5>Current Personal Goals</h5></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 min-vh-20"><textarea   class="form-control mention"  id="personal_goals" name="personal_goals" rows="3" placeholder="">{{ variables.personal_goals is defined ? variables.personal_goals }}</textarea></div>
                     </div>
                 </div>
             </div>
@@ -2306,7 +2764,7 @@
         <div class="col-sm-12">
             <div class="row"><div class="col-sm-12 card-title"><h5>Character Story</h5></div></div>
             <div class="row">
-                <div class="sm-12 min-vh-10">{{ variables.character_story|nl2br}}</div>
+                <div class="col-sm-12 min-vh-10">{{ variables.character_story|nl2br}}</div>
             </div>
         </div>
     </div>

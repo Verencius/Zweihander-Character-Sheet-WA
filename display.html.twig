@@ -1688,40 +1688,52 @@
                 </div>
             </div>
         </div>
-    </div>
-    {% endif %}
-    {% if variables.option_toggle_magic is defined and variables.option_toggle_magic == 1 %}
-    <div class="row card">
-        <div class="col-sm-12">
-            <div class="row"><div class="col-sm-12 card-title"><h5>Spells</h5></div></div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Type</th>
-                                <th>Reagents</th>
-                                <th>Distance</th>
-                                <th>Duration</th>
-                                <th>Effect</th>
-                                <th>Critical Success</th>
-                                <th>Critical Failure</th>
+        {% if variables.option_toggle_magic is defined and variables.option_toggle_magic == 1 %}
+        <div class="row card">
+            <div class="col-sm-12">
+                <div class="row"><div class="col-sm-12 card-title"><h5>Spells</h5></div></div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        {% if variables.magic_name_1 is defined and variables.magic_name_1 != "" %}
+                        <div class="row card">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-12"><strong>{{ variables.magic_name_1|title}}</strong>({{ variables.magic_difficulty_1}})</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2">{{ variables.magic_reagent_1}}</div>
+                                    <div class="col-sm-2">{{ variables.magic_distance_1}}</div>
+                                    <div class="col-sm-2">{{ variables.magic_duration_1}}</div>
+                                    <div class="col-sm-6">{{ variables.magic_effect_1}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2 card-info-label">Reagent</div>
+                                    <div class="col-sm-2 card-info-label">Distance</div>
+                                    <div class="col-sm-2 card-info-label">Duration</div>
+                                    <div class="col-sm-6 card-info-label">Effect</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">{{ variables.magic_critical_success_1}}</div>
+                                    <div class="col-sm-6">{{ variables.magic_critical_failure_1}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 card-info-label">Critical Success</div>
+                                    <div class="col-sm-6 card-info-label">Critical Failure</div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>    
+                            <!-- <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td> </td>
+                                <td></td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            {% if variables.magic_name_1 is defined and variables.magic_name_1 != "" %}
-                            <tr>
-                                <td>{{ variables.magic_name_1}}</td>
-                                <td>{{ variables.magic_difficulty_1}}</td>
-                                <td>{{ variables.magic_reagent_1}}</td>
-                                <td>{{ variables.magic_distance_1}}</td>
-                                <td>{{ variables.magic_duration_1}}</td>
-                                <td>{{ variables.magic_effect_1}}</td>
-                                <td>{{ variables.magic_critical_success_1}} </td>
-                                <td>{{ variables.magic_critical_failure_1}}</td>
-                            </tr>
-                            {% endif %}
                             {% if variables.magic_name_2 is defined and variables.magic_name_2 != "" %}
                             <tr>
                                 <td>{{ variables.magic_name_2}}</td>
@@ -1951,11 +1963,12 @@
                             </tr>
                             {% endif %}
                         </tbody>
-                    </table>        
+                    </table>   -->     
                 </div>
             </div>
         </div>
     </div>
+    {% endif %}
     <!-- magic sidebar -->
         <!-- <div class="col-sm-9 border"></div>
         <div class="col-sm-2 border">
@@ -2017,14 +2030,14 @@
                         <tbody>
                             {% if variables.ritual_name_1 is defined and variables.ritual_name_1 != "" %}
                             <tr>
-                                <td>{{ variables.ritual_name_1}}</td>
+                                <td>{{ variables.ritual_name_1|title}}</td>
                                 <td>{{ variables.ritual_casting_time_1}}</td>
                                 <td>{{ variables.ritual_reagents_1}}</td>
-                                <td>{{ variables.ritual_conidition_1}}</td>
+                                <td>{{ variables.ritual_condition_1}}</td>
                                 <td>{{ variables.ritual_channel_power_1}}</td>
                                 <td>{{ variables.ritual_difficulty_rating_1}}</td>
                                 <td>{{ variables.ritual_consequences_1}}</td>
-                                <td>{{ variables.ritual_effects_1}}</td>
+                                <td>{{ variables.ritual_effects_1|nl2br}}</td>
                             </tr>
                             {% endif %}
                             {% if variables.ritual_name_2 is defined and variables.ritual_name_2 != "" %}

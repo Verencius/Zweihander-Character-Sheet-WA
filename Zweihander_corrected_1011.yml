@@ -1852,11 +1852,13 @@ fields:
   magic_name_20:
     input: string
     label: "magic name 20"
+
 # description: "Petty / Lesser / Greater"
   magic_difficulty_1:
     input: select
     label: "magic difficulty 1"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1864,6 +1866,7 @@ fields:
     input: select
     label: "magic difficulty 2"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1871,6 +1874,7 @@ fields:
     input: select
     label: "magic difficulty 3"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1878,6 +1882,7 @@ fields:
     input: select
     label: "magic difficulty 4"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1885,6 +1890,7 @@ fields:
     input: select
     label: "magic difficulty 5"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1892,6 +1898,7 @@ fields:
     input: select
     label: "magic difficulty 6"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1899,6 +1906,7 @@ fields:
     input: select
     label: "magic difficulty 7"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1906,6 +1914,7 @@ fields:
     input: select
     label: "magic difficulty 8"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1913,6 +1922,7 @@ fields:
     input: select
     label: "magic difficulty 9"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1920,6 +1930,7 @@ fields:
     input: select
     label: "magic difficulty 10"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1927,6 +1938,7 @@ fields:
     input: select
     label: "magic difficulty 11"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1934,6 +1946,7 @@ fields:
     input: select
     label: "magic difficulty 12"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1941,6 +1954,7 @@ fields:
     input: select
     label: "magic difficulty 13"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1948,6 +1962,7 @@ fields:
     input: select
     label: "magic difficulty 14"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1955,6 +1970,7 @@ fields:
     input: select
     label: "magic difficulty 15"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1962,6 +1978,7 @@ fields:
     input: select
     label: "magic difficulty 16"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1969,6 +1986,7 @@ fields:
     input: select
     label: "magic difficulty 17"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1976,6 +1994,7 @@ fields:
     input: select
     label: "magic difficulty 18"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1983,6 +2002,7 @@ fields:
     input: select
     label: "magic difficulty 19"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -1990,6 +2010,7 @@ fields:
     input: select
     label: "magic difficulty 20"
     options:
+      generalist: "Generalist"
       petty: "Petty"
       lesser: "Lesser"
       greater: "Greater"
@@ -2240,6 +2261,7 @@ fields:
   magic_effect_20:
     input: text
     label: "magic effect 20"
+
 # magic critical success
   magic_critical_success_1:
     input: text
@@ -2366,246 +2388,247 @@ fields:
 
 # rituals tab
   ritual_name_1:
-    input: text
+    input: string
     label: "ritual name 1"
   ritual_casting_time_1:
-    input: text
+    input: string
     label: "ritual casting time 1"
   ritual_reagents_1:
-    input: text
+    input: string
     label: "ritual reagents 1"
-  ritual_condition_1:
-    input: text
-    label: "ritual conidition 1"
   ritual_channel_power_1:
-    input: text
+    input: string
     label: "ritual channel power 1"
   ritual_difficulty_rating_1:
-    input: text
+    input: string
     label: "ritual difficulty rating 1"
   ritual_consequences_1:
-    input: text
+    input: string
     label: "ritual consequences 1"
   ritual_effects_1:
     input: text
     label: "ritual effects 1"
   ritual_name_2:
-    input: text
+    input: string
     label: "ritual name 2"
   ritual_casting_time_2:
-    input: text
+    input: string
     label: "ritual casting time 2"
   ritual_reagents_2:
-    input: text
+    input: string
     label: "ritual reagents 2"
-  ritual_condition_2:
-    input: text
-    label: "ritual conidition 2"
   ritual_channel_power_2:
-    input: text
+    input: string
     label: "ritual channel power 2"
   ritual_difficulty_rating_2:
-    input: text
+    input: string
     label: "ritual difficulty rating 2"
   ritual_consequences_2:
-    input: text
+    input: string
     label: "ritual consequences 2"
   ritual_effects_2:
     input: text
     label: "ritual effects 2"
   ritual_name_3:
-    input: text
+    input: string
     label: "ritual name 3"
   ritual_casting_time_3:
-    input: text
+    input: string
     label: "ritual casting time 3"
   ritual_reagents_3:
-    input: text
+    input: string
     label: "ritual reagents 3"
-  ritual_condition_3:
-    input: text
-    label: "ritual conidition 3"
   ritual_channel_power_3:
-    input: text
+    input: string
     label: "ritual channel power 3"
   ritual_difficulty_rating_3:
-    input: text
+    input: string
     label: "ritual difficulty rating 3"
   ritual_consequences_3:
-    input: text
+    input: string
     label: "ritual consequences 3"
   ritual_effects_3:
     input: text
     label: "ritual effects 3"
   ritual_name_4:
-    input: text
+    input: string
     label: "ritual name 4"
   ritual_casting_time_4:
-    input: text
+    input: string
     label: "ritual casting time 4"
   ritual_reagents_4:
-    input: text
+    input: string
     label: "ritual reagents 4"
-  ritual_condition_4:
-    input: text
-    label: "ritual conidition 4"
   ritual_channel_power_4:
-    input: text
+    input: string
     label: "ritual channel power 4"
   ritual_difficulty_rating_4:
-    input: text
+    input: string
     label: "ritual difficulty rating 4"
   ritual_consequences_4:
-    input: text
+    input: string
     label: "ritual consequences 4"
   ritual_effects_4:
     input: text
     label: "ritual effects 4"
   ritual_name_5:
-    input: text
+    input: string
     label: "ritual name 5"
   ritual_casting_time_5:
-    input: text
+    input: string
     label: "ritual casting time 5"
   ritual_reagents_5:
-    input: text
+    input: string
     label: "ritual reagents 5"
-  ritual_condition_5:
-    input: text
-    label: "ritual conidition 5"
   ritual_channel_power_5:
-    input: text
+    input: string
     label: "ritual channel power 5"
   ritual_difficulty_rating_5:
-    input: text
+    input: string
     label: "ritual difficulty rating 5"
   ritual_consequences_5:
-    input: text
+    input: string
     label: "ritual consequences 5"
   ritual_effects_5:
-    input: text
+    input: string
     label: "ritual effects 5"
   ritual_name_6:
     input: text
     label: "ritual name 6"
   ritual_casting_time_6:
-    input: text
+    input: string
     label: "ritual casting time 6"
   ritual_reagents_6:
-    input: text
+    input: string
     label: "ritual reagents 6"
-  ritual_condition_6:
-    input: text
-    label: "ritual conidition 6"
   ritual_channel_power_6:
-    input: text
+    input: string
     label: "ritual channel power 6"
   ritual_difficulty_rating_6:
-    input: text
+    input: string
     label: "ritual difficulty rating 6"
   ritual_consequences_6:
-    input: text
+    input: string
     label: "ritual consequences 6"
   ritual_effects_6:
-    input: text
+    input: string
     label: "ritual effects 6"
   ritual_name_7:
     input: text
     label: "ritual name 7"
   ritual_casting_time_7:
-    input: text
+    input: string
     label: "ritual casting time 7"
   ritual_reagents_7:
-    input: text
+    input: string
     label: "ritual reagents 7"
-  ritual_condition_7:
-    input: text
-    label: "ritual conidition 7"
   ritual_channel_power_7:
-    input: text
+    input: string
     label: "ritual channel power 7"
   ritual_difficulty_rating_7:
-    input: text
+    input: string
     label: "ritual difficulty rating 7"
   ritual_consequences_7:
-    input: text
+    input: string
     label: "ritual consequences 7"
   ritual_effects_7:
     input: text
     label: "ritual effects 7"
   ritual_name_8:
-    input: text
+    input: string
     label: "ritual name 8"
   ritual_casting_time_8:
-    input: text
+    input: string
     label: "ritual casting time 8"
   ritual_reagents_8:
-    input: text
+    input: string
     label: "ritual reagents 8"
-  ritual_condition_8:
-    input: text
-    label: "ritual conidition 8"
   ritual_channel_power_8:
-    input: text
+    input: string
     label: "ritual channel power 8"
   ritual_difficulty_rating_8:
-    input: text
+    input: string
     label: "ritual difficulty rating 8"
   ritual_consequences_8:
-    input: text
+    input: string
     label: "ritual consequences 8"
   ritual_effects_8:
     input: text
     label: "ritual effects 8"
   ritual_name_9:
-    input: text
+    input: string
     label: "ritual name 9"
   ritual_casting_time_9:
-    input: text
+    input: string
     label: "ritual casting time 9"
   ritual_reagents_9:
-    input: text
+    input: string
     label: "ritual reagents 9"
-  ritual_condition_9:
-    input: text
-    label: "ritual conidition 9"
   ritual_channel_power_9:
-    input: text
+    input: string
     label: "ritual channel power 9"
   ritual_difficulty_rating_9:
-    input: text
+    input: string
     label: "ritual difficulty rating 9"
   ritual_consequences_9:
-    input: text
+    input: string
     label: "ritual consequences 9"
   ritual_effects_9:
     input: text
     label: "ritual effects 9"
   ritual_name_10:
-    input: text
+    input: string
     label: "ritual name 10"
   ritual_casting_time_10:
-    input: text
+    input: string
     label: "ritual casting time 10"
   ritual_reagents_10:
-    input: text
+    input: string
     label: "ritual reagents 10"
-  ritual_condition_10:
-    input: text
-    label: "ritual conidition 10"
   ritual_channel_power_10:
-    input: text
+    input: string
     label: "ritual channel power 10"
   ritual_difficulty_rating_10:
-    input: text
+    input: string
     label: "ritual difficulty rating 10"
   ritual_consequences_10:
-    input: text
+    input: string
     label: "ritual consequences 10"
   ritual_effects_10:
     input: text
     label: "ritual effects 10"
 
+#ritual condition
+  ritual_condition_1:
+    input: string
+    label: "ritual condition 1"
+  ritual_condition_2:
+    input: string
+    label: "ritual condition 2"
+  ritual_condition_3:
+    input: string
+    label: "ritual condition 3"
+  ritual_condition_4:
+    input: string
+    label: "ritual condition 4"
+  ritual_condition_5:
+    input: string
+    label: "ritual condition 5"
+  ritual_condition_6:
+    input: string
+    label: "ritual condition 6"
+  ritual_condition_7:
+    input: string
+    label: "ritual condition 7"
+  ritual_condition_8:
+    input: string
+    label: "ritual condition 8"
+  ritual_condition_9:
+    input: string
+    label: "ritual condition 9"
+  ritual_condition_10:
+    input: string
+    label: "ritual condition 10"
 
 # reagents (from character folio)
   reagent_name_1:

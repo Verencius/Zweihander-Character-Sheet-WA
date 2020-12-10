@@ -460,6 +460,22 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_difficulty_1" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 1</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_1" name="magic_difficulty_1">
+                    <option value="Generalist" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_ancestry" class="col-sm-2 control-label">
                 <h4 class="header-title">personal ancestry</h4>
             </label>
@@ -765,6 +781,22 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_difficulty_2" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 2</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_2" name="magic_difficulty_2">
+                    <option value="Generalist" {% if variables.magic_difficulty_2 is defined and variables.magic_difficulty_2 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_2 is defined and variables.magic_difficulty_2 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_2 is defined and variables.magic_difficulty_2 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_2 is defined and variables.magic_difficulty_2 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_sex" class="col-sm-2 control-label">
                 <h4 class="header-title">personal sex</h4>
             </label>
@@ -1018,6 +1050,22 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_difficulty_3" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 3</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_3" name="magic_difficulty_3">
+                    <option value="Generalist" {% if variables.magic_difficulty_3 is defined and variables.magic_difficulty_3 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_3 is defined and variables.magic_difficulty_3 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_3 is defined and variables.magic_difficulty_3 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_3 is defined and variables.magic_difficulty_3 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_height" class="col-sm-2 control-label">
                 <h4 class="header-title">personal height</h4>
             </label>
@@ -1241,6 +1289,22 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_difficulty_4" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 4</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_4" name="magic_difficulty_4">
+                    <option value="Generalist" {% if variables.magic_difficulty_4 is defined and variables.magic_difficulty_4 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_4 is defined and variables.magic_difficulty_4 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_4 is defined and variables.magic_difficulty_4 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_4 is defined and variables.magic_difficulty_4 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_weight" class="col-sm-2 control-label">
                 <h4 class="header-title">personal weight</h4>
             </label>
@@ -1444,6 +1508,22 @@
             </label>
             <div class="col-sm-12">
                 <textarea   class="form-control mention"  id="magic_critical_failure_5" name="magic_critical_failure_5" rows="3" placeholder="">{{ variables.magic_critical_failure_5 is defined ? variables.magic_critical_failure_5 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_difficulty_5" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 5</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_5" name="magic_difficulty_5">
+                    <option value="Generalist" {% if variables.magic_difficulty_5 is defined and variables.magic_difficulty_5 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_5 is defined and variables.magic_difficulty_5 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_5 is defined and variables.magic_difficulty_5 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_5 is defined and variables.magic_difficulty_5 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -1662,6 +1742,22 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_difficulty_6" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 6</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_6" name="magic_difficulty_6">
+                    <option value="Generalist" {% if variables.magic_difficulty_6 is defined and variables.magic_difficulty_6 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_6 is defined and variables.magic_difficulty_6 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_6 is defined and variables.magic_difficulty_6 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_6 is defined and variables.magic_difficulty_6 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_complexion" class="col-sm-2 control-label">
                 <h4 class="header-title">personal complexion</h4>
             </label>
@@ -1854,6 +1950,22 @@
             </label>
             <div class="col-sm-12">
                 <textarea   class="form-control mention"  id="magic_critical_failure_7" name="magic_critical_failure_7" rows="3" placeholder="">{{ variables.magic_critical_failure_7 is defined ? variables.magic_critical_failure_7 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_difficulty_7" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 7</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_7" name="magic_difficulty_7">
+                    <option value="Generalist" {% if variables.magic_difficulty_7 is defined and variables.magic_difficulty_7 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_7 is defined and variables.magic_difficulty_7 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_7 is defined and variables.magic_difficulty_7 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_7 is defined and variables.magic_difficulty_7 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -2061,6 +2173,22 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_difficulty_8" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 8</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_8" name="magic_difficulty_8">
+                    <option value="Generalist" {% if variables.magic_difficulty_8 is defined and variables.magic_difficulty_8 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_8 is defined and variables.magic_difficulty_8 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_8 is defined and variables.magic_difficulty_8 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_8 is defined and variables.magic_difficulty_8 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_eye_color" class="col-sm-2 control-label">
                 <h4 class="header-title">personal eye color</h4>
             </label>
@@ -2242,6 +2370,22 @@
             </label>
             <div class="col-sm-12">
                 <textarea   class="form-control mention"  id="magic_critical_failure_9" name="magic_critical_failure_9" rows="3" placeholder="">{{ variables.magic_critical_failure_9 is defined ? variables.magic_critical_failure_9 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_difficulty_9" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 9</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_9" name="magic_difficulty_9">
+                    <option value="Generalist" {% if variables.magic_difficulty_9 is defined and variables.magic_difficulty_9 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_9 is defined and variables.magic_difficulty_9 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_9 is defined and variables.magic_difficulty_9 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_9 is defined and variables.magic_difficulty_9 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -2440,6 +2584,22 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_difficulty_10" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 10</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_10" name="magic_difficulty_10">
+                    <option value="Generalist" {% if variables.magic_difficulty_10 is defined and variables.magic_difficulty_10 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_10 is defined and variables.magic_difficulty_10 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_10 is defined and variables.magic_difficulty_10 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_10 is defined and variables.magic_difficulty_10 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_season_of_birth" class="col-sm-2 control-label">
                 <h4 class="header-title">personal season of birth</h4>
             </label>
@@ -2577,6 +2737,22 @@
             </label>
             <div class="col-sm-12">
                 <textarea   class="form-control mention"  id="magic_critical_failure_11" name="magic_critical_failure_11" rows="3" placeholder="">{{ variables.magic_critical_failure_11 is defined ? variables.magic_critical_failure_11 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_difficulty_11" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 11</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_11" name="magic_difficulty_11">
+                    <option value="Generalist" {% if variables.magic_difficulty_11 is defined and variables.magic_difficulty_11 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_11 is defined and variables.magic_difficulty_11 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_11 is defined and variables.magic_difficulty_11 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_11 is defined and variables.magic_difficulty_11 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -2737,6 +2913,22 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_difficulty_12" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 12</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_12" name="magic_difficulty_12">
+                    <option value="Generalist" {% if variables.magic_difficulty_12 is defined and variables.magic_difficulty_12 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_12 is defined and variables.magic_difficulty_12 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_12 is defined and variables.magic_difficulty_12 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_12 is defined and variables.magic_difficulty_12 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="skill_agility_stealth_focus" class="col-sm-2 control-label">
                 <h4 class="header-title">skill agility stealth focus</h4>
             </label>
@@ -2863,6 +3055,22 @@
             </label>
             <div class="col-sm-12">
                 <textarea   class="form-control mention"  id="magic_critical_failure_13" name="magic_critical_failure_13" rows="3" placeholder="">{{ variables.magic_critical_failure_13 is defined ? variables.magic_critical_failure_13 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_difficulty_13" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 13</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_13" name="magic_difficulty_13">
+                    <option value="Generalist" {% if variables.magic_difficulty_13 is defined and variables.magic_difficulty_13 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_13 is defined and variables.magic_difficulty_13 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_13 is defined and variables.magic_difficulty_13 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_13 is defined and variables.magic_difficulty_13 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -3012,6 +3220,22 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_difficulty_14" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 14</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_14" name="magic_difficulty_14">
+                    <option value="Generalist" {% if variables.magic_difficulty_14 is defined and variables.magic_difficulty_14 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_14 is defined and variables.magic_difficulty_14 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_14 is defined and variables.magic_difficulty_14 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_14 is defined and variables.magic_difficulty_14 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_fate_points" class="col-sm-2 control-label">
                 <h4 class="header-title">personal fate points</h4>
             </label>
@@ -3149,6 +3373,22 @@
             </label>
             <div class="col-sm-12">
                 <textarea   class="form-control mention"  id="magic_critical_failure_15" name="magic_critical_failure_15" rows="3" placeholder="">{{ variables.magic_critical_failure_15 is defined ? variables.magic_critical_failure_15 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_difficulty_15" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 15</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_15" name="magic_difficulty_15">
+                    <option value="Generalist" {% if variables.magic_difficulty_15 is defined and variables.magic_difficulty_15 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_15 is defined and variables.magic_difficulty_15 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_15 is defined and variables.magic_difficulty_15 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_15 is defined and variables.magic_difficulty_15 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -3298,6 +3538,22 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_difficulty_16" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 16</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_16" name="magic_difficulty_16">
+                    <option value="Generalist" {% if variables.magic_difficulty_16 is defined and variables.magic_difficulty_16 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_16 is defined and variables.magic_difficulty_16 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_16 is defined and variables.magic_difficulty_16 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_16 is defined and variables.magic_difficulty_16 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="personal_disorders_drawbacks" class="col-sm-2 control-label">
                 <h4 class="header-title">personal disorders drawbacks</h4>
             </label>
@@ -3435,6 +3691,22 @@
             </label>
             <div class="col-sm-12">
                 <textarea   class="form-control mention"  id="magic_critical_failure_17" name="magic_critical_failure_17" rows="3" placeholder="">{{ variables.magic_critical_failure_17 is defined ? variables.magic_critical_failure_17 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_difficulty_17" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 17</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_17" name="magic_difficulty_17">
+                    <option value="Generalist" {% if variables.magic_difficulty_17 is defined and variables.magic_difficulty_17 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_17 is defined and variables.magic_difficulty_17 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_17 is defined and variables.magic_difficulty_17 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_17 is defined and variables.magic_difficulty_17 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -3589,6 +3861,22 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_difficulty_18" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 18</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_18" name="magic_difficulty_18">
+                    <option value="Generalist" {% if variables.magic_difficulty_18 is defined and variables.magic_difficulty_18 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_18 is defined and variables.magic_difficulty_18 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_18 is defined and variables.magic_difficulty_18 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_18 is defined and variables.magic_difficulty_18 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="difficulty_rating_trivial" class="col-sm-2 control-label">
                 <h4 class="header-title">difficulty rating trivial</h4>
             </label>
@@ -3715,6 +4003,22 @@
             </label>
             <div class="col-sm-12">
                 <textarea   class="form-control mention"  id="magic_critical_failure_19" name="magic_critical_failure_19" rows="3" placeholder="">{{ variables.magic_critical_failure_19 is defined ? variables.magic_critical_failure_19 }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="magic_difficulty_19" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 19</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_19" name="magic_difficulty_19">
+                    <option value="Generalist" {% if variables.magic_difficulty_19 is defined and variables.magic_difficulty_19 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_19 is defined and variables.magic_difficulty_19 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_19 is defined and variables.magic_difficulty_19 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_19 is defined and variables.magic_difficulty_19 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -3864,6 +4168,22 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
+            <label for="magic_difficulty_20" class="col-sm-2 control-label">
+                <h4 class="header-title">magic difficulty 20</h4>
+            </label>
+            <div class="col-sm-12">
+                <select   class="form-control"  id="magic_difficulty_20" name="magic_difficulty_20">
+                    <option value="Generalist" {% if variables.magic_difficulty_20 is defined and variables.magic_difficulty_20 == "Generalist"  %}selected="selected" {% endif %}  >Generalist</option>
+                    <option value="Petty" {% if variables.magic_difficulty_20 is defined and variables.magic_difficulty_20 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
+                    <option value="Lesser" {% if variables.magic_difficulty_20 is defined and variables.magic_difficulty_20 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
+                    <option value="Greater" {% if variables.magic_difficulty_20 is defined and variables.magic_difficulty_20 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
+                </select>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
             <label for="difficulty_rating_routine" class="col-sm-2 control-label">
                 <h4 class="header-title">difficulty rating routine</h4>
             </label>
@@ -3913,21 +4233,6 @@
             </label>
             <div class="col-sm-12"><label for="attribute_perception_advance_3" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.attribute_perception_advance_3 is defined and variables.attribute_perception_advance_3 == 1   %} checked="checked"{% endif %}   class="" id="attribute_perception_advance_3" name="attribute_perception_advance_3" placeholder="" type="checkbox" /> attribute perception advance 3</label>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
-            <label for="magic_difficulty_1" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 1</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_1" name="magic_difficulty_1">
-                    <option value="Petty" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_1 is defined and variables.magic_difficulty_1 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -4033,21 +4338,6 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
-            <label for="magic_difficulty_2" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 2</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_2" name="magic_difficulty_2">
-                    <option value="Petty" {% if variables.magic_difficulty_2 is defined and variables.magic_difficulty_2 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_2 is defined and variables.magic_difficulty_2 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_2 is defined and variables.magic_difficulty_2 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
             <label for="ritual_difficulty_rating_3" class="col-sm-2 control-label">
                 <h4 class="header-title">ritual difficulty rating 3</h4>
             </label>
@@ -4141,21 +4431,6 @@
             </label>
             <div class="col-sm-12"><label for="attribute_perception_advance_5" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.attribute_perception_advance_5 is defined and variables.attribute_perception_advance_5 == 1   %} checked="checked"{% endif %}   class="" id="attribute_perception_advance_5" name="attribute_perception_advance_5" placeholder="" type="checkbox" /> attribute perception advance 5</label>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
-            <label for="magic_difficulty_3" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 3</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_3" name="magic_difficulty_3">
-                    <option value="Petty" {% if variables.magic_difficulty_3 is defined and variables.magic_difficulty_3 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_3 is defined and variables.magic_difficulty_3 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_3 is defined and variables.magic_difficulty_3 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -4261,21 +4536,6 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
-            <label for="magic_difficulty_4" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 4</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_4" name="magic_difficulty_4">
-                    <option value="Petty" {% if variables.magic_difficulty_4 is defined and variables.magic_difficulty_4 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_4 is defined and variables.magic_difficulty_4 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_4 is defined and variables.magic_difficulty_4 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
             <label for="ritual_effects_3" class="col-sm-2 control-label">
                 <h4 class="header-title">ritual effects 3</h4>
             </label>
@@ -4369,21 +4629,6 @@
             </label>
             <div class="col-sm-12"><label for="attribute_intelligence_advance_1" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.attribute_intelligence_advance_1 is defined and variables.attribute_intelligence_advance_1 == 1   %} checked="checked"{% endif %}   class="" id="attribute_intelligence_advance_1" name="attribute_intelligence_advance_1" placeholder="" type="checkbox" /> attribute intelligence advance 1</label>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
-            <label for="magic_difficulty_5" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 5</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_5" name="magic_difficulty_5">
-                    <option value="Petty" {% if variables.magic_difficulty_5 is defined and variables.magic_difficulty_5 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_5 is defined and variables.magic_difficulty_5 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_5 is defined and variables.magic_difficulty_5 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -4494,21 +4739,6 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
-            <label for="magic_difficulty_6" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 6</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_6" name="magic_difficulty_6">
-                    <option value="Petty" {% if variables.magic_difficulty_6 is defined and variables.magic_difficulty_6 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_6 is defined and variables.magic_difficulty_6 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_6 is defined and variables.magic_difficulty_6 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
             <label for="ritual_casting_time_4" class="col-sm-2 control-label">
                 <h4 class="header-title">ritual casting time 4</h4>
             </label>
@@ -4597,21 +4827,6 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
-            <label for="magic_difficulty_7" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 7</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_7" name="magic_difficulty_7">
-                    <option value="Petty" {% if variables.magic_difficulty_7 is defined and variables.magic_difficulty_7 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_7 is defined and variables.magic_difficulty_7 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_7 is defined and variables.magic_difficulty_7 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
             <label for="ritual_reagents_4" class="col-sm-2 control-label">
                 <h4 class="header-title">ritual reagents 4</h4>
             </label>
@@ -4694,21 +4909,6 @@
             </label>
             <div class="col-sm-12"><label for="attribute_intelligence_advance_4" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.attribute_intelligence_advance_4 is defined and variables.attribute_intelligence_advance_4 == 1   %} checked="checked"{% endif %}   class="" id="attribute_intelligence_advance_4" name="attribute_intelligence_advance_4" placeholder="" type="checkbox" /> attribute intelligence advance 4</label>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
-            <label for="magic_difficulty_8" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 8</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_8" name="magic_difficulty_8">
-                    <option value="Petty" {% if variables.magic_difficulty_8 is defined and variables.magic_difficulty_8 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_8 is defined and variables.magic_difficulty_8 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_8 is defined and variables.magic_difficulty_8 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -4814,21 +5014,6 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
-            <label for="magic_difficulty_9" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 9</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_9" name="magic_difficulty_9">
-                    <option value="Petty" {% if variables.magic_difficulty_9 is defined and variables.magic_difficulty_9 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_9 is defined and variables.magic_difficulty_9 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_9 is defined and variables.magic_difficulty_9 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
             <label for="ritual_channel_power_4" class="col-sm-2 control-label">
                 <h4 class="header-title">ritual channel power 4</h4>
             </label>
@@ -4928,21 +5113,6 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
-            <label for="magic_difficulty_10" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 10</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_10" name="magic_difficulty_10">
-                    <option value="Petty" {% if variables.magic_difficulty_10 is defined and variables.magic_difficulty_10 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_10 is defined and variables.magic_difficulty_10 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_10 is defined and variables.magic_difficulty_10 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
             <label for="ritual_difficulty_rating_4" class="col-sm-2 control-label">
                 <h4 class="header-title">ritual difficulty rating 4</h4>
             </label>
@@ -5031,21 +5201,6 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
-            <label for="magic_difficulty_11" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 11</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_11" name="magic_difficulty_11">
-                    <option value="Petty" {% if variables.magic_difficulty_11 is defined and variables.magic_difficulty_11 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_11 is defined and variables.magic_difficulty_11 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_11 is defined and variables.magic_difficulty_11 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
             <label for="ritual_consequences_4" class="col-sm-2 control-label">
                 <h4 class="header-title">ritual consequences 4</h4>
             </label>
@@ -5123,21 +5278,6 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
-            <label for="magic_difficulty_12" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 12</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_12" name="magic_difficulty_12">
-                    <option value="Petty" {% if variables.magic_difficulty_12 is defined and variables.magic_difficulty_12 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_12 is defined and variables.magic_difficulty_12 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_12 is defined and variables.magic_difficulty_12 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
             <label for="ritual_effects_4" class="col-sm-2 control-label">
                 <h4 class="header-title">ritual effects 4</h4>
             </label>
@@ -5187,21 +5327,6 @@
             </label>
             <div class="col-sm-12"><label for="attribute_willpower_advance_3" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.attribute_willpower_advance_3 is defined and variables.attribute_willpower_advance_3 == 1   %} checked="checked"{% endif %}   class="" id="attribute_willpower_advance_3" name="attribute_willpower_advance_3" placeholder="" type="checkbox" /> attribute willpower advance 3</label>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
-            <label for="magic_difficulty_13" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 13</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_13" name="magic_difficulty_13">
-                    <option value="Petty" {% if variables.magic_difficulty_13 is defined and variables.magic_difficulty_13 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_13 is defined and variables.magic_difficulty_13 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_13 is defined and variables.magic_difficulty_13 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -5274,21 +5399,6 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
-            <label for="magic_difficulty_14" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 14</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_14" name="magic_difficulty_14">
-                    <option value="Petty" {% if variables.magic_difficulty_14 is defined and variables.magic_difficulty_14 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_14 is defined and variables.magic_difficulty_14 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_14 is defined and variables.magic_difficulty_14 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
             <label for="ritual_casting_time_5" class="col-sm-2 control-label">
                 <h4 class="header-title">ritual casting time 5</h4>
             </label>
@@ -5338,21 +5448,6 @@
             </label>
             <div class="col-sm-12"><label for="attribute_willpower_advance_5" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.attribute_willpower_advance_5 is defined and variables.attribute_willpower_advance_5 == 1   %} checked="checked"{% endif %}   class="" id="attribute_willpower_advance_5" name="attribute_willpower_advance_5" placeholder="" type="checkbox" /> attribute willpower advance 5</label>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
-            <label for="magic_difficulty_15" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 15</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_15" name="magic_difficulty_15">
-                    <option value="Petty" {% if variables.magic_difficulty_15 is defined and variables.magic_difficulty_15 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_15 is defined and variables.magic_difficulty_15 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_15 is defined and variables.magic_difficulty_15 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -5425,21 +5520,6 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
-            <label for="magic_difficulty_16" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 16</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_16" name="magic_difficulty_16">
-                    <option value="Petty" {% if variables.magic_difficulty_16 is defined and variables.magic_difficulty_16 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_16 is defined and variables.magic_difficulty_16 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_16 is defined and variables.magic_difficulty_16 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
             <label for="ritual_conidition_5" class="col-sm-2 control-label">
                 <h4 class="header-title">ritual conidition 5</h4>
             </label>
@@ -5478,21 +5558,6 @@
             </label>
             <div class="col-sm-12"><label for="attribute_fellowship_advance_1" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.attribute_fellowship_advance_1 is defined and variables.attribute_fellowship_advance_1 == 1   %} checked="checked"{% endif %}   class="" id="attribute_fellowship_advance_1" name="attribute_fellowship_advance_1" placeholder="" type="checkbox" /> attribute fellowship advance 1</label>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
-            <label for="magic_difficulty_17" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 17</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_17" name="magic_difficulty_17">
-                    <option value="Petty" {% if variables.magic_difficulty_17 is defined and variables.magic_difficulty_17 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_17 is defined and variables.magic_difficulty_17 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_17 is defined and variables.magic_difficulty_17 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
@@ -5554,21 +5619,6 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
-            <label for="magic_difficulty_18" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 18</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_18" name="magic_difficulty_18">
-                    <option value="Petty" {% if variables.magic_difficulty_18 is defined and variables.magic_difficulty_18 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_18 is defined and variables.magic_difficulty_18 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_18 is defined and variables.magic_difficulty_18 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
             <label for="ritual_difficulty_rating_5" class="col-sm-2 control-label">
                 <h4 class="header-title">ritual difficulty rating 5</h4>
             </label>
@@ -5624,21 +5674,6 @@
     </div>
     <div class="ibox">
         <div class="ibox-content">
-            <label for="magic_difficulty_19" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 19</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_19" name="magic_difficulty_19">
-                    <option value="Petty" {% if variables.magic_difficulty_19 is defined and variables.magic_difficulty_19 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_19 is defined and variables.magic_difficulty_19 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_19 is defined and variables.magic_difficulty_19 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
             <label for="ritual_consequences_5" class="col-sm-2 control-label">
                 <h4 class="header-title">ritual consequences 5</h4>
             </label>
@@ -5688,21 +5723,6 @@
             </label>
             <div class="col-sm-12"><label for="attribute_fellowship_advance_4" class="col-sm-2 control-label">
                 <input  value="1"  {% if variables.attribute_fellowship_advance_4 is defined and variables.attribute_fellowship_advance_4 == 1   %} checked="checked"{% endif %}   class="" id="attribute_fellowship_advance_4" name="attribute_fellowship_advance_4" placeholder="" type="checkbox" /> attribute fellowship advance 4</label>
-                <p class="description form-control-description"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ibox">
-        <div class="ibox-content">
-            <label for="magic_difficulty_20" class="col-sm-2 control-label">
-                <h4 class="header-title">magic difficulty 20</h4>
-            </label>
-            <div class="col-sm-12">
-                <select   class="form-control"  id="magic_difficulty_20" name="magic_difficulty_20">
-                    <option value="Petty" {% if variables.magic_difficulty_20 is defined and variables.magic_difficulty_20 == "Petty"  %}selected="selected" {% endif %}  >Petty</option>
-                    <option value="Lesser" {% if variables.magic_difficulty_20 is defined and variables.magic_difficulty_20 == "Lesser"  %}selected="selected" {% endif %}  >Lesser</option>
-                    <option value="Greater" {% if variables.magic_difficulty_20 is defined and variables.magic_difficulty_20 == "Greater"  %}selected="selected" {% endif %}  >Greater</option>
-                </select>
                 <p class="description form-control-description"></p>
             </div>
         </div>
