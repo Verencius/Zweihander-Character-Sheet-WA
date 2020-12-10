@@ -1353,69 +1353,10 @@ fields:
   trappings_name_20:
     input: string
     label: "trappings name 20"
+  trappings_name_21:
+    input: string
+    label: "trappings name 21"
   
-# trappings name
-  trappings_name_1:
-    input: string
-    label: "trappings name 1"
-  trappings_name_2:
-    input: string
-    label: "trappings name 2"
-  trappings_name_3:
-    input: string
-    label: "trappings name 3"
-  trappings_name_4:
-    input: string
-    label: "trappings name 4"
-  trappings_name_5:
-    input: string
-    label: "trappings name 5"
-  trappings_name_6:
-    input: string
-    label: "trappings name 6"
-  trappings_name_7:
-    input: string
-    label: "trappings name 7"
-  trappings_name_8:
-    input: string
-    label: "trappings name 8"
-  trappings_name_9:
-    input: string
-    label: "trappings name 9"
-  trappings_name_10:
-    input: string
-    label: "trappings name 10"
-  trappings_name_11:
-    input: string
-    label: "trappings name 11"
-  trappings_name_12:
-    input: string
-    label: "trappings name 12"
-  trappings_name_13:
-    input: string
-    label: "trappings name 13"
-  trappings_name_14:
-    input: string
-    label: "trappings name 14"
-  trappings_name_15:
-    input: string
-    label: "trappings name 15"
-  trappings_name_16:
-    input: string
-    label: "trappings name 16"
-  trappings_name_17:
-    input: string
-    label: "trappings name 17"
-  trappings_name_18:
-    input: string
-    label: "trappings name 18"
-  trappings_name_19:
-    input: string
-    label: "trappings name 19"
-  trappings_name_20:
-    input: string
-    label: "trappings name 20"
-
 # trappings description
   trappings_desc_1:
     input: string
@@ -1477,6 +1418,9 @@ fields:
   trappings_desc_20:
     input: string
     label: "trappings desc 20"
+  trappings_desc_21:
+    input: string
+    label: "trappings desc 21"
 
 # trappings encumbrance:
   trappings_enc_1:
@@ -1539,6 +1483,9 @@ fields:
   trappings_enc_20:
     input: integer
     label: "trappings enc 20"
+  trappings_enc_21:
+    input: integer
+    label: "trappings enc 21"
 
 
 # trappings quantity:
@@ -1602,6 +1549,9 @@ fields:
   trappings_qty_20:
     input: integer
     label: "trappings qty 20"
+  trappings_qty_21:
+    input: integer
+    label: "trappings qty 21"
 
 # trappings on vehicle or steed (from Character Folio)
   trappings_vehicle_name_1:

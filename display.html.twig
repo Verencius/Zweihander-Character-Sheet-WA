@@ -87,7 +87,7 @@
 {% set damage_threshold_plus_18 = damage_threshold_adjusted + 18 %}
 <!-- encumbrance and overage calculator -->
 {% set encumbrance_weapons_array = [variables.weapon_encumbrance_1, variables.weapon_encumbrance_2, variables.weapon_encumbrance_3, variables.weapon_encumbrance_4] %}
-{% set trappings_encumbrance_array = [variables.trappings_enc_1, variables.trappings_enc_2, variables.trappings_enc_3, variables.trappings_enc_4, variables.trappings_enc_5, variables.trappings_enc_6, variables.trappings_enc_7, variables.trappings_enc_8, variables.trappings_enc_9,variables.trappings_enc_10, variables.trappings_enc_11, variables.trappings_enc_12, variables.trappings_enc_13, variables.trappings_enc_14, variables.trappings_enc_15, variables.trappings_enc_16, variables.trappings_enc_17, variables.trappings_enc_18, variables.trappings_enc_19, variables.trappings_enc_20] %}
+{% set trappings_encumbrance_array = [variables.trappings_enc_1, variables.trappings_enc_2, variables.trappings_enc_3, variables.trappings_enc_4, variables.trappings_enc_5, variables.trappings_enc_6, variables.trappings_enc_7, variables.trappings_enc_8, variables.trappings_enc_9,variables.trappings_enc_10, variables.trappings_enc_11, variables.trappings_enc_12, variables.trappings_enc_13, variables.trappings_enc_14, variables.trappings_enc_15, variables.trappings_enc_16, variables.trappings_enc_17, variables.trappings_enc_18, variables.trappings_enc_19, variables.trappings_enc_20, variables.trappings_enc_21] %}
 {% set reagents_encumbrance_array = [reagent_enc_1, reagent_enc_2, reagent_enc_3, reagent_enc_4, reagent_enc_5, reagent_enc_6, reagent_enc_7, reagent_enc_8, reagent_enc_9, reagent_enc_10] %}
 {% set wealth_enc = ((variables.wealth_gc + variables.wealth_ss + variables.wealth_bp)/1000)|round (0,'floor') %}
 {% set encumbrance_total = encumbrance_weapons_array|reduce((carry, v) => carry + v) + variables.armor_encumbrance + variables.shield_encumbrance + trappings_encumbrance_array|reduce((carry, v) => carry + v) + reagents_encumbrance_array|reduce((carry, v) => carry + v) + wealth_enc %}
@@ -1564,6 +1564,13 @@
                                 <td>{{ variables.trappings_name_20}}</td>
                                 <td>{{ variables.trappings_qty_20}}</td>
                                 <td>{{ variables.trappings_enc_20}}</td>
+                            </tr>
+                            {% endif %}
+                            {% if variables.trappings_name_21 is not empty %}
+                            <tr>
+                                <td>{{ variables.trappings_name_21}}</td>
+                                <td>{{ variables.trappings_qty_21}}</td>
+                                <td>{{ variables.trappings_enc_21}}</td>
                             </tr>
                             {% endif %}
                         </tbody>
