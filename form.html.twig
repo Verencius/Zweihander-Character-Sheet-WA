@@ -425,11 +425,11 @@
             </div>
         </div>
     </div>
-    <!-- TAB #4 -->
+    <!-- Attributes and Skills-->
     <div class="row card mt-3">
         <div class="col-sm-12">
             <div class="row">
-                <div class="col-sm-12 card-title"><h3>Skills and Traits</h3></div>
+                <div class="col-sm-12 card-title"><h3>Attributes and Skills</h3></div>
             </div>
             <div class="row card-content">
                 <!-- Tab #4.1: Attributes, skills -->
@@ -903,91 +903,64 @@
             </div>
         </div>
     </div>
-    <div class="row card">
-        <div class="col-sm-12 border">
-            <div class="row">
-                <div class="col-sm-12"><h5>Traits</h5></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input value="{{ variables.trait_name_1 is defined ? variables.trait_name_1 }}"  class="form-control" id="trait_name_1" name="trait_name_1" placeholder="trait name" type="text" /></div>
-                <div class="col-sm-10"><input value="{{ variables.trait_description_1 is defined ? variables.trait_description_1 }}"  class="form-control" id="trait_description_1" name="trait_description_1" placeholder="trait description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input value="{{ variables.trait_name_2 is defined ? variables.trait_name_2 }}"  class="form-control" id="trait_name_2" name="trait_name_2" placeholder="trait name" type="text" /></div>
-                <div class="col-sm-10"><input value="{{ variables.trait_description_2 is defined ? variables.trait_description_2 }}"  class="form-control" id="trait_description_2" name="trait_description_2" placeholder="trait description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input value="{{ variables.trait_name_3 is defined ? variables.trait_name_3 }}"  class="form-control" id="trait_name_3" name="trait_name_3" placeholder="trait name" type="text" /></div>
-                <div class="col-sm-10"><input value="{{ variables.trait_description_3 is defined ? variables.trait_description_3 }}"  class="form-control" id="trait_description_3 " name="trait_description_3 " placeholder="trait description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input value="{{ variables.trait_name_4 is defined ? variables.trait_name_4 }}"  class="form-control" id="trait_name_4" name="trait_name_4" placeholder="trait name" type="text" /></div>
-                <div class="col-sm-10"><input value="{{ variables.trait_description_4 is defined ? variables.trait_description_24}}"  class="form-control" id="trait_description_4" name="trait_description_4" placeholder="trait description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input value="{{ variables.trait_name_5 is defined ? variables.trait_name_5 }}"  class="form-control" id="trait_name_5" name="trait_name_5" placeholder="trait name" type="text" /></div>
-                <div class="col-sm-10"><input value="{{ variables.trait_description_5 is defined ? variables.trait_description_5 }}"  class="form-control" id="trait_description_5" name="trait_description_5" placeholder="trait description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input value="{{ variables.trait_name_6 is defined ? variables.trait_name_6 }}"  class="form-control" id="trait_name_6" name="trait_name_6" placeholder="trait name" type="text" /></div>
-                <div class="col-sm-10"><input value="{{ variables.trait_description_6 is defined ? variables.trait_description_6 }}"  class="form-control" id="trait_description_6" name="trait_description_6" placeholder="trait description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input value="{{ variables.trait_name_7 is defined ? variables.trait_name_7 }}"  class="form-control" id="trait_name_7" name="trait_name_7" placeholder="trait name" type="text" /></div>
-                <div class="col-sm-10"><input value="{{ variables.trait_description_7 is defined ? variables.trait_description_7 }}"  class="form-control" id="trait_description_7" name="trait_description_7" placeholder="trait description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input value="{{ variables.trait_name_8 is defined ? variables.trait_name_8 }}"  class="form-control" id="trait_name_8" name="trait_name_8" placeholder="trait name" type="text" /></div>
-                <div class="col-sm-10"><input value="{{ variables.trait_description_8 is defined ? variables.trait_description_8 }}"  class="form-control" id="trait_description_8" name="trait_description_8" placeholder="trait description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input value="{{ variables.trait_name_9 is defined ? variables.trait_name_9 }}"  class="form-control" id="trait_name_9" name="trait_name_9" placeholder="trait name" type="text" /></div>
-                <div class="col-sm-10"><input value="{{ variables.trait_description_9 is defined ? variables.trait_description_9 }}"  class="form-control" id="trait_description_9" name="trait_description_9" placeholder="trait description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input value="{{ variables.trait_name_10 is defined ? variables.trait_name_10 }}"  class="form-control" id="trait_name_10" name="trait_name_10" placeholder="trait name" type="text" /></div>
-                <div class="col-sm-10"><input value="{{ variables.trait_description_10 is defined ? variables.trait_description_10 }}"  class="form-control" id="trait_description_10" name="trait_description_10" placeholder="trait description" type="text" /></div>
-            </div>
-        </div>
-    </div>
-    <!-- difficulty scale -->
-    <!--
-    <div class="row card mt-2">
+    <!-- MEGA TAB: Traits, Talents and Gifts -->
+    <div class="row card mt-3">
         <div class="col-sm-12">
             <div class="row">
-                <div class="col-sm-12 card-title"><h5>Difficulty Rating</h5></div>
+                <div class="col-sm-12 card-title"><h3>Traits, Talents and Gifts</h3></div>
             </div>
-            <div class="row">
-                <div class="col-12 col-md-4 col-lg-2 text-center">Trivial</div>
-                <div class="col-12 col-md-4 col-lg-1 text-center">Easy</div>
-                <div class="col-12 col-md-4 col-lg-2 text-center">Routine</div>
-                <div class="col-12 col-md-4 col-lg-2 text-center">Standard</div>
-                <div class="col-12 col-md-4 col-lg-2 text-center">Challenging</div>
-                <div class="col-12 col-md-4 col-lg-1 text-center">Hard</div>
-                <div class="col-12 col-md-4 col-lg-2 text-center">Arduous</div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-4 col-lg-2 text-center"><input type="radio" name="diffrat"></div>
-                <div class="col-12 col-md-4 col-lg-1 text-center"><input type="radio" name="diffrat"></div>
-                <div class="col-12 col-md-4 col-lg-2 text-center"><input type="radio" name="diffrat"></div>
-                <div class="col-12 col-md-4 col-lg-2 text-center"><input type="radio" name="diffrat"></div>
-                <div class="col-12 col-md-4 col-lg-2 text-center"><input type="radio" name="diffrat"></div>
-                <div class="col-12 col-md-4 col-lg-1 text-center"><input type="radio" name="diffrat"></div>
-                <div class="col-12 col-md-4 col-lg-2 text-center"><input type="radio" name="diffrat"></div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-4 col-lg-2 text-center">+30%</div>
-                <div class="col-12 col-md-4 col-lg-1 text-center">+20%</div>
-                <div class="col-12 col-md-4 col-lg-2 text-center">+10%</div>
-                <div class="col-12 col-md-4 col-lg-2 text-center">+/-0%</div>
-                <div class="col-12 col-md-4 col-lg-2 text-center">-10%</div>
-                <div class="col-12 col-md-4 col-lg-1 text-center">-20%</div>
-                <div class="col-12 col-md-4 col-lg-2 text-center">-30%</div>
+            <div class="row card-content">
+                <div class="col-sm-12 card">
+                    <div class="row">
+                        <div class="col-sm-12"><h5>Traits</h5></div>
+                    </div>
+                        <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-2"><input value="{{ variables.trait_name_1 is defined ? variables.trait_name_1 }}"  class="form-control" id="trait_name_1" name="trait_name_1" placeholder="trait name" type="text" /></div>
+                            <div class="col-sm-10"><input value="{{ variables.trait_description_1 is defined ? variables.trait_description_1 }}"  class="form-control" id="trait_description_1" name="trait_description_1" placeholder="trait description" type="text" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2"><input value="{{ variables.trait_name_2 is defined ? variables.trait_name_2 }}"  class="form-control" id="trait_name_2" name="trait_name_2" placeholder="trait name" type="text" /></div>
+                            <div class="col-sm-10"><input value="{{ variables.trait_description_2 is defined ? variables.trait_description_2 }}"  class="form-control" id="trait_description_2" name="trait_description_2" placeholder="trait description" type="text" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2"><input value="{{ variables.trait_name_3 is defined ? variables.trait_name_3 }}"  class="form-control" id="trait_name_3" name="trait_name_3" placeholder="trait name" type="text" /></div>
+                            <div class="col-sm-10"><input value="{{ variables.trait_description_3 is defined ? variables.trait_description_3 }}"  class="form-control" id="trait_description_3 " name="trait_description_3 " placeholder="trait description" type="text" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2"><input value="{{ variables.trait_name_4 is defined ? variables.trait_name_4 }}"  class="form-control" id="trait_name_4" name="trait_name_4" placeholder="trait name" type="text" /></div>
+                            <div class="col-sm-10"><input value="{{ variables.trait_description_4 is defined ? variables.trait_description_24}}"  class="form-control" id="trait_description_4" name="trait_description_4" placeholder="trait description" type="text" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2"><input value="{{ variables.trait_name_5 is defined ? variables.trait_name_5 }}"  class="form-control" id="trait_name_5" name="trait_name_5" placeholder="trait name" type="text" /></div>
+                            <div class="col-sm-10"><input value="{{ variables.trait_description_5 is defined ? variables.trait_description_5 }}"  class="form-control" id="trait_description_5" name="trait_description_5" placeholder="trait description" type="text" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2"><input value="{{ variables.trait_name_6 is defined ? variables.trait_name_6 }}"  class="form-control" id="trait_name_6" name="trait_name_6" placeholder="trait name" type="text" /></div>
+                            <div class="col-sm-10"><input value="{{ variables.trait_description_6 is defined ? variables.trait_description_6 }}"  class="form-control" id="trait_description_6" name="trait_description_6" placeholder="trait description" type="text" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2"><input value="{{ variables.trait_name_7 is defined ? variables.trait_name_7 }}"  class="form-control" id="trait_name_7" name="trait_name_7" placeholder="trait name" type="text" /></div>
+                            <div class="col-sm-10"><input value="{{ variables.trait_description_7 is defined ? variables.trait_description_7 }}"  class="form-control" id="trait_description_7" name="trait_description_7" placeholder="trait description" type="text" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2"><input value="{{ variables.trait_name_8 is defined ? variables.trait_name_8 }}"  class="form-control" id="trait_name_8" name="trait_name_8" placeholder="trait name" type="text" /></div>
+                            <div class="col-sm-10"><input value="{{ variables.trait_description_8 is defined ? variables.trait_description_8 }}"  class="form-control" id="trait_description_8" name="trait_description_8" placeholder="trait description" type="text" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2"><input value="{{ variables.trait_name_9 is defined ? variables.trait_name_9 }}"  class="form-control" id="trait_name_9" name="trait_name_9" placeholder="trait name" type="text" /></div>
+                            <div class="col-sm-10"><input value="{{ variables.trait_description_9 is defined ? variables.trait_description_9 }}"  class="form-control" id="trait_description_9" name="trait_description_9" placeholder="trait description" type="text" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2"><input value="{{ variables.trait_name_10 is defined ? variables.trait_name_10 }}"  class="form-control" id="trait_name_10" name="trait_name_10" placeholder="trait name" type="text" /></div>
+                            <div class="col-sm-10"><input value="{{ variables.trait_description_10 is defined ? variables.trait_description_10 }}"  class="form-control" id="trait_description_10" name="trait_description_10" placeholder="trait description" type="text" /></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    -->
-    <!-- MEGA TAB: Armor, Weapons, Talents, Injuries -->
+    <!-- MEGA TAB: Armor, Weapons, Injuries -->
     <div class="row card mt-3">
         <div class="col-sm-12">
             <div class="row">
@@ -2363,427 +2336,701 @@
     </div>
     {% endif %}
     <!-- end of magic tab -->
+    <!-- TAB: Reward Points and Professions -->
     <div class="row card mt-3">
         <div class="col-sm-12">
-            <div class="row"><div class="col-sm-12 card-title"><h3>Reward Points and Professions</h3></div></div>
-            <div class="row card-content">
-                <div class="col-sm-12">
-                    <div class="row">
-                        <div class="col-sm-12"><h5>Current Personal Goals</h5></div>
+            <div class="row">
+                <div class="col-sm-12 card-title"><h3>Reward Points and Professions</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row card-content">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="row card">
+                            <div class="col-sm-12">
+                                <div class="row"> 
+                                    <div class="col-sm-12 card-title"><h5>Reward Points</h5></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <strong>Current Reward Points</strong>
+                                    </div>
+                                    <div class="col-sm-4 border-strong btext">
+                                        <input value="{{ variables.current_reward_points is defined ? variables.current_reward_points }}"  class="form-control"  id="current_reward_points" name="current_reward_points" placeholder="0" type="number"  min="0" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <strong>Total Reward Points</strong>
+                                    </div>
+                                    <div class="col-sm-4 border-strong btext">
+                                        <input  value="{{ variables.total_reward_points is defined ? variables.total_reward_points }}"  class="form-control"  id="total_reward_points" name="total_reward_points" placeholder="0" type="number" min="0"  />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-12 min-vh-20"><textarea   class="form-control mention"  id="personal_goals" name="personal_goals" rows="3" placeholder="">{{ variables.personal_goals is defined ? variables.personal_goals }}</textarea></div>
+                    <div class="col-sm-10">
+                        <div class="row card">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-12 card-title"><h5>Personal Goals, Achievements etc.</h5></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <textarea   class="form-control mention"  id="personal_goals" name="personal_goals" rows="3" placeholder="">{{ variables.personal_goals is defined ? variables.personal_goals }}</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row card-content">
-                <div class="col-sm-2"><strong>Current Reward Points</strong></div>
-                <div class="col-sm-2"><div class="border-strong btext"><input  value="{{ variables.current_reward_points is defined ? variables.current_reward_points }}"  class="form-control"  id="current_reward_points" name="current_reward_points" placeholder="0" type="number"  min="0" /></div></div>
-                <div class="col-sm-2"><strong>Total Reward Points</strong></div>
-                <div class="col-sm-2"><div class="border-strong btext"><input  value="{{ variables.total_reward_points is defined ? variables.total_reward_points }}"  class="form-control"  id="total_reward_points" name="total_reward_points" placeholder="0" type="number" min="0"  /></div></div>
+            <div class="col-sm-12 card">
+                <div class="row">
+                    <div class="col-sm-12 card-title"><h5>Professions</h5></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <strong>Basic</strong>
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <strong>100 RP</strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <strong>Profession</strong>
+                            </div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic is defined ? variables.profession_basic }}"  class="form-control" id="profession_basic" name="profession_basic" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_skill_rank_1 is defined ? variables.profession_basic_skill_rank_1 }}"  class="form-control" id="profession_basic_skill_rank_1" name="profession_basic_skill_rank_1" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_1 is defined and variables.profession_basic_skill_rank_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_1" name="profession_basic_skill_rank_checkbox_1" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_skill_rank_2 is defined ? variables.profession_basic_skill_rank_2 }}"  class="form-control" id="profession_basic_skill_rank_2" name="profession_basic_skill_rank_2" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_2 is defined and variables.profession_basic_skill_rank_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_2" name="profession_basic_skill_rank_checkbox_2" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_skill_rank_3 is defined ? variables.profession_basic_skill_rank_3 }}"  class="form-control" id="profession_basic_skill_rank_3" name="profession_basic_skill_rank_3" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_3 is defined and variables.profession_basic_skill_rank_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_3" name="profession_basic_skill_rank_checkbox_3" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_skill_rank_4 is defined ? variables.profession_basic_skill_rank_4 }}"  class="form-control" id="profession_basic_skill_rank_4" name="profession_basic_skill_rank_4" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_4 is defined and variables.profession_basic_skill_rank_checkbox_4 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_4" name="profession_basic_skill_rank_checkbox_4" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_skill_rank_5 is defined ? variables.profession_basic_skill_rank_5 }}"  class="form-control" id="profession_basic_skill_rank_5" name="profession_basic_skill_rank_5" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_5 is defined and variables.profession_basic_skill_rank_checkbox_5 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_5" name="profession_basic_skill_rank_checkbox_5" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_skill_rank_6 is defined ? variables.profession_basic_skill_rank_6 }}"  class="form-control" id="profession_basic_skill_rank_6" name="profession_basic_skill_rank_6" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_6 is defined and variables.profession_basic_skill_rank_checkbox_6 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_6" name="profession_basic_skill_rank_checkbox_6" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_skill_rank_7 is defined ? variables.profession_basic_skill_rank_7 }}"  class="form-control" id="profession_basic_skill_rank_7" name="profession_basic_skill_rank_7" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_7 is defined and variables.profession_basic_skill_rank_checkbox_7 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_7" name="profession_basic_skill_rank_checkbox_7" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_skill_rank_8 is defined ? variables.profession_basic_skill_rank_8 }}"  class="form-control" id="profession_basic_skill_rank_8" name="profession_basic_skill_rank_8" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_8 is defined and variables.profession_basic_skill_rank_checkbox_8 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_8" name="profession_basic_skill_rank_checkbox_8" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_skill_rank_9 is defined ? variables.profession_basic_skill_rank_9 }}"  class="form-control" id="profession_basic_skill_rank_9" name="profession_basic_skill_rank_9" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_9 is defined and variables.profession_basic_skill_rank_checkbox_9 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_9" name="profession_basic_skill_rank_checkbox_9" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_skill_rank_10 is defined ? variables.profession_basic_skill_rank_10 }}"  class="form-control" id="profession_basic_skill_rank_10" name="profession_basic_skill_rank_10" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_10 is defined and variables.profession_basic_skill_rank_checkbox_10 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_10" name="profession_basic_skill_rank_checkbox_10" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2"><strong>Trait</strong></div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_trait is defined ? variables.profession_basic_trait }}"  class="form-control" id="profession_basic_trait" name="profession_basic_trait" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_trait_checkbox is defined and variables.profession_basic_trait_checkbox == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_trait_checkbox" name="profession_basic_trait_checkbox" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_bonus_advance_1 is defined ? variables.profession_basic_bonus_advance_1 }}"  class="form-control" id="profession_basic_bonus_advance_1" name="profession_basic_bonus_advance_1" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_bonus_advance_checkbox_1 is defined and variables.profession_basic_bonus_advance_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_bonus_advance_checkbox_1" name="profession_basic_bonus_advance_checkbox_1" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_bonus_advance_2 is defined ? variables.profession_basic_bonus_advance_2 }}"  class="form-control" id="profession_basic_bonus_advance_2" name="profession_basic_bonus_advance_2" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_bonus_advance_checkbox_2 is defined and variables.profession_basic_bonus_advance_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_bonus_advance_checkbox_2" name="profession_basic_bonus_advance_checkbox_2" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_bonus_advance_3 is defined ? variables.profession_basic_bonus_advance_3 }}"  class="form-control" id="profession_basic_bonus_advance_3" name="profession_basic_bonus_advance_3" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_bonus_advance_checkbox_3 is defined and variables.profession_basic_bonus_advance_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_bonus_advance_checkbox_3" name="profession_basic_bonus_advance_checkbox_3" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_bonus_advance_4 is defined ? variables.profession_basic_bonus_advance_4 }}"  class="form-control" id="profession_basic_bonus_advance_4" name="profession_basic_bonus_advance_4" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_bonus_advance_checkbox_4 is defined and variables.profession_basic_bonus_advance_checkbox_4 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_bonus_advance_checkbox_4" name="profession_basic_bonus_advance_checkbox_4" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_bonus_advance_5 is defined ? variables.profession_basic_bonus_advance_5 }}"  class="form-control" id="profession_basic_bonus_advance_5" name="profession_basic_bonus_advance_5" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_bonus_advance_checkbox_5 is defined and variables.profession_basic_bonus_advance_checkbox_5 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_bonus_advance_checkbox_5" name="profession_basic_bonus_advance_checkbox_5" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_bonus_advance_6 is defined ? variables.profession_basic_bonus_advance_6 }}"  class="form-control" id="profession_basic_bonus_advance_6" name="profession_basic_bonus_advance_6" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_bonus_advance_checkbox_6 is defined and variables.profession_basic_bonus_advance_checkbox_6 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_bonus_advance_checkbox_6" name="profession_basic_bonus_advance_checkbox_6" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_bonus_advance_7 is defined ? variables.profession_basic_bonus_advance_7 }}"  class="form-control" id="profession_basic_bonus_advance_7" name="profession_basic_bonus_advance_7" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_bonus_advance_checkbox_7 is defined and variables.profession_basic_bonus_advance_checkbox_7 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_bonus_advance_checkbox_7" name="profession_basic_bonus_advance_checkbox_7" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">TA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_talent_1 is defined ? variables.profession_basic_talent_1 }}"  class="form-control" id="profession_basic_talent_1" name="profession_basic_talent_1" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_talent_checkbox_1 is defined and variables.profession_basic_talent_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_talent_checkbox_1" name="profession_basic_talent_checkbox_1" placeholder="" type="checkbox" /> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">TA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_talent_2 is defined ? variables.profession_basic_talent_2 }}"  class="form-control" id="profession_basic_talent_2" name="profession_basic_talent_2" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_talent_checkbox_2 is defined and variables.profession_basic_talent_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_talent_checkbox_2" name="profession_basic_talent_checkbox_2" placeholder="" type="checkbox" /> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">TA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_basic_talent_3 is defined ? variables.profession_basic_talent_3 }}"  class="form-control" id="profession_basic_talent_3" name="profession_basic_talent_3" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_basic_talent_checkbox_3 is defined and variables.profession_basic_talent_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_talent_checkbox_3" name="profession_basic_talent_checkbox_3" placeholder="" type="checkbox" /> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <strong>Intermediate</strong>
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <strong>200 RP</strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <strong>Profession</strong>
+                            </div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate is defined ? variables.profession_intermediate }}"  class="form-control" id="profession_intermediate" name="profession_intermediate" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_skill_rank_1 is defined ? variables.profession_intermediate_skill_rank_1 }}"  class="form-control" id="profession_intermediate_skill_rank_1" name="profession_intermediate_skill_rank_1" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_1 is defined and variables.profession_intermediate_skill_rank_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_1" name="profession_intermediate_skill_rank_checkbox_1" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_skill_rank_2 is defined ? variables.profession_intermediate_skill_rank_2 }}"  class="form-control" id="profession_intermediate_skill_rank_2" name="profession_intermediate_skill_rank_2" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_2 is defined and variables.profession_intermediate_skill_rank_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_2" name="profession_intermediate_skill_rank_checkbox_2" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_skill_rank_3 is defined ? variables.profession_intermediate_skill_rank_3 }}"  class="form-control" id="profession_intermediate_skill_rank_3" name="profession_intermediate_skill_rank_3" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_3 is defined and variables.profession_intermediate_skill_rank_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_3" name="profession_intermediate_skill_rank_checkbox_3" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_skill_rank_4 is defined ? variables.profession_intermediate_skill_rank_4 }}"  class="form-control" id="profession_intermediate_skill_rank_4" name="profession_intermediate_skill_rank_4" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_4 is defined and variables.profession_intermediate_skill_rank_checkbox_4 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_4" name="profession_intermediate_skill_rank_checkbox_4" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_skill_rank_5 is defined ? variables.profession_intermediate_skill_rank_5 }}"  class="form-control" id="profession_intermediate_skill_rank_5" name="profession_intermediate_skill_rank_5" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_5 is defined and variables.profession_intermediate_skill_rank_checkbox_5 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_5" name="profession_intermediate_skill_rank_checkbox_5" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_skill_rank_6 is defined ? variables.profession_intermediate_skill_rank_6 }}"  class="form-control" id="profession_intermediate_skill_rank_6" name="profession_intermediate_skill_rank_6" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_6 is defined and variables.profession_intermediate_skill_rank_checkbox_6 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_6" name="profession_intermediate_skill_rank_checkbox_6" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_skill_rank_7 is defined ? variables.profession_intermediate_skill_rank_7 }}"  class="form-control" id="profession_intermediate_skill_rank_7" name="profession_intermediate_skill_rank_7" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_7 is defined and variables.profession_intermediate_skill_rank_checkbox_7 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_7" name="profession_intermediate_skill_rank_checkbox_7" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_skill_rank_8 is defined ? variables.profession_intermediate_skill_rank_8 }}"  class="form-control" id="profession_intermediate_skill_rank_8" name="profession_intermediate_skill_rank_8" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_8 is defined and variables.profession_intermediate_skill_rank_checkbox_8 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_8" name="profession_intermediate_skill_rank_checkbox_8" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_skill_rank_9 is defined ? variables.profession_intermediate_skill_rank_9 }}"  class="form-control" id="profession_intermediate_skill_rank_9" name="profession_intermediate_skill_rank_9" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_9 is defined and variables.profession_intermediate_skill_rank_checkbox_9 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_9" name="profession_intermediate_skill_rank_checkbox_9" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_skill_rank_10 is defined ? variables.profession_intermediate_skill_rank_10 }}"  class="form-control" id="profession_intermediate_skill_rank_10" name="profession_intermediate_skill_rank_10" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_10 is defined and variables.profession_intermediate_skill_rank_checkbox_10 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_10" name="profession_intermediate_skill_rank_checkbox_10" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2"><strong>Trait</strong></div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_trait is defined ? variables.profession_intermediate_trait }}"  class="form-control" id="profession_intermediate_trait" name="profession_intermediate_trait" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_trait_checkbox is defined and variables.profession_intermediate_trait_checkbox == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_trait_checkbox" name="profession_intermediate_trait_checkbox" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_bonus_advance_1 is defined ? variables.profession_intermediate_bonus_advance_1 }}"  class="form-control" id="profession_intermediate_bonus_advance_1" name="profession_intermediate_bonus_advance_1" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_1 is defined and variables.profession_intermediate_bonus_advance_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_1" name="profession_intermediate_bonus_advance_checkbox_1" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_bonus_advance_2 is defined ? variables.profession_intermediate_bonus_advance_2 }}"  class="form-control" id="profession_intermediate_bonus_advance_2" name="profession_intermediate_bonus_advance_2" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_2 is defined and variables.profession_intermediate_bonus_advance_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_2" name="profession_intermediate_bonus_advance_checkbox_2" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_bonus_advance_3 is defined ? variables.profession_intermediate_bonus_advance_3 }}"  class="form-control" id="profession_intermediate_bonus_advance_3" name="profession_intermediate_bonus_advance_3" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_3 is defined and variables.profession_intermediate_bonus_advance_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_3" name="profession_intermediate_bonus_advance_checkbox_3" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_bonus_advance_4 is defined ? variables.profession_intermediate_bonus_advance_4 }}"  class="form-control" id="profession_intermediate_bonus_advance_4" name="profession_intermediate_bonus_advance_4" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_4 is defined and variables.profession_intermediate_bonus_advance_checkbox_4 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_4" name="profession_intermediate_bonus_advance_checkbox_4" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_bonus_advance_5 is defined ? variables.profession_intermediate_bonus_advance_5 }}"  class="form-control" id="profession_intermediate_bonus_advance_5" name="profession_intermediate_bonus_advance_5" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_5 is defined and variables.profession_intermediate_bonus_advance_checkbox_5 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_5" name="profession_intermediate_bonus_advance_checkbox_5" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_bonus_advance_6 is defined ? variables.profession_intermediate_bonus_advance_6 }}"  class="form-control" id="profession_intermediate_bonus_advance_6" name="profession_intermediate_bonus_advance_6" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_6 is defined and variables.profession_intermediate_bonus_advance_checkbox_6 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_6" name="profession_intermediate_bonus_advance_checkbox_6" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_bonus_advance_7 is defined ? variables.profession_intermediate_bonus_advance_7 }}"  class="form-control" id="profession_intermediate_bonus_advance_7" name="profession_intermediate_bonus_advance_7" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_7 is defined and variables.profession_intermediate_bonus_advance_checkbox_7 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_7" name="profession_intermediate_bonus_advance_checkbox_7" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">TA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_talent_1 is defined ? variables.profession_intermediate_talent_1 }}"  class="form-control" id="profession_intermediate_talent_1" name="profession_intermediate_talent_1" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_talent_checkbox_1 is defined and variables.profession_intermediate_talent_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_talent_checkbox_1" name="profession_intermediate_talent_checkbox_1" placeholder="" type="checkbox" /> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">TA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_talent_2 is defined ? variables.profession_intermediate_talent_2 }}"  class="form-control" id="profession_intermediate_talent_2" name="profession_intermediate_talent_2" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_talent_checkbox_2 is defined and variables.profession_intermediate_talent_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_talent_checkbox_2" name="profession_intermediate_talent_checkbox_2" placeholder="" type="checkbox" /> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">TA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_intermediate_talent_3 is defined ? variables.profession_intermediate_talent_3 }}"  class="form-control" id="profession_intermediate_talent_3" name="profession_intermediate_talent_3" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_intermediate_talent_checkbox_3 is defined and variables.profession_intermediate_talent_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_talent_checkbox_3" name="profession_intermediate_talent_checkbox_3" placeholder="" type="checkbox" /> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <strong>Advanced</strong>
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <strong>300 RP</strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <strong>Profession</strong>
+                            </div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced is defined ? variables.profession_advanced }}"  class="form-control" id="profession_advanced" name="profession_advanced" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_skill_rank_1 is defined ? variables.profession_advanced_skill_rank_1 }}"  class="form-control" id="profession_advanced_skill_rank_1" name="profession_advanced_skill_rank_1" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_1 is defined and variables.profession_advanced_skill_rank_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_1" name="profession_advanced_skill_rank_checkbox_1" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_skill_rank_2 is defined ? variables.profession_advanced_skill_rank_2 }}"  class="form-control" id="profession_advanced_skill_rank_2" name="profession_advanced_skill_rank_2" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_2 is defined and variables.profession_advanced_skill_rank_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_2" name="profession_advanced_skill_rank_checkbox_2" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_skill_rank_3 is defined ? variables.profession_advanced_skill_rank_3 }}"  class="form-control" id="profession_advanced_skill_rank_3" name="profession_advanced_skill_rank_3" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_3 is defined and variables.profession_advanced_skill_rank_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_3" name="profession_advanced_skill_rank_checkbox_3" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_skill_rank_4 is defined ? variables.profession_advanced_skill_rank_4 }}"  class="form-control" id="profession_advanced_skill_rank_4" name="profession_advanced_skill_rank_4" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_4 is defined and variables.profession_advanced_skill_rank_checkbox_4 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_4" name="profession_advanced_skill_rank_checkbox_4" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_skill_rank_5 is defined ? variables.profession_advanced_skill_rank_5 }}"  class="form-control" id="profession_advanced_skill_rank_5" name="profession_advanced_skill_rank_5" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_5 is defined and variables.profession_advanced_skill_rank_checkbox_5 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_5" name="profession_advanced_skill_rank_checkbox_5" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_skill_rank_6 is defined ? variables.profession_advanced_skill_rank_6 }}"  class="form-control" id="profession_advanced_skill_rank_6" name="profession_advanced_skill_rank_6" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_6 is defined and variables.profession_advanced_skill_rank_checkbox_6 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_6" name="profession_advanced_skill_rank_checkbox_6" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_skill_rank_7 is defined ? variables.profession_advanced_skill_rank_7 }}"  class="form-control" id="profession_advanced_skill_rank_7" name="profession_advanced_skill_rank_7" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_7 is defined and variables.profession_advanced_skill_rank_checkbox_7 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_7" name="profession_advanced_skill_rank_checkbox_7" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_skill_rank_8 is defined ? variables.profession_advanced_skill_rank_8 }}"  class="form-control" id="profession_advanced_skill_rank_8" name="profession_advanced_skill_rank_8" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_8 is defined and variables.profession_advanced_skill_rank_checkbox_8 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_8" name="profession_advanced_skill_rank_checkbox_8" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_skill_rank_9 is defined ? variables.profession_advanced_skill_rank_9 }}"  class="form-control" id="profession_advanced_skill_rank_9" name="profession_advanced_skill_rank_9" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_9 is defined and variables.profession_advanced_skill_rank_checkbox_9 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_9" name="profession_advanced_skill_rank_checkbox_9" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">SR</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_skill_rank_10 is defined ? variables.profession_advanced_skill_rank_10 }}"  class="form-control" id="profession_advanced_skill_rank_10" name="profession_advanced_skill_rank_10" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_10 is defined and variables.profession_advanced_skill_rank_checkbox_10 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_10" name="profession_advanced_skill_rank_checkbox_10" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2"><strong>Trait</strong></div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_trait is defined ? variables.profession_advanced_trait }}"  class="form-control" id="profession_advanced_trait" name="profession_advanced_trait" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_trait_checkbox is defined and variables.profession_advanced_trait_checkbox == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_trait_checkbox" name="profession_advanced_trait_checkbox" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_bonus_advance_1 is defined ? variables.profession_advanced_bonus_advance_1 }}"  class="form-control" id="profession_advanced_bonus_advance_1" name="profession_advanced_bonus_advance_1" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_1 is defined and variables.profession_advanced_bonus_advance_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_1" name="profession_advanced_bonus_advance_checkbox_1" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_bonus_advance_2 is defined ? variables.profession_advanced_bonus_advance_2 }}"  class="form-control" id="profession_advanced_bonus_advance_2" name="profession_advanced_bonus_advance_2" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_2 is defined and variables.profession_advanced_bonus_advance_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_2" name="profession_advanced_bonus_advance_checkbox_2" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_bonus_advance_3 is defined ? variables.profession_advanced_bonus_advance_3 }}"  class="form-control" id="profession_advanced_bonus_advance_3" name="profession_advanced_bonus_advance_3" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_3 is defined and variables.profession_advanced_bonus_advance_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_3" name="profession_advanced_bonus_advance_checkbox_3" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_bonus_advance_4 is defined ? variables.profession_advanced_bonus_advance_4 }}"  class="form-control" id="profession_advanced_bonus_advance_4" name="profession_advanced_bonus_advance_4" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_4 is defined and variables.profession_advanced_bonus_advance_checkbox_4 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_4" name="profession_advanced_bonus_advance_checkbox_4" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_bonus_advance_5 is defined ? variables.profession_advanced_bonus_advance_5 }}"  class="form-control" id="profession_advanced_bonus_advance_5" name="profession_advanced_bonus_advance_5" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_5 is defined and variables.profession_advanced_bonus_advance_checkbox_5 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_5" name="profession_advanced_bonus_advance_checkbox_5" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_bonus_advance_6 is defined ? variables.profession_advanced_bonus_advance_6 }}"  class="form-control" id="profession_advanced_bonus_advance_6" name="profession_advanced_bonus_advance_6" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_6 is defined and variables.profession_advanced_bonus_advance_checkbox_6 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_6" name="profession_advanced_bonus_advance_checkbox_6" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">BA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_bonus_advance_7 is defined ? variables.profession_advanced_bonus_advance_7 }}"  class="form-control" id="profession_advanced_bonus_advance_7" name="profession_advanced_bonus_advance_7" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_7 is defined and variables.profession_advanced_bonus_advance_checkbox_7 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_7" name="profession_advanced_bonus_advance_checkbox_7" placeholder="" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">TA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_talent_1 is defined ? variables.profession_advanced_talent_1 }}"  class="form-control" id="profession_advanced_talent_1" name="profession_advanced_talent_1" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_talent_checkbox_1 is defined and variables.profession_advanced_talent_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_talent_checkbox_1" name="profession_advanced_talent_checkbox_1" placeholder="" type="checkbox" /> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">TA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_talent_2 is defined ? variables.profession_advanced_talent_2 }}"  class="form-control" id="profession_advanced_talent_2" name="profession_advanced_talent_2" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_talent_checkbox_2 is defined and variables.profession_advanced_talent_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_talent_checkbox_2" name="profession_advanced_talent_checkbox_2" placeholder="" type="checkbox" /> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">TA</div>
+                            <div class="col-sm-8">
+                                <input  value="{{ variables.profession_advanced_talent_3 is defined ? variables.profession_advanced_talent_3 }}"  class="form-control" id="profession_advanced_talent_3" name="profession_advanced_talent_3" placeholder="" type="text" />
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <input  value="1"  {% if variables.profession_advanced_talent_checkbox_3 is defined and variables.profession_advanced_talent_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_talent_checkbox_3" name="profession_advanced_talent_checkbox_3" placeholder="" type="checkbox" /> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row card-content">
-        <div class="col-sm-4">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Basic</th>
-                        <th class="text-right" colspan="2">100 RP</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Profession</strong></td>
-                        <td><input  value="{{ variables.profession_basic is defined ? variables.profession_basic }}"  class="form-control" id="profession_basic" name="profession_basic" placeholder="" type="text" /></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_basic_skill_rank_1 is defined ? variables.profession_basic_skill_rank_1 }}"  class="form-control" id="profession_basic_skill_rank_1" name="profession_basic_skill_rank_1" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_1 is defined and variables.profession_basic_skill_rank_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_1" name="profession_basic_skill_rank_checkbox_1" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_basic_skill_rank_2 is defined ? variables.profession_basic_skill_rank_2 }}"  class="form-control" id="profession_basic_skill_rank_2" name="profession_basic_skill_rank_2" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_2 is defined and variables.profession_basic_skill_rank_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_2" name="profession_basic_skill_rank_checkbox_2" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_basic_skill_rank_3 is defined ? variables.profession_basic_skill_rank_3 }}"  class="form-control" id="profession_basic_skill_rank_3" name="profession_basic_skill_rank_3" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_3 is defined and variables.profession_basic_skill_rank_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_3" name="profession_basic_skill_rank_checkbox_3" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_basic_skill_rank_4 is defined ? variables.profession_basic_skill_rank_4 }}"  class="form-control" id="profession_basic_skill_rank_4" name="profession_basic_skill_rank_4" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_4 is defined and variables.profession_basic_skill_rank_checkbox_4 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_4" name="profession_basic_skill_rank_checkbox_4" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_basic_skill_rank_5 is defined ? variables.profession_basic_skill_rank_5 }}"  class="form-control" id="profession_basic_skill_rank_5" name="profession_basic_skill_rank_5" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_5 is defined and variables.profession_basic_skill_rank_checkbox_5 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_5" name="profession_basic_skill_rank_checkbox_5" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_basic_skill_rank_6 is defined ? variables.profession_basic_skill_rank_6 }}"  class="form-control" id="profession_basic_skill_rank_6" name="profession_basic_skill_rank_6" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_6 is defined and variables.profession_basic_skill_rank_checkbox_6 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_6" name="profession_basic_skill_rank_checkbox_6" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_basic_skill_rank_7 is defined ? variables.profession_basic_skill_rank_7 }}"  class="form-control" id="profession_basic_skill_rank_7" name="profession_basic_skill_rank_7" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_7 is defined and variables.profession_basic_skill_rank_checkbox_7 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_7" name="profession_basic_skill_rank_checkbox_7" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_basic_skill_rank_8 is defined ? variables.profession_basic_skill_rank_8 }}"  class="form-control" id="profession_basic_skill_rank_8" name="profession_basic_skill_rank_8" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_8 is defined and variables.profession_basic_skill_rank_checkbox_8 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_8" name="profession_basic_skill_rank_checkbox_8" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_basic_skill_rank_9 is defined ? variables.profession_basic_skill_rank_9 }}"  class="form-control" id="profession_basic_skill_rank_9" name="profession_basic_skill_rank_9" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_9 is defined and variables.profession_basic_skill_rank_checkbox_9 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_9" name="profession_basic_skill_rank_checkbox_9" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_basic_skill_rank_10 is defined ? variables.profession_basic_skill_rank_10 }}"  class="form-control" id="profession_basic_skill_rank_10" name="profession_basic_skill_rank_10" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_skill_rank_checkbox_10 is defined and variables.profession_basic_skill_rank_checkbox_10 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_skill_rank_checkbox_10" name="profession_basic_skill_rank_checkbox_10" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Trait</strong></td>
-                        <td><input  value="{{ variables.profession_basic_trait is defined ? variables.profession_basic_trait }}"  class="form-control" id="profession_basic_trait" name="profession_basic_trait" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_trait_checkbox is defined and variables.profession_basic_trait_checkbox == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_trait_checkbox" name="profession_basic_trait_checkbox" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_basic_bonus_advance_1 is defined ? variables.profession_basic_bonus_advance_1 }}"  class="form-control" id="profession_basic_bonus_advance_1" name="profession_basic_bonus_advance_1" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_bonus_advance_checkbox_1 is defined and variables.profession_basic_bonus_advance_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_bonus_advance_checkbox_1" name="profession_basic_bonus_advance_checkbox_1" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_basic_bonus_advance_2 is defined ? variables.profession_basic_bonus_advance_2 }}"  class="form-control" id="profession_basic_bonus_advance_2" name="profession_basic_bonus_advance_2" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_bonus_advance_checkbox_2 is defined and variables.profession_basic_bonus_advance_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_bonus_advance_checkbox_2" name="profession_basic_bonus_advance_checkbox_2" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_basic_bonus_advance_3 is defined ? variables.profession_basic_bonus_advance_3 }}"  class="form-control" id="profession_basic_bonus_advance_3" name="profession_basic_bonus_advance_3" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_bonus_advance_checkbox_3 is defined and variables.profession_basic_bonus_advance_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_bonus_advance_checkbox_3" name="profession_basic_bonus_advance_checkbox_3" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_basic_bonus_advance_4 is defined ? variables.profession_basic_bonus_advance_4 }}"  class="form-control" id="profession_basic_bonus_advance_4" name="profession_basic_bonus_advance_4" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_bonus_advance_checkbox_4 is defined and variables.profession_basic_bonus_advance_checkbox_4 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_bonus_advance_checkbox_4" name="profession_basic_bonus_advance_checkbox_4" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_basic_bonus_advance_5 is defined ? variables.profession_basic_bonus_advance_5 }}"  class="form-control" id="profession_basic_bonus_advance_5" name="profession_basic_bonus_advance_5" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_bonus_advance_checkbox_5 is defined and variables.profession_basic_bonus_advance_checkbox_5 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_bonus_advance_checkbox_5" name="profession_basic_bonus_advance_checkbox_5" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_basic_bonus_advance_6 is defined ? variables.profession_basic_bonus_advance_6 }}"  class="form-control" id="profession_basic_bonus_advance_6" name="profession_basic_bonus_advance_6" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_bonus_advance_checkbox_6 is defined and variables.profession_basic_bonus_advance_checkbox_6 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_bonus_advance_checkbox_6" name="profession_basic_bonus_advance_checkbox_6" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_basic_bonus_advance_7 is defined ? variables.profession_basic_bonus_advance_7 }}"  class="form-control" id="profession_basic_bonus_advance_7" name="profession_basic_bonus_advance_7" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_bonus_advance_checkbox_7 is defined and variables.profession_basic_bonus_advance_checkbox_7 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_bonus_advance_checkbox_7" name="profession_basic_bonus_advance_checkbox_7" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>TA</td>
-                        <td><input  value="{{ variables.profession_basic_talent_1 is defined ? variables.profession_basic_talent_1 }}"  class="form-control" id="profession_basic_talent_1" name="profession_basic_talent_1" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_talent_checkbox_1 is defined and variables.profession_basic_talent_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_talent_checkbox_1" name="profession_basic_talent_checkbox_1" placeholder="" type="checkbox" /> </td>
-                    </tr>
-                    </tr>
-                    <tr>
-                        <td>TA</td>
-                        <td><input  value="{{ variables.profession_basic_talent_2 is defined ? variables.profession_basic_talent_2 }}"  class="form-control" id="profession_basic_talent_2" name="profession_basic_talent_2" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_talent_checkbox_2 is defined and variables.profession_basic_talent_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_talent_checkbox_2" name="profession_basic_talent_checkbox_2" placeholder="" type="checkbox" /> </td>
-                    </tr>
-                    <tr>
-                        <td>TA</td>
-                        <td><input  value="{{ variables.profession_basic_talent_3 is defined ? variables.profession_basic_talent_3 }}"  class="form-control" id="profession_basic_talent_3" name="profession_basic_talent_3" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_basic_talent_checkbox_3 is defined and variables.profession_basic_talent_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_basic_talent_checkbox_3" name="profession_basic_talent_checkbox_3" placeholder="" type="checkbox" /> </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-sm-4">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Intermediate</th>
-                        <th class="text-right" colspan="2">200 RP</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Profession</strong></td>
-                        <td><input  value="{{ variables.profession_intermediate is defined ? variables.profession_intermediate }}"  class="form-control" id="profession_intermediate" name="profession_intermediate" placeholder="" type="text" /></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_intermediate_skill_rank_1 is defined ? variables.profession_intermediate_skill_rank_1 }}"  class="form-control" id="profession_intermediate_skill_rank_1" name="profession_intermediate_skill_rank_1" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_1 is defined and variables.profession_intermediate_skill_rank_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_1" name="profession_intermediate_skill_rank_checkbox_1" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_intermediate_skill_rank_2 is defined ? variables.profession_intermediate_skill_rank_2 }}"  class="form-control" id="profession_intermediate_skill_rank_2" name="profession_intermediate_skill_rank_2" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_2 is defined and variables.profession_intermediate_skill_rank_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_2" name="profession_intermediate_skill_rank_checkbox_2" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_intermediate_skill_rank_3 is defined ? variables.profession_intermediate_skill_rank_3 }}"  class="form-control" id="profession_intermediate_skill_rank_3" name="profession_intermediate_skill_rank_3" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_3 is defined and variables.profession_intermediate_skill_rank_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_3" name="profession_intermediate_skill_rank_checkbox_3" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_intermediate_skill_rank_4 is defined ? variables.profession_intermediate_skill_rank_4 }}"  class="form-control" id="profession_intermediate_skill_rank_4" name="profession_intermediate_skill_rank_4" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_4 is defined and variables.profession_intermediate_skill_rank_checkbox_4 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_4" name="profession_intermediate_skill_rank_checkbox_4" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_intermediate_skill_rank_5 is defined ? variables.profession_intermediate_skill_rank_5 }}"  class="form-control" id="profession_intermediate_skill_rank_5" name="profession_intermediate_skill_rank_5" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_5 is defined and variables.profession_intermediate_skill_rank_checkbox_5 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_5" name="profession_intermediate_skill_rank_checkbox_5" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_intermediate_skill_rank_6 is defined ? variables.profession_intermediate_skill_rank_6 }}"  class="form-control" id="profession_intermediate_skill_rank_6" name="profession_intermediate_skill_rank_6" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_6 is defined and variables.profession_intermediate_skill_rank_checkbox_6 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_6" name="profession_intermediate_skill_rank_checkbox_6" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_intermediate_skill_rank_7 is defined ? variables.profession_intermediate_skill_rank_7 }}"  class="form-control" id="profession_intermediate_skill_rank_7" name="profession_intermediate_skill_rank_7" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_7 is defined and variables.profession_intermediate_skill_rank_checkbox_7 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_7" name="profession_intermediate_skill_rank_checkbox_7" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_intermediate_skill_rank_8 is defined ? variables.profession_intermediate_skill_rank_8 }}"  class="form-control" id="profession_intermediate_skill_rank_8" name="profession_intermediate_skill_rank_8" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_8 is defined and variables.profession_intermediate_skill_rank_checkbox_8 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_8" name="profession_intermediate_skill_rank_checkbox_8" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_intermediate_skill_rank_9 is defined ? variables.profession_intermediate_skill_rank_9 }}"  class="form-control" id="profession_intermediate_skill_rank_9" name="profession_intermediate_skill_rank_9" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_9 is defined and variables.profession_intermediate_skill_rank_checkbox_9 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_9" name="profession_intermediate_skill_rank_checkbox_9" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_intermediate_skill_rank_10 is defined ? variables.profession_intermediate_skill_rank_10 }}"  class="form-control" id="profession_intermediate_skill_rank_10" name="profession_intermediate_skill_rank_10" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_skill_rank_checkbox_10 is defined and variables.profession_intermediate_skill_rank_checkbox_10 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_skill_rank_checkbox_10" name="profession_intermediate_skill_rank_checkbox_10" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Trait</strong></td>
-                        <td><input  value="{{ variables.profession_intermediate_trait is defined ? variables.profession_intermediate_trait }}"  class="form-control" id="profession_intermediate_trait" name="profession_intermediate_trait" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_trait_checkbox is defined and variables.profession_intermediate_trait_checkbox == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_trait_checkbox" name="profession_intermediate_trait_checkbox" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_intermediate_bonus_advance_1 is defined ? variables.profession_intermediate_bonus_advance_1 }}"  class="form-control" id="profession_intermediate_bonus_advance_1" name="profession_intermediate_bonus_advance_1" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_1 is defined and variables.profession_intermediate_bonus_advance_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_1" name="profession_intermediate_bonus_advance_checkbox_1" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_intermediate_bonus_advance_2 is defined ? variables.profession_intermediate_bonus_advance_2 }}"  class="form-control" id="profession_intermediate_bonus_advance_2" name="profession_intermediate_bonus_advance_2" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_2 is defined and variables.profession_intermediate_bonus_advance_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_2" name="profession_intermediate_bonus_advance_checkbox_2" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_intermediate_bonus_advance_3 is defined ? variables.profession_intermediate_bonus_advance_3 }}"  class="form-control" id="profession_intermediate_bonus_advance_3" name="profession_intermediate_bonus_advance_3" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_3 is defined and variables.profession_intermediate_bonus_advance_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_3" name="profession_intermediate_bonus_advance_checkbox_3" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_intermediate_bonus_advance_4 is defined ? variables.profession_intermediate_bonus_advance_4 }}"  class="form-control" id="profession_intermediate_bonus_advance_4" name="profession_intermediate_bonus_advance_4" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_4 is defined and variables.profession_intermediate_bonus_advance_checkbox_4 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_4" name="profession_intermediate_bonus_advance_checkbox_4" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_intermediate_bonus_advance_5 is defined ? variables.profession_intermediate_bonus_advance_5 }}"  class="form-control" id="profession_intermediate_bonus_advance_5" name="profession_intermediate_bonus_advance_5" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_5 is defined and variables.profession_intermediate_bonus_advance_checkbox_5 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_5" name="profession_intermediate_bonus_advance_checkbox_5" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_intermediate_bonus_advance_6 is defined ? variables.profession_intermediate_bonus_advance_6 }}"  class="form-control" id="profession_intermediate_bonus_advance_6" name="profession_intermediate_bonus_advance_6" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_6 is defined and variables.profession_intermediate_bonus_advance_checkbox_6 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_6" name="profession_intermediate_bonus_advance_checkbox_6" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_intermediate_bonus_advance_7 is defined ? variables.profession_intermediate_bonus_advance_7 }}"  class="form-control" id="profession_intermediate_bonus_advance_7" name="profession_intermediate_bonus_advance_7" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_bonus_advance_checkbox_7 is defined and variables.profession_intermediate_bonus_advance_checkbox_7 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_bonus_advance_checkbox_7" name="profession_intermediate_bonus_advance_checkbox_7" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>TA</td>
-                        <td><input  value="{{ variables.profession_intermediate_talent_1 is defined ? variables.profession_intermediate_talent_1 }}"  class="form-control" id="profession_intermediate_talent_1" name="profession_intermediate_talent_1" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_talent_checkbox_1 is defined and variables.profession_intermediate_talent_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_talent_checkbox_1" name="profession_intermediate_talent_checkbox_1" placeholder="" type="checkbox" /> </td>
-                    </tr>
-                    </tr>
-                    <tr>
-                        <td>TA</td>
-                        <td><input  value="{{ variables.profession_intermediate_talent_2 is defined ? variables.profession_intermediate_talent_2 }}"  class="form-control" id="profession_intermediate_talent_2" name="profession_intermediate_talent_2" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_talent_checkbox_2 is defined and variables.profession_intermediate_talent_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_talent_checkbox_2" name="profession_intermediate_talent_checkbox_2" placeholder="" type="checkbox" /> </td>
-                    </tr>
-                    <tr>
-                        <td>TA</td>
-                        <td><input  value="{{ variables.profession_intermediate_talent_3 is defined ? variables.profession_intermediate_talent_3 }}"  class="form-control" id="profession_intermediate_talent_3" name="profession_intermediate_talent_3" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_intermediate_talent_checkbox_3 is defined and variables.profession_intermediate_talent_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_intermediate_talent_checkbox_3" name="profession_intermediate_talent_checkbox_3" placeholder="" type="checkbox" /> </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-sm-4">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Advanced</th>
-                        <th class="text-right" colspan="2">300 RP</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="w-25"><strong>Profession</strong></td>
-                        <td><input  value="{{ variables.profession_advanced is defined ? variables.profession_advanced }}"  class="form-control" id="profession_advanced" name="profession_advanced" placeholder="" type="text" /></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_advanced_skill_rank_1 is defined ? variables.profession_advanced_skill_rank_1 }}"  class="form-control" id="profession_advanced_skill_rank_1" name="profession_advanced_skill_rank_1" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_1 is defined and variables.profession_advanced_skill_rank_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_1" name="profession_advanced_skill_rank_checkbox_1" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_advanced_skill_rank_2 is defined ? variables.profession_advanced_skill_rank_2 }}"  class="form-control" id="profession_advanced_skill_rank_2" name="profession_advanced_skill_rank_2" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_2 is defined and variables.profession_advanced_skill_rank_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_2" name="profession_advanced_skill_rank_checkbox_2" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_advanced_skill_rank_3 is defined ? variables.profession_advanced_skill_rank_3 }}"  class="form-control" id="profession_advanced_skill_rank_3" name="profession_advanced_skill_rank_3" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_3 is defined and variables.profession_advanced_skill_rank_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_3" name="profession_advanced_skill_rank_checkbox_3" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_advanced_skill_rank_4 is defined ? variables.profession_advanced_skill_rank_4 }}"  class="form-control" id="profession_advanced_skill_rank_4" name="profession_advanced_skill_rank_4" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_4 is defined and variables.profession_advanced_skill_rank_checkbox_4 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_4" name="profession_advanced_skill_rank_checkbox_4" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_advanced_skill_rank_5 is defined ? variables.profession_advanced_skill_rank_5 }}"  class="form-control" id="profession_advanced_skill_rank_5" name="profession_advanced_skill_rank_5" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_5 is defined and variables.profession_advanced_skill_rank_checkbox_5 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_5" name="profession_advanced_skill_rank_checkbox_5" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_advanced_skill_rank_6 is defined ? variables.profession_advanced_skill_rank_6 }}"  class="form-control" id="profession_advanced_skill_rank_6" name="profession_advanced_skill_rank_6" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_6 is defined and variables.profession_advanced_skill_rank_checkbox_6 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_6" name="profession_advanced_skill_rank_checkbox_6" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_advanced_skill_rank_7 is defined ? variables.profession_advanced_skill_rank_7 }}"  class="form-control" id="profession_advanced_skill_rank_7" name="profession_advanced_skill_rank_7" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_7 is defined and variables.profession_advanced_skill_rank_checkbox_7 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_7" name="profession_advanced_skill_rank_checkbox_7" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_advanced_skill_rank_8 is defined ? variables.profession_advanced_skill_rank_8 }}"  class="form-control" id="profession_advanced_skill_rank_8" name="profession_advanced_skill_rank_8" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_8 is defined and variables.profession_advanced_skill_rank_checkbox_8 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_8" name="profession_advanced_skill_rank_checkbox_8" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_advanced_skill_rank_9 is defined ? variables.profession_advanced_skill_rank_9 }}"  class="form-control" id="profession_advanced_skill_rank_9" name="profession_advanced_skill_rank_9" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_9 is defined and variables.profession_advanced_skill_rank_checkbox_9 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_9" name="profession_advanced_skill_rank_checkbox_9" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>SR</td>
-                        <td><input  value="{{ variables.profession_advanced_skill_rank_10 is defined ? variables.profession_advanced_skill_rank_10 }}"  class="form-control" id="profession_advanced_skill_rank_10" name="profession_advanced_skill_rank_10" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_skill_rank_checkbox_10 is defined and variables.profession_advanced_skill_rank_checkbox_10 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_skill_rank_checkbox_10" name="profession_advanced_skill_rank_checkbox_10" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Trait</strong></td>
-                        <td><input  value="{{ variables.profession_advanced_trait is defined ? variables.profession_advanced_trait }}"  class="form-control" id="profession_advanced_trait" name="profession_advanced_trait" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_trait_checkbox is defined and variables.profession_advanced_trait_checkbox == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_trait_checkbox" name="profession_advanced_trait_checkbox" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_advanced_bonus_advance_1 is defined ? variables.profession_advanced_bonus_advance_1 }}"  class="form-control" id="profession_advanced_bonus_advance_1" name="profession_advanced_bonus_advance_1" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_1 is defined and variables.profession_advanced_bonus_advance_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_1" name="profession_advanced_bonus_advance_checkbox_1" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_advanced_bonus_advance_2 is defined ? variables.profession_advanced_bonus_advance_2 }}"  class="form-control" id="profession_advanced_bonus_advance_2" name="profession_advanced_bonus_advance_2" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_2 is defined and variables.profession_advanced_bonus_advance_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_2" name="profession_advanced_bonus_advance_checkbox_2" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_advanced_bonus_advance_3 is defined ? variables.profession_advanced_bonus_advance_3 }}"  class="form-control" id="profession_advanced_bonus_advance_3" name="profession_advanced_bonus_advance_3" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_3 is defined and variables.profession_advanced_bonus_advance_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_3" name="profession_advanced_bonus_advance_checkbox_3" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_advanced_bonus_advance_4 is defined ? variables.profession_advanced_bonus_advance_4 }}"  class="form-control" id="profession_advanced_bonus_advance_4" name="profession_advanced_bonus_advance_4" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_4 is defined and variables.profession_advanced_bonus_advance_checkbox_4 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_4" name="profession_advanced_bonus_advance_checkbox_4" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_advanced_bonus_advance_5 is defined ? variables.profession_advanced_bonus_advance_5 }}"  class="form-control" id="profession_advanced_bonus_advance_5" name="profession_advanced_bonus_advance_5" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_5 is defined and variables.profession_advanced_bonus_advance_checkbox_5 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_5" name="profession_advanced_bonus_advance_checkbox_5" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_advanced_bonus_advance_6 is defined ? variables.profession_advanced_bonus_advance_6 }}"  class="form-control" id="profession_advanced_bonus_advance_6" name="profession_advanced_bonus_advance_6" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_6 is defined and variables.profession_advanced_bonus_advance_checkbox_6 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_6" name="profession_advanced_bonus_advance_checkbox_6" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td><input  value="{{ variables.profession_advanced_bonus_advance_7 is defined ? variables.profession_advanced_bonus_advance_7 }}"  class="form-control" id="profession_advanced_bonus_advance_7" name="profession_advanced_bonus_advance_7" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_bonus_advance_checkbox_7 is defined and variables.profession_advanced_bonus_advance_checkbox_7 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_bonus_advance_checkbox_7" name="profession_advanced_bonus_advance_checkbox_7" placeholder="" type="checkbox" /></td>
-                    </tr>
-                    <tr>
-                        <td>TA</td>
-                        <td><input  value="{{ variables.profession_advanced_talent_1 is defined ? variables.profession_advanced_talent_1 }}"  class="form-control" id="profession_advanced_talent_1" name="profession_advanced_talent_1" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_talent_checkbox_1 is defined and variables.profession_advanced_talent_checkbox_1 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_talent_checkbox_1" name="profession_advanced_talent_checkbox_1" placeholder="" type="checkbox" /> </td>
-                    </tr>
-                    </tr>
-                    <tr>
-                        <td>TA</td>
-                        <td><input  value="{{ variables.profession_advanced_talent_2 is defined ? variables.profession_advanced_talent_2 }}"  class="form-control" id="profession_advanced_talent_2" name="profession_advanced_talent_2" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_talent_checkbox_2 is defined and variables.profession_advanced_talent_checkbox_2 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_talent_checkbox_2" name="profession_advanced_talent_checkbox_2" placeholder="" type="checkbox" /> </td>
-                    </tr>
-                    <tr>
-                        <td>TA</td>
-                        <td><input  value="{{ variables.profession_advanced_talent_3 is defined ? variables.profession_advanced_talent_3 }}"  class="form-control" id="profession_advanced_talent_3" name="profession_advanced_talent_3" placeholder="" type="text" /></td>
-                        <td><input  value="1"  {% if variables.profession_advanced_talent_checkbox_3 is defined and variables.profession_advanced_talent_checkbox_3 == 1   %} checked="checked"{% endif %}   class="" id="profession_advanced_talent_checkbox_3" name="profession_advanced_talent_checkbox_3" placeholder="" type="checkbox" /> </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="col-sm-12 card">
+                <div class="row">
+                    <div class="col-sm-12 card-title">
+                        <h5>Unique Advances</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <textarea   class="form-control mention"  id="unique_advances" name="unique_advances" rows="3" placeholder="">{{ variables.unique_advances is defined ? variables.unique_advances }}</textarea>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row card mt-3">
-        <div class="col-sm-12">
-            <div class="row"><div class="col-sm-12 card-title"><h5>Unique Advances</h5></div></div>
-            <div class="row">
-                <div class="sm-12 min-vh-50"><textarea   class="form-control mention"  id="unique_advances" name="unique_advances" rows="3" placeholder="">{{ variables.unique_advances is defined ? variables.unique_advances }}</textarea></div>
-            </div>
-        </div>
-    </div>
-    {% if variables.character_story != "" %}
-    <div class="row card mt-3">
-        <div class="col-sm-12">
-            <div class="row"><div class="col-sm-12 card-title"><h5>Character Story</h5></div></div>
-            <div class="row">
-                <div class="col-sm-12 min-vh-10">{{ variables.character_story|nl2br}}</div>
-            </div>
-        </div>
-    </div>
-    {% endif %}
 </div>
