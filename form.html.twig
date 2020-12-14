@@ -835,7 +835,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Tab #4.2: Traits -->
+                <!-- Tab #4.2: Languages -->
                 <div class="col-sm-4">
                     <div class="row">
                         <div class="col-sm-12 border">
@@ -909,54 +909,128 @@
             <div class="row">
                 <div class="col-sm-12 card-title"><h3>Traits, Talents and Gifts</h3></div>
             </div>
-            <div class="row card-content">
-                <div class="col-sm-12 card">
-                    <div class="row">
-                        <div class="col-sm-12"><h5>Traits</h5></div>
-                    </div>
-                        <div class="col-sm-12">
-                        <div class="row">
-                            <div class="col-sm-2"><input value="{{ variables.trait_name_1 is defined ? variables.trait_name_1 }}"  class="form-control" id="trait_name_1" name="trait_name_1" placeholder="trait name" type="text" /></div>
-                            <div class="col-sm-10"><input value="{{ variables.trait_description_1 is defined ? variables.trait_description_1 }}"  class="form-control" id="trait_description_1" name="trait_description_1" placeholder="trait description" type="text" /></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-2"><input value="{{ variables.trait_name_2 is defined ? variables.trait_name_2 }}"  class="form-control" id="trait_name_2" name="trait_name_2" placeholder="trait name" type="text" /></div>
-                            <div class="col-sm-10"><input value="{{ variables.trait_description_2 is defined ? variables.trait_description_2 }}"  class="form-control" id="trait_description_2" name="trait_description_2" placeholder="trait description" type="text" /></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-2"><input value="{{ variables.trait_name_3 is defined ? variables.trait_name_3 }}"  class="form-control" id="trait_name_3" name="trait_name_3" placeholder="trait name" type="text" /></div>
-                            <div class="col-sm-10"><input value="{{ variables.trait_description_3 is defined ? variables.trait_description_3 }}"  class="form-control" id="trait_description_3 " name="trait_description_3 " placeholder="trait description" type="text" /></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-2"><input value="{{ variables.trait_name_4 is defined ? variables.trait_name_4 }}"  class="form-control" id="trait_name_4" name="trait_name_4" placeholder="trait name" type="text" /></div>
-                            <div class="col-sm-10"><input value="{{ variables.trait_description_4 is defined ? variables.trait_description_24}}"  class="form-control" id="trait_description_4" name="trait_description_4" placeholder="trait description" type="text" /></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-2"><input value="{{ variables.trait_name_5 is defined ? variables.trait_name_5 }}"  class="form-control" id="trait_name_5" name="trait_name_5" placeholder="trait name" type="text" /></div>
-                            <div class="col-sm-10"><input value="{{ variables.trait_description_5 is defined ? variables.trait_description_5 }}"  class="form-control" id="trait_description_5" name="trait_description_5" placeholder="trait description" type="text" /></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-2"><input value="{{ variables.trait_name_6 is defined ? variables.trait_name_6 }}"  class="form-control" id="trait_name_6" name="trait_name_6" placeholder="trait name" type="text" /></div>
-                            <div class="col-sm-10"><input value="{{ variables.trait_description_6 is defined ? variables.trait_description_6 }}"  class="form-control" id="trait_description_6" name="trait_description_6" placeholder="trait description" type="text" /></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-2"><input value="{{ variables.trait_name_7 is defined ? variables.trait_name_7 }}"  class="form-control" id="trait_name_7" name="trait_name_7" placeholder="trait name" type="text" /></div>
-                            <div class="col-sm-10"><input value="{{ variables.trait_description_7 is defined ? variables.trait_description_7 }}"  class="form-control" id="trait_description_7" name="trait_description_7" placeholder="trait description" type="text" /></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-2"><input value="{{ variables.trait_name_8 is defined ? variables.trait_name_8 }}"  class="form-control" id="trait_name_8" name="trait_name_8" placeholder="trait name" type="text" /></div>
-                            <div class="col-sm-10"><input value="{{ variables.trait_description_8 is defined ? variables.trait_description_8 }}"  class="form-control" id="trait_description_8" name="trait_description_8" placeholder="trait description" type="text" /></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-2"><input value="{{ variables.trait_name_9 is defined ? variables.trait_name_9 }}"  class="form-control" id="trait_name_9" name="trait_name_9" placeholder="trait name" type="text" /></div>
-                            <div class="col-sm-10"><input value="{{ variables.trait_description_9 is defined ? variables.trait_description_9 }}"  class="form-control" id="trait_description_9" name="trait_description_9" placeholder="trait description" type="text" /></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-2"><input value="{{ variables.trait_name_10 is defined ? variables.trait_name_10 }}"  class="form-control" id="trait_name_10" name="trait_name_10" placeholder="trait name" type="text" /></div>
-                            <div class="col-sm-10"><input value="{{ variables.trait_description_10 is defined ? variables.trait_description_10 }}"  class="form-control" id="trait_description_10" name="trait_description_10" placeholder="trait description" type="text" /></div>
-                        </div>
-                    </div>
+        </div>
+    </div>
+    <div class="row card-content">
+        <div class="col-sm-12 card">
+            <div class="row">
+                <div class="col-sm-12"><h5>Traits</h5></div>
+            </div>
+                <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-2"><input value="{{ variables.trait_name_1 is defined ? variables.trait_name_1 }}"  class="form-control" id="trait_name_1" name="trait_name_1" placeholder="trait name" type="text" /></div>
+                    <div class="col-sm-10"><input value="{{ variables.trait_description_1 is defined ? variables.trait_description_1 }}"  class="form-control" id="trait_description_1" name="trait_description_1" placeholder="trait description" type="text" /></div>
                 </div>
+                <div class="row">
+                    <div class="col-sm-2"><input value="{{ variables.trait_name_2 is defined ? variables.trait_name_2 }}"  class="form-control" id="trait_name_2" name="trait_name_2" placeholder="trait name" type="text" /></div>
+                    <div class="col-sm-10"><input value="{{ variables.trait_description_2 is defined ? variables.trait_description_2 }}"  class="form-control" id="trait_description_2" name="trait_description_2" placeholder="trait description" type="text" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"><input value="{{ variables.trait_name_3 is defined ? variables.trait_name_3 }}"  class="form-control" id="trait_name_3" name="trait_name_3" placeholder="trait name" type="text" /></div>
+                    <div class="col-sm-10"><input value="{{ variables.trait_description_3 is defined ? variables.trait_description_3 }}"  class="form-control" id="trait_description_3 " name="trait_description_3 " placeholder="trait description" type="text" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"><input value="{{ variables.trait_name_4 is defined ? variables.trait_name_4 }}"  class="form-control" id="trait_name_4" name="trait_name_4" placeholder="trait name" type="text" /></div>
+                    <div class="col-sm-10"><input value="{{ variables.trait_description_4 is defined ? variables.trait_description_24}}"  class="form-control" id="trait_description_4" name="trait_description_4" placeholder="trait description" type="text" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"><input value="{{ variables.trait_name_5 is defined ? variables.trait_name_5 }}"  class="form-control" id="trait_name_5" name="trait_name_5" placeholder="trait name" type="text" /></div>
+                    <div class="col-sm-10"><input value="{{ variables.trait_description_5 is defined ? variables.trait_description_5 }}"  class="form-control" id="trait_description_5" name="trait_description_5" placeholder="trait description" type="text" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"><input value="{{ variables.trait_name_6 is defined ? variables.trait_name_6 }}"  class="form-control" id="trait_name_6" name="trait_name_6" placeholder="trait name" type="text" /></div>
+                    <div class="col-sm-10"><input value="{{ variables.trait_description_6 is defined ? variables.trait_description_6 }}"  class="form-control" id="trait_description_6" name="trait_description_6" placeholder="trait description" type="text" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"><input value="{{ variables.trait_name_7 is defined ? variables.trait_name_7 }}"  class="form-control" id="trait_name_7" name="trait_name_7" placeholder="trait name" type="text" /></div>
+                    <div class="col-sm-10"><input value="{{ variables.trait_description_7 is defined ? variables.trait_description_7 }}"  class="form-control" id="trait_description_7" name="trait_description_7" placeholder="trait description" type="text" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"><input value="{{ variables.trait_name_8 is defined ? variables.trait_name_8 }}"  class="form-control" id="trait_name_8" name="trait_name_8" placeholder="trait name" type="text" /></div>
+                    <div class="col-sm-10"><input value="{{ variables.trait_description_8 is defined ? variables.trait_description_8 }}"  class="form-control" id="trait_description_8" name="trait_description_8" placeholder="trait description" type="text" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"><input value="{{ variables.trait_name_9 is defined ? variables.trait_name_9 }}"  class="form-control" id="trait_name_9" name="trait_name_9" placeholder="trait name" type="text" /></div>
+                    <div class="col-sm-10"><input value="{{ variables.trait_description_9 is defined ? variables.trait_description_9 }}"  class="form-control" id="trait_description_9" name="trait_description_9" placeholder="trait description" type="text" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"><input value="{{ variables.trait_name_10 is defined ? variables.trait_name_10 }}"  class="form-control" id="trait_name_10" name="trait_name_10" placeholder="trait name" type="text" /></div>
+                    <div class="col-sm-10"><input value="{{ variables.trait_description_10 is defined ? variables.trait_description_10 }}"  class="form-control" id="trait_description_10" name="trait_description_10" placeholder="trait description" type="text" /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row card">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-12"><h5>Talents</h5></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.talent_name_1 is defined ? variables.talent_name_1 }}"  class="form-control" id="talent_name_1" name="talent_name_1" placeholder="talent name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.talent_desc_1 is defined ? variables.talent_desc_1 }}"  class="form-control" id="talent_desc_1" name="talent_desc_1" placeholder="talent description" type="text" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.talent_name_2 is defined ? variables.talent_name_2 }}"  class="form-control" id="talent_name_2" name="talent_name_2" placeholder="talent name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.talent_desc_2 is defined ? variables.talent_desc_2 }}"  class="form-control" id="talent_desc_2" name="talent_desc_2" placeholder="talent description" type="text" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.talent_name_3 is defined ? variables.talent_name_3 }}"  class="form-control" id="talent_name_3" name="talent_name_3" placeholder="talent name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.talent_desc_3 is defined ? variables.talent_desc_3 }}"  class="form-control" id="talent_desc_3" name="talent_desc_3" placeholder="talent description" type="text" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.talent_name_4 is defined ? variables.talent_name_4 }}"  class="form-control" id="talent_name_4" name="talent_name_4" placeholder="talent name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.talent_desc_4 is defined ? variables.talent_desc_4 }}"  class="form-control" id="talent_desc_4" name="talent_desc_4" placeholder="talent description" type="text" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.talent_name_5 is defined ? variables.talent_name_5 }}"  class="form-control" id="talent_name_5" name="talent_name_5" placeholder="talent name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.talent_desc_5 is defined ? variables.talent_desc_5 }}"  class="form-control" id="talent_desc_5" name="talent_desc_5" placeholder="talent description" type="text" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.talent_name_6 is defined ? variables.talent_name_6 }}"  class="form-control" id="talent_name_6" name="talent_name_6" placeholder="talent name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.talent_desc_6 is defined ? variables.talent_desc_6 }}"  class="form-control" id="talent_desc_6" name="talent_desc_6" placeholder="talent description" type="text" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.talent_name_7 is defined ? variables.talent_name_7 }}"  class="form-control" id="talent_name_7" name="talent_name_7" placeholder="talent name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.talent_desc_7 is defined ? variables.talent_desc_7 }}"  class="form-control" id="talent_desc_7" name="talent_desc_7" placeholder="talent description" type="text" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.talent_name_8 is defined ? variables.talent_name_8 }}"  class="form-control" id="talent_name_8" name="talent_name_8" placeholder="talent name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.talent_desc_8 is defined ? variables.talent_desc_8 }}"  class="form-control" id="talent_desc_8" name="talent_desc_8" placeholder="talent description" type="text" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.talent_name_9 is defined ? variables.talent_name_9 }}"  class="form-control" id="talent_name_9" name="talent_name_9" placeholder="talent name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.talent_desc_9 is defined ? variables.talent_desc_9 }}"  class="form-control" id="talent_desc_9" name="talent_desc_9" placeholder="talent description" type="text" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.talent_name_10 is defined ? variables.talent_name_10 }}"  class="form-control" id="talent_name_10" name="talent_name_10" placeholder="talent name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.talent_desc_10 is defined ? variables.talent_desc_10 }}"  class="form-control" id="talent_desc_10" name="talent_desc_10" placeholder="talent description" type="text" /></div>
+            </div>
+        </div>
+    </div>
+    <div class="row card">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-12"><h5>Daemonic Gifts</h5></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.daemonic_gift_name_1 is defined ? variables.daemonic_gift_name_1 }}"  class="form-control" id="daemonic_gift_name_1" name="daemonic_gift_name_1" placeholder="daemonic gift name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.daemonic_gift_desc_1 is defined ? variables.daemonic_gift_desc_1 }}"  class="form-control mention" id="daemonic_gift_desc_1" name="daemonic_gift_desc_1" placeholder="daemonic gift description" type="text" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.daemonic_gift_name_2 is defined ? variables.daemonic_gift_name_2 }}"  class="form-control" id="daemonic_gift_name_2" name="daemonic_gift_name_2" placeholder="daemonic gift name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.daemonic_gift_desc_2 is defined ? variables.daemonic_gift_desc_2 }}"  class="form-control mention" id="daemonic_gift_desc_2" name="daemonic_gift_desc_2" placeholder="daemonic gift description" type="text" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.daemonic_gift_name_3 is defined ? variables.daemonic_gift_name_3 }}"  class="form-control" id="daemonic_gift_name_3" name="daemonic_gift_name_3" placeholder="daemonic gift name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.daemonic_gift_desc_3 is defined ? variables.daemonic_gift_desc_3 }}"  class="form-control mention" id="daemonic_gift_desc_3" name="daemonic_gift_desc_3" placeholder="daemonic gift description" type="text" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.daemonic_gift_name_4 is defined ? variables.daemonic_gift_name_4 }}"  class="form-control" id="daemonic_gift_name_4" name="daemonic_gift_name_4" placeholder="daemonic gift name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.daemonic_gift_desc_4 is defined ? variables.daemonic_gift_desc_4 }}"  class="form-control mention" id="daemonic_gift_desc_4" name="daemonic_gift_desc_4" placeholder="daemonic gift description" type="text" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"><input  value="{{ variables.daemonic_gift_name_5 is defined ? variables.daemonic_gift_name_5 }}"  class="form-control" id="daemonic_gift_name_5" name="daemonic_gift_name_5" placeholder="daemonic gift name" type="text" /></div>
+                <div class="col-sm-10"><input  value="{{ variables.daemonic_gift_desc_5 is defined ? variables.daemonic_gift_desc_5 }}"  class="form-control mention" id="daemonic_gift_desc_5" name="daemonic_gift_desc_5" placeholder="daemonic gift description" type="text" /></div>
             </div>
         </div>
     </div>
@@ -1299,80 +1373,6 @@
                 </tr>
             </tbody>
         </table>
-    </div>
-    <div class="row card">
-        <div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-12"><h5>Talents</h5></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.talent_name_1 is defined ? variables.talent_name_1 }}"  class="form-control" id="talent_name_1" name="talent_name_1" placeholder="talent name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.talent_desc_1 is defined ? variables.talent_desc_1 }}"  class="form-control" id="talent_desc_1" name="talent_desc_1" placeholder="talent description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.talent_name_2 is defined ? variables.talent_name_2 }}"  class="form-control" id="talent_name_2" name="talent_name_2" placeholder="talent name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.talent_desc_2 is defined ? variables.talent_desc_2 }}"  class="form-control" id="talent_desc_2" name="talent_desc_2" placeholder="talent description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.talent_name_3 is defined ? variables.talent_name_3 }}"  class="form-control" id="talent_name_3" name="talent_name_3" placeholder="talent name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.talent_desc_3 is defined ? variables.talent_desc_3 }}"  class="form-control" id="talent_desc_3" name="talent_desc_3" placeholder="talent description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.talent_name_4 is defined ? variables.talent_name_4 }}"  class="form-control" id="talent_name_4" name="talent_name_4" placeholder="talent name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.talent_desc_4 is defined ? variables.talent_desc_4 }}"  class="form-control" id="talent_desc_4" name="talent_desc_4" placeholder="talent description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.talent_name_5 is defined ? variables.talent_name_5 }}"  class="form-control" id="talent_name_5" name="talent_name_5" placeholder="talent name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.talent_desc_5 is defined ? variables.talent_desc_5 }}"  class="form-control" id="talent_desc_5" name="talent_desc_5" placeholder="talent description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.talent_name_6 is defined ? variables.talent_name_6 }}"  class="form-control" id="talent_name_6" name="talent_name_6" placeholder="talent name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.talent_desc_6 is defined ? variables.talent_desc_6 }}"  class="form-control" id="talent_desc_6" name="talent_desc_6" placeholder="talent description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.talent_name_7 is defined ? variables.talent_name_7 }}"  class="form-control" id="talent_name_7" name="talent_name_7" placeholder="talent name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.talent_desc_7 is defined ? variables.talent_desc_7 }}"  class="form-control" id="talent_desc_7" name="talent_desc_7" placeholder="talent description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.talent_name_8 is defined ? variables.talent_name_8 }}"  class="form-control" id="talent_name_8" name="talent_name_8" placeholder="talent name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.talent_desc_8 is defined ? variables.talent_desc_8 }}"  class="form-control" id="talent_desc_8" name="talent_desc_8" placeholder="talent description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.talent_name_9 is defined ? variables.talent_name_9 }}"  class="form-control" id="talent_name_9" name="talent_name_9" placeholder="talent name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.talent_desc_9 is defined ? variables.talent_desc_9 }}"  class="form-control" id="talent_desc_9" name="talent_desc_9" placeholder="talent description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.talent_name_10 is defined ? variables.talent_name_10 }}"  class="form-control" id="talent_name_10" name="talent_name_10" placeholder="talent name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.talent_desc_10 is defined ? variables.talent_desc_10 }}"  class="form-control" id="talent_desc_10" name="talent_desc_10" placeholder="talent description" type="text" /></div>
-            </div>
-        </div>
-    </div>
-    <div class="row card">
-        <div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-12"><h5>Daemonic Gifts</h5></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.daemonic_gift_name_1 is defined ? variables.daemonic_gift_name_1 }}"  class="form-control" id="daemonic_gift_name_1" name="daemonic_gift_name_1" placeholder="daemonic gift name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.daemonic_gift_desc_1 is defined ? variables.daemonic_gift_desc_1 }}"  class="form-control mention" id="daemonic_gift_desc_1" name="daemonic_gift_desc_1" placeholder="daemonic gift description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.daemonic_gift_name_2 is defined ? variables.daemonic_gift_name_2 }}"  class="form-control" id="daemonic_gift_name_2" name="daemonic_gift_name_2" placeholder="daemonic gift name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.daemonic_gift_desc_2 is defined ? variables.daemonic_gift_desc_2 }}"  class="form-control mention" id="daemonic_gift_desc_2" name="daemonic_gift_desc_2" placeholder="daemonic gift description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.daemonic_gift_name_3 is defined ? variables.daemonic_gift_name_3 }}"  class="form-control" id="daemonic_gift_name_3" name="daemonic_gift_name_3" placeholder="daemonic gift name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.daemonic_gift_desc_3 is defined ? variables.daemonic_gift_desc_3 }}"  class="form-control mention" id="daemonic_gift_desc_3" name="daemonic_gift_desc_3" placeholder="daemonic gift description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.daemonic_gift_name_4 is defined ? variables.daemonic_gift_name_4 }}"  class="form-control" id="daemonic_gift_name_4" name="daemonic_gift_name_4" placeholder="daemonic gift name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.daemonic_gift_desc_4 is defined ? variables.daemonic_gift_desc_4 }}"  class="form-control mention" id="daemonic_gift_desc_4" name="daemonic_gift_desc_4" placeholder="daemonic gift description" type="text" /></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2"><input  value="{{ variables.daemonic_gift_name_5 is defined ? variables.daemonic_gift_name_5 }}"  class="form-control" id="daemonic_gift_name_5" name="daemonic_gift_name_5" placeholder="daemonic gift name" type="text" /></div>
-                <div class="col-sm-10"><input  value="{{ variables.daemonic_gift_desc_5 is defined ? variables.daemonic_gift_desc_5 }}"  class="form-control mention" id="daemonic_gift_desc_5" name="daemonic_gift_desc_5" placeholder="daemonic gift description" type="text" /></div>
-            </div>
-        </div>
     </div>
     <!-- MEGA TAB: Trappings -->
     <div class="row card mt-3">
