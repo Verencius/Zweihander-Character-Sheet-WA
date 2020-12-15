@@ -23,7 +23,6 @@
 {% set skill_brawn_drive_value = variables.attribute_brawn + ([variables.skill_brawn_drive_10,variables.skill_brawn_drive_20,variables.skill_brawn_drive_30]|reduce((carry, v) => carry + v))*10 %}
 {% set skill_brawn_intimidate_value = variables.attribute_brawn + ([variables.skill_brawn_intimidate_10,variables.skill_brawn_intimidate_20,variables.skill_brawn_intimidate_30]|reduce((carry, v) => carry + v))*10 %}
 {% set skill_brawn_toughness_value =  variables.attribute_brawn + ([variables.skill_brawn_toughness_10,variables.skill_brawn_toughness_20,variables.skill_brawn_toughness_30]|reduce((carry, v) => carry + v))*10 %}
-{% set skill_brawn_coordination_value =  variables.attribute_brawn + ([variables.skill_brawn_coordination_10,variables.skill_brawn_coordination_20,variables.skill_brawn_coordination_30]|reduce((carry, v) => carry + v))*10 %}
 {% set skill_agility_coordination_value =  variables.attribute_agility + ([variables.skill_agility_coordination_10,variables.skill_agility_coordination_20,variables.skill_agility_coordination_30]|reduce((carry, v) => carry + v))*10 %}     
 {% set skill_agility_pilot_value =  variables.attribute_agility + ([variables.skill_agility_pilot_10,variables.skill_agility_pilot_20,variables.skill_agility_pilot_30]|reduce((carry, v) => carry + v))*10 %}     
 {% set skill_agility_ride_value =  variables.attribute_agility + ([variables.skill_agility_ride_10,variables.skill_agility_ride_20,variables.skill_agility_ride_30]|reduce((carry, v) => carry + v))*10 %}     
@@ -341,7 +340,7 @@
                             {% for i in 9..1 %}
                                 <td class="text-center">{% if current_order_ranks >= i %} <i class="fas fa-circle"></i> {% else %} <i class="far fa-circle"></i>{% endif %}</td>
                             {% endfor %}
-                            <td class="text-center"><div class="border-strong btext pt-1 pb-1"><strong>{%if variables.alignment_corruption is defined and variables.alignment_curruption is not null %}{{variables.alignment_corruption}}{% else %}0{% endif %}</strong></div></td>
+                            <td class="text-center"><div class="border-strong btext pt-1 pb-1"><strong>{%if variables.alignment_corruption is defined and variables.alignment_curruption is not empty %}{{variables.alignment_corruption}}{% else %}0{% endif %}</strong></div></td>
                             {% for i in 1..9 %}
                                 <td class="text-center">{% if current_chaos_ranks >= i %} <i class="fas fa-circle"></i> {% else %} <i class="far fa-circle"></i>{% endif %}</td>
                             {% endfor %}
@@ -1089,7 +1088,7 @@
     </div>
     <!-- TAB #5: Armour and Shield -->
     <div class="row card mt-2">
-        <div class="col-sm-6 card-content border-right">
+        <div class="col-sm-12 card-content border-right">
             <div class="row">
                 <div class="col-sm-3"><h5>Armor</h5></div>
                 <div class="col-sm-2"><h5>DTh Mod.</h5></div>
@@ -1107,7 +1106,9 @@
                 <div class="col-sm-1">{% if variables.armor_is_makers_mark == true %}{% set armor_encumbrance_adjusted = variables.armor_encumbrance - 2 %}{{ armor_encumbrance_adjusted}}{% else %}{{ variables.armor_encumbrance}}{% endif %}</div>
             </div>
         </div>
-        <div class="col-sm-6 card-content">
+    </div>
+    <div class="row card mt-2">
+        <div class="col-sm-12 card-content">
             <div class="row">
                 <div class="col-sm-4">
                     <div><h5>Shield</h5></div>
@@ -1138,7 +1139,7 @@
     </div>
     <!-- TAB #6: Dodge, Parry, Damage threshold -->
     <div class="row card mt-2">
-        <div class="col-sm-4 border-right">
+        <div class="col-sm-6 border-right">
             <div class="row">
                 <div class="col-sm-5">
                     <div class="row">
@@ -1211,7 +1212,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-5"> 
+        <div class="col-sm-6"> 
             <div class="row">
                 <div class="col-sm-6">
                     <div class="row">
@@ -1404,26 +1405,20 @@
             </div>
         </div>
         <div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="col-sm-2"><strong>Bag of Coins</strong></div>
-                    <div class="col-sm-2">
-                        <strong>GC</strong>
-                        <span class="border-strong btext">{%if variables.wealth_gc == 0 %}0{% else %}{{ variables.wealth_gc}}{% endif %}</span>
-                    </div>
-                    <div class="col-sm-2">
-                        <strong>SS</strong>
-                        <span class="border-strong btext">{% if variables.wealth_ss == 0 %}0{% else %}{{ variables.wealth_ss}}{% endif %}</span>
-                    </div>
-                    <div class="col-sm-2">
-                        <strong>BP</strong>
-                        <span class="border-strong btext">{% if variables.wealth_bp == 0 %}0{% else %}{{ variables.wealth_bp}}{% endif %}</span>
-                    </div>
-                    <div class="col-sm-2">
-                        <strong>Enc.</strong>
-                        <span class="border-strong btext">{{ wealth_enc}}</span>
-                    </div>
+            <!-- <div class="row">
+                <div class="col-sm-12 card-title">
+                    <div class="row">Bag of Coins</div>
                 </div>
+            </div> -->
+            <div class="row">
+                <div class="col-sm-1 text-right"><strong>GC</strong></div>
+                <div class="col-sm-1 border-strong btext">{%if variables.wealth_gc == 0 %}0{% else %}{{ variables.wealth_gc}}{% endif %}</div>
+                <div class="col-sm-1 text-right"><strong>SS</strong></div>
+                <div class="col-sm-1 border-strong btext">{% if variables.wealth_ss == 0 %}0{% else %}{{ variables.wealth_ss}}{% endif %}</div>
+                <div class="col-sm-1 text-right"><strong>BP</strong></div>
+                <div class="col-sm-1 border-strong btext">{% if variables.wealth_bp == 0 %}0{% else %}{{ variables.wealth_bp}}{% endif %}</div>
+                <div class="col-sm-1 text-right"><strong>Enc.</strong></div>
+                <div class="col-sm-1 border-strong btext">{{ wealth_enc}}</div>
             </div>
         </div>
         <div class="col-sm-12">
@@ -1433,155 +1428,155 @@
                         <div class="col-sm-12 card-title"><h5>Trappings on Self</h5></div>
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-10"><strong>Trappings</strong></div>
-                                <div class="col-sm-1"><strong>Qty.</strong></div>
-                                <div class="col-sm-1"><strong>Enc.</strong></div>
+                                <div class="col-lg-10 col-md-8"><strong>Trappings</strong></div>
+                                <div class="col-lg-1 col-md-2"><strong>Qty.</strong></div>
+                                <div class="col-lg-1 col-md-2"><strong>Enc.</strong></div>
                             </div>
                             {% if variables.trappings_name_1 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_1}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_1}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_1}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_1}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_1}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_1}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_2 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_2}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_2}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_2}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_2}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_2}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_2}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_3 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_3}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_3}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_3}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_3}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_3}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_3}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_4 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_4}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_4}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_4}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_4}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_4}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_4}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_5 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_5}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_5}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_5}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_5}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_5}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_5}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_6 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_6}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_6}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_6}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_6}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_6}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_6}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_7 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_7}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_7}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_7}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_7}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_7}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_7}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_8 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_8}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_8}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_8}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_8}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_8}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_8}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_9 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_9}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_9}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_9}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_9}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_9}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_9}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_10 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_10}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_10}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_10}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_10}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_10}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_10}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_11 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_11}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_11}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_11}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_11}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_11}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_11}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_12 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_12}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_12}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_12}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_12}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_12}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_12}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_13 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_13}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_13}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_13}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_13}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_13}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_13}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_14 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_14}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_14}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_14}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_14}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_14}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_14}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_15 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_15}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_15}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_15}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_15}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_15}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_15}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_16 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_16}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_16}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_16}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_16}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_16}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_16}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_17 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_17}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_17}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_17}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_17}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_17}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_17}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_18 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_18}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_18}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_18}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_18}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_18}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_18}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_19 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_19}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_19}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_19}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_19}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_19}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_19}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_20 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_20}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_20}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_20}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_20}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_20}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_20}}</div>
                             </div>
                             {% endif %}
                             {% if variables.trappings_name_21 is not empty %}
                             <div class="row">
-                                <div class="col-sm-10">{{ variables.trappings_name_21}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_qty_21}}</div>
-                                <div class="col-sm-1">{{ variables.trappings_enc_21}}</div>
+                                <div class="col-lg-10 col-md-8">{{ variables.trappings_name_21}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_qty_21}}</div>
+                                <div class="col-lg-1 col-md-2">{{ variables.trappings_enc_21}}</div>
                             </div>
                             {% endif %}
                         </div>
@@ -1785,7 +1780,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_1|title}}</strong>({{ variables.magic_difficulty_1}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_1|title}}&nbsp;({{ variables.magic_difficulty_1}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_1}}</div>
@@ -1814,7 +1809,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_2|title}}</strong>({{ variables.magic_difficulty_2}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_2|title}}&nbsp;({{ variables.magic_difficulty_2}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_2}}</div>
@@ -1843,7 +1838,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_3|title}}</strong>({{ variables.magic_difficulty_3}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_3|title}}&nbsp;({{ variables.magic_difficulty_3}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_3}}</div>
@@ -1872,7 +1867,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_4|title}}</strong>({{ variables.magic_difficulty_4}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_4|title}}&nbsp;({{ variables.magic_difficulty_4}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_4}}</div>
@@ -1901,7 +1896,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_5|title}}</strong>({{ variables.magic_difficulty_5}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_5|title}}&nbps;({{ variables.magic_difficulty_5}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_5}}</div>
@@ -1930,7 +1925,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_6|title}}</strong>({{ variables.magic_difficulty_6}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_6|title}}&npbs;({{ variables.magic_difficulty_6}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_6}}</div>
@@ -1959,7 +1954,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_7|title}}</strong>({{ variables.magic_difficulty_7}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_7|title}}&nbps;({{ variables.magic_difficulty_7}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_7}}</div>
@@ -1988,7 +1983,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_8|title}}</strong>({{ variables.magic_difficulty_8}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_8|title}}&nbps;({{ variables.magic_difficulty_8}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_8}}</div>
@@ -2017,7 +2012,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_9|title}}</strong>({{ variables.magic_difficulty_9}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_9|title}}&nbps;({{ variables.magic_difficulty_9}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_9}}</div>
@@ -2046,7 +2041,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_10|title}}</strong>({{ variables.magic_difficulty_10}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_10|title}}&nbps;({{ variables.magic_difficulty_10}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_10}}</div>
@@ -2075,7 +2070,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_11|title}}</strong>({{ variables.magic_difficulty_11}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_11|title}}&nbps;({{ variables.magic_difficulty_11}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_11}}</div>
@@ -2104,7 +2099,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_12|title}}</strong>({{ variables.magic_difficulty_12}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_12|title}}&nbps;({{ variables.magic_difficulty_12}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_12}}</div>
@@ -2133,7 +2128,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_13|title}}</strong>({{ variables.magic_difficulty_13}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_13|title}}&nbps;({{ variables.magic_difficulty_13}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_13}}</div>
@@ -2162,7 +2157,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_14|title}}</strong>({{ variables.magic_difficulty_14}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_14|title}}&nbps;({{ variables.magic_difficulty_14}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_14}}</div>
@@ -2191,7 +2186,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_15|title}}</strong>({{ variables.magic_difficulty_15}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_15|title}}&nbps;({{ variables.magic_difficulty_15}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_15}}</div>
@@ -2220,7 +2215,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_16|title}}</strong>({{ variables.magic_difficulty_16}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_16|title}}&nbps;({{ variables.magic_difficulty_16}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_16}}</div>
@@ -2249,7 +2244,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_17|title}}</strong>({{ variables.magic_difficulty_17}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_17|title}}&nbps;({{ variables.magic_difficulty_17}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_17}}</div>
@@ -2278,7 +2273,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_18|title}}</strong>({{ variables.magic_difficulty_18}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_18|title}}&nbps;({{ variables.magic_difficulty_18}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_18}}</div>
@@ -2307,7 +2302,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_19|title}}</strong>({{ variables.magic_difficulty_19}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_19|title}}&nbps;({{ variables.magic_difficulty_19}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_19}}</div>
@@ -2336,7 +2331,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.magic_name_20|title}}</strong>({{ variables.magic_difficulty_20}})</div>
+                                <div class="col-sm-12"><h3>{{ variables.magic_name_20|title}}&nbps;({{ variables.magic_difficulty_20}})</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.magic_reagent_20}}</div>
@@ -2380,7 +2375,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.ritual_name_1|title}}</strong></div>
+                                <div class="col-sm-12"><h3>{{ variables.ritual_name_1|title}}</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.ritual_casting_time_1}}</div>
@@ -2411,7 +2406,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.ritual_name_2|title}}</strong></div>
+                                <div class="col-sm-12"><h3>{{ variables.ritual_name_2|title}}</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.ritual_casting_time_2}}</div>
@@ -2442,7 +2437,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.ritual_name_3|title}}</strong></div>
+                                <div class="col-sm-12"><h3>{{ variables.ritual_name_3|title}}</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.ritual_casting_time_3}}</div>
@@ -2473,7 +2468,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.ritual_name_4|title}}</strong></div>
+                                <div class="col-sm-12"><h3>{{ variables.ritual_name_4|title}}</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.ritual_casting_time_4}}</div>
@@ -2504,7 +2499,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.ritual_name_5|title}}</strong></div>
+                                <div class="col-sm-12"><h3>{{ variables.ritual_name_5|title}}</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.ritual_casting_time_5}}</div>
@@ -2535,7 +2530,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.ritual_name_6|title}}</strong></div>
+                                <div class="col-sm-12"><h3>{{ variables.ritual_name_6|title}}</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.ritual_casting_time_6}}</div>
@@ -2566,7 +2561,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.ritual_name_7|title}}</strong></div>
+                                <div class="col-sm-12"><h3>{{ variables.ritual_name_7|title}}</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.ritual_casting_time_7}}</div>
@@ -2597,7 +2592,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.ritual_name_8|title}}</strong></div>
+                                <div class="col-sm-12"><h3>{{ variables.ritual_name_8|title}}</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.ritual_casting_time_8}}</div>
@@ -2628,7 +2623,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.ritual_name_9|title}}</strong></div>
+                                <div class="col-sm-12"><h3>{{ variables.ritual_name_9|title}}</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.ritual_casting_time_9}}</div>
@@ -2659,7 +2654,7 @@
                     <div class="row card">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12"><strong>{{ variables.ritual_name_10|title}}</strong></div>
+                                <div class="col-sm-12"><h3>{{ variables.ritual_name_10|title}}</h3></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">{{ variables.ritual_casting_time_10}}</div>
