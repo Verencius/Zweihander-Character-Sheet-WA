@@ -852,19 +852,19 @@
             </div>
             <div class="row card-content">
                 <div class="col-sm-12">
-                    <input  value="{{ variables.language_1 is defined ? variables.language_1 }}"  class="form-control" id="language_1" name="language_1" placeholder="native language" type="text" />&nbsp;
+                    <input  value="{{ variables.language_1 is defined ? variables.language_1 }}"  class="form-control" id="language_1" name="language_1" placeholder="native language" type="text" />
                 </div>
                     <div class="col-sm-12">
-                    <input  value="{{ variables.language_2 is defined ? variables.language_2 }}"  class="form-control" id="language_2" name="language_2" placeholder="language #2" type="text" />&nbsp;
+                    <input  value="{{ variables.language_2 is defined ? variables.language_2 }}"  class="form-control" id="language_2" name="language_2" placeholder="language #2" type="text" />
                 </div>
                     <div class="col-sm-12">
-                    <input  value="{{ variables.language_3 is defined ? variables.language_3 }}"  class="form-control" id="language_3" name="language_3" placeholder="language #3" type="text" />&nbsp;
+                    <input  value="{{ variables.language_3 is defined ? variables.language_3 }}"  class="form-control" id="language_3" name="language_3" placeholder="language #3" type="text" />
                 </div>
                     <div class="col-sm-12">
-                    <input  value="{{ variables.language_4 is defined ? variables.language_4 }}"  class="form-control" id="language_4" name="language_4" placeholder="language #4" type="text" />&nbsp;
+                    <input  value="{{ variables.language_4 is defined ? variables.language_4 }}"  class="form-control" id="language_4" name="language_4" placeholder="language #4" type="text" />
                 </div>
                     <div class="col-sm-12">
-                    <input  value="{{ variables.language_5 is defined ? variables.language_5 }}"  class="form-control" id="language_5" name="language_5" placeholder="language #5" type="text" />&nbsp;
+                    <input  value="{{ variables.language_5 is defined ? variables.language_5 }}"  class="form-control" id="language_5" name="language_5" placeholder="language #5" type="text" />
                 </div>
             </div>
         </div>
@@ -891,17 +891,15 @@
                         <div class="col-sm-6"><div class="border-strong">{% if variables.peril_threshold_base != "" %}{{ peril_threshold_plus_18}}{% else %}{{attribute_willpower_bonus_final + 21}}{% endif %}</div></div>
                     </div> 
                 </div>
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <select   class="form-control"  id="peril_condition_track" name="peril_condition_track">
-                            <option value="UNHINDERED" {% if variables.peril_condition_track is defined and variables.peril_condition_track == "UNHINDERED"  %}selected="selected" {% endif %}  >UNHINDERED</option>
-                            <option value="imperiled" {% if variables.peril_condition_track is defined and variables.peril_condition_track == "imperiled"  %}selected="selected" {% endif %}  >Imperiled</option>
-                            <option value="ignore 1 skill rank" {% if variables.peril_condition_track is defined and variables.peril_condition_track == "ignore 1 skill rank"  %}selected="selected" {% endif %}  >Ignore 1 skill rank</option>
-                            <option value="ignore 2 skill ranks" {% if variables.peril_condition_track is defined and variables.peril_condition_track == "ignore 2 skill ranks"  %}selected="selected" {% endif %}  >Ignore 2 skill ranks</option>
-                            <option value="ignore 3 skill ranks" {% if variables.peril_condition_track is defined and variables.peril_condition_track == "ignore 3 skill ranks"  %}selected="selected" {% endif %}  >Ignore 3 skill ranks</option>
-                            <option value="INCAPACITATED!" {% if variables.peril_condition_track is defined and variables.peril_condition_track == "INCAPACITATED!"  %}selected="selected" {% endif %}  >INCAPACITATED!</option>
-                        </select>
-                    </div>
+                <div class="col-sm-12 text-center">
+                    <select   class="form-control"  id="peril_condition_track" name="peril_condition_track">
+                        <option value="UNHINDERED" {% if variables.peril_condition_track is defined and variables.peril_condition_track == "UNHINDERED"  %}selected="selected" {% endif %}  >UNHINDERED</option>
+                        <option value="imperiled" {% if variables.peril_condition_track is defined and variables.peril_condition_track == "imperiled"  %}selected="selected" {% endif %}  >Imperiled</option>
+                        <option value="ignore 1 skill rank" {% if variables.peril_condition_track is defined and variables.peril_condition_track == "ignore 1 skill rank"  %}selected="selected" {% endif %}  >Ignore 1 skill rank</option>
+                        <option value="ignore 2 skill ranks" {% if variables.peril_condition_track is defined and variables.peril_condition_track == "ignore 2 skill ranks"  %}selected="selected" {% endif %}  >Ignore 2 skill ranks</option>
+                        <option value="ignore 3 skill ranks" {% if variables.peril_condition_track is defined and variables.peril_condition_track == "ignore 3 skill ranks"  %}selected="selected" {% endif %}  >Ignore 3 skill ranks</option>
+                        <option value="INCAPACITATED!" {% if variables.peril_condition_track is defined and variables.peril_condition_track == "INCAPACITATED!"  %}selected="selected" {% endif %}  >INCAPACITATED!</option>
+                    </select>
                 </div>
             </div>
         </div>
