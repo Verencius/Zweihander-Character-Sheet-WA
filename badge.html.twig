@@ -96,6 +96,61 @@
 {% else %}
     {% set profession_current = variables.profession_basic %}
 {% endif %}
+<!-- peril threshold modifiers -->
+{% set peril_threshold_plus_6 = variables.peril_threshold_base + 6 %}
+{% set peril_threshold_plus_12 = variables.peril_threshold_base + 12 %}
+{% set peril_threshold_plus_18 = variables.peril_threshold_base + 18 %}
+<!-- damage threshold modifiers -->
+{% if variables.shield_is_makers_mark == true and variables.shield_is_ruined == false %}
+    {% set shield_damage_threshold_modifier = 1 %}
+    {% else %}
+    {% set shield_damage_threshold_modifier = 0 %}
+{% endif %}
+{% if variables.armor_is_ruined == false %}
+    {% set armor_damage_threshold = variables.armor_dth_mod %}
+{% else %}
+    {% set armor_damage_threshold = 0 %}
+{% endif %}
+{% if variables.damage.threshold is defined and variables.damage_threshold is not empty %}
+    {% set damage_threshold_temp = variables.damage_threshold %}
+    {% else %}
+    {% set damage_threshold_temp = attribute_brawn_bonus_final %}
+{% endif %}
+{% set damage_threshold_adjusted = damage_threshold_temp + armor_damage_threshold +  shield_damage_threshold_modifier %}
+{% set damage_threshold_plus_6 = damage_threshold_adjusted + 6 %}
+{% set damage_threshold_plus_12 = damage_threshold_adjusted + 12 %}
+{% set damage_threshold_plus_18 = damage_threshold_adjusted + 18 %}
+<!-- encumbrance and overage calculator -->
+{% set encumbrance_weapons_array = [variables.weapon_encumbrance_1, variables.weapon_encumbrance_2, variables.weapon_encumbrance_3, variables.weapon_encumbrance_4] %}
+{% set trappings_encumbrance_array = [variables.trappings_enc_1, variables.trappings_enc_2, variables.trappings_enc_3, variables.trappings_enc_4, variables.trappings_enc_5, variables.trappings_enc_6, variables.trappings_enc_7, variables.trappings_enc_8, variables.trappings_enc_9,variables.trappings_enc_10, variables.trappings_enc_11, variables.trappings_enc_12, variables.trappings_enc_13, variables.trappings_enc_14, variables.trappings_enc_15, variables.trappings_enc_16, variables.trappings_enc_17, variables.trappings_enc_18, variables.trappings_enc_19, variables.trappings_enc_20, variables.trappings_enc_21] %}
+{% set reagents_encumbrance_array = [reagent_enc_1, reagent_enc_2, reagent_enc_3, reagent_enc_4, reagent_enc_5, reagent_enc_6, reagent_enc_7, reagent_enc_8, reagent_enc_9, reagent_enc_10] %}
+{% set wealth_enc = ((variables.wealth_gc + variables.wealth_ss + variables.wealth_bp)/1000)|round (0,'floor') %}
+{% set encumbrance_total = encumbrance_weapons_array|reduce((carry, v) => carry + v) + variables.armor_encumbrance + variables.shield_encumbrance + trappings_encumbrance_array|reduce((carry, v) => carry + v) + reagents_encumbrance_array|reduce((carry, v) => carry + v) + wealth_enc %}
+<!-- encumbrance default values and calculations -->
+{% if variables.encumbrance_limit is defined and variables.encumbrance_limit is not empty %}
+    {% set encumbrance_limit_temp = variables.encumbrance_limit %}
+    {% else %}
+    {% set encumbrance_limit_temp = attribute_brawn_bonus_final +3 %}
+{% endif %}
+{% if encumbrance_limit_temp > encumbrance_total %}
+    {% set encumbrance_overage = 0 %}
+    {% else %}
+    {% set encumbrance_overage = encumbrance_total - variables.encumbrance_limit %}
+{% endif %}
+<!-- initiative default values and calculations -->
+{% if variables.initiative_base is defined and variables.initiative_base is not empty %}
+    {% set initiative_base_temp = variables.initiative_base %}
+    {% else %}
+    {% set initiative_base_temp = attribute_perception_bonus_final +3 %}
+{% endif %}
+{% set initiative_current = initiative_base_temp - encumbrance_overage %}
+<!-- movement calculations -->
+{% if variables.movement_base is defined and variables.movement_base is not empty %}
+    {% set movement_base_temp = variables.movement_base %}
+    {% else %}
+    {% set movement_base_temp = attribute_agility_bonus_final + 3 %}
+{% endif %}
+{% set movement_current = movement_base_temp - encumbrance_overage %}
 <!--end of macros -->
 <div id="karta" class="container fluid">
     <div class="col-sm-12">
@@ -147,42 +202,62 @@
     </div>
     <div class="col-sm-12">
         <div class="row">
-            {% if skill_combat_martial_melee_value > 0 %}Martial Melee:&nbsp;+{{skill_combat_martial_melee_value }}{% if variables.skill_combat_martial_melee_focus is not empty %}&nbsp;[{{ variables.skill_combat_martial_melee_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_combat_martial_ranged_value > 0 %}Martial Ranged:&nbsp;+{{combat_martial_ranged_value}}{% if variables.skill_combat_martial_range_focus is not empty %}&nbsp;[{{ variables.skill_combat_martial_range_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_combat_simple_melee_value > 0 %}Simple Melee:&nbsp;+{{skill_combat_simple_melee_value }}{% if variables.skill_combat_simple_melee_focus is not empty %}&nbsp;[{{ variables.skill_combat_simple_melee_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_combat_simple_ranged_value > 0 %}Simple Ranged:&nbsp;+{{skill_combat_simple_ranged_value}}{% if variables.skill_combat_simple_range_focus is not empty %}&nbsp;[{{ variables.skill_combat_simple_range_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_brawn_athletics_value > 0 %}Athletics:&nbsp;+{{skill_brawn_athletics_value }}{% if variables.skill_brawn_athletics_focus is not empty %}&nbsp;[{{ variables.skill_brawn_athletics_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_brawn_drive_value > 0 %}Drive:&nbsp;+{{skill_brawn_drive_value }}{% if variables.skill_brawn_drive_focus is not empty %}&nbsp;[{{ variables.skill_brawn_drive_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_brawn_intimidate_value > 0 %}Intimidate:&nbsp;+{{skill_brawn_intimidate_value }}{% if variables.skill_brawn_intimidate_focus is not empty %}&nbsp;[{{ variables.skill_brawn_intimidate_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_brawn_toughness_value > 0 %}Toughness:&nbsp;+{{skill_brawn_toughness_value}}{% if variables.skill_brawn_toughness_focus is not empty %}&nbsp;[{{ variables.skill_brawn_toughness_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_agility_coordination_value > v0 %}Coordination:&nbsp;+{{skill_agility_coordination_value }}{% if variables.skill_agility_coordination_focus is not empty %}&nbsp;[{{ variables.skill_agility_coordination_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_agility_pilot_value > 0 %}Pilot:&nbsp;+{{skill_agility_pilot_value}}{% if variables.skill_agility_pilot_focus is not empty %}&nbsp;[{{ variables.skill_agility_pilot_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_agility_ride_value > 0 %}Ride:&nbsp;+{{skill_agility_ride_value}}{% if variables.skill_agility_ride_focus is not empty %}&nbsp;[{{ variables.skill_agility_ride_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_agility_skulduggery_value > 0 %}Skulduggery:&nbsp;+{{skill_agility_skulduggery_value}}{% if variables.skill_agility_skullduggery_focus is not empty %}&nbsp;[{{ variables.skill_agility_skullduggery_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_agility_stealth_value > 0 %}Stealth:&nbsp;+{{skill_agility_stealth_value }}{% if variables.skill_agility_stealth_focus is not empty %}&nbsp;[{{ variables.skill_agility_stealth_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_perception_awareness_value > 0 %}Awareness:&nbsp;+{{skill_perception_awareness_value}}{% if variables.skill_perception_awareness_focus is not empty %}&nbsp;[{{ variables.skill_perception_awareness_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_perception_eavesdrop_value > 0 %}Eavesdrop:&nbsp;+{{skill_perception_eavesdrop_value}}{% if variables.skill_perception_eavesdrop_focus is not empty %}&nbsp;[{{ variables.skill_perception_eavesdrop_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_perception_scrutinize_value > 0 %}Scrutinize:&nbsp;+{{skill_perception_scrutinize_value}}{% if variables.skill_perception_scrutinize_focus is not empty %}&nbsp;[{{ variables.skill_perception_scrutinize_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_perception_survival_value > 0 %}Survival:&nbsp;+{{skill_perception_scrutinize_value}}{% if variables.skill_perception_survival_focus is not empty %}&nbsp;[{{ variables.skill_perception_survival_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_intelligence_alchemy_value > 0 %}Alchemy:&nbsp;+{{skill_intelligence_alchemy_value}}{% if variables.skill_intelligence_alchemy_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_alchemy_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_intelligence_counterfeit_value > 0 %}Counterfeit:&nbsp;+{{skill_intelligence_counterfeit_value}}{% if variables.skill_intelligence_counterfeit_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_counterfeit_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_intelligence_education_value > 0 %}Education:&nbsp;+{{skill_intelligence_education_value}}{% if variables.skill_intelligence_education_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_education_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_intelligence_folklore_value > 0 %}Folklore:&nbsp;+{{skill_intelligence_folklore_value}}{% if variables.skill_intelligence_folklore_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_folklore_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_intelligence_gamble_value > 0 %}Gamble:&nbsp;+{{skill_intelligence_gamble_value}}{% if variables.skill_intelligence_gamble_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_gamble_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_intelligence_heal_value > 0 %}Heal:&nbsp;+{{skill_intelligence_heal_value}}{% if variables.skill_intelligence_heal_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_heal_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_intelligence_navigation_value > 0 %}Navigation:&nbsp;+{{skill_intelligence_navigation_value}}{% if variables.skill_intelligence_navigation_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_navigation_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_intelligence_warfare_value > 0 %}Warfare:&nbsp;+{{skill_intelligence_warfare_value}}{% if variables.skill_intelligence_warfare_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_warfare_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_willpower_incantation_value > 0 %}Incantation:&nbsp;+{{skill_willpower_incantation_value}}{% if variables.skill_willpower_incantation_focus is not empty %}&nbsp;[{{ variables.skill_willpower_incantation_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_willpower_interrogation_value > 0 %}Interrogation:&nbsp;+{{skill_willpower_interrogation_value}}{% if variables.skill_willpower_interrogation_focus is not empty %}&nbsp;[{{ variables.skill_willpower_interrogation_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_willpower_resolve_value > 0 %}Resolve:&nbsp;+{{skill_willpower_resolve_value}}{% if variables.skill_willpower_resolve_focus is not empty %}&nbsp;[{{ variables.skill_willpower_resolve_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_willpower_tradecraft_value > 0 %}Tradecraft:&nbsp;+{{skill_willpower_tradecraft_value}}{% if variables.skill_willpower_tradecraft_focus is not empty %}&nbsp;[{{ variables.skill_willpower_tradecraft_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_fellowship_bargain_value > 0 %}Bargain:&nbsp;+{{skill_fellowship_bargain_value}}{% if variables.skill_fellowship_bargain_focus is not empty %}&nbsp;[{{ variables.skill_fellowship_bargain_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_fellowship_charm_value > 0 %}Charm:&nbsp;+{{skill_fellowship_charm_value}}{% if variables.skill_fellowship_charm_focus is not empty %}&nbsp;[{{ variables.skill_fellowship_charm_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_fellowship_disguise_value > 0 %}Disguise:&nbsp;+{{skill_fellowship_disguise_value}}{% if variables.skill_fellowship_disguise_focus is not empty %}&nbsp;[{{ variables.skill_fellowship_disguise_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_fellowship_guile_value > 0 %}Guile:&nbsp;+{{skill_fellowship_guile_value}}{% if variables.skill_fellowship_guile_focus is not empty %}&nbsp;[{{ variables.skill_fellowship_guile_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_fellowship_handle_animal_value > 0 %}Handle Animal:&nbsp;+{{skill_fellowship_handle_animal_value}}{% if variables.skill_fellowship_handle_animal_focus is not empty %}&nbsp;[{{ variables.skill_fellowship_handle_animal_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_fellowship_leadership_value > 0 %}Leadership:&nbsp;+{{skill_fellowship_leadership_value}}{% if variables.skill_fellowship_leadership_focus is not empty %}&nbsp;[{{ variables.skill_fellowship_leadership_focus}}]{% endif %},&nbsp;{% endif %}
-            {% if skill_fellowship_rumor_value > 0 %}Rumor:&nbsp;+{{skill_fellowship_rumor_value}}{% if variables.skill_fellowship_rumor_focus is not empty %}&nbsp;[{{ variables.skill_fellowship_rumor_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_combat_martial_melee_value > 0 %}Martial Melee&nbsp;+{{skill_combat_martial_melee_value }}{% if variables.skill_combat_martial_melee_focus is not empty %}&nbsp;[{{ variables.skill_combat_martial_melee_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_combat_martial_ranged_value > 0 %}Martial Ranged&nbsp;+{{combat_martial_ranged_value}}{% if variables.skill_combat_martial_range_focus is not empty %}&nbsp;[{{ variables.skill_combat_martial_range_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_combat_simple_melee_value > 0 %}Simple Melee&nbsp;+{{skill_combat_simple_melee_value }}{% if variables.skill_combat_simple_melee_focus is not empty %}&nbsp;[{{ variables.skill_combat_simple_melee_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_combat_simple_ranged_value > 0 %}Simple Ranged&nbsp;+{{skill_combat_simple_ranged_value}}{% if variables.skill_combat_simple_range_focus is not empty %}&nbsp;[{{ variables.skill_combat_simple_range_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_brawn_athletics_value > 0 %}Athletics&nbsp;+{{skill_brawn_athletics_value }}{% if variables.skill_brawn_athletics_focus is not empty %}&nbsp;[{{ variables.skill_brawn_athletics_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_brawn_drive_value > 0 %}Drive&nbsp;+{{skill_brawn_drive_value }}{% if variables.skill_brawn_drive_focus is not empty %}&nbsp;[{{ variables.skill_brawn_drive_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_brawn_intimidate_value > 0 %}Intimidate&nbsp;+{{skill_brawn_intimidate_value }}{% if variables.skill_brawn_intimidate_focus is not empty %}&nbsp;[{{ variables.skill_brawn_intimidate_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_brawn_toughness_value > 0 %}Toughness&nbsp;+{{skill_brawn_toughness_value}}{% if variables.skill_brawn_toughness_focus is not empty %}&nbsp;[{{ variables.skill_brawn_toughness_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_agility_coordination_value > v0 %}Coordination&nbsp;+{{skill_agility_coordination_value }}{% if variables.skill_agility_coordination_focus is not empty %}&nbsp;[{{ variables.skill_agility_coordination_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_agility_pilot_value > 0 %}Pilot&nbsp;+{{skill_agility_pilot_value}}{% if variables.skill_agility_pilot_focus is not empty %}&nbsp;[{{ variables.skill_agility_pilot_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_agility_ride_value > 0 %}Ride&nbsp;+{{skill_agility_ride_value}}{% if variables.skill_agility_ride_focus is not empty %}&nbsp;[{{ variables.skill_agility_ride_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_agility_skulduggery_value > 0 %}Skulduggery&nbsp;+{{skill_agility_skulduggery_value}}{% if variables.skill_agility_skullduggery_focus is not empty %}&nbsp;[{{ variables.skill_agility_skullduggery_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_agility_stealth_value > 0 %}Stealth&nbsp;+{{skill_agility_stealth_value }}{% if variables.skill_agility_stealth_focus is not empty %}&nbsp;[{{ variables.skill_agility_stealth_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_perception_awareness_value > 0 %}Awareness&nbsp;+{{skill_perception_awareness_value}}{% if variables.skill_perception_awareness_focus is not empty %}&nbsp;[{{ variables.skill_perception_awareness_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_perception_eavesdrop_value > 0 %}Eavesdrop&nbsp;+{{skill_perception_eavesdrop_value}}{% if variables.skill_perception_eavesdrop_focus is not empty %}&nbsp;[{{ variables.skill_perception_eavesdrop_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_perception_scrutinize_value > 0 %}Scrutinize&nbsp;+{{skill_perception_scrutinize_value}}{% if variables.skill_perception_scrutinize_focus is not empty %}&nbsp;[{{ variables.skill_perception_scrutinize_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_perception_survival_value > 0 %}Survival&nbsp;+{{skill_perception_scrutinize_value}}{% if variables.skill_perception_survival_focus is not empty %}&nbsp;[{{ variables.skill_perception_survival_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_intelligence_alchemy_value > 0 %}Alchemy&nbsp;+{{skill_intelligence_alchemy_value}}{% if variables.skill_intelligence_alchemy_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_alchemy_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_intelligence_counterfeit_value > 0 %}Counterfeit&nbsp;+{{skill_intelligence_counterfeit_value}}{% if variables.skill_intelligence_counterfeit_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_counterfeit_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_intelligence_education_value > 0 %}Education&nbsp;+{{skill_intelligence_education_value}}{% if variables.skill_intelligence_education_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_education_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_intelligence_folklore_value > 0 %}Folklore&nbsp;+{{skill_intelligence_folklore_value}}{% if variables.skill_intelligence_folklore_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_folklore_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_intelligence_gamble_value > 0 %}Gamble&nbsp;+{{skill_intelligence_gamble_value}}{% if variables.skill_intelligence_gamble_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_gamble_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_intelligence_heal_value > 0 %}Heal&nbsp;+{{skill_intelligence_heal_value}}{% if variables.skill_intelligence_heal_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_heal_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_intelligence_navigation_value > 0 %}Navigation&nbsp;+{{skill_intelligence_navigation_value}}{% if variables.skill_intelligence_navigation_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_navigation_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_intelligence_warfare_value > 0 %}Warfare&nbsp;+{{skill_intelligence_warfare_value}}{% if variables.skill_intelligence_warfare_focus is not empty %}&nbsp;[{{ variables.skill_intelligence_warfare_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_willpower_incantation_value > 0 %}Incantation&nbsp;+{{skill_willpower_incantation_value}}{% if variables.skill_willpower_incantation_focus is not empty %}&nbsp;[{{ variables.skill_willpower_incantation_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_willpower_interrogation_value > 0 %}Interrogation&nbsp;+{{skill_willpower_interrogation_value}}{% if variables.skill_willpower_interrogation_focus is not empty %}&nbsp;[{{ variables.skill_willpower_interrogation_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_willpower_resolve_value > 0 %}Resolve&nbsp;+{{skill_willpower_resolve_value}}{% if variables.skill_willpower_resolve_focus is not empty %}&nbsp;[{{ variables.skill_willpower_resolve_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_willpower_tradecraft_value > 0 %}Tradecraft&nbsp;+{{skill_willpower_tradecraft_value}}{% if variables.skill_willpower_tradecraft_focus is not empty %}&nbsp;[{{ variables.skill_willpower_tradecraft_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_fellowship_bargain_value > 0 %}Bargain&nbsp;+{{skill_fellowship_bargain_value}}{% if variables.skill_fellowship_bargain_focus is not empty %}&nbsp;[{{ variables.skill_fellowship_bargain_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_fellowship_charm_value > 0 %}Charm&nbsp;+{{skill_fellowship_charm_value}}{% if variables.skill_fellowship_charm_focus is not empty %}&nbsp;[{{ variables.skill_fellowship_charm_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_fellowship_disguise_value > 0 %}Disguise&nbsp;+{{skill_fellowship_disguise_value}}{% if variables.skill_fellowship_disguise_focus is not empty %}&nbsp;[{{ variables.skill_fellowship_disguise_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_fellowship_guile_value > 0 %}Guile&nbsp;+{{skill_fellowship_guile_value}}{% if variables.skill_fellowship_guile_focus is not empty %}&nbsp;[{{ variables.skill_fellowship_guile_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_fellowship_handle_animal_value > 0 %}Handle Animal&nbsp;+{{skill_fellowship_handle_animal_value}}{% if variables.skill_fellowship_handle_animal_focus is not empty %}&nbsp;[{{ variables.skill_fellowship_handle_animal_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_fellowship_leadership_value > 0 %}Leadership&nbsp;+{{skill_fellowship_leadership_value}}{% if variables.skill_fellowship_leadership_focus is not empty %}&nbsp;[{{ variables.skill_fellowship_leadership_focus}}]{% endif %},&nbsp;{% endif %}
+            {% if skill_fellowship_rumor_value > 0 %}Rumor&nbsp;+{{skill_fellowship_rumor_value}}{% if variables.skill_fellowship_rumor_focus is not empty %}&nbsp;[{{ variables.skill_fellowship_rumor_focus}}]{% endif %},&nbsp;{% endif %}
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <strong>Peril Threshold:</strong>&nbsp;{{variables.peril_threshold_base }}&nbsp;/&nbsp;{{peril_threshold_plus_6 }}&nbsp;/&nbsp;{{peril_threshold_plus_12 }}&nbsp;/&nbsp;{{peril_threshold_plus_18 }}
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <strong>Current Initiative:</strong>&nbsp;{{initiative_current}}
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <strong>Current Movement:</strong>&nbsp;{{movement_current}}
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <strong>Damage Threshold:</strong>&nbsp;{{damage_threshold_adjusted}}&nbsp;/&nbsp;{{damage_threshold_plus_6 }}&nbsp;/&nbsp;{{damage_threshold_plus_12 }}&nbsp;/&nbsp;{{damage_threshold_plus_18 }}
         </div>
     </div>
     <div class="col-sm-12">

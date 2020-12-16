@@ -51,9 +51,10 @@ h1, h2 {
 }
 .card {
     border: 1px solid #27241f;
-    background-color: #fefefe;
+    background-color: #fefefe!important;
     margin: 4px;
     font-size: 13px;
+    color: #000!important;
 }
 .card.row {
     flex-direction: row;
@@ -135,6 +136,31 @@ h1, h2 {
 .text-right {
     text-align: right!important;
 }
+.form-control {
+    background: #e2dfca!important;
+    color: #000!important;
+    border: 1px solid #b9b384!important;
+}
+.form-control::placeholder{
+    color: #777!important;
+}
+.form-control::-webkit-input-placeholder {
+    color: #777!important;
+}
+.form-control:-ms-input-placeholder {
+    color: #777!important;
+}
+.form-control:focus, .form-control:active {
+    background: #c5be8c!important;
+    color: #000!important;
+}
+.form-control option {
+    color: #000;
+}
+.border-strong .form-control {
+    border-radius: 15px;
+    margin: 0;
+}
 .checkbox {
     margin: 0 2px;
 }
@@ -146,4 +172,40 @@ h1, h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.CodeMirror {
+    background: #e2dfca!important;
+    color: #000!important;
+    text-shadow: none!important;
+}
+.CodeMirror-buttonsPanel [type="button"] {
+    background: #e2dfca!important;
+    border: 1px solid #b9b38d;
+}
+.CodeMirror-buttonsPanel [type="button"]:hover {
+    background: #b9b38d!important;
+    border: 1px solid #a7a077;
+    color: #000;
+}
+.CodeMirror-gutters {
+    background: #f1efe8!important;
+}
+.sceditor-container {
+    width: 100%!important;
+    background-color: #e2dfca!important;
+    color: #000!important;
+}
+div.sceditor-toolbar {
+    background: #e2dfca!important;
+}
+div.sceditor-toolbar .sceditor-button {
+    color: #000!important;
+    text-shadow: 0 0 black;
+}
+div.sceditor-toolbar .sceditor-button.active, div.sceditor-toolbar .sceditor-button:hover {
+    background: #b9b38d!important;    
+} 
+div.sceditor-toolbar .sceditor-button.disabled, div.sceditor-toolbar .sceditor-button.disabled:hover {
+    background: #e2dfca!important;
+    color: #666!important;
 }

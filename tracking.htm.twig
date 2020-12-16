@@ -7,7 +7,7 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <input  value="{{ variables.alignment_corruption is defined ? variables.alignment_corruption }}"  class="form-control"  id="alignment_corruption" name="alignment_corruption" placeholder="" type="number"  min=0 />
+                <input  value="{{ variables.alignment_corruption is defined ? variables.alignment_corruption }}"  class="form-control"  id="alignment_corruption" name="alignment_corruption" placeholder="" type="number"  min="0" />
             </div>
             <div class="col-sm-4">
                 <select   class="form-control"  id="peril_condition_track" name="peril_condition_track">
@@ -49,64 +49,60 @@
             </div>
         </div>
     </div>
-    <div class="col sm-12">
-        <div class="row">
-            {% if variables.weapon_name_1 is not empty and variables.weapon_ammo_1 > 0 %}
-            <div class="col-sm-4">
-                <div class="row card-title">
-                    <div class="col-sm-6">Weapon</div>
-                    <div class="col-sm-6">Ammo</div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">{{ variables.weapon_name_1}}</div>
-                    <div class="col-sm-6">
-                        <input  value="{{ variables.weapon_ammo_1 is defined ? variables.weapon_ammo_1 }}"  class="form-control"  id="weapon_ammo_1" name="weapon_ammo_1" placeholder="" type="number" min="0"  />
-                    </div>
-                </div>
-            </div>
-            {% endif %}
-            {% if variables.weapon_name_2 is not empty and variables.weapon_ammo_2 > 0 %}
-            <div class="col-sm-4">
-                <div class="row card-title">
-                    <div class="col-sm-6">Weapon</div>
-                    <div class="col-sm-6">Ammo</div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">{{ variables.weapon_name_2}}</div>
-                    <div class="col-sm-6">
-                        <input  value="{{ variables.weapon_ammo_2 is defined ? variables.weapon_ammo_2 }}"  class="form-control"  id="weapon_ammo_2" name="weapon_ammo_2" placeholder="" type="number" min="0"  />
-                    </div>
-                </div>
-            </div>
-            {% endif %}
-            {% if variables.weapon_name_3 is not empty and variables.weapon_ammo_3 > 0 %}
-            <div class="col-sm-4">
-                <div class="row card-title">
-                    <div class="col-sm-6">Weapon</div>
-                    <div class="col-sm-6">Ammo</div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">{{ variables.weapon_name_3}}</div>
-                    <div class="col-sm-6">
-                        <input  value="{{ variables.weapon_ammo_3 is defined ? variables.weapon_ammo_3 }}"  class="form-control"  id="weapon_ammo_3" name="weapon_ammo_3" placeholder="" type="number" min="0"  />
-                    </div>
-                </div>
-            </div>
-            {% endif %}
-            {% if variables.weapon_name_4 is not empty and variables.weapon_ammo_4 > 0 %}
-            <div class="col-sm-4">
-                <div class="row card-title">
-                    <div class="col-sm-6">Weapon</div>
-                    <div class="col-sm-6">Ammo</div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">{{ variables.weapon_name_4}}</div>
-                    <div class="col-sm-6">
-                        <input  value="{{ variables.weapon_ammo_4 is defined ? variables.weapon_ammo_4 }}"  class="form-control"  id="weapon_ammo_4" name="weapon_ammo_4" placeholder="" type="number" min="0"  />
-                    </div>
-                </div>
-            </div>
-            {% endif %}
+    {% if variables.weapon_name_1 is not empty and variables.weapon_ammo_1 > 0 %}
+    <div class="col-sm-3">
+        <div class="row card-title">
+            <div class="col-sm-6">Weapon</div>
+            <div class="col-sm-6">Ammo</div>
         </div>
-    </div>       
+        <div class="row">
+            <div class="col-sm-6">{{ variables.weapon_name_1}}</div>
+            <div class="col-sm-6">
+                <input  value="{{ variables.weapon_ammo_1 is defined ? variables.weapon_ammo_1 }}"  class="form-control"  id="weapon_ammo_1" name="weapon_ammo_1" placeholder="" type="number" min="0"  />
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if variables.weapon_name_2 is not empty and variables.weapon_ammo_2 > 0 %}
+    <div class="col-sm-3">
+        <div class="row card-title">
+            <div class="col-sm-6">Weapon</div>
+            <div class="col-sm-6">Ammo</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">{{ variables.weapon_name_2}}</div>
+            <div class="col-sm-6">
+                <input  value="{{ variables.weapon_ammo_2 is defined ? variables.weapon_ammo_2 }}"  class="form-control"  id="weapon_ammo_2" name="weapon_ammo_2" placeholder="" type="number" min="0"  />
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if variables.weapon_name_3 is not empty and variables.weapon_ammo_3 > 0 %}
+    <div class="col-sm-3">
+        <div class="row card-title">
+            <div class="col-sm-6">Weapon</div>
+            <div class="col-sm-6">Ammo</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">{{ variables.weapon_name_3}}</div>
+            <div class="col-sm-6">
+                <input  value="{{ variables.weapon_ammo_3 is defined ? variables.weapon_ammo_3 }}"  class="form-control"  id="weapon_ammo_3" name="weapon_ammo_3" placeholder="" type="number" min="0"  />
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if variables.weapon_name_4 is not empty and variables.weapon_ammo_4 > 0 %}
+    <div class="col-sm-3">
+        <div class="row card-title">
+            <div class="col-sm-6">Weapon</div>
+            <div class="col-sm-6">Ammo</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">{{ variables.weapon_name_4}}</div>
+            <div class="col-sm-6">
+                <input  value="{{ variables.weapon_ammo_4 is defined ? variables.weapon_ammo_4 }}"  class="form-control"  id="weapon_ammo_4" name="weapon_ammo_4" placeholder="" type="number" min="0"  />
+            </div>
+        </div>
+    </div>
+    {% endif %}    
 </div>

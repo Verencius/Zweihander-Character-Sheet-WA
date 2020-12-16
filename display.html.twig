@@ -340,7 +340,7 @@
                             {% for i in 9..1 %}
                                 <td class="text-center">{% if current_order_ranks >= i %} <i class="fas fa-circle"></i> {% else %} <i class="far fa-circle"></i>{% endif %}</td>
                             {% endfor %}
-                            <td class="text-center"><div class="border-strong btext pt-1 pb-1"><strong>{%if variables.alignment_corruption is defined and variables.alignment_curruption is not empty %}{{variables.alignment_corruption}}{% else %}0{% endif %}</strong></div></td>
+                            <td class="text-center"><div class="border-strong btext pt-1 pb-1"><strong>{%if variables.alignment_corruption is defined and variables.alignment_corruption is not empty %}{{variables.alignment_corruption}}{% else %}0{% endif %}</strong></div></td>
                             {% for i in 1..9 %}
                                 <td class="text-center">{% if current_chaos_ranks >= i %} <i class="fas fa-circle"></i> {% else %} <i class="far fa-circle"></i>{% endif %}</td>
                             {% endfor %}
@@ -756,7 +756,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6 border">
+                        <div class="col-sm-6">
                             <div class="row"><div class="col-sm-12"><h5>Peril Threshold</h5></div></div>
                             <div class="row">
                                 <div class="col-sm-5">
@@ -779,7 +779,9 @@
                                 </div>   
                             </div>
                         </div>
-                        <div class="col-sm-6 border">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
                             <div class="row"><div class="col-sm-12"><h5>Peril Condition Track</h5></div></div>
                             <div class="row">
                                 <div class="col-sm-2">{% if variables.peril_condition_track == "unhindered" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
@@ -2697,9 +2699,9 @@
         </div>
         <div class="col-sm-12">
             <div class="row card-content">
-                <div class="col-sm-2"><strong>Current Reward Points</strong></div>
+                <div class="col-sm-3"><strong>Current Reward Points</strong></div>
                 <div class="col-sm-2"><div class="border-strong btext">{% if variables.current_reward_points is not empty %}{{ variables.current_reward_points}}{% else %}0{% endif %}</div></div>
-                <div class="col-sm-2"><strong>Total Reward Points</strong></div>
+                <div class="col-sm-3"><strong>Total Reward Points</strong></div>
                 <div class="col-sm-2"><div class="border-strong btext">{% if variables.total_reward_points is not empty %}{{ variables.total_reward_points}}{% else %}0{% endif %}</div></div>
             </div>
         </div>
