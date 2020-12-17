@@ -1,0 +1,6 @@
+Changelog
+
+17/12/2020
+ - removed magic toggle from FORM
+ - replaced idle circle for PERIL DAMAGE and MAGIC with selectors
+ - 

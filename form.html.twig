@@ -1658,22 +1658,19 @@
             </div>
         </div>
     </div>
-    <!-- TAB: Spells -->
-    {% if variables.option_toggle_magic is defined and variables.option_toggle_magic == 1 or variables.option_toggle_rituals is defined and variables.option_toggle_rituals == 1 %}
-    <div class="row card mt-3">
+    <!-- TAB: Spells --><div class="row card mt-3">
         <div class="col-sm-12 card-title">
             <h3>Magic and Rituals</h3>
         </div>
         <div class="row card-content">
             <div class="col-sm-12">
-                <span>{% if variables.magic_source_type != "arcane" %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</span>
-                <span>Arcane</span>
-                <span>&nbsp;<span>{% if variables.magic_source_type != "covenant" %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</span>
-                <span>Covenant</span>
-                <span>&nbsp;<span>{% if variables.magic_source_type != "divine" %}<i class="far fa-circle"></i>{% else %}<i class="fas fa-circle"></i>{% endif %}</span>
-                <span>Divine</span>
+                <select   class="form-control"  id="magic_source_type" name="magic_source_type">
+                    <option value="none" {% if variables.magic_source_type is defined and variables.magic_source_type == "none"  %}selected="selected" {% endif %}  >Choose Magic Source</option>
+                    <option value="arcane" {% if variables.magic_source_type is defined and variables.magic_source_type == "arcane"  %}selected="selected" {% endif %}  >Arcane</option>
+                    <option value="covenant" {% if variables.magic_source_type is defined and variables.magic_source_type == "covenant"  %}selected="selected" {% endif %}  >Covenant</option>
+                    <option value="divine" {% if variables.magic_source_type is defined and variables.magic_source_type == "divine"  %}selected="selected" {% endif %}  >Divine</option>
+                </select>
             </div>
-            {% if variables.option_toggle_magic is defined and variables.option_toggle_magic == 1 %}
             <div class="col-sm-12">
                 <div class="row card">
                     <div class="col-sm-12 card-title"><h5>Spells</h5></div>
@@ -2140,12 +2137,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            {% endif %}
-            <!-- end of spells tab-->
-            <!-- TAB: Rituals -->
-            {% if variables.option_toggle_rituals is defined and variables.option_toggle_rituals == 1 %}
-            <div class="col-sm-12">
+            </div><!-- end of spells tab-->
+            <!-- TAB: Rituals --><div class="col-sm-12">
                 <div class="row card">
                     <div class="col-sm-12 card-title"><h5>Rituals</h5></div>
                     <div class="col-sm-12">
@@ -2351,12 +2344,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            {% endif %}
-            <!-- end of rituals tab -->
+            </div><!-- end of rituals tab -->
         </div>
     </div>
-    {% endif %}
     <!-- end of magic tab -->
     <!-- TAB: Reward Points and Professions -->
     <div class="row card mt-3">
