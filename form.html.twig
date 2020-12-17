@@ -329,53 +329,41 @@
             <div class="row card-content">
                 <div class="col-sm-6">
                     <div class="row">
-                        <div class="col-sm-4"><strong>Fate Points:</strong></div>
-                        <div class="col-sm-2">
-                            <div class="col-sm-12 border-strong btext text-center">
-                                <input  value="{{ variables.personal_fate_points is defined ? variables.personal_fate_points }}"  class="form-control"  id="personal_fate_points" name="personal_fate_points" placeholder="" type="number" min="0"  />
-                            </div>
+                        <div class="col-sm-5"><strong>Fate Points:</strong></div>
+                        <div class="col-sm-2 border-strong btext text-center">
+                            <input  value="{{ variables.personal_fate_points is defined ? variables.personal_fate_points }}"  class="form-control"  id="personal_fate_points" name="personal_fate_points" placeholder="" type="number" min="0"  />
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-4"><strong>Reputation Points:</strong></div>
-                        <div class="col-sm-2">
-                            <div class="col-sm-12 border-strong btext text-center">
-                                <input  value="{{ variables.personal_reputation_points is defined ? variables.personal_reputation_points }}"  class="form-control"  id="personal_reputation_points" name="personal_reputation_points" placeholder="" type="number" min="0"/>
-                            </div>
+                        <div class="col-sm-5"><strong>Reputation Points:</strong></div>
+                        <div class="col-sm-2 border-strong btext text-center">
+                            <input  value="{{ variables.personal_reputation_points is defined ? variables.personal_reputation_points }}"  class="form-control"  id="personal_reputation_points" name="personal_reputation_points" placeholder="" type="number" min="0"/>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-4"><strong>Corruption:</strong></div>
-                        <div class="col-sm-2">
-                            <div class="col-sm-12 border-strong btext text-center">
-                                <input  value="{{ variables.alignment_corruption is defined ? variables.alignment_corruption }}"  class="form-control"  id="alignment_corruption" name="alignment_corruption" placeholder="" type="number" min="0"  />
-                            </div>
+                        <div class="col-sm-5"><strong>Corruption:</strong></div>
+                        <div class="col-sm-2 border-strong btext text-center">
+                            <input  value="{{ variables.alignment_corruption is defined ? variables.alignment_corruption }}"  class="form-control"  id="alignment_corruption" name="alignment_corruption" placeholder="" type="number" min="0"  />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="row">
-                        <div class="col-sm-4"><strong>Order Ranks:</strong></div>
-                        <div class="col-sm-2">
-                            <div class="col-sm-12 border-strong btext text-center">
-                                <input  value="{{ variables.alignment_order_ranks is defined ? variables.alignment_order_ranks }}"  class="form-control"  id="alignment_order_ranks" name="alignment_order_ranks" placeholder="0" type="number" min="0" max="9" />
-                            </div>
+                        <div class="col-sm-5"><strong>Order Ranks:</strong></div>
+                        <div class="col-sm-2 border-strong btext text-center">
+                            <input  value="{{ variables.alignment_order_ranks is defined ? variables.alignment_order_ranks }}"  class="form-control"  id="alignment_order_ranks" name="alignment_order_ranks" placeholder="0" type="number" min="0" max="9" />
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-4"><strong>Chaos Ranks:</strong></div>
-                        <div class="col-sm-2">
-                            <div class="col-sm-12 border-strong btext text-center">
-                                <input  value="{{ variables.alignment_chaos_ranks is defined ? variables.alignment_chaos_ranks }}"  class="form-control"  id="alignment_order_ranks" name="alignment_order_ranks" placeholder="0" type="number" min="0" max="9" />
-                            </div>
+                        <div class="col-sm-5"><strong>Chaos Ranks:</strong></div>
+                        <div class="col-sm-2 border-strong btext text-center">
+                            <input  value="{{ variables.alignment_chaos_ranks is defined ? variables.alignment_chaos_ranks }}"  class="form-control"  id="alignment_order_ranks" name="alignment_order_ranks" placeholder="0" type="number" min="0" max="9" />
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-4"><strong>Permanent Chaos Ranks:</strong></div>
-                        <div class="col-sm-2">
-                            <div class="col-sm-12 border-strong btext text-center">
-                                <input  value="{{ variables.alignment_permanent_chaos_ranks is defined ? variables.alignment_permanent_chaos_ranks }}"  class="form-control"  id="alignment_permanent_chaos_ranks" name="alignment_permanent_chaos_ranks" placeholder="0" type="number" min="0" max="9" />
-                            </div>
+                        <div class="col-sm-5"><strong>Permanent Chaos Ranks:</strong></div>
+                        <div class="col-sm-2 border-strong btext text-center">
+                            <input  value="{{ variables.alignment_permanent_chaos_ranks is defined ? variables.alignment_permanent_chaos_ranks }}"  class="form-control"  id="alignment_permanent_chaos_ranks" name="alignment_permanent_chaos_ranks" placeholder="0" type="number" min="0" max="9" />
                         </div>
                     </div>
                 </div>
@@ -444,8 +432,8 @@
         </div>
         <!-- Tab #4.1: Attributes, skills -->
         <div class="col-sm-12 card-content">
-            <div class="row card-content">
-                <div class="col-sm-4 border">
+            <div class="row">
+                <div class="col-sm-3 border">
                     <div class="row border-bottom">
                         <div class="col-sm-12"><strong>Primary Attributes</strong></div>
                     </div>
@@ -476,7 +464,7 @@
                         <div class="col-sm-4">{{ attribute_combat_bonus_final}}</div>
                     </div>
                 </div>
-                <div class="col-sm-8 border">
+                <div class="col-sm-9 border">
                     <div class="row border-bottom">
                         <div class="col-sm-3"><strong>Skills</strong></div>
                         <div class="col-sm-3"><strong>Skill Ranks +10</strong></div>
@@ -505,7 +493,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 border"> 
+                <div class="col-sm-3 border"> 
                     <div class="row">     
                         <div class="col-sm-8">Brawn</div>
                         <div class="col-sm-4"><input  value="{{ variables.attribute_brawn is defined ? variables.attribute_brawn }}"  class="form-control"  id="attribute_brawn" name="attribute_brawn" placeholder="25" type="number" min="0" max="100"   /></div>
@@ -531,7 +519,7 @@
                         <div class="col-sm-4">{{ attribute_brawn_bonus_final}}</div>
                     </div>
                 </div>
-                <div class="col-sm-8 border">
+                <div class="col-sm-9 border">
                     <div class="row">
                         <div class="col-sm-3">Athletics</div>
                         <div class="col-sm-3"><input  value="1"  {% if variables.skill_brawn_athletics_10 is defined and variables.skill_brawn_athletics_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_brawn_athletics_10" name="skill_brawn_athletics_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_brawn_athletics_20 is defined and variables.skill_brawn_athletics_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_brawn_athletics_20" name="skill_brawn_athletics_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_brawn_athletics_30 is defined and variables.skill_brawn_athletics_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_brawn_athletics_30" name="skill_brawn_athletics_30" placeholder="" type="checkbox" /></div>
@@ -555,7 +543,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 border">
+                <div class="col-sm-3 border">
                     <div class="row">     
                         <div class="col-sm-8">Agility</div>
                         <div class="col-sm-4"><input  value="{{ variables.attribute_agility is defined ? variables.attribute_agility }}"  class="form-control"  id="attribute_agility" name="attribute_agility" placeholder="25" type="number" min="0" max="100"   /></div>
@@ -581,7 +569,7 @@
                         <div class="col-sm-4">{{ attribute_agility_bonus_final}}</div>
                     </div>
                 </div>
-                <div class="col-sm-8 border">
+                <div class="col-sm-9 border">
                     <div class="row">
                         <div class="col-sm-3">Coordination</div>
                         <div class="col-sm-3"><input  value="1"  {% if variables.skill_agility_coordination_10 is defined and variables.skill_agility_coordination_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_coordination_10" name="skill_agility_coordination_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_agility_coordination_20 is defined and variables.skill_agility_coordination_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_coordination_20" name="skill_agility_coordination_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_agility_coordination_30 is defined and variables.skill_agility_coordination_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_agility_coordination_30" name="skill_agility_coordination_30" placeholder="" type="checkbox" /></div>
@@ -610,7 +598,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 border">
+                <div class="col-sm-3 border">
                     <div class="row">     
                         <div class="col-sm-8">Perception</div>
                         <div class="col-sm-4"><input  value="{{ variables.attribute_perception is defined ? variables.attribute_perception }}"  class="form-control"  id="attribute_perception" name="attribute_perception" placeholder="25" type="number"  min="0" max="100" /></div>
@@ -636,7 +624,7 @@
                         <div class="col-sm-4">{{ attribute_perception_bonus_final}}</div>
                     </div>
                 </div>
-                <div class="col-sm-8 border">
+                <div class="col-sm-9 border">
                     <div class="row">
                         <div class="col-sm-3">Awareness</div>
                         <div class="col-sm-3"><input  value="1"  {% if variables.skill_perception_awareness_10 is defined and variables.skill_perception_awareness_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_awareness_10" name="skill_perception_awareness_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_perception_awareness_20 is defined and variables.skill_perception_awareness_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_awareness_20" name="skill_perception_awareness_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_perception_awareness_30 is defined and variables.skill_perception_awareness_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_perception_awareness_30" name="skill_perception_awareness_30" placeholder="" type="checkbox" /></div>
@@ -660,7 +648,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 border">
+                <div class="col-sm-3 border">
                     <div class="row">     
                         <div class="col-sm-8">Intelligence</div>
                         <div class="col-sm-4"><input  value="{{ variables.attribute_intelligence is defined ? variables.attribute_intelligence }}"  class="form-control"  id="attribute_intelligence" name="attribute_intelligence" placeholder="25" type="number"  min="0" max="100" /></div>
@@ -686,7 +674,7 @@
                         <div class="col-sm-4">{{ attribute_intelligence_bonus_final}}</div>
                     </div>
                 </div>
-                <div class="col-sm-8 border">
+                <div class="col-sm-9 border">
                     <div class="row">
                         <div class="col-sm-3">Alchemy*</div>
                         <div class="col-sm-3"><input  value="1"  {% if variables.skill_intelligence_alchemy_10 is defined and variables.skill_intelligence_alchemy_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_alchemy_10" name="skill_intelligence_alchemy_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_alchemy_20 is defined and variables.skill_intelligence_alchemy_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_alchemy_20" name="skill_intelligence_alchemy_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_intelligence_alchemy_30 is defined and variables.skill_intelligence_alchemy_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_intelligence_alchemy_30" name="skill_intelligence_alchemy_30" placeholder="" type="checkbox" /></div>
@@ -730,7 +718,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 border">
+                <div class="col-sm-3 border">
                     <div class="row">     
                         <div class="col-sm-8">Willpower</div>
                         <div class="col-sm-4"><input  value="{{ variables.attribute_willpower is defined ? variables.attribute_willpower }}"  class="form-control"  id="attribute_willpower" name="attribute_willpower" placeholder="25" type="number"  min="0" max="100" /></div>
@@ -756,7 +744,7 @@
                         <div class="col-sm-4">{{ attribute_willpower_bonus_final}}</div>
                     </div>
                 </div>
-                <div class="col-sm-8 border">
+                <div class="col-sm-9 border">
                     <div class="row">
                         <div class="col-sm-3">Incantation*</div>
                         <div class="col-sm-3"><input  value="1"  {% if variables.skill_willpower_incantation_10 is defined and variables.skill_willpower_incantation_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_incantation_10" name="skill_willpower_incantation_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_willpower_incantation_20 is defined and variables.skill_willpower_incantation_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_incantation_20" name="skill_willpower_incantation_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_willpower_incantation_30 is defined and variables.skill_willpower_incantation_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_willpower_incantation_30" name="skill_willpower_incantation_30" placeholder="" type="checkbox" /></div>
@@ -780,7 +768,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 border">
+                <div class="col-sm-3 border">
                     <div class="row">     
                         <div class="col-sm-8">Fellowship</div>
                         <div class="col-sm-4"><input  value="{{ variables.attribute_fellowship is defined ? variables.attribute_fellowship }}"  class="form-control"  id="attribute_fellowship" name="attribute_fellowship" placeholder="25" type="number"  min="0" max="100" /></div>
@@ -806,7 +794,7 @@
                         <div class="col-sm-4">{{ attribute_fellowship_bonus_final}}</div>
                     </div>
                 </div>
-                <div class="col-sm-8 border">
+                <div class="col-sm-9 border">
                     <div class="row">
                         <div class="col-sm-3">Bargain</div>
                         <div class="col-sm-3"><input  value="1"  {% if variables.skill_fellowship_bargain_10 is defined and variables.skill_fellowship_bargain_10 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_bargain_10" name="skill_fellowship_bargain_10" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_bargain_20 is defined and variables.skill_fellowship_bargain_20 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_bargain_20" name="skill_fellowship_bargain_20" placeholder="" type="checkbox" /><input  value="1"  {% if variables.skill_fellowship_bargain_30 is defined and variables.skill_fellowship_bargain_30 == 1   %} checked="checked"{% endif %}   class="checkbox" id="skill_fellowship_bargain_30" name="skill_fellowship_bargain_30" placeholder="" type="checkbox" /></div>
@@ -1045,15 +1033,21 @@
                 <div class="col-sm-4 border">
                     <div class="row"><div class="col-sm-12 text-center"><h5>Encumbrance Limit</h5></div></div>
                     <div class="row">
-                        <div class="col-sm-3 ml-auto">
+                        <div class="col-sm-4 ml-auto">
                             <div class="row"><div class="col-sm-12"></div></div>
                             <div class="row"><div class="col-sm-12 text-center"><b></b></div></div>
                         </div>
-                        <div class="col-sm-3">
-                            <div class="row"><div class="col-sm-12"><div class="border-strong"><input value="{{ variables.encumbrance_limit is defined ? variables.encumbrance_limit }}" class="form-control input-large" id="encumbrance_limit" name="encumbrance_limit" placeholder="{{ encumbrance_limit_temp}}" type="number" min="0" /></div></div></div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="border-strong">
+                                        <input value="{{ variables.encumbrance_limit is defined ? variables.encumbrance_limit }}" class="form-control input-large" id="encumbrance_limit" name="encumbrance_limit" placeholder="{{ encumbrance_limit_temp}}" type="number" min="0" />
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row"><div class="col-sm-12 text-center"><b>3+BB</b></div></div>
                         </div>
-                        <div class="col-sm-3 mr-auto">
+                        <div class="col-sm-4 mr-auto">
                             <div class="row"><div class="col-sm-12"></div></div>
                             <div class="row"><div class="col-sm-12 text-center"><b></b></div></div>
                         </div>
@@ -1062,15 +1056,23 @@
                 <div class="col-sm-4 border">
                     <div class="row"><div class="col-sm-12 text-center"><h5>Initiative</h5></div></div>
                     <div class="row">
-                        <div class="col-sm-3 ml-auto">
+                        <div class="col-sm-4 ml-auto">
                             <div class="row"><div class="col-sm-12"></div></div>
                             <div class="row"><div class="col-sm-12 text-center"><b></b></div></div>
                         </div>
-                        <div class="col-sm-3">
-                            <div class="row"><div class="col-sm-12"><div class="border-strong"><input value="{{ variables.initiative_base is defined ? variables.initiative_base }}" class="form-control input-large" id="initiative_base" name="initiative_base" placeholder="{{ initiative_base_temp}}" type="number" min="0" /></div></div></div>
-                            <div class="row"><div class="col-sm-12 text-center"><b>3+PB</b></div></div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="border-strong">
+                                        <input value="{{ variables.initiative_base is defined ? variables.initiative_base }}" class="form-control input-large" id="initiative_base" name="initiative_base" placeholder="{{ initiative_base_temp}}" type="number" min="0" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 text-center"><b>3+PB</b></div>
+                            </div>
                         </div>
-                        <div class="col-sm-3 mr-auto">
+                        <div class="col-sm-4 mr-auto">
                             <div class="row"><div class="col-sm-12"></div></div>
                             <div class="row"><div class="col-sm-12 text-center"><b></b></div></div>
                         </div>
@@ -1079,12 +1081,18 @@
                 <div class="col-sm-4 border">
                     <div class="row"><div class="col-sm-12 text-center"><h5>Movement</h5></div></div>
                     <div class="row">
-                        <div class="col-sm-3 ml-auto">
+                        <div class="col-sm-4 ml-auto">
                             <div class="row"><div class="col-sm-12"></div></div>
                             <div class="row"><div class="col-sm-12 text-center"><b></b></div></div>
                         </div>
-                        <div class="col-sm-3">
-                            <div class="row"><div class="col-sm-12"><div class="border-strong"><input value="{{ variables.movement_base is defined ? variables.movement_base }}" class="form-control input-large" id="movement_base" name="movement_base" placeholder="{{ movement_base_temp}}" type="number" min="0" /></div></div></div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="border-strong">
+                                        <input value="{{ variables.movement_base is defined ? variables.movement_base }}" class="form-control input-large" id="movement_base" name="movement_base" placeholder="{{ movement_base_temp}}" type="number" min="0" />
+                                    </div>
+                                </div>    
+                            </div>
                             <div class="row"><div class="col-sm-12 text-center"><b>3+AB</b></div></div>
                         </div>
                         <div class="col-sm-3 mr-auto">
@@ -1095,10 +1103,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- TAB #5: Armour and Shield -->
-    <div class="row card mt-2">
-        <div class="col-sm-12 card-content border-right">
+        <!-- TAB #5: Armour and Shield -->
+        <div class="col-sm-12 card-content">
             <div class="row">
                 <div class="col-sm-2"><h5>Armor</h5></div>
                 <div class="col-sm-1"><h5>DTh Mod.</h5></div>
@@ -1120,8 +1126,6 @@
                 <div class="col-sm-1"><input  value="{{ variables.armor_encumbrance is defined ? variables.armor_encumbrance }}"  class="form-control"  id="armor_encumbrance" name="armor_encumbrance" placeholder="" type="number" min="0"  /></div>
             </div>
         </div>
-    </div>
-    <div class="row card mt-2">
         <div class="col-sm-12 card-content">
             <div class="row">
                 <div class="col-sm-2">
@@ -1158,9 +1162,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- TAB #6: Dodge, Parry, Damage threshold -->
-    <div class="row card mt-2">
+        <!-- TAB #6: Dodge, Parry, Damage threshold -->
         <div class="col-sm-3 border-right">
             <div class="row">
                 <div class="col-sm-12">
@@ -1172,7 +1174,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="border-strong text-center">
-                                        <h1><input  value="{{ variables.damage_threshold is defined ? variables.damage_threshold }}"  class="form-control input-large"  id="damage_threshold" name="damage_threshold" placeholder="{{ attribute_brawn_bonus_final}}" type="number"  min="0" /></h1>
+                                        <input  value="{{ variables.damage_threshold is defined ? variables.damage_threshold }}"  class="form-control input-large"  id="damage_threshold" name="damage_threshold" placeholder="{{ attribute_brawn_bonus_final}}" type="number"  min="0" />
                                     </div>
                                 </div>
                             </div>

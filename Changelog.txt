@@ -4,3 +4,7 @@ Changelog
  - removed magic toggle from FORM
  - replaced idle circle for PERIL DAMAGE and MAGIC with selectors
  - fixed QTY and ENC column width on trappings to col-sm-2 for clairty on smaller screens
+ - fixed col width on input form - attributes and skills
+ - Corruption tab overhaul in FORM
+
+
