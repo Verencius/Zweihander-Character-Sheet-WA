@@ -209,3 +209,61 @@ div.sceditor-toolbar .sceditor-button.disabled, div.sceditor-toolbar .sceditor-b
     background: #e2dfca!important;
     color: #666!important;
 }
+
+.input-hidden { display: none;}
+
+.input-hidden + label { display: inline-block}
+
+.input-hidden ~ .tab { display: none}
+
+#tab1:checked ~ .tab.content1, 
+#tab2:checked ~ .tab.content2, 
+#tab3:checked ~ .tab.content3, 
+#tab4:checked ~ .tab.content4, 
+#tab5:checked ~ .tab.content5, 
+#tab6:checked ~ .tab.content6, 
+#tab7:checked ~ .tab.content7, 
+#tab8:checked ~ .tab.content8, 
+#tab9:checked ~ .tab.content9, 
+#tab10:checked ~ .tab.content10, 
+#tab11:checked ~ .tab.content11, 
+#tab12:checked ~ .tab.content12 { 
+  display: block;
+}
+
+.input-hidden + label {
+  flex: 1 0 16%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+  background: darkred;
+  color: white;
+  padding: 4px;
+  border-radius: 1rem !important;
+  position: relative;
+  top: 1px;
+  min-width: 140px;
+  max-width: 140px;
+  width: 135px;
+  height: 30px;
+}
+
+.input-hidden:hover {
+  background: white !important;
+  color: black;
+  font-weight: 800;
+  font-size: larger;
+  padding: 2px;
+}
+
+.input-hidden:checked + label {
+  background: white !important;
+  color: black;
+  font-weight: 800;
+  font-size: larger;
+  padding: 2px;
+}

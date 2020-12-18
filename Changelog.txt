@@ -1,5 +1,11 @@
 Changelog
 
+18/12/2020 v1
+- finished TRACKING
+- prepared FORM for tabbing
+- layout on FORM finished
+- STYLE pre-prepped for tabbing
+
 17/12/2020
  - removed magic toggle from FORM
  - replaced idle circle for PERIL DAMAGE and MAGIC with selectors
