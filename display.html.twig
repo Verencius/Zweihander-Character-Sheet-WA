@@ -325,11 +325,11 @@
                             <tr>
                                 <td><strong>Gain Fate Point</strong></td>
                                 {% for i in 9..1 %}
-                                    <td class="text-center">{% if current_order_ranks >= i %} <i class="fas fa-circle"></i> {% else %} <i class="far fa-circle"></i>{% endif %}</td>
+                                    <td class="text-center">{% if current_order_ranks >= i %}&nbsp;<i class="fas fa-circle"></i> {% else %}&nbsp;<i class="far fa-circle"></i>{% endif %}</td>
                                 {% endfor %}
                                 <td class="text-center"><div class="border-strong btext pt-1 pb-1"><strong>{%if variables.alignment_corruption is defined and variables.alignment_corruption is not empty %}{{variables.alignment_corruption}}{% else %}0{% endif %}</strong></div></td>
                                 {% for i in 1..9 %}
-                                    <td class="text-center">{% if current_chaos_ranks >= i %} <i class="fas fa-circle"></i> {% else %} <i class="far fa-circle"></i>{% endif %}</td>
+                                    <td class="text-center">{% if current_chaos_ranks >= i %}&nbsp;<i class="fas fa-circle"></i> {% else %}&nbsp;<i class="far fa-circle"></i>{% endif %}</td>
                                 {% endfor %}
                                 <td><strong>Gain Disorder</strong></td>
                             </tr>
@@ -402,11 +402,11 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8">Bonus Advance</div>
-                                    <div class="col-sm-4">{% if attribute_combat_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_combat_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_combat_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-4">{% if variables.attribute_combat_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_combat_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_combat_advance_3 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8"></div>
-                                    <div class="col-sm-4">{% if attribute_combat_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_combat_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_combat_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-4">{% if variables.attribute_combat_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_combat_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_combat_advance_6 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8">Bonus modifier</div>
@@ -425,22 +425,22 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Martial Melee*</div>
-                                    <div class="col-sm-3">{% if variables.skill_combat_martial_melee_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_martial_melee_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_martial_melee_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_combat_martial_melee_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_combat_martial_melee_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_combat_martial_melee_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_combat_martial_melee_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Martial Ranged*</div>
-                                    <div class="col-sm-3">{% if variables.skill_combat_martial_ranged_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_martial_ranged_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_martial_ranged_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_combat_martial_ranged_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_combat_martial_ranged_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_combat_martial_ranged_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_combat_martial_ranged_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Simple Melee</div>
-                                    <div class="col-sm-3">{% if variables.skill_combat_simple_melee_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_simple_melee_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_simple_melee_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_combat_simple_melee_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_combat_simple_melee_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_combat_simple_melee_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_combat_simple_melee_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Simple Ranged</div>
-                                    <div class="col-sm-3">{% if variables.skill_combat_simple_ranged_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_simple_ranged_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_combat_simple_ranged_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_combat_simple_ranged_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_combat_simple_ranged_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_combat_simple_ranged_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_combat_simple_ranged_focus}}</div>
                                 </div>
                             </div>
@@ -453,11 +453,11 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8">Bonus Advance</div>
-                                    <div class="col-sm-4">{% if attribute_brawn_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_brawn_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_brawn_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-4">{% if variables.attribute_brawn_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_brawn_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_brawn_advance_3 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8"></div>
-                                    <div class="col-sm-4">{% if attribute_brawn_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_brawn_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_brawn_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-4">{% if variables.attribute_brawn_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_brawn_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_brawn_advance_6 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8">Bonus modifier</div>
@@ -471,22 +471,22 @@
                             <div class="col-sm-8">
                                 <div class="row">
                                     <div class="col-sm-3">Athletics</div>
-                                    <div class="col-sm-3">{% if variables.skill_brawn_athletics_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_athletics_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_athletics_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_brawn_athletics_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_brawn_athletics_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_brawn_athletics_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_brawn_athletics_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Drive*</div>
-                                    <div class="col-sm-3">{% if variables.skill_brawn_drive_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_drive_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_drive_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_brawn_drive_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_brawn_drive_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_brawn_drive_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_brawn_drive_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Intimidate</div>
-                                    <div class="col-sm-3">{% if variables.skill_brawn_intimidate_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_intimidate_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_intimidate_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_brawn_intimidate_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_brawn_intimidate_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_brawn_intimidate_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_brawn_intimidate_focus}} </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Toughness</div>
-                                    <div class="col-sm-3">{% if variables.skill_brawn_toughness_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_toughness_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_brawn_toughness_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_brawn_toughness_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_brawn_toughness_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_brawn_toughness_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_brawn_toughness_focus}}</div>
                                 </div>
                             </div>
@@ -499,11 +499,11 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8">Bonus Advance</div>
-                                    <div class="col-sm-4">{% if attribute_agility_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_agility_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_agility_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-4">{% if variables.attribute_agility_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_agility_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_agility_advance_3 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8"></div>
-                                    <div class="col-sm-4">{% if attribute_agility_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_agility_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_agility_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-4">{% if variables.attribute_agility_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_agility_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_agility_advance_6 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8">Bonus modifier</div>
@@ -517,27 +517,27 @@
                             <div class="col-sm-8">
                                 <div class="row">
                                     <div class="col-sm-3">Coordination</div>
-                                    <div class="col-sm-3">{% if variables.skill_agility_coordination_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_coordination_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_coordination_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_agility_coordination_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_agility_coordination_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_agility_coordination_30 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_agility_coordination_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Pilot*</div>
-                                    <div class="col-sm-3">{% if variables.skill_agility_pilot_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_pilot_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_pilot_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_agility_pilot_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_agility_pilot_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_agility_pilot_30 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_agility_pilot_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Ride*</div>
-                                    <div class="col-sm-3">{% if variables.skill_agility_ride_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_ride_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_ride_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_agility_ride_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_agility_ride_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_agility_ride_30 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_agility_ride_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Skulduggery</div>
-                                    <div class="col-sm-3">{% if variables.skill_agility_skullduggery_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_skullduggery_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_skullduggery_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
-                                    <div class="col-sm-6 border-bottom">{{ variables.skill_agility_skullduggery_focus}}</div>
+                                    <div class="col-sm-3">{% if variables.skill_agility_skulduggery_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_agility_skulduggery_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_agility_skulduggery_30 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-6 border-bottom">{{ variables.skill_agility_skulduggery_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Stealth</div>
-                                    <div class="col-sm-3">{% if variables.skill_agility_stealth_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_agility_stealth_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if vvariables.skill_agility_stealth_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_agility_stealth_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_agility_stealth_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_agility_stealth_30 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_agility_stealth_focus}}</div>
                                 </div>
                             </div>
@@ -550,11 +550,11 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8">Bonus Advance</div>
-                                    <div class="col-sm-4">{% if attribute_perception_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_perception_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_perception_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-4">{% if variables.attribute_perception_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_perception_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_perception_advance_3 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8"></div>
-                                    <div class="col-sm-4">{% if attribute_perception_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_perception_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_perception_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-4">{% if variables.attribute_perception_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_perception_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_perception_advance_6 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8">Bonus modifier</div>
@@ -568,22 +568,22 @@
                             <div class="col-sm-8">
                                 <div class="row">
                                     <div class="col-sm-3">Awareness</div>
-                                    <div class="col-sm-3">{% if variables.skill_perception_awareness_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_awareness_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_awareness_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_perception_awareness_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_perception_awareness_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_perception_awareness_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_perception_awareness_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Eavesdrop</div>
-                                    <div class="col-sm-3">{% if variables.skill_perception_eavesdrop_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_eavesdrop_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_eavesdrop_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_perception_eavesdrop_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_perception_eavesdrop_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_perception_eavesdrop_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_perception_eavesdrop_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Scrutinize</div>
-                                    <div class="col-sm-3">{% if variables.skill_perception_scrutinize_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_scrutinize_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_scrutinize_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_perception_scrutinize_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_perception_scrutinize_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_perception_scrutinize_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_perception_scrutinize_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Survival</div>
-                                    <div class="col-sm-3">{% if variables.skill_perception_survival_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_survival_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_perception_survival_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_perception_survival_10 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_perception_survival_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_perception_survival_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_perception_survival_focus}}</div>
                                 </div>
                             </div>
@@ -596,11 +596,11 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8">Bonus Advance</div>
-                                    <div class="col-sm-4">{% if attribute_intelligence_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_intelligence_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_intelligence_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-4">{% if variables.attribute_intelligence_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_intelligence_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_intelligence_advance_3 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8"></div>
-                                    <div class="col-sm-4">{% if attribute_intelligence_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_intelligence_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_intelligence_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-4">{% if variables.attribute_intelligence_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_intelligence_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_intelligence_advance_6 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8">Bonus modifier</div>
@@ -614,42 +614,42 @@
                             <div class="col-sm-8">
                                 <div class="row">
                                     <div class="col-sm-3">Alchemy*</div>
-                                    <div class="col-sm-3">{% if variables.skill_intelligence_alchemy_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_alchemy_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_alchemy_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_intelligence_alchemy_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_alchemy_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_alchemy_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_intelligence_alchemy_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Counterfeit*</div>
-                                    <div class="col-sm-3">{% if variables.skill_intelligence_counterfeit_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_counterfeit_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_counterfeit_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_intelligence_counterfeit_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_counterfeit_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_counterfeit_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_intelligence_counterfeit_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Education*</div>
-                                    <div class="col-sm-3">{% if variables.skill_intelligence_education_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_education_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_education_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_intelligence_education_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_education_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_education_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_intelligence_education_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Folklore</div>
-                                    <div class="col-sm-3">{% if variables.skill_intelligence_folklore_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_folklore_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_folklore_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_intelligence_folklore_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_folklore_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_folklore_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_intelligence_folklore_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Gamble</div>
-                                    <div class="col-sm-3">{% if variables.skill_intelligence_gamble_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_gamble_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_gamble_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_intelligence_gamble_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_gamble_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_gamble_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_intelligence_gamble_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Heal*</div>
-                                    <div class="col-sm-3">{% if variables.skill_intelligence_heal_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_heal_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_heal_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_intelligence_heal_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_heal_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_heal_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_intelligence_heal_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Navigation*</div>
-                                    <div class="col-sm-3">{% if variables.skill_intelligence_navigation_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_navigation_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_navigation_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_intelligence_navigation_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_navigation_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_navigation_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_intelligence_navigation_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Warfare*</div>
-                                    <div class="col-sm-3">{% if variables.skill_intelligence_warfare_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_warfare_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_intelligence_warfare_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_intelligence_warfare_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_warfare_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_intelligence_warfare_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_intelligence_warfare_focus}}</div>
                                 </div>
                             </div>
@@ -662,11 +662,11 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8">Bonus Advance</div>
-                                    <div class="col-sm-4">{% if attribute_willpower_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_willpower_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_willpower_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-4">{% if variables.attribute_willpower_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_willpower_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_willpower_advance_3 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8"></div>
-                                    <div class="col-sm-4">{% if attribute_willpower_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_willpower_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_willpower_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-4">{% if variables.attribute_willpower_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_willpower_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_willpower_advance_6 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8">Bonus modifier</div>
@@ -680,22 +680,22 @@
                             <div class="col-sm-8">
                                 <div class="row">
                                     <div class="col-sm-3">Incantation*</div>
-                                    <div class="col-sm-3">{% if variables.skill_willpower_incantation_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_incantation_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_incantation_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_willpower_incantation_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_willpower_incantation_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_willpower_incantation_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_willpower_incantation_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Interrogation*</div>
-                                    <div class="col-sm-3">{% if variables.skill_willpower_interrogation_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_interrogation_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_interrogation_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_willpower_interrogation_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_willpower_interrogation_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_willpower_interrogation_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_willpower_interrogation_focus}} </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Resolve</div>
-                                    <div class="col-sm-3">{% if variables.skill_willpower_resolve_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_resolve_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_resolve_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_willpower_resolve_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_willpower_resolve_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_willpower_resolve_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_willpower_resolve_focus}} </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Tradecraft*</div>
-                                    <div class="col-sm-3">{% if variables.skill_willpower_tradecraft_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_tradecraft_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_willpower_tradecraft_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_willpower_tradecraft_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_willpower_tradecraft_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_willpower_tradecraft_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_willpower_tradecraft_focus}} </div>
                                 </div>
                             </div>
@@ -708,11 +708,11 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8">Bonus Advance</div>
-                                    <div class="col-sm-4">{% if attribute_fellowship_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_fellowship_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_fellowship_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-4">{% if variables.attribute_fellowship_advance_1 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_fellowship_advance_2 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_fellowship_advance_3 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8"></div>
-                                    <div class="col-sm-4">{% if attribute_fellowship_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_fellowship_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if attribute_fellowship_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-4">{% if variables.attribute_fellowship_advance_4 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_fellowship_advance_5 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}{% if variables.attribute_fellowship_advance_6 == 0 %}<i class="far fa-square-full"></i> {% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-8">Bonus modifier</div>
@@ -726,37 +726,37 @@
                             <div class="col-sm-8">
                                 <div class="row">
                                     <div class="col-sm-3">Bargain</div>
-                                    <div class="col-sm-3">{% if variables.skill_fellowship_bargain_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_bargain_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_bargain_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_fellowship_bargain_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_fellowship_bargain_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_fellowship_bargain_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_fellowship_bargain_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Charm</div>
-                                    <div class="col-sm-3">{% if variables.skill_fellowship_charm_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_charm_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_charm_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_fellowship_charm_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_fellowship_charm_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_fellowship_charm_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_fellowship_charm_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Disguise*</div>
-                                    <div class="col-sm-3">{% if variables.skill_fellowship_disguise_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_disguise_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_disguise_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_fellowship_disguise_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_fellowship_disguise_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_fellowship_disguise_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_fellowship_disguise_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Guile</div>
-                                    <div class="col-sm-3">{% if variables.skill_fellowship_guile_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_guile_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_guile_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_fellowship_guile_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_fellowship_guile_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_fellowship_guile_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_fellowship_guile_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Handle Animal*</div>
-                                    <div class="col-sm-3">{% if variables.skill_fellowship_handle_animal_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_handle_animal_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_handle_animal_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_fellowship_handle_animal_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_fellowship_handle_animal_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_fellowship_handle_animal_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_fellowship_handle_animal_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Leadership*</div>
-                                    <div class="col-sm-3">{% if variables.skill_fellowship_leadership_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_leadership_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_leadership_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_fellowship_leadership_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_fellowship_leadership_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_fellowship_leadership_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_fellowship_leadership_focus}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">Rumor</div>
-                                    <div class="col-sm-3">{% if variables.skill_fellowship_rumor_10 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_rumor_20 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}{% if variables.skill_fellowship_rumor_30 == 0 %} <i class="far fa-square-full"></i> {% else %} <i class="fas fa-square-full"></i>{% endif %}</div>
+                                    <div class="col-sm-3">{% if variables.skill_fellowship_rumor_10 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_fellowship_rumor_20 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}&nbsp;{% if variables.skill_fellowship_rumor_30 == 0 %}<i class="far fa-square-full"></i>{% else %}<i class="fas fa-square-full"></i>{% endif %}</div>
                                     <div class="col-sm-6 border-bottom">{{ variables.skill_fellowship_rumor_focus}}</div>
                                 </div>
                             </div>
@@ -1128,40 +1128,40 @@
                 <div class="row">
                     <div class="col-sm-5">
                         <div class="row">
-                            <div class="col-sm-12 border-bottom"><h5>Dodge <i class="fas fa-bow-arrow"></i></h5></div>
+                            <div class="col-sm-12 border-bottom"><h5>Dodge&nbsp;<i class="fas fa-bow-arrow"></i></h5></div>
                         </div>
                         {% if variables.armor_is_natural == true %}
                         <div class="row">
-                            <div class="col-sm-9 pr-0">Coordination <i class="fas fa-running"></i></div>
+                            <div class="col-sm-9 pr-0">Coordination&nbsp;<i class="fas fa-running"></i></div>
                             <div class="col-sm-3">{% set agility_coordination_value_natural = skill_agility_coordination_value + 10 %}{{ agility_coordination_value_natural}}</div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-9">Guile <i class="fas fa-running"></i></div>
+                            <div class="col-sm-9">Guile&nbsp;<i class="fas fa-running"></i></div>
                             <div class="col-sm-3">{% set fellowship_guile_value_natural = skill_fellowship_guile_value +10 %}{{ fellowship_guile_value_natural}}</div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-9">Drive <i class="fas fa-running"></i></div>
+                            <div class="col-sm-9">Drive&nbsp;<i class="fas fa-running"></i></div>
                             <div class="col-sm-3">{% set brawn_drive_natural = skill_brawn_drive_value +10 %}{{ brawn_drive_natural}} </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-9">Ride <i class="fas fa-running"></i></div>
+                            <div class="col-sm-9">Ride&nbsp;<i class="fas fa-running"></i></div>
                             <div class="col-sm-3">{% set agility_ride_natural = skill_agility_ride_value +10 %}{{ agility_ride_natural}}</div> 
                         </div>
                         {% else %}
                         <div class="row">
-                            <div class="col-sm-9 pr-0">Coordination <i class="fal fa-running"></i></div>
+                            <div class="col-sm-9 pr-0">Coordination&nbsp;<i class="fal fa-running"></i></div>
                             <div class="col-sm-3">{{ skill_agility_coordination_value}}</div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-9">Guile <i class="fal fa-running"></i></div>
+                            <div class="col-sm-9">Guile&nbsp;<i class="fal fa-running"></i></div>
                             <div class="col-sm-3">{{ skill_fellowship_guile_value}}</div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-9">Drive <i class="fal fa-running"></i></div>
+                            <div class="col-sm-9">Drive&nbsp;<i class="fal fa-running"></i></div>
                             <div class="col-sm-3">{{ skill_brawn_drive_value}} </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-9">Ride <i class="fal fa-running"></i></div>
+                            <div class="col-sm-9">Ride&nbsp;<i class="fal fa-running"></i></div>
                             <div class="col-sm-3">{{ skill_agility_ride_value}}</div> 
                         </div>
                         {% endif %}
@@ -1170,7 +1170,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12 border-bottom"><h5>Parry <i class="fas fa-sword"></i></h5></div>
+                                    <div class="col-sm-12 border-bottom"><h5>Parry&nbsp;<i class="fas fa-sword"></i></h5></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">Simple Melee</div>
