@@ -872,11 +872,11 @@
             </div>
             <div class="row">
                 <div class="col-sm-2"><input value="{{ variables.trait_name_3 is defined ? variables.trait_name_3 }}"  class="form-control" id="trait_name_3" name="trait_name_3" placeholder="trait name" type="text" /></div>
-                <div class="col-sm-10"><input value="{{ variables.trait_description_3 is defined ? variables.trait_description_3 }}"  class="form-control" id="trait_description_3 " name="trait_description_3 " placeholder="trait description" type="text" /></div>
+                <div class="col-sm-10"><input value="{{ variables.trait_description_3 is defined ? variables.trait_description_3 }}"  class="form-control" id="trait_description_3" name="trait_description_3" placeholder="trait description" type="text" /></div>
             </div>
             <div class="row">
                 <div class="col-sm-2"><input value="{{ variables.trait_name_4 is defined ? variables.trait_name_4 }}"  class="form-control" id="trait_name_4" name="trait_name_4" placeholder="trait name" type="text" /></div>
-                <div class="col-sm-10"><input value="{{ variables.trait_description_4 is defined ? variables.trait_description_24}}"  class="form-control" id="trait_description_4" name="trait_description_4" placeholder="trait description" type="text" /></div>
+                <div class="col-sm-10"><input value="{{ variables.trait_description_4 is defined ? variables.trait_description_4}}"  class="form-control" id="trait_description_4" name="trait_description_4" placeholder="trait description" type="text" /></div>
             </div>
             <div class="row">
                 <div class="col-sm-2"><input value="{{ variables.trait_name_5 is defined ? variables.trait_name_5 }}"  class="form-control" id="trait_name_5" name="trait_name_5" placeholder="trait name" type="text" /></div>
@@ -972,6 +972,7 @@
     </div>
     <!-- Combat Profile: Armor, Weapons, Injuries -->
     <div class="row card tab content5">
+        <!-- encumbrance, initiative and movement -->
         <div class="col-sm-12">
             <div class="row">
                 <div class="col-sm-12 card-title"><h3>Combat Profile</h3></div>
@@ -1089,7 +1090,7 @@
                 </div>
                 <div class="col-sm-1">
                     <div><h5>Castle Forged?</h5></div>
-                    <div><input  value="1"  {% if variables.shield_is_ruined is defined and variables.shield_is_ruined == 1   %} checked="checked"{% endif %}   class="" id="shield_is_ruined" name="shield_is_ruined" placeholder="" type="checkbox" /></div>
+                    <div><input  value="1"  {% if variables.shield_is_castle_forged is defined and variables.shield_is_castle_forged == 1   %} checked="checked"{% endif %}   class="" id="shield_is_castle_forged" name="shield_is_castle_forged" placeholder="" type="checkbox" /></div>
                 </div>
                 <div class="col-sm-1">
                     <div><h5>Makers Mark?</h5></div>
@@ -1220,226 +1221,234 @@
         </div>
         <!-- TAB: weapons #6 -->
         <div class="col-sm-12">
-            <h5>Weapons</h5>
-        </div>
-        <div class="col-sm-12 border">
             <div class="row">
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_name_1 is defined ? variables.weapon_name_1 }}"  class="form-control" id="weapon_name_1" name="weapon_name_1" placeholder="weapon" type="text" />
-                </div>
-                <div class="col-sm-3">
-                    <select   class="form-control"  id="weapon_skill_1" name="weapon_skill_1">
-                        <option value="Simple Melee" {% if variables.weapon_skill_1 is defined and variables.weapon_skill_1 == "Simple Melee"  %}selected="selected" {% endif %}  >Simple Melee</option>
-                        <option value="Martial Melee" {% if variables.weapon_skill_1 is defined and variables.weapon_skill_1 == "Martial Melee"  %}selected="selected" {% endif %}  >Martial Melee</option>
-                        <option value="Simple Ranged" {% if variables.weapon_skill_1 is defined and variables.weapon_skill_1 == "Simple Ranged"  %}selected="selected" {% endif %}  >Simple Ranged</option>
-                        <option value="Martial Ranged" {% if variables.weapon_skill_1 is defined and variables.weapon_skill_1 == "Martial Ranged"  %}selected="selected" {% endif %}  >Martial Ranged</option>
-                    </select>
-                </div>
-                <div class="col-sm-3">
-                    <select   class="form-control"  id="weapon_handling_1" name="weapon_handling_1">
-                        <option value="One-handed" {% if variables.weapon_handling_1 is defined and variables.weapon_handling_1 == "One-handed"  %}selected="selected" {% endif %}  >One-handed</option>
-                        <option value="Two-handed" {% if variables.weapon_handling_1 is defined and variables.weapon_handling_1 == "Two-handed"  %}selected="selected" {% endif %}  >Two-handed</option>
-                    </select>
-                </div>
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_damage_1 is defined ? variables.weapon_damage_1 }}"  class="form-control"  id="weapon_damage_1" name="weapon_damage_1" placeholder="damage" type="text"   />
-                </div>
+                <div class="col-sm-12"><h5>Weapons</h5></div>
             </div>
             <div class="row">
-                <div class="col-sm-2">
-                    <input  value="{{ variables.weapon_load_1 is defined ? variables.weapon_load_1 }}"  class="form-control"  id="weapon_load_1" name="weapon_load_1" placeholder="load (AP)" type="number"  min="0" />
+                <div class="col-sm-12 border">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_name_1 is defined ? variables.weapon_name_1 }}"  class="form-control" id="weapon_name_1" name="weapon_name_1" placeholder="weapon" type="text" />
+                        </div>
+                        <div class="col-sm-3">
+                            <select   class="form-control"  id="weapon_skill_1" name="weapon_skill_1">
+                                <option value="Simple Melee" {% if variables.weapon_skill_1 is defined and variables.weapon_skill_1 == "Simple Melee"  %}selected="selected" {% endif %}  >Simple Melee</option>
+                                <option value="Martial Melee" {% if variables.weapon_skill_1 is defined and variables.weapon_skill_1 == "Martial Melee"  %}selected="selected" {% endif %}  >Martial Melee</option>
+                                <option value="Simple Ranged" {% if variables.weapon_skill_1 is defined and variables.weapon_skill_1 == "Simple Ranged"  %}selected="selected" {% endif %}  >Simple Ranged</option>
+                                <option value="Martial Ranged" {% if variables.weapon_skill_1 is defined and variables.weapon_skill_1 == "Martial Ranged"  %}selected="selected" {% endif %}  >Martial Ranged</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <select   class="form-control"  id="weapon_handling_1" name="weapon_handling_1">
+                                <option value="One-handed" {% if variables.weapon_handling_1 is defined and variables.weapon_handling_1 == "One-handed"  %}selected="selected" {% endif %}  >One-handed</option>
+                                <option value="Two-handed" {% if variables.weapon_handling_1 is defined and variables.weapon_handling_1 == "Two-handed"  %}selected="selected" {% endif %}  >Two-handed</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_damage_1 is defined ? variables.weapon_damage_1 }}"  class="form-control"  id="weapon_damage_1" name="weapon_damage_1" placeholder="damage" type="text"   />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <input  value="{{ variables.weapon_load_1 is defined ? variables.weapon_load_1 }}"  class="form-control"  id="weapon_load_1" name="weapon_load_1" placeholder="load (AP)" type="number"  min="0" />
+                        </div>
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_distance_1 is defined ? variables.weapon_distance_1 }}" class="form-control"  id="weapon_distance_1" name="weapon_distance_1" placeholder="distance (short / medium x2/ long x3)" type="text" />
+                        </div>
+                        <div class="col-sm-2">
+                            <input  value="{{ variables.weapon_ammo_1 is defined ? variables.weapon_ammo_1 }}"  class="form-control"  id="weapon_ammo_1" name="weapon_ammo_1" placeholder="ammo qty" type="number" min="0"  />
+                        </div>
+                        <div class="col-sm-2">
+                            <input  value="{{ variables.weapon_encumbrance_1 is defined ? variables.weapon_encumbrance_1 }}"  class="form-control"  id="weapon_encumbrance_1" name="weapon_encumbrance_1" placeholder="Enc" type="number" min="0"  />
+                        </div>
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_qualities_1 is defined ? variables.weapon_qualities_1 }}"  class="form-control"  id="weapon_qualities_1 " name="weapon_qualities_1" placeholder="qualities" type="text"   />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label><input  value="1"  {% if variables.weapon_is_ruined_1 is defined and variables.weapon_is_ruined_1 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_ruined_1" name="weapon_is_ruined_1" placeholder="" type="checkbox" />&nbsp;<strong>Ruined!</strong></label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label><input  value="1"  {% if variables.weapon_is_makers_mark_1 is defined and variables.weapon_is_makers_mark_1 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_makers_mark_1" name="weapon_is_makers_mark_1" placeholder="" type="checkbox" />&nbsp;<strong>Makers Mark</strong></label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label><input  value="1"  {% if variables.weapon_is_castle_forged_1 is defined and variables.weapon_is_castle_forged_1 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_castle_forged_1" name="weapon_is_castle_forged_1" placeholder="" type="checkbox" />&nbsp;<strong>Castle Forged</strong></label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label><input  value="1"  {% if variables.weapon_is_defensive_1 is defined and variables.weapon_is_defensive_1 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_defensive_1" name="weapon_is_defensive_1" placeholder="" type="checkbox" />&nbsp;<strong>Defensive</strong></label>
+                                </div>                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_distance_1 is defined ? variables.weapon_distance_1 }}" class="form-control"  id="weapon_distance_1" name="weapon_distance_1" placeholder="distance (short / medium x2/ long x3)" type="text" />
+                <div class="col-sm-12 border">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_name_2 is defined ? variables.weapon_name_2 }}"  class="form-control" id="weapon_name_2" name="weapon_name_2" placeholder="weapon" type="text" />
+                        </div>
+                        <div class="col-sm-3">
+                            <select   class="form-control"  id="weapon_skill_2" name="weapon_skill_2">
+                                <option value="Simple Melee" {% if variables.weapon_skill_2 is defined and variables.weapon_skill_2 == "Simple Melee"  %}selected="selected" {% endif %}  >Simple Melee</option>
+                                <option value="Martial Melee" {% if variables.weapon_skill_2 is defined and variables.weapon_skill_2 == "Martial Melee"  %}selected="selected" {% endif %}  >Martial Melee</option>
+                                <option value="Simple Ranged" {% if variables.weapon_skill_2 is defined and variables.weapon_skill_2 == "Simple Ranged"  %}selected="selected" {% endif %}  >Simple Ranged</option>
+                                <option value="Martial Ranged" {% if variables.weapon_skill_2 is defined and variables.weapon_skill_2 == "Martial Ranged"  %}selected="selected" {% endif %}  >Martial Ranged</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <select   class="form-control"  id="weapon_handling_2" name="weapon_handling_2">
+                                <option value="One-handed" {% if variables.weapon_handling_2 is defined and variables.weapon_handling_2 == "One-handed"  %}selected="selected" {% endif %}  >One-handed</option>
+                                <option value="Two-handed" {% if variables.weapon_handling_2 is defined and variables.weapon_handling_2 == "Two-handed"  %}selected="selected" {% endif %}  >Two-handed</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_damage_2 is defined ? variables.weapon_damage_2 }}"  class="form-control"  id="weapon_damage_2" name="weapon_damage_2" placeholder="damage" type="text"   />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <input  value="{{ variables.weapon_load_2 is defined ? variables.weapon_load_2 }}"  class="form-control"  id="weapon_load_2" name="weapon_load_2" placeholder="load (AP)" type="number"  min="0" />
+                        </div>
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_distance_2 is defined ? variables.weapon_distance_2 }}" class="form-control"  id="weapon_distance_2" name="weapon_distance_2" placeholder="distance (short / medium x2/ long x3)" type="text" />
+                        </div>
+                        <div class="col-sm-2">
+                            <input  value="{{ variables.weapon_ammo_2 is defined ? variables.weapon_ammo_2 }}"  class="form-control"  id="weapon_ammo_2" name="weapon_ammo_2" placeholder="ammo qty" type="number" min="0"  />
+                        </div>
+                        <div class="col-sm-2">
+                            <input  value="{{ variables.weapon_encumbrance_2 is defined ? variables.weapon_encumbrance_2 }}"  class="form-control"  id="weapon_encumbrance_2" name="weapon_encumbrance_2" placeholder="Enc" type="number" min="0"  />
+                        </div>
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_qualities_2 is defined ? variables.weapon_qualities_2 }}"  class="form-control"  id="weapon_qualities_2 " name="weapon_qualities_2" placeholder="qualities" type="text"   />
+                        </div>
+                    </div>
+                    <div class="row background-color=blue">
+                        <div class="col-sm-3">
+                            <label><input  value="1"  {% if variables.weapon_is_ruined_2 is defined and variables.weapon_is_ruined_2 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_ruined_2" name="weapon_is_ruined_2" placeholder="" type="checkbox" />&nbsp;<strong>Ruined!</strong></label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input  value="1"  {% if variables.weapon_is_makers_mark_2 is defined and variables.weapon_is_makers_mark_2 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_makers_mark_2" name="weapon_is_makers_mark_2" placeholder="" type="checkbox" />&nbsp;<strong>Makers Mark</strong></label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input  value="1"  {% if variables.weapon_is_castle_forged_2 is defined and variables.weapon_is_castle_forged_2 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_castle_forged_2" name="weapon_is_castle_forged_2" placeholder="" type="checkbox" />&nbsp;<strong>Castle Forged</strong></label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input  value="1"  {% if variables.weapon_is_defensive_2 is defined and variables.weapon_is_defensive_2 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_defensive_2" name="weapon_is_defensive_2" placeholder="" type="checkbox" />&nbsp;<strong>Defensive</strong></label>
+                        </div>                
+                    </div>
                 </div>
-                <div class="col-sm-2">
-                    <input  value="{{ variables.weapon_ammo_1 is defined ? variables.weapon_ammo_1 }}"  class="form-control"  id="weapon_ammo_1" name="weapon_ammo_1" placeholder="ammo qty" type="number" min="0"  />
+                <div class="col-sm-12 border">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_name_3 is defined ? variables.weapon_name_3 }}"  class="form-control" id="weapon_name_3" name="weapon_name_3" placeholder="weapon" type="text" />
+                        </div>
+                        <div class="col-sm-3">
+                            <select   class="form-control"  id="weapon_skill_3" name="weapon_skill_3">
+                                <option value="Simple Melee" {% if variables.weapon_skill_3 is defined and variables.weapon_skill_3 == "Simple Melee"  %}selected="selected" {% endif %}  >Simple Melee</option>
+                                <option value="Martial Melee" {% if variables.weapon_skill_3 is defined and variables.weapon_skill_3 == "Martial Melee"  %}selected="selected" {% endif %}  >Martial Melee</option>
+                                <option value="Simple Ranged" {% if variables.weapon_skill_3 is defined and variables.weapon_skill_3 == "Simple Ranged"  %}selected="selected" {% endif %}  >Simple Ranged</option>
+                                <option value="Martial Ranged" {% if variables.weapon_skill_3 is defined and variables.weapon_skill_3 == "Martial Ranged"  %}selected="selected" {% endif %}  >Martial Ranged</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <select   class="form-control"  id="weapon_handling_3" name="weapon_handling_3">
+                                <option value="One-handed" {% if variables.weapon_handling_3 is defined and variables.weapon_handling_3 == "One-handed"  %}selected="selected" {% endif %}  >One-handed</option>
+                                <option value="Two-handed" {% if variables.weapon_handling_3 is defined and variables.weapon_handling_3 == "Two-handed"  %}selected="selected" {% endif %}  >Two-handed</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_damage_3 is defined ? variables.weapon_damage_3 }}"  class="form-control"  id="weapon_damage_3" name="weapon_damage_3" placeholder="damage" type="text"   />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <input  value="{{ variables.weapon_load_3 is defined ? variables.weapon_load_3 }}"  class="form-control"  id="weapon_load_3" name="weapon_load_3" placeholder="load (AP)" type="number"  min="0" />
+                        </div>
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_distance_3 is defined ? variables.weapon_distance_3 }}" class="form-control"  id="weapon_distance_3" name="weapon_distance_3" placeholder="distance (short / medium x2/ long x3)" type="text" />
+                        </div>
+                        <div class="col-sm-2">
+                            <input  value="{{ variables.weapon_ammo_3 is defined ? variables.weapon_ammo_3 }}"  class="form-control"  id="weapon_ammo_3" name="weapon_ammo_3" placeholder="ammo qty" type="number" min="0"  />
+                        </div>
+                        <div class="col-sm-2">
+                            <input  value="{{ variables.weapon_encumbrance_3 is defined ? variables.weapon_encumbrance_3 }}"  class="form-control"  id="weapon_encumbrance_3" name="weapon_encumbrance_3" placeholder="Enc" type="number" min="0"  />
+                        </div>
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_qualities_3 is defined ? variables.weapon_qualities_3 }}"  class="form-control"  id="weapon_qualities_3 " name="weapon_qualities_3" placeholder="qualities" type="text"   />
+                        </div>
+                    </div>
+                    <div class="row background-color=blue">
+                        <div class="col-sm-3">
+                            <label><input  value="1"  {% if variables.weapon_is_ruined_3 is defined and variables.weapon_is_ruined_3 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_ruined_3" name="weapon_is_ruined_3" placeholder="" type="checkbox" />&nbsp;<strong>Ruined!</strong></label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input  value="1"  {% if variables.weapon_is_makers_mark_3 is defined and variables.weapon_is_makers_mark_3 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_makers_mark_3" name="weapon_is_makers_mark_3" placeholder="" type="checkbox" />&nbsp;<strong>Makers Mark</strong></label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input  value="1"  {% if variables.weapon_is_castle_forged_3 is defined and variables.weapon_is_castle_forged_3 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_castle_forged_3" name="weapon_is_castle_forged_3" placeholder="" type="checkbox" />&nbsp;<strong>Castle Forged</strong></label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input  value="1"  {% if variables.weapon_is_defensive_3 is defined and variables.weapon_is_defensive_3 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_defensive_3" name="weapon_is_defensive_3" placeholder="" type="checkbox" />&nbsp;<strong>Defensive</strong></label>
+                        </div>                
+                    </div>
                 </div>
-                <div class="col-sm-2">
-                    <input  value="{{ variables.weapon_encumbrance_1 is defined ? variables.weapon_encumbrance_1 }}"  class="form-control"  id="weapon_encumbrance_1" name="weapon_encumbrance_1" placeholder="Enc" type="number" min="0"  />
+                <div class="col-sm-12 border">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_name_4 is defined ? variables.weapon_name_4 }}"  class="form-control" id="weapon_name_4" name="weapon_name_4" placeholder="weapon" type="text" />
+                        </div>
+                        <div class="col-sm-3">
+                            <select   class="form-control"  id="weapon_skill_4" name="weapon_skill_4">
+                                <option value="Simple Melee" {% if variables.weapon_skill_4 is defined and variables.weapon_skill_4 == "Simple Melee"  %}selected="selected" {% endif %}  >Simple Melee</option>
+                                <option value="Martial Melee" {% if variables.weapon_skill_4 is defined and variables.weapon_skill_4 == "Martial Melee"  %}selected="selected" {% endif %}  >Martial Melee</option>
+                                <option value="Simple Ranged" {% if variables.weapon_skill_4 is defined and variables.weapon_skill_4 == "Simple Ranged"  %}selected="selected" {% endif %}  >Simple Ranged</option>
+                                <option value="Martial Ranged" {% if variables.weapon_skill_4 is defined and variables.weapon_skill_4 == "Martial Ranged"  %}selected="selected" {% endif %}  >Martial Ranged</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <select   class="form-control"  id="weapon_handling_4" name="weapon_handling_4">
+                                <option value="One-handed" {% if variables.weapon_handling_4 is defined and variables.weapon_handling_4 == "One-handed"  %}selected="selected" {% endif %}  >One-handed</option>
+                                <option value="Two-handed" {% if variables.weapon_handling_4 is defined and variables.weapon_handling_4 == "Two-handed"  %}selected="selected" {% endif %}  >Two-handed</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_damage_4 is defined ? variables.weapon_damage_4 }}"  class="form-control"  id="weapon_damage_4" name="weapon_damage_4" placeholder="damage" type="text"   />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <input  value="{{ variables.weapon_load_4 is defined ? variables.weapon_load_4 }}"  class="form-control"  id="weapon_load_4" name="weapon_load_4" placeholder="load (AP)" type="number"  min="0" />
+                        </div>
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_distance_4 is defined ? variables.weapon_distance_4 }}" class="form-control"  id="weapon_distance_4" name="weapon_distance_4" placeholder="distance (short / medium x2/ long x3)" type="text" />
+                        </div>
+                        <div class="col-sm-2">
+                            <input  value="{{ variables.weapon_ammo_4 is defined ? variables.weapon_ammo_4 }}"  class="form-control"  id="weapon_ammo_4" name="weapon_ammo_4" placeholder="ammo qty" type="number" min="0"  />
+                        </div>
+                        <div class="col-sm-2">
+                            <input  value="{{ variables.weapon_encumbrance_4 is defined ? variables.weapon_encumbrance_4 }}"  class="form-control"  id="weapon_encumbrance_4" name="weapon_encumbrance_4" placeholder="Enc" type="number" min="0"  />
+                        </div>
+                        <div class="col-sm-3">
+                            <input  value="{{ variables.weapon_qualities_4 is defined ? variables.weapon_qualities_4 }}"  class="form-control"  id="weapon_qualities_4 " name="weapon_qualities_4" placeholder="qualities" type="text"   />
+                        </div>
+                    </div>
+                    <div class="row background-color=blue">
+                        <div class="col-sm-3">
+                            <label><input  value="1"  {% if variables.weapon_is_ruined_4 is defined and variables.weapon_is_ruined_4 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_ruined_4" name="weapon_is_ruined_4" placeholder="" type="checkbox" />&nbsp;<strong>Ruined!</strong></label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input  value="1"  {% if variables.weapon_is_makers_mark_4 is defined and variables.weapon_is_makers_mark_4 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_makers_mark_4" name="weapon_is_makers_mark_4" placeholder="" type="checkbox" />&nbsp;<strong>Makers Mark</strong></label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input  value="1"  {% if variables.weapon_is_castle_forged_4 is defined and variables.weapon_is_castle_forged_4 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_castle_forged_4" name="weapon_is_castle_forged_4" placeholder="" type="checkbox" />&nbsp;<strong>Castle Forged</strong></label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input  value="1"  {% if variables.weapon_is_defensive_4 is defined and variables.weapon_is_defensive_4 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_defensive_4" name="weapon_is_defensive_4" placeholder="" type="checkbox" />&nbsp;<strong>Defensive</strong></label>
+                        </div>                
+                    </div>
                 </div>
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_qualities_1 is defined ? variables.weapon_qualities_1 }}"  class="form-control"  id="weapon_qualities_1 " name="weapon_qualities_1" placeholder="qualities" type="text"   />
-                </div>
-            </div>
-            <div class="row background-color=blue">
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_ruined_1 is defined and variables.weapon_is_ruined_1 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_ruined_1" name="weapon_is_ruined_1" placeholder="" type="checkbox" />&nbsp;<strong>Ruined!</strong></label>
-                </div>
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_makers_mark_1 is defined and variables.weapon_is_makers_mark_1 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_makers_mark_1" name="weapon_is_makers_mark_1" placeholder="" type="checkbox" />&nbsp;<strong>Makers Mark</strong></label>
-                </div>
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_castle_forged_1 is defined and variables.weapon_is_castle_forged_1 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_castle_forged_1" name="weapon_is_castle_forged_1" placeholder="" type="checkbox" />&nbsp;<strong>Castle Forged</strong></label>
-                </div>
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_defensive_1 is defined and variables.weapon_is_defensive_1 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_defensive_1" name="weapon_is_defensive_1" placeholder="" type="checkbox" />&nbsp;<strong>Defensive</strong></label>
-                </div>                
-            </div>
-        </div>
-        <div class="col-sm-12 border">
-            <div class="row">
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_name_2 is defined ? variables.weapon_name_2 }}"  class="form-control" id="weapon_name_2" name="weapon_name_2" placeholder="weapon" type="text" />
-                </div>
-                <div class="col-sm-3">
-                    <select   class="form-control"  id="weapon_skill_2" name="weapon_skill_2">
-                        <option value="Simple Melee" {% if variables.weapon_skill_2 is defined and variables.weapon_skill_2 == "Simple Melee"  %}selected="selected" {% endif %}  >Simple Melee</option>
-                        <option value="Martial Melee" {% if variables.weapon_skill_2 is defined and variables.weapon_skill_2 == "Martial Melee"  %}selected="selected" {% endif %}  >Martial Melee</option>
-                        <option value="Simple Ranged" {% if variables.weapon_skill_2 is defined and variables.weapon_skill_2 == "Simple Ranged"  %}selected="selected" {% endif %}  >Simple Ranged</option>
-                        <option value="Martial Ranged" {% if variables.weapon_skill_2 is defined and variables.weapon_skill_2 == "Martial Ranged"  %}selected="selected" {% endif %}  >Martial Ranged</option>
-                    </select>
-                </div>
-                <div class="col-sm-3">
-                    <select   class="form-control"  id="weapon_handling_2" name="weapon_handling_2">
-                        <option value="One-handed" {% if variables.weapon_handling_2 is defined and variables.weapon_handling_2 == "One-handed"  %}selected="selected" {% endif %}  >One-handed</option>
-                        <option value="Two-handed" {% if variables.weapon_handling_2 is defined and variables.weapon_handling_2 == "Two-handed"  %}selected="selected" {% endif %}  >Two-handed</option>
-                    </select>
-                </div>
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_damage_2 is defined ? variables.weapon_damage_2 }}"  class="form-control"  id="weapon_damage_2" name="weapon_damage_2" placeholder="damage" type="text"   />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2">
-                    <input  value="{{ variables.weapon_load_2 is defined ? variables.weapon_load_2 }}"  class="form-control"  id="weapon_load_2" name="weapon_load_2" placeholder="load (AP)" type="number"  min="0" />
-                </div>
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_distance_2 is defined ? variables.weapon_distance_2 }}" class="form-control"  id="weapon_distance_2" name="weapon_distance_2" placeholder="distance (short / medium x2/ long x3)" type="text" />
-                </div>
-                <div class="col-sm-2">
-                    <input  value="{{ variables.weapon_ammo_2 is defined ? variables.weapon_ammo_2 }}"  class="form-control"  id="weapon_ammo_2" name="weapon_ammo_2" placeholder="ammo qty" type="number" min="0"  />
-                </div>
-                <div class="col-sm-2">
-                    <input  value="{{ variables.weapon_encumbrance_2 is defined ? variables.weapon_encumbrance_2 }}"  class="form-control"  id="weapon_encumbrance_2" name="weapon_encumbrance_2" placeholder="Enc" type="number" min="0"  />
-                </div>
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_qualities_2 is defined ? variables.weapon_qualities_2 }}"  class="form-control"  id="weapon_qualities_2 " name="weapon_qualities_2" placeholder="qualities" type="text"   />
-                </div>
-            </div>
-            <div class="row background-color=blue">
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_ruined_2 is defined and variables.weapon_is_ruined_2 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_ruined_2" name="weapon_is_ruined_2" placeholder="" type="checkbox" />&nbsp;<strong>Ruined!</strong></label>
-                </div>
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_makers_mark_2 is defined and variables.weapon_is_makers_mark_2 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_makers_mark_2" name="weapon_is_makers_mark_2" placeholder="" type="checkbox" />&nbsp;<strong>Makers Mark</strong></label>
-                </div>
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_castle_forged_2 is defined and variables.weapon_is_castle_forged_2 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_castle_forged_2" name="weapon_is_castle_forged_2" placeholder="" type="checkbox" />&nbsp;<strong>Castle Forged</strong></label>
-                </div>
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_defensive_2 is defined and variables.weapon_is_defensive_2 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_defensive_2" name="weapon_is_defensive_2" placeholder="" type="checkbox" />&nbsp;<strong>Defensive</strong></label>
-                </div>                
-            </div>
-        </div>
-        <div class="col-sm-12 border">
-            <div class="row">
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_name_3 is defined ? variables.weapon_name_3 }}"  class="form-control" id="weapon_name_3" name="weapon_name_3" placeholder="weapon" type="text" />
-                </div>
-                <div class="col-sm-3">
-                    <select   class="form-control"  id="weapon_skill_3" name="weapon_skill_3">
-                        <option value="Simple Melee" {% if variables.weapon_skill_3 is defined and variables.weapon_skill_3 == "Simple Melee"  %}selected="selected" {% endif %}  >Simple Melee</option>
-                        <option value="Martial Melee" {% if variables.weapon_skill_3 is defined and variables.weapon_skill_3 == "Martial Melee"  %}selected="selected" {% endif %}  >Martial Melee</option>
-                        <option value="Simple Ranged" {% if variables.weapon_skill_3 is defined and variables.weapon_skill_3 == "Simple Ranged"  %}selected="selected" {% endif %}  >Simple Ranged</option>
-                        <option value="Martial Ranged" {% if variables.weapon_skill_3 is defined and variables.weapon_skill_3 == "Martial Ranged"  %}selected="selected" {% endif %}  >Martial Ranged</option>
-                    </select>
-                </div>
-                <div class="col-sm-3">
-                    <select   class="form-control"  id="weapon_handling_3" name="weapon_handling_3">
-                        <option value="One-handed" {% if variables.weapon_handling_3 is defined and variables.weapon_handling_3 == "One-handed"  %}selected="selected" {% endif %}  >One-handed</option>
-                        <option value="Two-handed" {% if variables.weapon_handling_3 is defined and variables.weapon_handling_3 == "Two-handed"  %}selected="selected" {% endif %}  >Two-handed</option>
-                    </select>
-                </div>
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_damage_3 is defined ? variables.weapon_damage_3 }}"  class="form-control"  id="weapon_damage_3" name="weapon_damage_3" placeholder="damage" type="text"   />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2">
-                    <input  value="{{ variables.weapon_load_3 is defined ? variables.weapon_load_3 }}"  class="form-control"  id="weapon_load_3" name="weapon_load_3" placeholder="load (AP)" type="number"  min="0" />
-                </div>
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_distance_3 is defined ? variables.weapon_distance_3 }}" class="form-control"  id="weapon_distance_3" name="weapon_distance_3" placeholder="distance (short / medium x2/ long x3)" type="text" />
-                </div>
-                <div class="col-sm-2">
-                    <input  value="{{ variables.weapon_ammo_3 is defined ? variables.weapon_ammo_3 }}"  class="form-control"  id="weapon_ammo_3" name="weapon_ammo_3" placeholder="ammo qty" type="number" min="0"  />
-                </div>
-                <div class="col-sm-2">
-                    <input  value="{{ variables.weapon_encumbrance_3 is defined ? variables.weapon_encumbrance_3 }}"  class="form-control"  id="weapon_encumbrance_3" name="weapon_encumbrance_3" placeholder="Enc" type="number" min="0"  />
-                </div>
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_qualities_3 is defined ? variables.weapon_qualities_3 }}"  class="form-control"  id="weapon_qualities_3 " name="weapon_qualities_3" placeholder="qualities" type="text"   />
-                </div>
-            </div>
-            <div class="row background-color=blue">
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_ruined_3 is defined and variables.weapon_is_ruined_3 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_ruined_3" name="weapon_is_ruined_3" placeholder="" type="checkbox" />&nbsp;<strong>Ruined!</strong></label>
-                </div>
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_makers_mark_3 is defined and variables.weapon_is_makers_mark_3 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_makers_mark_3" name="weapon_is_makers_mark_3" placeholder="" type="checkbox" />&nbsp;<strong>Makers Mark</strong></label>
-                </div>
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_castle_forged_3 is defined and variables.weapon_is_castle_forged_3 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_castle_forged_3" name="weapon_is_castle_forged_3" placeholder="" type="checkbox" />&nbsp;<strong>Castle Forged</strong></label>
-                </div>
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_defensive_3 is defined and variables.weapon_is_defensive_3 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_defensive_3" name="weapon_is_defensive_3" placeholder="" type="checkbox" />&nbsp;<strong>Defensive</strong></label>
-                </div>                
-            </div>
-        </div>
-        <div class="col-sm-12 border">
-            <div class="row">
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_name_4 is defined ? variables.weapon_name_4 }}"  class="form-control" id="weapon_name_4" name="weapon_name_4" placeholder="weapon" type="text" />
-                </div>
-                <div class="col-sm-3">
-                    <select   class="form-control"  id="weapon_skill_4" name="weapon_skill_4">
-                        <option value="Simple Melee" {% if variables.weapon_skill_4 is defined and variables.weapon_skill_4 == "Simple Melee"  %}selected="selected" {% endif %}  >Simple Melee</option>
-                        <option value="Martial Melee" {% if variables.weapon_skill_4 is defined and variables.weapon_skill_4 == "Martial Melee"  %}selected="selected" {% endif %}  >Martial Melee</option>
-                        <option value="Simple Ranged" {% if variables.weapon_skill_4 is defined and variables.weapon_skill_4 == "Simple Ranged"  %}selected="selected" {% endif %}  >Simple Ranged</option>
-                        <option value="Martial Ranged" {% if variables.weapon_skill_4 is defined and variables.weapon_skill_4 == "Martial Ranged"  %}selected="selected" {% endif %}  >Martial Ranged</option>
-                    </select>
-                </div>
-                <div class="col-sm-3">
-                    <select   class="form-control"  id="weapon_handling_4" name="weapon_handling_4">
-                        <option value="One-handed" {% if variables.weapon_handling_4 is defined and variables.weapon_handling_4 == "One-handed"  %}selected="selected" {% endif %}  >One-handed</option>
-                        <option value="Two-handed" {% if variables.weapon_handling_4 is defined and variables.weapon_handling_4 == "Two-handed"  %}selected="selected" {% endif %}  >Two-handed</option>
-                    </select>
-                </div>
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_damage_4 is defined ? variables.weapon_damage_4 }}"  class="form-control"  id="weapon_damage_4" name="weapon_damage_4" placeholder="damage" type="text"   />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2">
-                    <input  value="{{ variables.weapon_load_4 is defined ? variables.weapon_load_4 }}"  class="form-control"  id="weapon_load_4" name="weapon_load_4" placeholder="load (AP)" type="number"  min="0" />
-                </div>
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_distance_4 is defined ? variables.weapon_distance_4 }}" class="form-control"  id="weapon_distance_4" name="weapon_distance_4" placeholder="distance (short / medium x2/ long x3)" type="text" />
-                </div>
-                <div class="col-sm-2">
-                    <input  value="{{ variables.weapon_ammo_4 is defined ? variables.weapon_ammo_4 }}"  class="form-control"  id="weapon_ammo_4" name="weapon_ammo_4" placeholder="ammo qty" type="number" min="0"  />
-                </div>
-                <div class="col-sm-2">
-                    <input  value="{{ variables.weapon_encumbrance_4 is defined ? variables.weapon_encumbrance_4 }}"  class="form-control"  id="weapon_encumbrance_4" name="weapon_encumbrance_4" placeholder="Enc" type="number" min="0"  />
-                </div>
-                <div class="col-sm-3">
-                    <input  value="{{ variables.weapon_qualities_4 is defined ? variables.weapon_qualities_4 }}"  class="form-control"  id="weapon_qualities_4 " name="weapon_qualities_4" placeholder="qualities" type="text"   />
-                </div>
-            </div>
-            <div class="row background-color=blue">
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_ruined_4 is defined and variables.weapon_is_ruined_4 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_ruined_4" name="weapon_is_ruined_4" placeholder="" type="checkbox" />&nbsp;<strong>Ruined!</strong></label>
-                </div>
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_makers_mark_4 is defined and variables.weapon_is_makers_mark_4 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_makers_mark_4" name="weapon_is_makers_mark_4" placeholder="" type="checkbox" />&nbsp;<strong>Makers Mark</strong></label>
-                </div>
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_castle_forged_4 is defined and variables.weapon_is_castle_forged_4 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_castle_forged_4" name="weapon_is_castle_forged_4" placeholder="" type="checkbox" />&nbsp;<strong>Castle Forged</strong></label>
-                </div>
-                <div class="col-sm-3">
-                    <label><input  value="1"  {% if variables.weapon_is_defensive_4 is defined and variables.weapon_is_defensive_4 == 1   %} checked="checked"{% endif %}   class="" id="weapon_is_defensive_4" name="weapon_is_defensive_4" placeholder="" type="checkbox" />&nbsp;<strong>Defensive</strong></label>
-                </div>                
             </div>
         </div>
     </div>
@@ -1649,7 +1658,7 @@
                             <div class="row">
                                 <div class="col-sm-8"><input  value="{{ variables.reagent_name_2 is defined ? variables.reagent_name_2 }}"  class="form-control" id="reagent_name_2" name="reagent_name_2" placeholder="" type="text" /></div>
                                 <div class="col-sm-2"><input  value="{{ variables.reagent_qty_2 is defined ? variables.reagent_qty_2 }}"  class="form-control"  id="reagent_qty_2" name="reagent_qty_2" placeholder="" type="number"  min="0" /></div>
-                                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_2 is defined ? variables.reagent_enc_2 }}"  class="form-control"  id="reagent_enc_2" name="reagent_enc_3" placeholder="" type="number" min="0"  /></div>
+                                <div class="col-sm-2"><input  value="{{ variables.reagent_enc_2 is defined ? variables.reagent_enc_2 }}"  class="form-control"  id="reagent_enc_2" name="reagent_enc_2" placeholder="" type="number" min="0"  /></div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8"><input  value="{{ variables.reagent_name_3 is defined ? variables.reagent_name_3 }}"  class="form-control" id="reagent_name_3" name="reagent_name_3" placeholder="" type="text" /></div>

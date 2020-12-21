@@ -65,12 +65,12 @@
 {% set peril_threshold_plus_12 = variables.peril_threshold_base + 12 %}
 {% set peril_threshold_plus_18 = variables.peril_threshold_base + 18 %}
 <!-- damage threshold modifiers -->
-{% if variables.shield_is_makers_mark == true and variables.shield_is_ruined == false %}
+{% if variables.shield_is_makers_mark == 1 and variables.shield_is_ruined == 0 %}
     {% set shield_damage_threshold_modifier = 1 %}
     {% else %}
     {% set shield_damage_threshold_modifier = 0 %}
 {% endif %}
-{% if variables.armor_is_ruined == false %}
+{% if variables.armor_is_ruined == 0 %}
     {% set armor_damage_threshold = variables.armor_dth_mod %}
 {% else %}
     {% set armor_damage_threshold = 0 %}
@@ -121,9 +121,9 @@
 {% set current_order_ranks = variables.alignment_order_ranks %}
 <!-- Weapon stats -->
 {% if [weapon_is_defensive_1, weapon_is_defensive_2, weapon_is_defensive_3, weapon_is_defensive_4]|reduce((carry, v) => carry + v) > 0 %}
-    {% set weapon_is_defensive = true %}
+    {% set weapon_is_defensive = 1 %}
     {% else %}
-    {% set weapon_is_defensive = false %}
+    {% set weapon_is_defensive = 0 %}
 {% endif %}
 <!-- end of macros -->
 <div id="karta" class="container-fluid">
@@ -187,7 +187,7 @@
                         </div>
                         <div class="row">
                             <!-- this should loop through 3 different professions and select the highest defined -->
-                            <div class="col-sm-12"><h2>The {{ profession_current}}</h2></div>
+                            <div class="col-sm-12"><h2>The&nbsp;{% if profession_current is not empty %}{{ profession_current|title}}{% else %}Mystery{% endif %}</h2></div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12"><h3>"{% if variables.personal_dooming is defined and variables.personal_dooming is not empty %}{{ variables.personal_dooming}}{% else %}"This one's fate is not known yet"{% endif %}"</h3> 
@@ -1100,9 +1100,9 @@
                     <div class="col-sm-3">{{ variables.armor_name}}</div>
                     <div class="col-sm-2">{% if variables.armor.dth.mod is not empty %}{{ variables.armor_dth_mod}}{% else %}0{% endif %}</div>
                     <div class="col-sm-4">{{ variables.armor_qualities}}</div>
-                    <div class="col-sm-1">{% if variables.armor_is_ruined == true %}<i class="ra ra-broken-shield"></i>{% elseif variables.armor_is_makers_mark == true %}<i class="ra ra-forging"></i>{% elseif variables.armor_is_castle_forged == true %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</div>
-                    <div class="col-sm-1">{% if variables.armor_is_natural == true %}<i class="fas fa-running"></i>{% else %}<i class="fal fa-running"></i>{% endif %}</div>
-                    <div class="col-sm-1">{% if variables.armor_is_makers_mark == true %}{% set armor_encumbrance_adjusted = variables.armor_encumbrance - 2 %}{{ armor_encumbrance_adjusted}}{% else %}{{ variables.armor_encumbrance}}{% endif %}</div>
+                    <div class="col-sm-1">{% if variables.armor_is_ruined == 1 %}<i class="ra ra-broken-shield"></i>{% elseif variables.armor_is_makers_mark == 1 %}<i class="ra ra-forging"></i>{% elseif variables.armor_is_castle_forged == 1 %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</div>
+                    <div class="col-sm-1">{% if variables.armor_is_natural == 1 %}<i class="fas fa-running"></i>{% else %}<i class="fal fa-running"></i>{% endif %}</div>
+                    <div class="col-sm-1">{% if variables.armor_is_makers_mark == 1 %}{% set armor_encumbrance_adjusted = variables.armor_encumbrance - 2 %}{{ armor_encumbrance_adjusted}}{% else %}{{ variables.armor_encumbrance}}{% endif %}</div>
                 </div>
             </div>
             <div class="col-sm-12 card-content">
@@ -1117,9 +1117,9 @@
                 <div class="row">
                     <div class="col-sm-4">{{ variables.shield_name}}</div>
                     <div class="col-sm-4">{{ variables.shield_qualities}}</div>
-                    <div class="col-sm-1">{% if variables.shield_is_ruined == true %}<i class="ra ra-broken-shield"></i>{% elseif variables.shield_is_makers_mark == true %}<i class="ra ra-forging"></i>{% elseif variables.shield_is_castle_forged == true %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</div>
-                    <div class="col-sm-1">{% if variables.shield_is_defensive == false %}<i class="far fa-shield"></i>{% else %}<i class="fas fa-shield"></i>{% endif %}</div>
-                    <div class="col-sm-1">{% if variables.shield_is_protective == false %}{% else %}<i class="fad fa-bow-arrow"></i>{% endif %}</div>
+                    <div class="col-sm-1">{% if variables.shield_is_ruined == 1 %}<i class="ra ra-broken-shield"></i>{% elseif variables.shield_is_makers_mark == 1 %}<i class="ra ra-forging"></i>{% elseif variables.shield_is_castle_forged == 1 %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</div>
+                    <div class="col-sm-1">{% if variables.shield_is_defensive == 0 %}<i class="far fa-shield"></i>{% else %}<i class="fas fa-shield"></i>{% endif %}</div>
+                    <div class="col-sm-1">{% if variables.shield_is_protective == 0 %}{% else %}<i class="fad fa-bow-arrow"></i>{% endif %}</div>
                     <div class="col-sm-1">{{ variables.shield_encumbrance}}</div>
                 </div>
             </div>
@@ -1130,7 +1130,7 @@
                         <div class="row">
                             <div class="col-sm-12 border-bottom"><h5>Dodge&nbsp;<i class="fas fa-bow-arrow"></i></h5></div>
                         </div>
-                        {% if variables.armor_is_natural == true %}
+                        {% if variables.armor_is_natural == 1 %}
                         <div class="row">
                             <div class="col-sm-9 pr-0">Coordination&nbsp;<i class="fas fa-running"></i></div>
                             <div class="col-sm-3">{% set agility_coordination_value_natural = skill_agility_coordination_value + 10 %}{{ agility_coordination_value_natural}}</div>
@@ -1174,23 +1174,23 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">Simple Melee</div>
-                                    <div class="col-sm-6">{{ skill_combat_simple_melee_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_combat_simple_melee_value +10}}{% endif %}</div>
+                                    <div class="col-sm-6">{{ skill_combat_simple_melee_value}}{% if variables.shield_is_defensive == 1 or weapon_is_defensive == 1 %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_combat_simple_melee_value +10}}{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">Martial Melee</div>
-                                    <div class="col-sm-6">{{ skill_combat_martial_melee_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_combat_martial_melee_value +10}}{% endif %}</div>
+                                    <div class="col-sm-6">{{ skill_combat_martial_melee_value}}{% if variables.shield_is_defensive == 1 or weapon_is_defensive == 1 %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_combat_martial_melee_value +10}}{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">Guile</div>
-                                    <div class="col-sm-6">{{ skill_fellowship_guile_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_fellowship_guile_value +10}}{% endif %}</div>
+                                    <div class="col-sm-6">{{ skill_fellowship_guile_value}}{% if variables.shield_is_defensive == 1 or weapon_is_defensive == 1 %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_fellowship_guile_value +10}}{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">Charm</div>
-                                    <div class="col-sm-6">{{ skill_fellowship_charm_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_fellowship_charm_value +10}}{% endif %}</div>
+                                    <div class="col-sm-6">{{ skill_fellowship_charm_value}}{% if variables.shield_is_defensive == 1 or weapon_is_defensive == 1 %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_fellowship_charm_value +10}}{% endif %}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">Incantation</div>
-                                    <div class="col-sm-6">{{ skill_willpower_incantation_value}}{% if variables.shield_is_defensive == true or weapon_is_defensive == true %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_willpower_incantation_value +10}}{% endif %}</div>
+                                    <div class="col-sm-6">{{ skill_willpower_incantation_value}}{% if variables.shield_is_defensive == 1 or weapon_is_defensive == 1 %}&nbsp;/&nbsp;<i class="fas fa-shield"></i>&nbsp;:&nbsp;{{ skill_willpower_incantation_value +10}}{% endif %}</div>
                                 </div>
                             </div>
                         </div>
@@ -1330,8 +1330,8 @@
                             <td>{{ variables.weapon_distance_1}}</td>
                             <td>{{ variables.weapon_damage_1}}</td>
                             <td>{{ variables.weapon_qualities_1}}</td>
-                            <td>{% if variables.weapon_is_ruined_1 == true %}<i class="ra ra-broken-shield"></i>{% elseif variables.weapon_is_makers_mark_1 == true %}<i class="ra ra-forging"></i>{% elseif variables.weapons_is_castle_forged_1 == true %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</td>
-                            <td>{% if variables.weapons_is_defensive_1 == false %}<i class="far fa-shield"></i>{% else %}<i class="fas fa-shield"></i>{% endif %}</td>
+                            <td>{% if variables.weapon_is_ruined_1 == 1 %}<i class="ra ra-broken-shield"></i>{% elseif variables.weapon_is_makers_mark_1 == 1 %}<i class="ra ra-forging"></i>{% elseif variables.weapon_is_castle_forged_1 == 1 %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</td>
+                            <td>{% if variables.weapon_is_defensive_1 == 0 %}<i class="far fa-shield"></i>{% else %}<i class="fas fa-shield"></i>{% endif %}</td>
                             <td>{{ variables.weapon_encumbrance_1}} </td>
                         </tr>
                         {% endif %}
@@ -1345,8 +1345,8 @@
                             <td>{{ variables.weapon_distance_2}}</td>
                             <td>{{ variables.weapon_damage_2}}</td>
                             <td>{{ variables.weapon_qualities_2}} </td>
-                            <td>{% if variables.weapon_is_ruined_2 == true %}<i class="ra ra-broken-shield"></i>{% elseif variables.weapon_is_makers_mark_2 == true %}<i class="ra ra-forging"></i>{% elseif variables.weapons_is_castle_forged_2 == true %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</td>
-                            <td>{% if variables.weapons_is_defensive_2 == false %}<i class="far fa-shield"></i>{% else %}<i class="fas fa-shield"></i>{% endif %}</td>
+                            <td>{% if variables.weapon_is_ruined_2 == 1 %}<i class="ra ra-broken-shield"></i>{% elseif variables.weapon_is_makers_mark_2 == 1 %}<i class="ra ra-forging"></i>{% elseif variables.weapon_is_castle_forged_2 == 1 %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</td>
+                            <td>{% if variables.weapon_is_defensive_2 == 0 %}<i class="far fa-shield"></i>{% else %}<i class="fas fa-shield"></i>{% endif %}</td>
                             <td>{{ variables.weapon_encumbrance_2}} </td>
                         </tr>
                         {% endif %}
@@ -1360,8 +1360,8 @@
                             <td>{{ variables.weapon_distance_3}}</td>
                             <td>{{ variables.weapon_damage_3}}</td>
                             <td>{{ variables.weapon_qualities_3}} </td>
-                            <td>{% if variables.weapon_is_ruined_3 == true %}<i class="ra ra-broken-shield"></i>{% elseif variables.weapon_is_makers_mark_3 == true %}<i class="ra ra-forging"></i>{% elseif variables.weapons_is_castle_forged_3 == true %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</td>
-                            <td>{% if variables.weapons_is_defensive_3 == false %}<i class="far fa-shield"></i>{% else %}<i class="fas fa-shield"></i>{% endif %}</td>
+                            <td>{% if variables.weapon_is_ruined_3 == 1 %}<i class="ra ra-broken-shield"></i>{% elseif variables.weapon_is_makers_mark_3 == 1 %}<i class="ra ra-forging"></i>{% elseif variables.weapon_is_castle_forged_3 == 1 %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</td>
+                            <td>{% if variables.weapon_is_defensive_3 == 0 %}<i class="far fa-shield"></i>{% else %}<i class="fas fa-shield"></i>{% endif %}</td>
                             <td>{{ variables.weapon_encumbrance_3}} </td>
                         </tr>
                         {% endif %}
@@ -1375,8 +1375,8 @@
                             <td>{{ variables.weapon_distance_4}}</td>
                             <td>{{ variables.weapon_damage_4}}</td>
                             <td>{{ variables.weapon_qualities_4}} </td>
-                            <td>{% if variables.weapon_is_ruined_4 == true %}<i class="ra ra-broken-shield"></i>{% elseif variables.weapon_is_makers_mark_4 == true %}<i class="ra ra-forging"></i>{% elseif variables.weapons_is_castle_forged_4 == true %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</td>
-                            <td>{% if variables.weapons_is_defensive_4 == false %}<i class="far fa-shield"></i>{% else %}<i class="fas fa-shield"></i>{% endif %}</td>
+                            <td>{% if variables.weapon_is_ruined_4 == 1 %}<i class="ra ra-broken-shield"></i>{% elseif variables.weapon_is_makers_mark_4 == 1 %}<i class="ra ra-forging"></i>{% elseif variables.weapon_is_castle_forged_4 == 1 %}<i class="ra ra-anvil"></i>{% else %}{% endif %}</td>
+                            <td>{% if variables.weapon_is_defensive_4 == 0 %}<i class="far fa-shield"></i>{% else %}<i class="fas fa-shield"></i>{% endif %}</td>
                             <td>{{ variables.weapon_encumbrance_4}} </td>
                         </tr>
                         {% endif %}
@@ -1586,49 +1586,49 @@
                                 {% endif %}
                                 {% if variables.trappings_vehicle_name_3 is not empty %}
                                 <div class="row">
-                                    <div class="col-md-10 col-sm-11 d-flex">{{ variables.trappings_vehicle_name_3}}</div>
+                                    <div class="col-sm-11 d-flex">{{ variables.trappings_vehicle_name_3}}</div>
                                     <div class="col-sm-1 d-flex">{{ variables.trappings_vehicle_enc_3}}</div>
                                 </div>
                                 {% endif %}
                                 {% if variables.trappings_vehicle_name_4 is not empty %}
                                 <div class="row">
-                                    <div class="col-md-10 col-sm-11 d-flex">{{ variables.trappings_vehicle_name_4}}</div>
+                                    <div class="col-sm-11 d-flex">{{ variables.trappings_vehicle_name_4}}</div>
                                     <div class="col-sm-1 d-flex">{{ variables.trappings_vehicle_enc_4}}</div>
                                 </div>
                                 {% endif %}
                                 {% if variables.trappings_vehicle_name_5 is not empty %}
                                 <div class="row">
-                                    <div class="col-md-10 col-sm-11 d-flex">{{ variables.trappings_vehicle_name_5}}</div>
+                                    <div class="col-sm-11 d-flex">{{ variables.trappings_vehicle_name_5}}</div>
                                     <div class="col-sm-1 d-flex">{{ variables.trappings_vehicle_enc_5}}</div>
                                 </div>
                                 {% endif %}
                                 {% if variables.trappings_vehicle_name_6 is not empty %}
                                 <div class="row">
-                                    <div class="col-md-10 col-sm-11 d-flex">{{ variables.trappings_vehicle_name_6}}</div>
+                                    <div class="col-sm-11 d-flex">{{ variables.trappings_vehicle_name_6}}</div>
                                     <div class="col-sm-1 d-flex">{{ variables.trappings_vehicle_enc_6}}</div>
                                 </div>
                                 {% endif %}
                                 {% if variables.trappings_vehicle_name_7 is not empty %}
                                 <div class="row">
-                                    <div class="col-md-10 col-sm-11 d-flex">{{ variables.trappings_vehicle_name_7}}</div>
+                                    <div class="col-sm-11 d-flex">{{ variables.trappings_vehicle_name_7}}</div>
                                     <div class="col-sm-1 d-flex">{{ variables.trappings_vehicle_enc_7}}</div>
                                 </div>
                                 {% endif %}
                                 {% if variables.trappings_vehicle_name_8 is not empty %}
                                 <div class="row">
-                                    <div class="col-md-10 col-sm-11 d-flex">{{ variables.trappings_vehicle_name_8}}</div>
+                                    <div class="col-sm-11 d-flex">{{ variables.trappings_vehicle_name_8}}</div>
                                     <div class="col-sm-1 d-flex">{{ variables.trappings_vehicle_enc_8}}</div>
                                 </div>
                                 {% endif %}
                                 {% if variables.trappings_vehicle_name_9 is not empty %}
                                 <div class="row">
-                                    <div class="col-md-10 col-sm-11 d-flex">{{ variables.trappings_vehicle_name_9}}</div>
+                                    <div class="col-sm-11 d-flex">{{ variables.trappings_vehicle_name_9}}</div>
                                     <div class="col-sm-1 d-flex">{{ variables.trappings_vehicle_enc_9}}</div>
                                 </div>
                                 {% endif %}
                                 {% if variables.trappings_vehicle_name_10 is not empty %}
                                 <div class="row">
-                                    <div class="col-md-10 col-sm-11 d-flex">{{ variables.trappings_vehicle_name_10}}</div>
+                                    <div class="col-sm-11 d-flex">{{ variables.trappings_vehicle_name_10}}</div>
                                     <div class="col-sm-1 d-flex">{{ variables.trappings_vehicle_enc_10}}</div>
                                 </div>
                                 {% endif %}
@@ -1884,7 +1884,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_5|title}}&nbps;({{ variables.magic_difficulty_5}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_5|title}}&nbsp;({{ variables.magic_difficulty_5}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_5}}</div>
@@ -1913,7 +1913,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_6|title}}&npbs;({{ variables.magic_difficulty_6}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_6|title}}&nbss;({{ variables.magic_difficulty_6}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_6}}</div>
@@ -1942,7 +1942,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_7|title}}&nbps;({{ variables.magic_difficulty_7}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_7|title}}&nbsp;({{ variables.magic_difficulty_7}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_7}}</div>
@@ -1971,7 +1971,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_8|title}}&nbps;({{ variables.magic_difficulty_8}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_8|title}}&nbsp;({{ variables.magic_difficulty_8}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_8}}</div>
@@ -2000,7 +2000,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_9|title}}&nbps;({{ variables.magic_difficulty_9}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_9|title}}&nbsp;({{ variables.magic_difficulty_9}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_9}}</div>
@@ -2029,7 +2029,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_10|title}}&nbps;({{ variables.magic_difficulty_10}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_10|title}}&nbsp;({{ variables.magic_difficulty_10}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_10}}</div>
@@ -2058,7 +2058,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_11|title}}&nbps;({{ variables.magic_difficulty_11}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_11|title}}&nbsp;({{ variables.magic_difficulty_11}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_11}}</div>
@@ -2087,7 +2087,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_12|title}}&nbps;({{ variables.magic_difficulty_12}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_12|title}}&nbsp;({{ variables.magic_difficulty_12}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_12}}</div>
@@ -2116,7 +2116,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_13|title}}&nbps;({{ variables.magic_difficulty_13}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_13|title}}&nbsp;({{ variables.magic_difficulty_13}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_13}}</div>
@@ -2145,7 +2145,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_14|title}}&nbps;({{ variables.magic_difficulty_14}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_14|title}}&nbsp;({{ variables.magic_difficulty_14}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_14}}</div>
@@ -2174,7 +2174,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_15|title}}&nbps;({{ variables.magic_difficulty_15}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_15|title}}&nbsp;({{ variables.magic_difficulty_15}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_15}}</div>
@@ -2203,7 +2203,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_16|title}}&nbps;({{ variables.magic_difficulty_16}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_16|title}}&nbsp;({{ variables.magic_difficulty_16}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_16}}</div>
@@ -2232,7 +2232,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_17|title}}&nbps;({{ variables.magic_difficulty_17}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_17|title}}&nbsp;({{ variables.magic_difficulty_17}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_17}}</div>
@@ -2261,7 +2261,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_18|title}}&nbps;({{ variables.magic_difficulty_18}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_18|title}}&nbsp;({{ variables.magic_difficulty_18}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_18}}</div>
@@ -2290,7 +2290,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_19|title}}&nbps;({{ variables.magic_difficulty_19}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_19|title}}&nbsp;({{ variables.magic_difficulty_19}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_19}}</div>
@@ -2319,7 +2319,7 @@
                         <div class="row card">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12"><h3>{{ variables.magic_name_20|title}}&nbps;({{ variables.magic_difficulty_20}})</h3></div>
+                                    <div class="col-sm-12"><h3>{{ variables.magic_name_20|title}}&nbsp;({{ variables.magic_difficulty_20}})</h3></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">{{ variables.magic_reagent_20}}</div>
