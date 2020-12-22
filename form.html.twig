@@ -1151,45 +1151,16 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <select   class="form-control"  id="damage_condition_track" name="damage_condition_track">
-                                        <option value="unharmed" {% if variables.damage_condition_track is defined and variables.damage_condition_track == "unharmed"  %}selected="selected" {% endif %}  >UNHARMED</option>
-                                        <option value="light" {% if variables.damage_condition_track is defined and variables.damage_condition_track == "light"  %}selected="selected" {% endif %}  >Lightly Wounded</option>
-                                        <option value="moderate" {% if variables.damage_condition_track is defined and variables.damage_condition_track == "moderate"  %}selected="selected" {% endif %}  >Moderately Wounded</option>
-                                        <option value="serious" {% if variables.damage_condition_track is defined and variables.damage_condition_track == "serious"  %}selected="selected" {% endif %}  >Seriously Wounded</option>
-                                        <option value="grievous" {% if variables.damage_condition_track is defined and variables.damage_condition_track == "grievous"  %}selected="selected" {% endif %}  >Grievously Wounded</option>
-                                        <option value="slain" {% if variables.damage_condition_track is defined and variables.damage_condition_track == "slain"  %}selected="selected" {% endif %}  >SLAIN!</option>
+                                        <option value="UNHARMED" {% if variables.damage_condition_track is defined and variables.damage_condition_track == "UNHARMED"  %}selected="selected" {% endif %}  >UNHARMED</option>
+                                        <option value="lightly wounded" {% if variables.damage_condition_track is defined and variables.damage_condition_track == "lightly wounded"  %}selected="selected" {% endif %}  >lightly wounded</option>
+                                        <option value="moderately wounded" {% if variables.damage_condition_track is defined and variables.damage_condition_track == "moderately wounded"  %}selected="selected" {% endif %}  >moderately wounded</option>
+                                        <option value="seriously wounded" {% if variables.damage_condition_track is defined and variables.damage_condition_track == "seriously wounded"  %}selected="selected" {% endif %}  >seriously wounded</option>
+                                        <option value="grievously wounded" {% if variables.damage_condition_track is defined and variables.damage_condition_track == "grievously wounded"  %}selected="selected" {% endif %}  >grievously wounded</option>
+                                        <option value="SLAIN!" {% if variables.damage_condition_track is defined and variables.damage_condition_track == "SLAIN!"  %}selected="selected" {% endif %}  >SLAIN!</option>
                                     </select>
                                 </div>
                             </div>    
                         </div>
-                        <!-- <div class="col-sm-6">
-                            <div class="row">
-                                <div class="col-sm-12"><h5>Damage Condition Track</h5></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">{% if variables.damage_condition_track == "unharmed" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
-                                <div class="col-sm-10">UNHARMED</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">{% if variables.damage_condition_track == "light" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
-                                <div class="col-sm-10">Lightly Wounded</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">{% if variables.damage_condition_track == "moderate" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
-                                <div class="col-sm-10">Moderately Wounded</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">{% if variables.damage_condition_track == "serious" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
-                                <div class="col-sm-10">Seriously Wounded</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">{% if variables.damage_condition_track == "grievous" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
-                                <div class="col-sm-10">Grievously Wounded</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-1">{% if variables.damage_condition_track == "slain" %}<i class="fas fa-circle"></i>{% else %}<i class="far fa-circle"></i>{% endif %}</div>
-                                <div class="col-sm-10">SLAIN!</div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
                 <div class="col-sm-9 border-left">

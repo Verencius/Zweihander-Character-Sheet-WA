@@ -1003,12 +1003,12 @@ fields:
     input: select
     label: "damage condition track"
     options:
-        unharmed: "unharmed"
-        light: "light"
-        moderate: "moderate"
-        serious: "serious"
-        grievous: "grievous"
-        slain: "slain"     
+        unharmed: "UNHARMED"
+        light: "lightly wounded"
+        moderate: "moderately wounded"
+        serious: "seriously wounded"
+        grievous: "grievously wounded"
+        slain: "SLAIN!"     
 
   # Dodge & Parry
   #  dodge:
